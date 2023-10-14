@@ -29,7 +29,7 @@ exports.register = (req, res) => {
 
       if (password !== confirm_password)
         return res.json({
-          message: "Password do not match",
+          message: "Password does not match",
           success: false,
         });
 

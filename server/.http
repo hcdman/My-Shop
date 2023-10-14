@@ -15,3 +15,28 @@ Content-Type: application/json
   "password": "123aa",
   "confirm_password": "123aa"
 }
+
+###
+POST http://localhost:5000/type/add
+Content-Type: application/json
+
+{
+  "maloai": "ML02",
+  "tenloai": "Samsung"
+}
+
+
+###
+GET http://localhost:5000/type/getall
+
+###
+DELETE http://localhost:5000/type/delete/ML01
+Content-Type: application/json
+
+###
+PUT http://localhost:5000/type/update/ML01
+Content-Type: application/json
+
+{
+  "tenloai": "ViVo"
+}
