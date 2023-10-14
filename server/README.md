@@ -25,7 +25,11 @@
 
 You can use `.http` file (extension `REST Client`) instead of `Postman` to test the API
 
-| Method | URL             | Description              |
-| ------ | --------------- | ------------------------ |
-| `POST` | `/api/register` | Create new account admin |
-| `POST` | `/api/login`    | Login my-shop            |
+| Method   | URL                | Description              |
+| -------- | ------------------ | ------------------------ |
+| `POST`   | `/api/register`    | Create new account admin |
+| `POST`   | `/api/login`       | Login my-shop            |
+| `GET`    | `/api/type/getall` | Get all type of product  |
+| `POST`   | `/api/add`         | Add new type             |
+| `DELETE` | `/api/delete/:id`  | Delete type has id       |
+| `POST`   | `/api/update/:id`  | Update name type         |

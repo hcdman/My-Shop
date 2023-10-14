@@ -9,8 +9,10 @@ const db = mysql.createConnection({
 //get all type
 exports.getAllType = async (req, res) => {
   let sql = "SELECT * FROM loai";
-  let obj = [];
   db.query(sql, (error, result) => {
+    if (error)
+      return res.status(400).json({ message: "Server error", success: false });
+
     result = JSON.parse(JSON.stringify(result));
 
     return res.status(200).json({

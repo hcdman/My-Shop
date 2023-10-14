@@ -21,8 +21,8 @@ POST http://localhost:5000/type/add
 Content-Type: application/json
 
 {
-  "maloai": "ML02",
-  "tenloai": "Samsung"
+  "maloai": "ML01",
+  "tenloai": "Apple"
 }
 
 
@@ -34,9 +34,49 @@ DELETE http://localhost:5000/type/delete/ML01
 Content-Type: application/json
 
 ###
-PUT http://localhost:5000/type/update/ML01
+PUT http://localhost:5000/type/update/ML02
 Content-Type: application/json
 
 {
-  "tenloai": "ViVo"
+  "tenloai": "Samsung"
+}
+
+###
+POST http://localhost:5000/product/add
+Content-Type: application/json
+
+{
+  "masp":"SP04",
+  "anh":"E:/DoAn/Win/assest/samsung-galaxy-a05.jpg",
+  "tensp":"Samsung Galaxy A05",
+  "hangsx":"Samsung",
+  "gia_goc":2800000, 
+  "gia":3090000, 
+  "sl":20, 
+  "maloai":"ML02",
+  "giamgia":0
+}
+
+###
+GET http://localhost:5000/product/getall
+
+###
+GET http://localhost:5000/product/get/SP01
+
+###
+DELETE http://localhost:5000/product/delete/SP01
+
+###
+PUT http://localhost:5000/product/update/SP01
+Content-Type: application/json
+
+{
+  "anh":"E:/DoAn/Win/assest/iPhone-14-plus.jpg",
+  "tensp":"iPhone 14 Plus",
+  "hangsx":"Apple",
+  "gia_goc":19990000, 
+  "gia":21990000, 
+  "sl":50, 
+  "maloai":"ML01",
+  "giamgia":12
 }
