@@ -1,0 +1,17 @@
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "username":"haonhat",
+  "password":"123aa"
+}
+
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+  "username":"haonhat",
+  "password": "123aa",
+  "confirm_password": "123aa"
+}
