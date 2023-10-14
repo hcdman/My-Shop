@@ -25,11 +25,16 @@
 
 You can use `.http` file (extension `REST Client`) instead of `Postman` to test the API
 
-| Method   | URL                | Description              |
-| -------- | ------------------ | ------------------------ |
-| `POST`   | `/api/register`    | Create new account admin |
-| `POST`   | `/api/login`       | Login my-shop            |
-| `GET`    | `/api/type/getall` | Get all type of product  |
-| `POST`   | `/api/add`         | Add new type             |
-| `DELETE` | `/api/delete/:id`  | Delete type has id       |
-| `POST`   | `/api/update/:id`  | Update name type         |
+| Method   | URL                   | Description              |
+| -------- | --------------------- | ------------------------ |
+| `POST`   | `/api/register`       | Create new account admin |
+| `POST`   | `/api/login`          | Login my-shop            |
+| `GET`    | `/type/getall`        | Get all type of product  |
+| `POST`   | `/type/add`           | Add new type             |
+| `DELETE` | `/type/delete/:id`    | Delete type has ID       |
+| `PUT`    | `/type/update/:id`    | Update name type         |
+| `GET`    | `/product/getall`     | Get all product          |
+| `POST`   | `/product/add`        | Add new product          |
+| `GET`    | `/product/get/:id`    | Get one product has ID   |
+| `DELETE` | `/product/delete/:id` | Delete product has ID    |
+| `PUT`    | `/product/update/:id` | Update prosuct has ID    |
