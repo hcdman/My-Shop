@@ -147,3 +147,19 @@ Content-Type: application/json
   "makh":"KH01",
   "trigia":140601500
 }
+
+###
+POST http://localhost:5000/cthd/add
+Content-Type: application/json
+
+{
+  "sohd":1002,
+  "masp":"SP04",
+  "sl":1
+}
+
+###
+GET http://localhost:5000/cthd/getall
+
+###
+GET http://localhost:5000/cthd/get/1002
