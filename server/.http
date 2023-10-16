@@ -86,8 +86,8 @@ POST http://localhost:5000/customer/add
 Content-Type: application/json
 
 {
-  "makh":"KH02",
-  "hoten":"Tran Ngoc Han",
+  "makh":"KH01",
+  "hoten":"Nguyen Van A",
   "dchi":"23/5 Nguyen Trai, Q5, TpHCM",
   "sodt":"0908256478",
   "ngsinh":"1974-4-3",
@@ -115,4 +115,35 @@ Content-Type: application/json
   "ngsinh":"1980-12-6",
   "email":"jsi@gmail.com",
   "ngdk":"2006-08-5"
+}
+
+
+###
+POST http://localhost:5000/bill/add
+Content-Type: application/json
+
+{
+  "sohd":1002,
+  "nghd":"2023-07-23",
+  "makh":"KH01",
+  "trigia":140601500
+}
+
+###
+GET http://localhost:5000/bill/getall
+
+###
+GET http://localhost:5000/bill/get/1002
+
+###
+DELETE http://localhost:5000/bill/delete/1001
+
+###
+PUT http://localhost:5000/bill/update/1001
+Content-Type: application/json
+
+{
+  "nghd":"2023-08-23",
+  "makh":"KH01",
+  "trigia":140601500
 }

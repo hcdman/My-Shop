@@ -44,3 +44,8 @@ You can use `.http` file (extension `REST Client`) instead of `Postman` to test 
 | `GET`    | `/customer/get/:id`    | Get one customer has ID  |
 | `DELETE` | `/customer/delete/:id` | Delete customer has ID   |
 | `PUT`    | `/customer/update/:id` | Update customer has ID   |
+| `GET`    | `/bill/getall`         | Get all bill             |
+| `POST`   | `/bill/add`            | Add new bill             |
+| `GET`    | `/bill/get/:id`        | Get one bill has ID      |
+| `DELETE` | `/bill/delete/:id`     | Delete bill has ID       |
+| `PUT`    | `/bill/update/:id`     | Update bill has ID       |
