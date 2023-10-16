@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wMGIyVSTJUwOqb85edN4Et4+zalLAvrRckXLEHUEJYccbKkTYbFPxjZfQKHIREtMwVBVYuAbbfq/OdzNJD0m4w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hoai0\\source\\repos\\My Shop\\My Shop.Core\\My Shop.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hoai0\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

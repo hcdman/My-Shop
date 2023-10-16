@@ -1,0 +1,16 @@
+App.xbf
+MainWindow.xbf
+Styles\FontSizes.xbf
+Styles\TextBlock.xbf
+Styles\Thickness.xbf
+Views\CategoryPage.xbf
+Views\CustomerPage.xbf
+Views\DashboardPage.xbf
+Views\LoginPage.xbf
+Views\LogoutPage.xbf
+Views\OrdersPage.xbf
+Views\ProductsDetailPage.xbf
+Views\ProductsPage.xbf
+Views\SettingsPage.xbf
+Views\ShellPage.xbf
+Views\StatisticsPage.xbf
