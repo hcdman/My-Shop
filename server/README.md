@@ -1,3 +1,6 @@
+## Link Test Server
+https://test-deploy-jbnz-b3pzz1uzt-nxhawk.vercel.app/
+
 ## Tech Stack
 
 **Code:** Nodejs, nodemon, mysql, fetchAPI, dotenv, js.
