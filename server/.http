@@ -46,15 +46,15 @@ POST http://localhost:5000/product/add
 Content-Type: application/json
 
 {
-  "masp":"SP04",
-  "anh":"E:/DoAn/Win/assest/samsung-galaxy-a05.jpg",
-  "tensp":"Samsung Galaxy A05",
-  "hangsx":"Samsung",
-  "gia_goc":2800000, 
-  "gia":3090000, 
-  "sl":20, 
-  "maloai":"ML02",
-  "giamgia":0
+  "masp":"SP01",
+  "anh":"E:/DoAn/Win/assest/iphone-15-pro-max.jpg",
+  "tensp":"iPhone 15 Pro Max",
+  "hangsx":"Apple",
+  "gia_goc":19990000, 
+  "gia":21990000, 
+  "sl":50, 
+  "maloai":"ML01",
+  "giamgia":12
 }
 
 ###
@@ -67,16 +67,52 @@ GET http://localhost:5000/product/get/SP01
 DELETE http://localhost:5000/product/delete/SP01
 
 ###
-PUT http://localhost:5000/product/update/SP01
+PUT http://localhost:5000/product/update/SP04
 Content-Type: application/json
 
 {
-  "anh":"E:/DoAn/Win/assest/iPhone-14-plus.jpg",
-  "tensp":"iPhone 15 Plus",
+  "anh":"E:/DoAn/Win/assest/iphone-14-plus.jpg",
+  "tensp":"iPhone 14 Plus",
   "hangsx":"Apple",
   "gia_goc":19990000, 
   "gia":21990000, 
   "sl":50, 
   "maloai":"ML01",
   "giamgia":12
+}
+
+###
+POST http://localhost:5000/customer/add
+Content-Type: application/json
+
+{
+  "makh":"KH02",
+  "hoten":"Tran Ngoc Han",
+  "dchi":"23/5 Nguyen Trai, Q5, TpHCM",
+  "sodt":"0908256478",
+  "ngsinh":"1974-4-3",
+  "email":"jsi@gmail.com",
+  "ngdk":"2006-07-30"
+}
+
+###
+GET http://localhost:5000/customer/getall
+
+###
+GET http://localhost:5000/customer/get/KH01
+
+###
+DELETE http://localhost:5000/customer/delete/KH01
+
+###
+PUT http://localhost:5000/customer/update/KH02
+Content-Type: application/json
+
+{
+  "hoten":"Tran Ngoc Linh",
+  "dchi":"45 Nguyen Canh Chan, Q1, TpHCM",
+  "sodt":"0908256478",
+  "ngsinh":"1980-12-6",
+  "email":"jsi@gmail.com",
+  "ngdk":"2006-08-5"
 }

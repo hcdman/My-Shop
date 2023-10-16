@@ -17,20 +17,17 @@ exports.register = (req, res) => {
         console.log(error);
         return res.status(400).json({
           message: "Server error",
-          success: false,
         });
       }
 
       if (result.length > 0)
         return res.json({
           message: "Username is already taken",
-          success: false,
         });
 
       if (password !== confirm_password)
         return res.json({
           message: "Password does not match",
-          success: false,
         });
 
       const hashedPassword = await argon2.hash(password);
@@ -43,12 +40,10 @@ exports.register = (req, res) => {
             console.log(error);
             return res.status(400).json({
               message: "Server error",
-              success: false,
             });
           } else
             return res.json({
               message: "User Registration Success",
-              success: true,
             });
         }
       );
@@ -62,7 +57,6 @@ exports.login = async (req, res) => {
     if (!username || !password) {
       return res.status(400).json({
         message: "Please Enter Your Username and Passsword",
-        success: false,
       });
     }
 
@@ -73,7 +67,6 @@ exports.login = async (req, res) => {
         if (result.length <= 0) {
           return res.status(402).json({
             message: "Username or Password Incorrect...",
-            success: false,
           });
         } else {
           const passwordValid = await argon2.verify(
@@ -83,12 +76,10 @@ exports.login = async (req, res) => {
           if (!passwordValid) {
             return res.status(402).json({
               message: "Username or Password Incorrect...",
-              success: false,
             });
           }
           return res.status(200).json({
             message: `Hello ${username}`,
-            success: true,
           });
         }
       }
@@ -97,7 +88,6 @@ exports.login = async (req, res) => {
     console.log(error);
     return res.status(400).json({
       message: "Server error",
-      success: false,
     });
   }
 };

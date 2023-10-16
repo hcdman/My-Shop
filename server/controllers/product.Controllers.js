@@ -17,13 +17,11 @@ cloudinary.config({
 exports.getAllProduct = async (req, res) => {
   let sql = "SELECT * FROM sanpham";
   db.query(sql, (error, result) => {
-    if (error)
-      return res.status(400).json({ message: "Server error", success: false });
+    if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));
 
     return res.status(200).json({
-      data: result,
-      success: true,
+      product: result,
     });
   });
 };
@@ -36,18 +34,12 @@ exports.getProduct = async (req, res) => {
     "SELECT * FROM sanpham WHERE masp=?",
     [masp],
     async (error, result) => {
-      if (error)
-        return res
-          .status(400)
-          .json({ message: "Server Error", success: false });
+      if (error) return res.status(400).json({ message: "Server Error" });
       if (result.length < 1)
-        return res
-          .status(400)
-          .json({ message: "Sản phẩm không tồn tại", success: false });
+        return res.status(400).json({ message: "Sản phẩm không tồn tại" });
 
       res.json({
         data: JSON.parse(JSON.stringify(result[0])),
-        success: true,
       });
     }
   );
@@ -68,63 +60,48 @@ exports.addNew = async (req, res) => {
     sl <= 0 ||
     !maloai
   )
-    return res
-      .status(400)
-      .json({ message: "Thông tin không hợp lệ", success: false });
+    return res.status(400).json({ message: "Thông tin không hợp lệ" });
 
   db.query(
     "SELECT * FROM sanpham WHERE masp=?",
     [masp],
     async (error, result) => {
       if (result.length > 0)
-        return res
-          .status(400)
-          .json({ message: "Mã sản phẩm đã tồn tại", success: false });
+        return res.status(400).json({ message: "Mã sản phẩm đã tồn tại" });
       db.query(
         "SELECT * FROM loai WHERE maloai=?",
         [maloai],
         async (error, result) => {
           if (result.length < 1) {
-            return res
-              .status(400)
-              .json({ message: "Mã loại không tồn tại", success: false });
+            return res.status(400).json({ message: "Mã loại không tồn tại" });
           } else {
-            cloudinary.uploader.upload(
-              anh,
-              { public_id: "olympic_flag" },
-              function (error, result) {
-                if (error)
-                  return res
-                    .status(400)
-                    .json({ message: "Cloundinary Error", success: false });
+            cloudinary.uploader.upload(anh, function (error, result) {
+              if (error)
+                return res.status(400).json({ message: "Cloundinary Error" });
 
-                db.query(
-                  "insert into sanpham set ?",
-                  {
-                    masp,
-                    anh: result.url,
-                    tensp,
-                    hangsx,
-                    gia_goc,
-                    gia,
-                    sl,
-                    maloai,
-                    giamgia,
-                  },
-                  async (error, result) => {
-                    if (error)
-                      return res
-                        .status(400)
-                        .json({ message: "Server Error", success: false });
+              db.query(
+                "insert into sanpham set ?",
+                {
+                  masp,
+                  anh: result.url,
+                  tensp,
+                  hangsx,
+                  gia_goc,
+                  gia,
+                  sl,
+                  maloai,
+                  giamgia,
+                },
+                async (error, result) => {
+                  if (error)
+                    return res.status(400).json({ message: "Server Error" });
 
-                    return res.json({
-                      message: "Thêm sản phẩm thành công",
-                      success: true,
-                    });
-                  }
-                );
-              }
-            );
+                  return res.json({
+                    message: "Thêm sản phẩm thành công",
+                  });
+                }
+              );
+            });
           }
         }
       );
@@ -136,15 +113,10 @@ exports.addNew = async (req, res) => {
 exports.delete = async (req, res) => {
   const masp = req.params.id;
 
-  if (!masp)
-    return res
-      .status(400)
-      .json({ message: "Thông tin còn thiếu", success: false });
+  if (!masp) return res.status(400).json({ message: "Thông tin còn thiếu" });
 
   if (masp.length !== 4)
-    return res
-      .status(400)
-      .json({ message: "Mã loại không hợp lệ", success: false });
+    return res.status(400).json({ message: "Mã loại không hợp lệ" });
 
   db.query(
     "select * from sanpham where masp=?",
@@ -156,18 +128,15 @@ exports.delete = async (req, res) => {
           if (error) {
             return res.status(400).json({
               message: "Lỗi khi xóa sản phẩm",
-              success: false,
             });
           }
           return res.json({
             message: "Xóa sản phẩm thành công",
-            success: true,
           });
         });
       } else {
         return res.status(400).json({
           message: "Mã sản phẩm không tồn tại",
-          success: false,
         });
       }
     }
@@ -188,9 +157,7 @@ exports.update = async (req, res) => {
     sl <= 0 ||
     !maloai
   )
-    return res
-      .status(400)
-      .json({ message: "Thông tin không hợp lệ", success: false });
+    return res.status(400).json({ message: "Thông tin không hợp lệ" });
 
   db.query(
     "select * from sanpham where masp=?",
@@ -202,46 +169,35 @@ exports.update = async (req, res) => {
           [maloai],
           async (error, result) => {
             if (result.length < 1)
-              return res
-                .status(400)
-                .json({ message: "Mã loại không tồn tại", success: false });
+              return res.status(400).json({ message: "Mã loại không tồn tại" });
 
-            cloudinary.uploader.upload(
-              anh,
-              { public_id: "olympic_flag" },
-              function (error, result) {
-                if (error)
-                  return res
-                    .status(400)
-                    .json({ message: "Ảnh không tồn tại", success: false });
-                let sql = `UPDATE sanpham SET ? where masp = '${masp}'`;
-                db.query(
-                  sql,
-                  {
-                    anh: result.url,
-                    tensp,
-                    hangsx,
-                    gia_goc,
-                    gia,
-                    sl,
-                    maloai,
-                    giamgia,
-                  },
-                  (error, result) => {
-                    return res.status(200).json({
-                      message: "Update sản phẩm thành công",
-                      success: true,
-                    });
-                  }
-                );
-              }
-            );
+            cloudinary.uploader.upload(anh, function (error, result) {
+              if (error)
+                return res.status(400).json({ message: "Ảnh không tồn tại" });
+              let sql = `UPDATE sanpham SET ? where masp = '${masp}'`;
+              db.query(
+                sql,
+                {
+                  anh: result.url,
+                  tensp,
+                  hangsx,
+                  gia_goc,
+                  gia,
+                  sl,
+                  maloai,
+                  giamgia,
+                },
+                (error, result) => {
+                  return res.status(200).json({
+                    message: "Update sản phẩm thành công",
+                  });
+                }
+              );
+            });
           }
         );
       } else {
-        return res
-          .status(400)
-          .json({ message: "Sản phẩm không tồn tại", success: false });
+        return res.status(400).json({ message: "Sản phẩm không tồn tại" });
       }
     }
   );
