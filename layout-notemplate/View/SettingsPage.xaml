@@ -8,8 +8,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
     <Grid>
-
+        <StackPanel
+        x:Name="ContentArea">
+            <StackPanel>
+                <RadioButton 
+                    Content="Default" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}"
+                    CommandParameter="Default">
+                </RadioButton>
+                <RadioButton 
+                    Content="Light" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}" 
+                    CommandParameter="Light">
+                </RadioButton>
+                <RadioButton 
+                    Content="Dark" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}" 
+                    CommandParameter="Dark">
+                </RadioButton>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

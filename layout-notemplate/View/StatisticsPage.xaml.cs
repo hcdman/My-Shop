@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -11,7 +10,6 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
-using MyShop.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -22,15 +20,10 @@ namespace MyShop.View;
 /// <summary>
 /// An empty page that can be used on its own or navigated to within a Frame.
 /// </summary>
-public sealed partial class SettingsPage : Page
+public sealed partial class StatisticsPage : Page
 {
-    public SettingsViewModel ViewModel
-    {
-        get;
-    }
-    public SettingsPage()
+    public StatisticsPage()
     {
         this.InitializeComponent();
-        ViewModel = Ioc.Default.GetRequiredService<SettingsViewModel>();
     }
 }

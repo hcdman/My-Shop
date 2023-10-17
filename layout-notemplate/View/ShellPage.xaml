@@ -48,32 +48,32 @@
                 <CornerRadius x:Key="NavigationViewContentGridCornerRadius">0,0,0,0</CornerRadius>
             </NavigationView.Resources>
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Dashboard" Tag="View.DashboardPage">
+                <NavigationViewItem Content="Dashboard" Tag="MyShop.View.DashboardPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF246;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Customer" Tag="View.CustomerPage">
+                <NavigationViewItem Content="Customer" Tag="MyShop.View.CustomerPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xEA8C;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Category" Tag="View.CategoryPage">
+                <NavigationViewItem Content="Category" Tag="MyShop.View.CategoryPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE8FD;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Products" Tag="View.ProductsPage">
+                <NavigationViewItem Content="Products" Tag="MyShop.View.ProductsPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE8EA;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Orders" Tag="View.OrdersPage">
+                <NavigationViewItem Content="Orders" Tag="MyShop.View.OrdersPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE7BF;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="Statistics" Tag="View.StatisticsPage">
+                <NavigationViewItem Content="Statistics" Tag="MyShop.View.StatisticsPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xEB05;" />
                     </NavigationViewItem.Icon>

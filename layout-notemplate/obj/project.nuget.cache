@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KreZj2mkDGxmLvd5kOJkkY82eBPZV2TpM0i03dmiv9B/q9J1N/PkUj3I2F0Iqbz7mg1fJNU+hIBGUud4ABmTIw==",
+  "dgSpecHash": "ItyHHeDuxVjhYMK0fiRVr6pA9tLaizgZM0f91d/rfLcMW8a6CJ0H+TPme9XLTJ2z7UskWllSrMf7Lug6h1AjVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\MyShop\\MyShop.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\Myshop\\MyShop.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsappsdk\\1.3.230602002\\microsoft.windowsappsdk.1.3.230602002.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.22\\microsoft.netcore.app.runtime.win-x86.6.0.22.nupkg.sha512",

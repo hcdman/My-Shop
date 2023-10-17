@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -11,6 +13,8 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using MyShop.Services;
+using MyShop.ViewModel;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -32,6 +36,7 @@ public partial class App : Application
     public App()
     {
         this.InitializeComponent();
+        Ioc.Default.ConfigureServices(ConfigureServices());
     }
 
     /// <summary>
@@ -62,5 +67,12 @@ public partial class App : Application
         throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
     }
 
+    private static IServiceProvider ConfigureServices()
+    {
+        var services = new ServiceCollection();
+        services.AddSingleton<IThemeSelectorService, ThemeSelectorService>();
+        services.AddSingleton<SettingsViewModel>();
+        return services.BuildServiceProvider();
+    }
     public static Window m_window;
 }
