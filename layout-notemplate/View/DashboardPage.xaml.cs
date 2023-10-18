@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -22,8 +23,11 @@ namespace MyShop.View;
 /// </summary>
 public sealed partial class DashboardPage : Page
 {
+
     public DashboardPage()
     {
-        this.InitializeComponent();
+        
+        InitializeComponent();
+        this.DataContext = new DashboardViewModel();
     }
 }
