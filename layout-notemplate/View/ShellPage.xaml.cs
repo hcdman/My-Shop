@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -14,6 +16,7 @@ using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.ApplicationSettings;
+using Windows.UI.Popups;
 using static System.Net.WebRequestMethods;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -38,14 +41,22 @@ public sealed partial class ShellPage : Page
     }
     private void NavView_Loaded(object sender, RoutedEventArgs e)
     {
+        var oldPage = ConfigurationManager.AppSettings["currentNavigationViewItem"];
 
-        // NavView doesn't load any page by default, so load home page.
-        NavView.SelectedItem = NavView.MenuItems[0];
+        //NavView doesn't load any page by default, so load old page.
+        for(var i = 0; i< NavView.MenuItems.Count; i++)
+        {
+            var menuItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem) NavView.MenuItems[i];
+            if(menuItem.Tag.Equals(oldPage))
+            {
+                NavView.SelectedItem = NavView.MenuItems[i];
+            }
+        }
 
         // If navigation occurs on SelectionChanged, this isn't needed.
         // Because we use ItemInvoked to navigate, we need to call Navigate
-        // here to load the home page.
-        NavView_Navigate(typeof(DashboardPage), new EntranceNavigationTransitionInfo());
+        // here to load the old page.
+        NavView_Navigate(Type.GetType(oldPage), new EntranceNavigationTransitionInfo());
     }
     private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
     {
@@ -73,5 +84,27 @@ public sealed partial class ShellPage : Page
         {
             ContentFrame.Navigate(navPageType, null, transitionInfo);
         }
+    }
+
+    private void NavigationViewItem_Tapped(object sender, TappedRoutedEventArgs e)
+    {
+        var currentPage = ContentFrame.SourcePageType.FullName;
+
+        var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+        config.AppSettings.Settings["currentNavigationViewItem"].Value = currentPage;
+        config.Save(ConfigurationSaveMode.Minimal);
+        ConfigurationManager.RefreshSection("appSettings");
+        Frame.Navigate(typeof(View.LoginPage));
+        //App.m_window.Close();
+    }
+
+    private void Page_Unloaded(object sender, RoutedEventArgs e)
+    {
+        var currentPage = ContentFrame.SourcePageType.FullName;
+
+        var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+        config.AppSettings.Settings["currentNavigationViewItem"].Value = currentPage;
+        config.Save(ConfigurationSaveMode.Minimal);
+        ConfigurationManager.RefreshSection("appSettings");
     }
 }
