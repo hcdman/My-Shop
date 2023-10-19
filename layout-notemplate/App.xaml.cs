@@ -19,6 +19,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -46,20 +47,37 @@ public partial class App : Application
     protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
     {
         m_window = new MainWindow();
-
+       
+        //set center screen
+        var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(m_window);
+        Microsoft.UI.WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+        Microsoft.UI.Windowing.AppWindow appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+        if (appWindow is not null)
+        {
+            Microsoft.UI.Windowing.DisplayArea displayArea = Microsoft.UI.Windowing.DisplayArea.GetFromWindowId(windowId, Microsoft.UI.Windowing.DisplayAreaFallback.Nearest);
+            if (displayArea is not null)
+            {
+                var CenteredPosition = appWindow.Position;
+                CenteredPosition.X = ((displayArea.WorkArea.Width - appWindow.Size.Width) / 2);
+                CenteredPosition.Y = ((displayArea.WorkArea.Height - appWindow.Size.Height) / 2);
+                appWindow.Move(CenteredPosition);
+            }
+        }
+        appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1440, Height = 956 });
         // Create a Frame to act as the navigation context and navigate to the Login page
         Frame rootFrame = new Frame();
         rootFrame.NavigationFailed += OnNavigationFailed;
 
         // Navigate to the Login page, configuring the new page
         // by passing required information as a navigation parameter
-
+      
         rootFrame.Navigate(typeof(View.LoginPage), args.Arguments);
 
         // Place the frame in the current Window
         m_window.Content = rootFrame;
         // Ensure the MainWindow is active
         m_window.Activate();
+      
     }
 
     void OnNavigationFailed(object sender, NavigationFailedEventArgs e)

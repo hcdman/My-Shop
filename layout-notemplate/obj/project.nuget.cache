@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NVzI/XP9XiCmK4ZT+TwGyOUDmJ7mX1IxO0QHPTtEDI9RbFck4isZb+f++kXCGLTb1oJ6FoNmsZUItjm+2Hmlfg==",
+  "dgSpecHash": "cOCwliFUFdbu4zOnuIV38pg6EIWMhJhPjWxKmH6VHBQ05tt8XRfjOw/QWl25RY0g6TSILSu1fdC2OaIrI7W67w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hoai0\\source\\repos\\Hieu\\My-Shop\\layout-notemplate\\MyShop.csproj",
+  "projectFilePath": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\MyShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hoai0\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\hoai0\\.nuget\\packages\\communitytoolkit.winui.ui.controls.datagrid\\7.1.2\\communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512",

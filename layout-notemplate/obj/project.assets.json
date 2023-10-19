@@ -2209,11 +2209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoai0\\source\\repos\\Hieu\\My-Shop\\layout-notemplate\\MyShop.csproj",
+      "projectUniqueName": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\MyShop.csproj",
       "projectName": "MyShop",
-      "projectPath": "C:\\Users\\hoai0\\source\\repos\\Hieu\\My-Shop\\layout-notemplate\\MyShop.csproj",
+      "projectPath": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\MyShop.csproj",
       "packagesPath": "C:\\Users\\hoai0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoai0\\source\\repos\\Hieu\\My-Shop\\layout-notemplate\\obj\\",
+      "outputPath": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

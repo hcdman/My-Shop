@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>7c9bc8ee-3bbd-4f71-b9b6-3451ea53326a</PackageIdentityName>
     <PackageIdentityPublisher>CN=ADMIN</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>92CA53904A4815DE933CE387E43B6874CA62975985C73764F34ED54AF2BF3086</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>7c9bc8ee-3bbd-4f71-b9b6-3451ea53326a_1.0.0.0_x64__mdtdy63a0eab0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>7c9bc8ee-3bbd-4f71-b9b6-3451ea53326a_mdtdy63a0eab0!App</RegisteredUserModeAppID>
@@ -26,36 +26,40 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-18T17:39:41.427</Modified>
+      <Modified>2023-10-19T17:11:06.714</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-18T17:39:40.981</Modified>
+      <Modified>2023-10-19T17:11:06.343</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
       <PackagePath>MyShop.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-18T16:52:32.356</Modified>
+      <Modified>2023-10-19T15:24:07.184</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
       <PackagePath>MyShop.dll</PackagePath>
-      <Modified>2023-10-18T17:39:40.732</Modified>
+      <Modified>2023-10-19T17:11:06.126</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
       <PackagePath>MyShop.dll.config</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MyShop.exe</PackagePath>
-      <Modified>2023-10-18T17:39:40.741</Modified>
+      <Modified>2023-10-19T17:11:06.137</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\order.png">
+      <PackagePath>Icons\order.png</PackagePath>
+      <Modified>2023-10-19T03:32:07.329</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
       <PackagePath>MyShop.deps.json</PackagePath>
-      <Modified>2023-10-18T16:52:31.960</Modified>
+      <Modified>2023-10-19T16:25:36.870</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1057,33 +1061,45 @@
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.DataGrid.pri</PackagePath>
       <Modified>2021-11-18T21:49:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2023-10-18T10:05:44.124</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\money.png">
+      <PackagePath>Icons\money.png</PackagePath>
+      <Modified>2023-10-19T16:00:22.446</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\PhoneSample\iphone.png">
+      <PackagePath>PhoneSample\iphone.png</PackagePath>
+      <Modified>2023-10-19T16:23:57.755</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\product.png">
+      <PackagePath>Icons\product.png</PackagePath>
+      <Modified>2023-10-19T03:33:03.975</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

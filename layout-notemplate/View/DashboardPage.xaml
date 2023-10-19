@@ -8,121 +8,177 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#383854">
+     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    
+    >
 
     <Grid>
-        <Grid Width="800">
+        <Grid Width="900">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
+            <!--Header-->
             <Grid Grid.Row="0">
                 <Grid.Resources>
                     <Style TargetType="TextBlock">
-                        <Setter Property="Foreground" Value="White"></Setter>
+                        <Setter Property="Foreground" Value="Black"></Setter>
                         <Setter Property="FontWeight" Value="Bold"></Setter>
-                        <Setter Property="FontSize" Value="30"></Setter>
+                        <Setter Property="FontSize" Value="15"></Setter>
                     </Style>
                 </Grid.Resources>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-
-                <TextBlock Text="Dash Board" />
+                <TextBlock Text="Dash Board" Margin="10"/>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                     <ToggleSwitch x:Name="toggleSwitch" OffContent="Week" OnContent="Month"/>
                 </StackPanel>
-
             </Grid>
-
-            <Grid Grid.Row="1" Margin="50 20 15 40">
+            <!--General information-->
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!--Total Products sold-->
-                <Border CornerRadius="15" Margin="0 0 25 0">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                            <GradientStop Color="#369FFF" Offset="0"/>
-                            <GradientStop Color="#d9b5ff" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
+                <!--Items in stock-->
+                <Border CornerRadius="5" Margin="0 0 25 0" Background="White" Height="125">
                     <Border.Clip>
                         <RectangleGeometry Rect="0,0,291,140"/>
                     </Border.Clip>
-                   <Grid Padding="10">
-                        <TextBlock Text="Total Products: 125"  VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,10,0"/>
-                        <FontIcon Glyph="&#xE821;" FontSize="40" HorizontalAlignment="Right" Foreground="Black"/>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Instock" Margin="10,0,10,0"/>
+                            <TextBlock Text="1322 Products" FontWeight="Bold" Margin="10,0,10,0"/>
+                        </StackPanel>
+                        <Image Grid.Column="1" Source="ms-appx:///Icons/product.png" HorizontalAlignment="Right" Width="50" VerticalAlignment="Top"/>
                     </Grid>
+                </Border>
+
+                <!--today revenue-->
+                <Border CornerRadius="5" Margin="0 0 25 0" Grid.Column="2" Background="White" Height="125">
+                    <Border.Clip>
+                        <RectangleGeometry Rect="0,0,291,140"/>
+                    </Border.Clip>
+                    <Grid Padding="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Todays revenue" Margin="10,0,10,0"/>
+                            <TextBlock Text="$8344" FontWeight="Bold" Margin="10,0,10,0"/>
+                        </StackPanel>
+                        <Image Grid.Column="1" Source="ms-appx:///Icons/money.png" HorizontalAlignment="Right" Width="50" VerticalAlignment="Top"/>
+                    </Grid>
+
                 </Border>
 
                 <!--Total Orders-->
-                <Border CornerRadius="15" Margin="0 0 25 0" Grid.Column="1">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                            <GradientStop Color="#369FFF" Offset="0"/>
-                            <GradientStop Color="#d9b5ff" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
+                <Border CornerRadius="5" Margin="0 0 25 0" Grid.Column="1" Background="White" Height="125">
                     <Border.Clip>
                         <RectangleGeometry Rect="0,0,291,140"/>
                     </Border.Clip>
                     <Grid Padding="10">
-                        <TextBlock Text="Total Orders : 125" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,10,0"/>
-                        <FontIcon Glyph="&#xE719;" FontSize="40" HorizontalAlignment="Right" Foreground="Black"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="This Week Order" Margin="10,0,10,0"/>
+                            <TextBlock Text="305 New Order" FontWeight="Bold" Margin="10,0,10,0"/>
+                        </StackPanel>
+                        <Image Grid.Column="1" Source="ms-appx:///Icons/order.png" HorizontalAlignment="Right" Width="50" VerticalAlignment="Top"/>
                     </Grid>
                 </Border>
 
-                <!--Total products in stock-->
-                <Border CornerRadius="15" Margin="0 0 25 0" Grid.Column="2">
-                    <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                            <GradientStop Color="#369FFF" Offset="0"/>
-                            <GradientStop Color="#d9b5ff" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Border.Background>
-                    <Border.Clip>
-                        <RectangleGeometry Rect="0,0,291,140"/>
-                    </Border.Clip>
-                    <Grid Padding="10">
-                        <TextBlock Text="In stock: 125" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,10,0"/>
-                        <FontIcon Glyph="" FontSize="40" HorizontalAlignment="Right" Foreground="Black"/>
-                    </Grid>
-
-                </Border>
             </Grid>
             <!--Top 5 products sold out-->
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" Margin="15" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Margin="40,20,0,0" FontWeight="Bold">Most Sold Products</TextBlock>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20">
+                    <Border CornerRadius="2" Margin="20 0 25 0" Grid.Column="1" Background="#D9D9D9" Height="120">
+                        <StackPanel Margin="10">
+                            <Image Source="ms-appx:///PhoneSample/iphone.png" Width="50"/>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock>Iphone 15 Pro Max</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">1499$</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="2" Margin="0 0 25 0" Grid.Column="1"  Background="#D9D9D9" Height="120">
+                        <StackPanel Margin="10">
+                            <Image Source="ms-appx:///PhoneSample/iphone.png" Width="50"/>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock>Iphone 15 Pro Max</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">1499$</TextBlock>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="2" Margin="0 0 25 0" Grid.Column="1"  Background="#D9D9D9" Height="120">
+                        <StackPanel Margin="10">
+                            <Image Source="ms-appx:///PhoneSample/iphone.png" Width="50"/>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock>Iphone 15 Pro Max</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">1499$</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="2" Margin="0 0 25 0" Grid.Column="1"  Background="#D9D9D9" Height="120">
+                        <StackPanel Margin="10">
+                            <Image Source="ms-appx:///PhoneSample/iphone.png" Width="50"/>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock>Iphone 15 Pro Max</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">1499$</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="2" Margin="0 0 25 0" Grid.Column="1" Background="#D9D9D9" Height="120">
+                        <StackPanel Margin="10">
+                            <Image Source="ms-appx:///PhoneSample/iphone.png" Width="50"/>
+                            <StackPanel Margin="0,10,0,0">
+                                <TextBlock>Iphone 15 Pro Max</TextBlock>
+                                <TextBlock HorizontalAlignment="Center">1499$</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            
+            <!--Latest order-->
+            <Grid Grid.Row="3" Background="White" Width="800">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBlock HorizontalTextAlignment="Center" FontWeight="Bold">Top 5 products sold out</TextBlock>
+                <TextBlock Margin="20" FontWeight="Bold">Latest orders</TextBlock>
                 <Grid Grid.Row="1">
-                    <controls:DataGrid x:Name="Dashboard" Height="600" Margin="12" AutoGenerateColumns="False"
-                        ItemsSource="{Binding Products}">
+                    <controls:DataGrid x:Name="Dashboard" Height="100" Margin="12" AutoGenerateColumns="False"
+                       ItemsSource="{x:Bind DashboardItems}" >
                         <controls:DataGrid.Columns>
-                            <controls:DataGridTextColumn Header="ID" Width="SizeToHeader" Binding="{Binding Id}" FontSize="20" />
-                            <controls:DataGridTextColumn Header="Name" Width="SizeToCells" Binding="{Binding Name}" FontSize="20" />
-                            <controls:DataGridTextColumn Header="Manufacture" Width="150" Binding="{Binding Manufacture}">
-                                <!--<controls:DataGridTextColumn.ElementStyle>
-                                    <Style TargetType="TextBlock">
-                                        <Setter Property="TextWrapping" Value="Wrap" />
-                                    </Style>
-                                </controls:DataGridTextColumn.ElementStyle>
-                                <controls:DataGridTextColumn.EditingElementStyle>
-                                    <Style TargetType="TextBox">
-                                        <Setter Property="Foreground" Value="Blue" />
-                                    </Style>
-                                </controls:DataGridTextColumn.EditingElementStyle>-->
-                            </controls:DataGridTextColumn>
-                            <controls:DataGridCheckBoxColumn Header="Import" Width="40" Binding="{Binding Import}" />
-                        </controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn Header="Product" Width="SizeToHeader" Binding="{Binding Id}" FontSize="10" 
+                                                         FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Order ID" Width="SizeToHeader" Binding="{Binding OrderId}" FontSize="10" FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Date" Width="SizeToHeader" Binding="{Binding Date}" FontSize="10" FontWeight="Bold" />
+                            <controls:DataGridTextColumn Header="Customer name" Width="SizeToHeader" Binding="{Binding Name}" FontSize="10" FontWeight="Bold" />
+                            <controls:DataGridTextColumn Header="Status" Width="SizeToHeader" Binding="{Binding Status}" FontSize="10" FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Amount" Width="SizeToHeader" Binding="{Binding Amount}" FontSize="10" FontWeight="Bold"/>
+                            </controls:DataGrid.Columns>
                     </controls:DataGrid>
                 </Grid>
             </Grid>

@@ -10,37 +10,40 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>7c9bc8ee-3bbd-4f71-b9b6-3451ea53326a</PackageIdentityName>
     <PackageIdentityPublisher>CN=ADMIN</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
       <PackagePath>MyShop.runtimeconfig.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
       <PackagePath>MyShop.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
       <PackagePath>MyShop.dll.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MyShop.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\order.png">
+      <PackagePath>Icons\order.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
       <PackagePath>MyShop.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
@@ -793,26 +796,35 @@
     <AppxPackagedFile Include="C:\Users\hoai0\.nuget\packages\communitytoolkit.winui.ui.controls.datagrid\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.DataGrid.pri">
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.DataGrid.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Hieu\My-Shop\layout-notemplate\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\money.png">
+      <PackagePath>Icons\money.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\PhoneSample\iphone.png">
+      <PackagePath>PhoneSample\iphone.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\Icons\product.png">
+      <PackagePath>Icons\product.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
