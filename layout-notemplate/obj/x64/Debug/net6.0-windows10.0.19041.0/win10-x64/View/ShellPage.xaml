@@ -39,7 +39,8 @@
                                                       
                      OpenPaneLength="200"
                      IsBackButtonVisible="Collapsed"
-                     IsBackEnabled="False">
+                     IsBackEnabled="False"
+                     >
             <NavigationView.Resources>
                 <LinearGradientBrush x:Key="NavigationViewItemBackgroundSelected">
                     <GradientStop Offset="0" Color="#0A21C6"/>

@@ -97,7 +97,7 @@ public sealed partial class ShellPage : Page
         Frame.Navigate(typeof(View.LoginPage));
         //App.m_window.Close();
     }
-
+    
     private void Page_Unloaded(object sender, RoutedEventArgs e)
     {
         var currentPage = ContentFrame.SourcePageType.FullName;

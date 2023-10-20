@@ -1,1 +1,1 @@
-C:\Users\hoai0\OneDrive\Desktop\Code Wins\My-Shop\layout-notemplate\MyShop.csproj;x64
+C:\Users\ADMIN\Workspace\Windows-C#\My-Shop\layout-notemplate\MyShop.csproj;x64

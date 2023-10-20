@@ -17,7 +17,7 @@
                                                                 
                     CommandParameter="Default">
                 </RadioButton>
-                <RadioButton x:ConnectionId='4' 
+                <RadioButton x:ConnectionId='4' Name="light"
                     Content="Light" 
                                                                  
                     CommandParameter="Light">

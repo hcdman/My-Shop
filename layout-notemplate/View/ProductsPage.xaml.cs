@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -10,6 +11,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -26,4 +28,36 @@ public sealed partial class ProductsPage : Page
     {
         this.InitializeComponent();
     }
+
+
+    BindingList<Product> phones;
+    private void Page_Loaded(object sender, RoutedEventArgs e)
+    {
+         phones = new BindingList<Product>()
+         {
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           new Product("1", "Iphone 15", "China", false, "$1499"),
+           
+         };
+            ContentGridView.ItemsSource = phones;
+    }
+
+    private void AddButton_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(View.AddProductPage));
+    }
 }
+

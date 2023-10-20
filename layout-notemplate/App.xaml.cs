@@ -77,7 +77,16 @@ public partial class App : Application
         m_window.Content = rootFrame;
         // Ensure the MainWindow is active
         m_window.Activate();
-      
+
+        //Auto light mode when start app
+        if (Enum.TryParse("Light", out ElementTheme theme) is true)
+        {
+            if (App.m_window?.Content is FrameworkElement frameworkElement)
+            {
+                frameworkElement.RequestedTheme = theme;
+            }
+        }
+        
     }
 
     void OnNavigationFailed(object sender, NavigationFailedEventArgs e)

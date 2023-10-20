@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -32,5 +33,6 @@ public sealed partial class SettingsPage : Page
     {
         this.InitializeComponent();
         ViewModel = Ioc.Default.GetRequiredService<SettingsViewModel>();
+        light.IsChecked = true;
     }
 }

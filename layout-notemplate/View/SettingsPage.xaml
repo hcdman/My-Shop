@@ -17,7 +17,7 @@
                     Command="{x:Bind ViewModel.SetThemeCommand}"
                     CommandParameter="Default">
                 </RadioButton>
-                <RadioButton 
+                <RadioButton Name="light"
                     Content="Light" 
                     Command="{x:Bind ViewModel.SetThemeCommand}" 
                     CommandParameter="Light">
