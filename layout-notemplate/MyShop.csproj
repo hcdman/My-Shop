@@ -14,11 +14,9 @@
   <ItemGroup>
     <None Remove="Icons\delete.png" />
     <None Remove="Icons\edit.png" />
-    <None Remove="Icons\left.png" />
     <None Remove="Icons\money.png" />
     <None Remove="Icons\order.png" />
     <None Remove="Icons\product.png" />
-    <None Remove="Icons\right.png" />
     <None Remove="PhoneSample\iphone.png" />
     <None Remove="View\CategoryPage.xaml" />
     <None Remove="View\CustomerPage.xaml" />
@@ -41,9 +39,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Icons\delete.png" />
     <Content Include="Icons\edit.png" />
-    <Content Include="Icons\left.png" />
     <Content Include="Icons\money.png" />
-    <Content Include="Icons\right.png" />
     <Content Include="PhoneSample\iphone.png" />
   </ItemGroup>
 

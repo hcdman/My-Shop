@@ -175,7 +175,7 @@
                                                          FontWeight="Bold"/>
                             <controls:DataGridTextColumn Header="Order ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding OrderId}" FontSize="10" FontWeight="Bold"/>
                             <controls:DataGridTextColumn Header="Date" CanUserResize="False" Width="SizeToCells" Binding="{Binding Date}" FontSize="10" FontWeight="Bold" />
-                            <controls:DataGridTextColumn Header="Customer name" CanUserResize="False" Width="SizeToCells" Binding="{Binding Name}" FontSize="10" FontWeight="Bold" />
+                            <controls:DataGridTextColumn Header="Customer name" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Name}" FontSize="10" FontWeight="Bold" />
                             <controls:DataGridTextColumn Header="Status" CanUserResize="False" Width="SizeToCells" Binding="{Binding Status}" FontSize="10" FontWeight="Bold"/>
                             <controls:DataGridTextColumn Header="Amount" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Amount}" FontSize="10" FontWeight="Bold"/>
                             </controls:DataGrid.Columns>
