@@ -11,11 +11,17 @@
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.1",
           "CommunityToolkit.WinUI.UI.Controls.DataGrid": "7.1.2",
+          "MahApps.Metro.IconPacks.Material": "4.11.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
           "Microsoft.WindowsAppSDK": "1.4.231008000",
           "System.Configuration.ConfigurationManager": "7.0.0",
+<<<<<<< HEAD
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.22",
+=======
+          "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.21",
+          "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "6.0.21",
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.29"
         },
         "runtime": {
@@ -32,10 +38,13 @@
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.100.2223.42425"
           },
+<<<<<<< HEAD
           "Microsoft.VisualBasic.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "6.0.2223.42425"
           },
+=======
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
           "Microsoft.Win32.Primitives.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.2223.42425"
@@ -164,10 +173,13 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.2223.42425"
           },
+<<<<<<< HEAD
           "System.Drawing.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "6.0.2223.42425"
           },
+=======
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
           "System.Dynamic.Runtime.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.2223.42425"
@@ -672,10 +684,13 @@
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "6.0.2223.42425"
           },
+<<<<<<< HEAD
           "WindowsBase.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "6.0.2223.42425"
           },
+=======
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
           "mscorlib.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "6.0.2223.42425"
@@ -859,6 +874,219 @@
           }
         }
       },
+      "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64/6.0.21": {
+        "runtime": {
+          "Accessibility.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "DirectWriteForwarder.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "Microsoft.VisualBasic.Forms.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "Microsoft.VisualBasic.dll": {
+            "assemblyVersion": "10.1.0.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "Microsoft.Win32.Registry.AccessControl.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "PresentationCore.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework-SystemCore.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework-SystemData.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework-SystemDrawing.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework-SystemXml.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework-SystemXmlLinq.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.Aero.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.Aero2.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.AeroLite.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.Classic.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.Luna.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.Royale.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationFramework.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationUI.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "ReachFramework.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "System.CodeDom.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Design.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Diagnostics.EventLog.Messages.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.DirectoryServices.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Drawing.Design.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Drawing.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.IO.Packaging.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Printing.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "System.Resources.Extensions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Security.Cryptography.Xml.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Threading.AccessControl.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.2123.36311"
+          },
+          "System.Windows.Controls.Ribbon.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "System.Windows.Forms.Design.Editors.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Windows.Forms.Design.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Windows.Forms.Primitives.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Windows.Forms.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36406"
+          },
+          "System.Windows.Input.Manipulations.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "System.Windows.Presentation.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "System.Xaml.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "UIAutomationClient.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "UIAutomationClientSideProviders.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "UIAutomationProvider.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "UIAutomationTypes.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "WindowsBase.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          },
+          "WindowsFormsIntegration.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.2123.36405"
+          }
+        },
+        "native": {
+          "D3DCompiler_47_cor3.dll": {
+            "fileVersion": "10.0.22621.755"
+          },
+          "PenImc_cor3.dll": {
+            "fileVersion": "6.0.2123.36405"
+          },
+          "PresentationNative_cor3.dll": {
+            "fileVersion": "6.0.23.36205"
+          },
+          "vcruntime140_cor3.dll": {
+            "fileVersion": "14.36.32530.0"
+          },
+          "wpfgfx_cor3.dll": {
+            "fileVersion": "6.0.2123.36405"
+          }
+        }
+      },
       "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.29": {
         "runtime": {
           "Microsoft.Windows.SDK.NET.dll": {
@@ -887,6 +1115,18 @@
           "lib/net5.0-windows10.0.18362/CommunityToolkit.WinUI.UI.Controls.DataGrid.dll": {
             "assemblyVersion": "7.1.0.0",
             "fileVersion": "7.1.2.1"
+          }
+        }
+      },
+      "MahApps.Metro.IconPacks.Material/4.11.0": {
+        "runtime": {
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.11.0.12"
+          },
+          "lib/net5.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.11.0.12"
           }
         }
       },
@@ -1052,6 +1292,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64/6.0.21": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
     "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.29": {
       "type": "runtimepack",
       "serviceable": false,
@@ -1070,6 +1315,13 @@
       "sha512": "sha512-F73oYdYza8zhDwGHdXCZJJMeiDJ6nR97WPe180o7jOX3U90ZIqvU/GtYZdN3/x8DOS48t5GQG70LqxfyIGeaxw==",
       "path": "communitytoolkit.winui.ui.controls.datagrid/7.1.2",
       "hashPath": "communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512"
+    },
+    "MahApps.Metro.IconPacks.Material/4.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZCuuxWHvXxl39XBYXk4PCMUVtw1pevT5AE1qsj7VRy2tRtDYbzHWYW0FbnH+Vf0rP7BogZrRlKns3zFEkDEjFQ==",
+      "path": "mahapps.metro.iconpacks.material/4.11.0",
+      "hashPath": "mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/7.0.0": {
       "type": "package",

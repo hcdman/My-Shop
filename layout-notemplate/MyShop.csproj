@@ -12,6 +12,8 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Icons\delete.png" />
+    <None Remove="Icons\edit.png" />
     <None Remove="Icons\money.png" />
     <None Remove="Icons\order.png" />
     <None Remove="Icons\product.png" />
@@ -36,6 +38,8 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Icons\delete.png" />
+    <Content Include="Icons\edit.png" />
     <Content Include="Icons\money.png" />
     <Content Include="PhoneSample\iphone.png" />
   </ItemGroup>
@@ -43,6 +47,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.DataGrid" Version="7.1.2" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231008000" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />

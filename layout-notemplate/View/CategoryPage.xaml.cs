@@ -11,6 +11,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
+using MyShop.ViewModel;
 using Windows.Foundation.Collections;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -25,5 +26,6 @@ public sealed partial class CategoryPage : Page
     public CategoryPage()
     {
         this.InitializeComponent();
+        this.DataContext = new CategoryViewModel();
     }
 }

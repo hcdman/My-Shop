@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     x:Class="MyShop.View.OrdersPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,7 +11,87 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock>Orders</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="15" FontWeight="Bold" Margin="10">Order</TextBlock>
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBox x:ConnectionId='6' x:Name="CustomerNameTextBox" PlaceholderText="Customer Name    " Width="180"/>
+                <Button Margin="8,0,0,0">Search</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="1">
+                <TextBox x:ConnectionId='4' Margin="0,0,10,0" x:Name="FromDay" PlaceholderText="From day" Width="100"/>
+                <TextBox x:ConnectionId='5'  Margin="0,0,20,0" x:Name="ToDay" PlaceholderText="To day" Width="100"/>
+                <Button Content="Filter"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="35,10,0,10" Grid.Column="2">
+                <Button Margin="0,0,10,0" Content="Remove Filder"/>
+                <Button Content="Add"/>
+            </StackPanel>
+
+        </Grid>
+
+        <!--Data of order-->
+        <Grid Grid.Row="2" Background="White" Width="800" Height="350">
+            <controls:DataGrid x:ConnectionId='2' x:Name="CustomerDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" HorizontalAlignment="Center">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Header="Product" CanUserResize="False" Width="SizeToCells" Binding="{Binding Product}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" CanUserResize="False" Width="SizeToHeader" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Date" Binding="{Binding Date}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Customer Name" CanUserResize="False" Width="SizeToHeader" Binding="{Binding CustomerName}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Status" CanUserResize="False" Width="SizeToCells" Binding="{Binding Status}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Amount" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Amount}" FontWeight="Medium"/>
+                    <controls:DataGridTemplateColumn Header="Action" IsReadOnly="True" CanUserResize="False"  Width="SizeToCells">
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Margin="5 0 0 0">
+                                        <Image  Source="ms-appx:///Icons/edit.png" Width="16"/>
+                                    </Button>
+                                    <Button Margin="5 0 0 0" >
+                                        <Image  Source="ms-appx:///Icons/delete.png" Width="16"/>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </Grid>
+        <!--Pagination-->
+        <Grid Grid.Row="3" Background="white" Width="700">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <TextBlock FontWeight="Bold">Order per page</TextBlock>
+                <Border Background="#D9D9D9" Margin="5,0,0,0">
+                    <TextBlock>10</TextBlock>
+                </Border>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10,0,0,0">
+                <Button>Previous</Button>
+                <Border Margin="10"  Background="#D9D9D9">
+                    <TextBlock>1/10</TextBlock>
+                </Border>
+                <Button>Next</Button>
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </Page>
 

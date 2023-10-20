@@ -1,14 +1,27 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "94bqjdeCQ6ha/goiXAGwdux3Pi1036tB0PG0sAgLyzAMkPt1tsBzScir+MWaiOGhqDAPT/IM5ExpJtd/X0TujQ==",
+=======
+  "dgSpecHash": "2ucfsh18KfckuFCyIj/w/qw5Nwvh+rYdgwX0vs8OkKVdDY+2irtBbIYmEOTVRLJtUHM21coOVhaFNQmyQt3qwQ==",
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\My-Shop\\layout-notemplate\\MyShop.csproj",
   "expectedPackageFiles": [
+<<<<<<< HEAD
     "C:\\Users\\ADMIN\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\communitytoolkit.winui.ui.controls.datagrid\\7.1.2\\communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+=======
+    "C:\\Users\\hoai0\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\hoai0\\.nuget\\packages\\communitytoolkit.winui.ui.controls.datagrid\\7.1.2\\communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512",
+    "C:\\Users\\hoai0\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512",
+    "C:\\Users\\hoai0\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\hoai0\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\hoai0\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+>>>>>>> 41080171267a35d15a10331b074bc19a1e14d365
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsappsdk\\1.4.231008000\\microsoft.windowsappsdk.1.4.231008000.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
