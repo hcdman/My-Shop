@@ -43,11 +43,11 @@
             <controls:DataGrid x:Name="CustomerDataGrid" ItemsSource="{Binding Customers}" AutoGenerateColumns="False" HorizontalAlignment="Center">
                 
                 <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn Header="Id" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Id}" FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserResize="False" Width="SizeToCells" FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Address" Binding="{Binding Address}" CanUserResize="False"  Width="auto" FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" CanUserResize="False"  Width="SizeToCells" FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Phone" Binding="{Binding Phone}" CanUserResize="False"  Width="SizeToCells" FontWeight="Bold"/>
+                    <controls:DataGridTextColumn Header="Id" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Id}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserResize="False" Width="SizeToCells" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Address" Binding="{Binding Address}" CanUserResize="False"  Width="auto" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Phone" Binding="{Binding Phone}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
                     <controls:DataGridTemplateColumn Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
                         <controls:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

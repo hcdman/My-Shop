@@ -42,9 +42,9 @@
         <Grid Grid.Row="2" Background="White" Width="700" Height="350">
             <controls:DataGrid x:ConnectionId='2' x:Name="CustomerDataGrid" ItemsSource="{Binding Categories}" AutoGenerateColumns="False" HorizontalAlignment="Center">
                 <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn Header="Id" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Id}" FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserResize="False" Width="SizeToHeader"  FontWeight="Bold"/>
-                    <controls:DataGridTextColumn Header="Address" Binding="{Binding Instock}" CanUserResize="False"  Width="auto"  FontWeight="Bold"/>
+                    <controls:DataGridTextColumn Header="Id" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Id}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Name" Binding="{Binding Name}" CanUserResize="False" Width="SizeToHeader"  FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Address" Binding="{Binding Instock}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
                     <controls:DataGridTemplateColumn Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader">
                         <controls:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -70,7 +70,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <TextBlock FontWeight="Bold">Customer per page</TextBlock>
+                <TextBlock FontWeight="Bold">Category per page</TextBlock>
                 <Border Background="#D9D9D9" Margin="5,0,0,0">
                     <TextBlock>10</TextBlock>
                 </Border>
