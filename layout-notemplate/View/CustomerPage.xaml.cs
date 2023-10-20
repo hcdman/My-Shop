@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -25,5 +26,6 @@ public sealed partial class CustomerPage : Page
     public CustomerPage()
     {
         this.InitializeComponent();
+        this.DataContext = new CustomerViewModel();
     }
 }

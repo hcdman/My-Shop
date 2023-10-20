@@ -104,7 +104,7 @@
 
             </Grid>
             <!--Top 5 products sold out-->
-            <Grid Grid.Row="2" Margin="15" Background="White">
+            <Grid Grid.Row="2" Margin="0,15,5,15" Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
@@ -166,18 +166,18 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBlock Margin="20" FontWeight="Bold">Latest orders</TextBlock>
+                <TextBlock Margin="10" FontWeight="Bold">Latest orders</TextBlock>
                 <Grid Grid.Row="1">
                     <controls:DataGrid x:ConnectionId='2' x:Name="Dashboard" Height="100" Margin="12" AutoGenerateColumns="False"
                                                              >
                         <controls:DataGrid.Columns>
-                            <controls:DataGridTextColumn Header="Product" Width="SizeToHeader" Binding="{Binding Id}" FontSize="10" 
+                            <controls:DataGridTextColumn Header="Product" CanUserResize="False" Width="SizeToHeader " Binding="{Binding Id}" FontSize="10" 
                                                          FontWeight="Bold"/>
-                            <controls:DataGridTextColumn Header="Order ID" Width="SizeToHeader" Binding="{Binding OrderId}" FontSize="10" FontWeight="Bold"/>
-                            <controls:DataGridTextColumn Header="Date" Width="SizeToHeader" Binding="{Binding Date}" FontSize="10" FontWeight="Bold" />
-                            <controls:DataGridTextColumn Header="Customer name" Width="SizeToHeader" Binding="{Binding Name}" FontSize="10" FontWeight="Bold" />
-                            <controls:DataGridTextColumn Header="Status" Width="SizeToHeader" Binding="{Binding Status}" FontSize="10" FontWeight="Bold"/>
-                            <controls:DataGridTextColumn Header="Amount" Width="SizeToHeader" Binding="{Binding Amount}" FontSize="10" FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Order ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding OrderId}" FontSize="10" FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Date" CanUserResize="False" Width="SizeToCells" Binding="{Binding Date}" FontSize="10" FontWeight="Bold" />
+                            <controls:DataGridTextColumn Header="Customer name" CanUserResize="False" Width="SizeToCells" Binding="{Binding Name}" FontSize="10" FontWeight="Bold" />
+                            <controls:DataGridTextColumn Header="Status" CanUserResize="False" Width="SizeToCells" Binding="{Binding Status}" FontSize="10" FontWeight="Bold"/>
+                            <controls:DataGridTextColumn Header="Amount" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Amount}" FontSize="10" FontWeight="Bold"/>
                             </controls:DataGrid.Columns>
                     </controls:DataGrid>
                 </Grid>
