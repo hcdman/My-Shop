@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MyShop.View.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyShop.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel
+        x:Name="ContentArea">
+            <StackPanel>
+                <RadioButton 
+                    Content="Default" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}"
+                    CommandParameter="Default">
+                </RadioButton>
+                <RadioButton Name="light"
+                    Content="Light" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}" 
+                    CommandParameter="Light">
+                </RadioButton>
+                <RadioButton 
+                    Content="Dark" 
+                    Command="{x:Bind ViewModel.SetThemeCommand}" 
+                    CommandParameter="Dark">
+                </RadioButton>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
