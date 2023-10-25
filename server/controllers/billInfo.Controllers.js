@@ -19,7 +19,7 @@ exports.getAllBillInfo = async (req, res) => {
   });
 };
 
-//lấy chi tiết tất cả thông tin hóa đơn (sohd) (masp, teensp, ...)
+//lấy chi tiết tất cả thông tin hóa đơn (sohd) (masp, tensp, ...)
 exports.getBillInfo = async (req, res) => {
   const sohd = req.params.id;
 

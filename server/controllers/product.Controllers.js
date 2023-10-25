@@ -1,5 +1,6 @@
 const mysql = require("mysql");
 const cloudinary = require("cloudinary").v2;
+const fs = require("fs");
 
 const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
@@ -47,8 +48,12 @@ exports.getProduct = async (req, res) => {
 
 //thêm sản phẩm mới
 exports.addNew = async (req, res) => {
-  const { masp, anh, tensp, hangsx, gia_goc, gia, sl, maloai, giamgia } =
-    req.body;
+  data = JSON.parse(req.body.data);
+  console.log("data");
+  const b64 = Buffer.from(req.file.buffer).toString("base64");
+  let dataURI = "data:" + req.file.mimetype + ";base64," + b64;
+
+  const { masp, tensp, hangsx, anh, gia_goc, gia, sl, maloai, giamgia } = data;
 
   if (
     !masp ||
@@ -75,7 +80,7 @@ exports.addNew = async (req, res) => {
           if (result.length < 1) {
             return res.status(400).json({ message: "Mã loại không tồn tại" });
           } else {
-            cloudinary.uploader.upload(anh, function (error, result) {
+            cloudinary.uploader.upload(dataURI, function (error, result) {
               if (error)
                 return res.status(400).json({ message: "Cloundinary Error" });
 
@@ -201,4 +206,69 @@ exports.update = async (req, res) => {
       }
     }
   );
+};
+
+// lấy danh sách top 5 sản phẩm bán chạy nhất
+exports.getTop5 = async (req, res) => {
+  let sql =
+    "SELECT * FROM cthd ct, sanpham sp where ct.masp = sp.masp  GROUP BY ct.masp ORDER BY sum(ct.sl) DESC LIMIT 5";
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+
+    return res.status(200).json({
+      product: result,
+    });
+  });
+};
+
+function stringToPrice(price) {
+  switch (price) {
+    case "Below 2.000.000":
+      return "gia < 2000000";
+    case "2.000.000 - 3.999.999":
+      return "gia >= 2000000 and gia < 4000000";
+    case "4.000.000 - 6.999.999":
+      return "gia >= 4000000 and gia < 7000000";
+    case "7.000.000 - 12.999.999":
+      return "gia >= 7000000 and gia < 13000000";
+    case "13.000.000 - 20.000.000":
+      return "gia >= 13000000 and gia <= 20000000";
+    case "Over 20.000.000":
+      return "gia > 20000000";
+  }
+  return "gia > 0";
+}
+
+//filter product
+exports.filter = async (req, res) => {
+  const { name, price, maloai, SortBy, per_page, page } = req.body;
+
+  let sql = "SELECT * FROM sanpham";
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+
+    let skip = (page - 1) * per_page;
+    sql = `select *, count(*) over() as Total from sanpham where tensp like '%${name}%' and maloai like '%${maloai}%' and ${stringToPrice(
+      price
+    )}`;
+    if (SortBy === "Price descending") sql += ` order by gia desc, masp`;
+    else if (SortBy === "Price ascending") sql += ` order by gia asc, masp`;
+    else sql += " order by masp";
+    sql += ` limit ${per_page} offset ${skip}`;
+
+    try {
+      db.query(sql, (error, result) => {
+        if (error) return res.status(400).json({ message: "Server error" });
+        result = JSON.parse(JSON.stringify(result));
+        return res.status(200).json({
+          product: result,
+        });
+      });
+    } catch (e) {
+      console.log(e);
+      res.status(400).json({ message: "Server error" });
+    }
+  });
 };

@@ -5,6 +5,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+var multer = require("multer")();
 
 const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
@@ -27,7 +28,7 @@ app.use(cors());
 
 app.use("/auth", require("./routes/auth"));
 app.use("/type", require("./routes/type"));
-app.use("/product", require("./routes/product"));
+app.use("/product", multer.single("file"), require("./routes/product"));
 app.use("/customer", require("./routes/customer"));
 app.use("/bill", require("./routes/bill"));
 app.use("/cthd", require("./routes/billInfo"));

@@ -145,3 +145,57 @@ exports.update = async (req, res) => {
     }
   );
 };
+
+// get top 10 latest order
+exports.latest = async (req, res) => {
+  let sql =
+    'SELECT hd.sohd, DATE_FORMAT(hd.nghd, "%d/%m/%Y") AS nghd, kh.hoten, hd.trigia FROM hoadon hd, khachhang kh WHERE hd.makh = kh.makh ORDER BY hd.nghd DESC LIMIT 10';
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+
+    return res.status(200).json({
+      bill: result,
+    });
+  });
+};
+
+// get top 10 latest order in week
+exports.currentWeek = async (req, res) => {
+  let sql =
+    "SELECT * FROM hoadon WHERE YEARWEEK(nghd, 1) = YEARWEEK(CURDATE(), 1) ";
+
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+
+    return res.status(200).json(result.length);
+  });
+};
+
+// get top 10 latest order in month
+exports.currentMonth = async (req, res) => {
+  let sql =
+    "SELECT * FROM hoadon WHERE YEAR(nghd) = YEAR(CURDATE()) and MONTH(nghd) = MONTH(CURDATE())";
+
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+
+    return res.status(200).json(result.length);
+  });
+};
+
+// get top 10 latest order in month
+exports.todayMoney = async (req, res) => {
+  let sql =
+    "SELECT SUM(trigia) FROM hoadon WHERE YEAR(nghd) = YEAR(CURDATE()) and MONTH(nghd) = MONTH(CURDATE()) and DAY(nghd) = DAY(CURDATE())";
+
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+    money = result[0]["SUM(trigia)"];
+    if (money == null) money = 0;
+    return res.status(200).json(money);
+  });
+};

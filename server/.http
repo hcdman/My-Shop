@@ -7,6 +7,15 @@ Content-Type: application/json
 }
 
 ###
+POST https://test-deploy-jbnz-b3pzz1uzt-nxhawk.vercel.app/auth/login
+Content-Type: application/json
+
+{
+  "username":"haonhat",
+  "password":"123aa"
+}
+
+###
 POST http://localhost:5000/auth/register
 Content-Type: application/json
 
@@ -21,8 +30,8 @@ POST http://localhost:5000/type/add
 Content-Type: application/json
 
 {
-  "maloai": "ML01",
-  "tenloai": "Apple"
+  "maloai": "ML05",
+  "tenloai": "Xiaomi"
 }
 
 
@@ -86,9 +95,9 @@ POST http://localhost:5000/customer/add
 Content-Type: application/json
 
 {
-  "makh":"KH01",
-  "hoten":"Nguyen Van A",
-  "dchi":"23/5 Nguyen Trai, Q5, TpHCM",
+  "makh":"KH03",
+  "hoten":"Tran Thi C",
+  "dchi":"Đống Đa, Hà Nội",
   "sodt":"0908256478",
   "ngsinh":"1974-4-3",
   "email":"jsi@gmail.com",
@@ -123,11 +132,12 @@ POST http://localhost:5000/bill/add
 Content-Type: application/json
 
 {
-  "sohd":1002,
-  "nghd":"2023-07-23",
+  "sohd":1003,
+  "nghd":"2023-10-20",
   "makh":"KH01",
   "trigia":140601500
 }
+
 
 ###
 GET http://localhost:5000/bill/getall
@@ -144,8 +154,8 @@ Content-Type: application/json
 
 {
   "nghd":"2023-08-23",
-  "makh":"KH01",
-  "trigia":140601500
+  "makh":"KH03",
+  "trigia":200451500
 }
 
 ###
@@ -153,9 +163,9 @@ POST http://localhost:5000/cthd/add
 Content-Type: application/json
 
 {
-  "sohd":1002,
-  "masp":"SP04",
-  "sl":1
+  "sohd":1003,
+  "masp":"SP10",
+  "sl":6
 }
 
 ###
@@ -163,3 +173,34 @@ GET http://localhost:5000/cthd/getall
 
 ###
 GET http://localhost:5000/cthd/get/1002
+
+### 
+POST https://test-deploy-nxhawk.vercel.app/auth/login
+Content-Type: application/json
+
+{
+  "username":"haonhat",
+  "password":"123aa"
+}
+
+###
+GET http://localhost:5000/product/top5
+
+###
+GET http://localhost:5000/bill/latest
+
+###
+GET http://localhost:5000/bill/todayMoney
+
+###
+POST http://localhost:5000/product/filter
+Content-Type: application/json
+
+{
+  "name":"iphone", 
+  "price":"Over 20.000.000", 
+  "maloai":"ML01", 
+  "SortBy":"None",
+  "per_page": 2,
+  "page":1
+}
