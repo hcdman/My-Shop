@@ -1,5 +1,6 @@
 ## Link Test Server
-https://test-deploy-jbnz-b3pzz1uzt-nxhawk.vercel.app/
+
+https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/
 
 ## Tech Stack
 
