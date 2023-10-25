@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IuzDTQ1d1jxTswHbEzesZSNWuwqICgDjcmERQ3rN5Jl1Vk47862fvs8r8RUyv4FkbL8W8AmYyhkEqWYDXh78fA==",
+  "dgSpecHash": "vJ4oW6jJYSUaz4LeAcWyKOHHsR7hk9NPGmt99pzyVuf5lpUAZu6+whAeTsAUrUHaP6sXmUraBNoOzsUMWBhpmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AD\\Downloads\\My-Shop-layout-notemplate\\My-Shop-layout-notemplate\\layout-notemplate\\MyShop.csproj",
+  "projectFilePath": "E:\\DoAn\\Win\\My-Shop\\layout-notemplate\\MyShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AD\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\communitytoolkit.winui.ui.controls.datagrid\\7.1.2\\communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512",
@@ -17,16 +17,16 @@
     "C:\\Users\\AD\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.23\\microsoft.netcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.23\\microsoft.netcore.app.runtime.win-arm64.6.0.23.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.23\\microsoft.netcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.23\\microsoft.netcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.23.nupkg.sha512",
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.23.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.23.nupkg.sha512",
     "C:\\Users\\AD\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.23\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.23.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.23\\microsoft.netcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
-    "C:\\Users\\AD\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.23.nupkg.sha512"
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
+    "C:\\Users\\AD\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512"
   ],
   "logs": []
 }

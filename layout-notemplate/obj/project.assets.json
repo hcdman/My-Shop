@@ -2355,11 +2355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AD\\Downloads\\My-Shop-layout-notemplate\\My-Shop-layout-notemplate\\layout-notemplate\\MyShop.csproj",
+      "projectUniqueName": "E:\\DoAn\\Win\\My-Shop\\layout-notemplate\\MyShop.csproj",
       "projectName": "MyShop",
-      "projectPath": "C:\\Users\\AD\\Downloads\\My-Shop-layout-notemplate\\My-Shop-layout-notemplate\\layout-notemplate\\MyShop.csproj",
+      "projectPath": "E:\\DoAn\\Win\\My-Shop\\layout-notemplate\\MyShop.csproj",
       "packagesPath": "C:\\Users\\AD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AD\\Downloads\\My-Shop-layout-notemplate\\My-Shop-layout-notemplate\\layout-notemplate\\obj\\",
+      "outputPath": "E:\\DoAn\\Win\\My-Shop\\layout-notemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
