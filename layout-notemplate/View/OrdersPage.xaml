@@ -30,13 +30,13 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="1">
-                <TextBox Margin="0,0,10,0" x:Name="FromDay" PlaceholderText="From day" Width="100"/>
-                <TextBox  Margin="0,0,20,0" x:Name="ToDay" PlaceholderText="To day" Width="100"/>
+                <CalendarDatePicker PlaceholderText="From day" Margin="5" />
+                <CalendarDatePicker PlaceholderText="To day" Margin="5" />
                 <Button Content="Filter"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="35,10,0,10" Grid.Column="2">
-                <Button Margin="0,0,10,0" Content="Remove Filder"/>
+                <Button Margin="0,0,10,0" Content="Remove Filter"/>
                 <Button Content="Add"/>
             </StackPanel>
 

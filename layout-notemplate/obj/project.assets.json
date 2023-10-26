@@ -204,6 +204,51 @@
           }
         }
       },
+      "Syncfusion.Chart.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Core.WinUI": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Core.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Licensing": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/23.1.42": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.Configuration.ConfigurationManager/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -499,6 +544,51 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
+      "Syncfusion.Chart.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Core.WinUI": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Core.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Licensing": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/23.1.42": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.Configuration.ConfigurationManager/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -776,6 +866,51 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
+      "Syncfusion.Chart.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Core.WinUI": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Core.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Licensing": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/23.1.42": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        }
+      },
       "System.Configuration.ConfigurationManager/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -1051,6 +1186,51 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Syncfusion.Chart.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Core.WinUI": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Core.WinUI/23.1.42": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.3.230502000",
+          "Syncfusion.Licensing": "23.1.42"
+        },
+        "compile": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll": {
+            "related": ".pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/23.1.42": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {}
         }
       },
       "System.Configuration.ConfigurationManager/7.0.0": {
@@ -2185,6 +2365,105 @@
         "tools/x86/GenXbf.dll"
       ]
     },
+    "Syncfusion.Chart.WinUI/23.1.42": {
+      "sha512": "q4yxaQ9R7cfUkmHErahBrVGPtYcqqM+kaBDxvLW4qGXEEPMEl3ZJcDh7DM13Cqqi4OJ2V3cmHtGiRdme8nku1w==",
+      "type": "package",
+      "path": "syncfusion.chart.winui/23.1.42",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.dll",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.pri",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI.xml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartAxis/Themes/ChartAxis.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartAxis/Themes/ChartAxis.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/ChartSeries.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/ChartSeries.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/Generic.Legend.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/Generic.Legend.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/Generic.Symbol.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/ChartSeries/Themes/Generic.Symbol.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Core/Legend/Themes/LegendSymbols.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Core/Legend/Themes/LegendSymbols.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Core/Legend/Themes/SfLegend.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Core/Legend/Themes/SfLegend.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/Chart/sfchart.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/Chart/sfchart.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/ChartAxis/chartaxis.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/ChartAxis/chartaxis.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/ChartSeries/chartseries.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/ChartSeries/chartseries.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/generic.common.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/generic.common.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/generic.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/generic.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/themeresources.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Chart.WinUI/Themes/themeresources.xbf",
+        "syncfusion.chart.winui.23.1.42.nupkg.sha512",
+        "syncfusion.chart.winui.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Core.WinUI/23.1.42": {
+      "sha512": "6fqyLv+blVlYpTVokbK+jtEnhdE9C2LV5hWhw/XulXQyS/N/QxWoisB6tDhlJ2nVMLMGTIK3A9ij50NwF5CHAA==",
+      "type": "package",
+      "path": "syncfusion.core.winui/23.1.42",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.dll",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.pri",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI.xml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/Common.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Compact.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/DensityStyles/Standard.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/TextButton.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/avatarview.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/generic.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shadowstyle.xbf",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xaml",
+        "lib/net6.0-windows10.0/Syncfusion.Core.WinUI/Themes/shimmer.xbf",
+        "syncfusion.core.winui.23.1.42.nupkg.sha512",
+        "syncfusion.core.winui.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Licensing/23.1.42": {
+      "sha512": "1SYem8VeJAJw41vLx8sfc2gm8ooWhoOArrv+OTaXJrQLo1psu2SjubfxgpUTJdXUSD/POjkxAk4Xm6kuk8sqQg==",
+      "type": "package",
+      "path": "syncfusion.licensing/23.1.42",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.23.1.42.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
     "System.Configuration.ConfigurationManager/7.0.0": {
       "sha512": "WvRUdlL1lB0dTRZSs5XcQOd5q9MYNk90GkbmRmiCvRHThWiojkpGqWdmEDJdXyHbxG/BhE5hmVbMfRLXW9FJVA==",
       "type": "package",
@@ -2345,27 +2624,28 @@
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.756",
       "Microsoft.WindowsAppSDK >= 1.4.231008000",
+      "Syncfusion.Chart.WinUI >= 23.1.42",
       "System.Configuration.ConfigurationManager >= 7.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Users\\hoai0\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\My-Shop\\layout-notemplate\\MyShop.csproj",
+      "projectUniqueName": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\MyShop.csproj",
       "projectName": "MyShop",
-      "projectPath": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\My-Shop\\layout-notemplate\\MyShop.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Workspace\\Windows-C#\\My-Shop\\layout-notemplate\\obj\\",
+      "projectPath": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\MyShop.csproj",
+      "packagesPath": "C:\\Users\\hoai0\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoai0\\OneDrive\\Desktop\\Code Wins\\My-Shop\\layout-notemplate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hoai0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2416,6 +2696,10 @@
             "target": "Package",
             "version": "[1.4.231008000, )"
           },
+          "Syncfusion.Chart.WinUI": {
+            "target": "Package",
+            "version": "[23.1.42, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[7.0.0, )"
@@ -2435,27 +2719,27 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -2463,15 +2747,15 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -2482,7 +2766,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
