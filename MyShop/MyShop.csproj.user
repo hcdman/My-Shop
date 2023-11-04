@@ -17,6 +17,9 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="View\StasticsChild.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UpdateCustomerPage.xaml">
       <SubType>Designer</SubType>
     </Page>

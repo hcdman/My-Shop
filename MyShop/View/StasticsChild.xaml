@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MyShop.View.StasticsChild"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyShop.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    xmlns:ViewModel="using:MyShop.ViewModel"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+     Foreground="{ThemeResource MyForegroundThemeBrush}">
+
+    <Grid Margin="{StaticResource PageContentMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock FontWeight="Bold" FontSize="20">Product Stastics</TextBlock>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Margin="2" Click="OtherView" Name="ViewProduct">View Revenue Stastics</Button>
+                <Button Margin="2" Click="WeekClick" Name="Week">Week</Button>
+                <Button Margin="2" Click="MonthClick" Name="Month">Month</Button>
+                <Button Margin="2" Click="YearClick" Name="Year" Background=" #FF00FF00 " >Year</Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <chart:SfCircularChart Height="500">
+                <chart:SfCircularChart.Legend >
+                    <chart:ChartLegend ToggleSeriesVisibility="True"/>
+                </chart:SfCircularChart.Legend>
+                <chart:SfCircularChart.Series>
+                    <chart:PieSeries  LegendIcon="Rectangle"
+                        ItemsSource="{Binding Saless}"
+						 ShowDataLabels="True"
+                         XBindingPath="Product"
+						 EnableTooltip="True"
+                         YBindingPath="SalesRate"
+                                      Radius = "0.9">
+                        <chart:PieSeries.DataLabelSettings>
+                            <chart:CircularDataLabelSettings Context="Percentage" UseSeriesPalette="True" 
+					ShowConnectorLine="True" 
+					ConnectorHeight="40"
+					Position="Outside"/>
+
+                        </chart:PieSeries.DataLabelSettings>
+                    </chart:PieSeries>
+                </chart:SfCircularChart.Series>
+                <chart:SfCircularChart.Header>
+                    <TextBlock Text="Products Sales" 
+                           HorizontalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="Blue"/>
+                </chart:SfCircularChart.Header>
+            </chart:SfCircularChart>
+        </Grid>
+    </Grid>
+</Page>
