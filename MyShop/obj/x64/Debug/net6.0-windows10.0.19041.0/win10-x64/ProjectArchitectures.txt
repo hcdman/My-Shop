@@ -1,0 +1,1 @@
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\MyShop.csproj;x64
