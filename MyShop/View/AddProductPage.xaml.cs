@@ -13,6 +13,8 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using MyShop.ViewModel;
+using System.Threading;
+using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -30,12 +32,17 @@ namespace MyShop.View
             this.DataContext = new AddProductViewModel();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var dataSource = (AddProductViewModel)DataContext;
-            dataSource.addNewProduct();
+            var success = await dataSource.addNewProduct();
 
-            //Frame.Navigate(typeof(View.ProductsPage));
+            if (success)
+            {
+                await Task.Delay(1000);
+                Frame.Navigate(typeof(View.ProductsPage));
+            }
+
         }
     }
 }

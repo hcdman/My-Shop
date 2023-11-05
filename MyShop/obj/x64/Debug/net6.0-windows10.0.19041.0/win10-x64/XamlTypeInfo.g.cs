@@ -224,7 +224,7 @@ namespace MyShop.MyShop_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[160];
+            _typeNameTable = new string[161];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -383,10 +383,11 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeNameTable[155] = "MyShop.View.StatisticsPage";
             _typeNameTable[156] = "MyShop.View.UpdateCategoryPage";
             _typeNameTable[157] = "MyShop.View.UpdateCustomerPage";
-            _typeNameTable[158] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
-            _typeNameTable[159] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
+            _typeNameTable[158] = "MyShop.View.UpdateProductPage";
+            _typeNameTable[159] = "Syncfusion.UI.Xaml.Core.DoubleToObjectConverter";
+            _typeNameTable[160] = "Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter";
 
-            _typeTable = new global::System.Type[160];
+            _typeTable = new global::System.Type[161];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -547,8 +548,9 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeTable[155] = typeof(global::MyShop.View.StatisticsPage);
             _typeTable[156] = typeof(global::MyShop.View.UpdateCategoryPage);
             _typeTable[157] = typeof(global::MyShop.View.UpdateCustomerPage);
-            _typeTable[158] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
-            _typeTable[159] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
+            _typeTable[158] = typeof(global::MyShop.View.UpdateProductPage);
+            _typeTable[159] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter);
+            _typeTable[160] = typeof(global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -645,8 +647,9 @@ namespace MyShop.MyShop_XamlTypeInfo
         private object Activate_155_StatisticsPage() { return new global::MyShop.View.StatisticsPage(); }
         private object Activate_156_UpdateCategoryPage() { return new global::MyShop.View.UpdateCategoryPage(); }
         private object Activate_157_UpdateCustomerPage() { return new global::MyShop.View.UpdateCustomerPage(); }
-        private object Activate_158_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
-        private object Activate_159_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
+        private object Activate_158_UpdateProductPage() { return new global::MyShop.View.UpdateProductPage(); }
+        private object Activate_159_DoubleToObjectConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToObjectConverter(); }
+        private object Activate_160_DoubleToVisibilityConverter() { return new global::Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -2064,9 +2067,16 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 158:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
+            case 158:   //  MyShop.View.UpdateProductPage
+                userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_158_UpdateProductPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 159:   //  Syncfusion.UI.Xaml.Core.DoubleToObjectConverter
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_158_DoubleToObjectConverter;
+                userType.Activator = Activate_159_DoubleToObjectConverter;
                 userType.AddMemberName("TrueValue");
                 userType.AddMemberName("FalseValue");
                 userType.AddMemberName("NullValue");
@@ -2076,9 +2086,9 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 159:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
+            case 160:   //  Syncfusion.UI.Xaml.Core.DoubleToVisibilityConverter
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Syncfusion.UI.Xaml.Core.DoubleToObjectConverter"));
-                userType.Activator = Activate_159_DoubleToVisibilityConverter;
+                userType.Activator = Activate_160_DoubleToVisibilityConverter;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;

@@ -16,7 +16,7 @@ namespace MyShop.ViewModel
     {
         HandleAPI api = new HandleAPI();
 
-        private List<Product> _tmpProducts = new List<Product>();   
+        private List<Product> _tmpProducts = new List<Product>();
 
         private BindingList<Product> _products;
         public BindingList<Product> Products
@@ -98,7 +98,7 @@ namespace MyShop.ViewModel
             }
         }
 
-        public ProductPageViewModel() 
+        public ProductPageViewModel()
         {
             SelectOption1 = new BindingList<string>();
             SelectOption1.Add("Below 2.000.000");
@@ -201,10 +201,10 @@ namespace MyShop.ViewModel
                 AllType.Add(item);
         }
 
-        private async void FilterFunc(bool reload = true)
+        public async void FilterFunc(bool reload = true)
         {
             if (reload) Page = 1;
-            ListProduct products = await api.Filter(SearchName, Option1, maloai:Type.maloai, SortBy:Option2, per_page: PerPage, page: Page);
+            ListProduct products = await api.Filter(SearchName, Option1, maloai: Type.maloai, SortBy: Option2, per_page: PerPage, page: Page);
             Products = new BindingList<Product>();
             foreach (var item in products.product)
             {
@@ -226,7 +226,6 @@ namespace MyShop.ViewModel
             Type = new TypeProduct();
             Type.maloai = "";
             FilterFunc();
-            
         }
 
         private void NewPage(int num)

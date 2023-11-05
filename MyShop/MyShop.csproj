@@ -27,6 +27,7 @@
     <None Remove="View\StasticsChild.xaml" />
     <None Remove="View\UpdateCategoryPage.xaml" />
     <None Remove="View\UpdateCustomerPage.xaml" />
+    <None Remove="View\UpdateProductPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,6 +73,11 @@
     <Content Update="Assets\icon-shop-64.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\UpdateProductPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\StasticsChild.xaml">

@@ -25,12 +25,12 @@ namespace MyShop.API
     {
         HttpClient client = new HttpClient();
 
-        public HandleAPI() 
+        public HandleAPI()
         {
 
-           //client.BaseAddress = new Uri("http://localhost:5000/");
+            client.BaseAddress = new Uri("http://localhost:5000/");
 
-            client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
+            //client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json")
@@ -39,7 +39,7 @@ namespace MyShop.API
 
         public async Task<bool> hasAccount()
         {
-            
+
 
             return false;
         }
@@ -87,7 +87,7 @@ namespace MyShop.API
             var returnValue = await response.Content.ReadAsStringAsync();
             ListProduct res = JsonSerializer.Deserialize<ListProduct>(returnValue);
 
-            
+
             return res;
         }
 
@@ -99,14 +99,26 @@ namespace MyShop.API
             return res;
         }
 
-        public async Task<string> AddNewProduct(MultipartFormDataContent content)
+        public async Task<Tuple<bool, string>> AddNewProduct(MultipartFormDataContent content)
         {
             var response = await client.PostAsync("product/add", content);
             var returnValue = await response.Content.ReadAsStringAsync();
 
             Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
 
-            return res.message;
+            if (response.StatusCode.ToString() == "OK") return Tuple.Create(true, res.message);
+            return Tuple.Create(false, res.message);
+        }
+
+        public async Task<Tuple<bool, string>> UpdateProduct(MultipartFormDataContent content, string id)
+        {
+            var response = await client.PutAsync($"product/update/{id}", content);
+            var returnValue = await response.Content.ReadAsStringAsync();
+
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+
+            if (response.StatusCode.ToString() == "OK") return Tuple.Create(true, res.message);
+            return Tuple.Create(false, res.message);
         }
 
         public async Task<Tuple<bool, string>> DeleteProduct(string id)
@@ -186,8 +198,8 @@ namespace MyShop.API
         /// 
         // public async Task<listCustomer> GetAllCustomer()
         public async Task<BindingList<Customer>> GetAllCustomer()
-         {
-            
+        {
+
             listCustomer res = new listCustomer();
             res.customer = null;
             while (res.customer == null)
@@ -196,14 +208,14 @@ namespace MyShop.API
                 var response = await client.GetAsync("customer/getall");
                 System.Threading.Thread.Sleep(1000);
                 var returnValue = await response.Content.ReadAsStringAsync();
-                 res = JsonSerializer.Deserialize<listCustomer>(returnValue);
+                res = JsonSerializer.Deserialize<listCustomer>(returnValue);
                 //return res;
                 System.Threading.Thread.Sleep(1000);
             }
 
 
             // Dinh dang lai ngay thang
-            for(var i = 0; i < res.customer.Count; i++)
+            for (var i = 0; i < res.customer.Count; i++)
             {
                 res.customer[i].ngsinh = res.customer[i].ngsinh.Substring(0, 10);
                 res.customer[i].ngdk = res.customer[i].ngdk.Substring(0, 10);
@@ -214,7 +226,7 @@ namespace MyShop.API
 
         public async Task<Tuple<bool, string>> addCustomer(Customer cus)
         {
-            
+
             using StringContent jsonContent = new(
             JsonSerializer.Serialize(cus),
             Encoding.UTF8,
@@ -280,7 +292,7 @@ namespace MyShop.API
             JsonSerializer.Serialize(cus),
             Encoding.UTF8,
                 "application/json");
-           // System.Threading.Thread.Sleep(1000);
+            // System.Threading.Thread.Sleep(1000);
             var response = await client.PutAsync($"customer/update/{cus.makh}", jsonContent);
             var returnValue = await response.Content.ReadAsStringAsync();
             Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);

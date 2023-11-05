@@ -1,11 +1,35 @@
-﻿using System.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.ComponentModel;
 
 namespace MyShop.Model
 {
-    public class TypeProduct
+    public class TypeProduct : ObservableObject
     {
-        public string maloai { get; set; }
-        public string tenloai { get; set; }
+        private string _maloai, _tenloai;
+        public string maloai
+        {
+            get
+            {
+                return _maloai;
+            }
+            set
+            {
+                SetProperty(ref _maloai, value);
+                OnPropertyChanged(nameof(maloai));
+            }
+        }
+        public string tenloai
+        {
+            get
+            {
+                return _tenloai;
+            }
+            set
+            {
+                SetProperty(ref _tenloai, value);
+                OnPropertyChanged(nameof(tenloai));
+            }
+        }
 
         public override string ToString()
         {
@@ -15,6 +39,6 @@ namespace MyShop.Model
 
     public class ListTypeProduct
     {
-        public BindingList<TypeProduct> data {  get; set; }
+        public BindingList<TypeProduct> data { get; set; }
     }
 }

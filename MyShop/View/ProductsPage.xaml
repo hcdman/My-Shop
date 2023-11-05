@@ -6,7 +6,7 @@
     xmlns:local="using:MyShop.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:converter="using:MyShop.Converter"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls" xmlns:controls1="using:System.Windows.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource MyBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}"
@@ -162,7 +162,11 @@
                 Grid.Row="3">
                 <GridView
                     x:Name="ContentGridView"
-                    ItemsSource="{Binding Products}">
+                    ItemsSource="{Binding Products}"
+                   
+                    >
+
+
                     <GridView.ItemContainerStyle>
                         <Style
                             TargetType="GridViewItem">
@@ -185,7 +189,24 @@
                                 Margin="30 5 30 5"
                                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                                 Padding="20"
-                                CornerRadius="8">
+                                CornerRadius="8"
+                                
+                                >
+
+                                <StackPanel.ContextFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="Edit" Click="EditMenuFlyoutItem_Click" Tag="{Binding masp}">
+                                            <MenuFlyoutItem.Icon>
+                                                <SymbolIcon Symbol="Edit"/>
+                                            </MenuFlyoutItem.Icon>
+                                        </MenuFlyoutItem>
+                                        <MenuFlyoutItem Text="Delete" Click="DeleteMenuFlyoutItem_Click" Tag="{Binding masp}">
+                                            <MenuFlyoutItem.Icon>
+                                                <SymbolIcon Symbol="Delete"/>
+                                            </MenuFlyoutItem.Icon>
+                                        </MenuFlyoutItem>
+                                    </MenuFlyout>
+                                </StackPanel.ContextFlyout>
                                 <Image
                                     Source="{Binding anh}"
                                     Width="50" />
@@ -203,6 +224,8 @@
                             </StackPanel>
                         </DataTemplate>
                     </GridView.ItemTemplate>
+
+
                 </GridView>
             </Grid>
 
@@ -227,7 +250,9 @@
                         Height="30"
                         Text="{Binding PerPage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                         TextAlignment="Center"
-                        Margin="10 0"></TextBox>
+                        Margin="10 0"
+                        KeyDown="TextBox_KeyDown"
+                        ></TextBox>
                 </StackPanel>
                 <StackPanel
                     Orientation="Horizontal"
@@ -247,6 +272,7 @@
                         Margin="10 0"
                         Command="{Binding Next}">Next</Button>
                 </StackPanel>
+
 
             </Grid>
         </Grid>

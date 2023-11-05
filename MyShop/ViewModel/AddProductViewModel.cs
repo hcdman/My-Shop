@@ -15,7 +15,7 @@ using MyShop.Model;
 
 namespace MyShop.ViewModel
 {
-    class AddProductViewModel: ObservableObject
+    class AddProductViewModel : ObservableObject
     {
         private string _id;
         public string Id
@@ -212,12 +212,12 @@ namespace MyShop.ViewModel
 
         }
 
-        public async void addNewProduct()
+        public async Task<bool> addNewProduct()
         {
             if (Image == "")
             {
                 Mess = "Chưa có ảnh";
-                return;
+                return false;
             }
             Mess = "";
             IsLoading = true;
@@ -251,8 +251,10 @@ namespace MyShop.ViewModel
             // Thêm các tham số khác nếu cần
             content.Add(jsonContent, "data");
 
-            Mess = await api.AddNewProduct(content);
+            bool succes = false;
+            (succes, Mess) = await api.AddNewProduct(content);
             IsLoading = false;
+            return succes;
         }
     }
 }
