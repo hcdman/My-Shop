@@ -27,7 +27,7 @@ public sealed partial class AddCustomerPage : Page
     {
         this.InitializeComponent();
         AddCustomerViewModel ViewModel = new AddCustomerViewModel();
-        form.DataContext = ViewModel.cus;
-        this.DataContext = ViewModel;
+        //form.DataContext = ViewModel.cus;
+        //this.DataContext = ViewModel;
     }
 }

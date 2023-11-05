@@ -1,107 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Page
     x:Class="MyShop.View.AddCustomerPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:MyShop.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:MyShop.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
     Background="{ThemeResource MyBackgroundThemeBrush}"
-    Foreground="{ThemeResource MyForegroundThemeBrush}">
+    Foreground="{ThemeResource MyForegroundThemeBrush}"
+    mc:Ignorable="d">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Name="form">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">ID customer:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding makh , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+    <Grid>
+        <Border
+            Width="500"
+            Height="600"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+            CornerRadius="10">
+            <StackPanel Margin="20" Orientation="Vertical">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="Add Customer" />
+                <Grid VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="0"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Name" />
+                    <TextBox
+                        Grid.Row="1"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Address" />
+                    <TextBox
+                        Grid.Row="3"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="4"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Phone number" />
+                    <TextBox
+                        Grid.Row="5"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="6"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Date of Birth" />
+                    <CalendarDatePicker Grid.Row="7" />
+                    <TextBlock
+                        Grid.Row="8"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Email" />
+                    <TextBox
+                        Grid.Row="9"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="10"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Date of Registration" />
+                    <CalendarDatePicker Grid.Row="11" />
                 </Grid>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Full name:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding hoten, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-                <Grid Grid.Row="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Arress:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding dchi, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-                <Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Tel:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding sodt ,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-                <Grid Grid.Row="4">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Date of birth:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding ngsinh, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-                <Grid Grid.Row="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Email:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding email, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-                <Grid Grid.Row="6">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Date of registration:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding ngdk, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-            </Grid>
-            <Grid Grid.Column="1">
-                <StackPanel>
-                    <Image Source="ms-appx:///PhoneSample/iphone.png"/>
-                    <Button HorizontalAlignment="Center" Margin="0 10">Import Image</Button>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button
+                        x:Name="AddBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        Content="Add"
+                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                x:Name="LoginBorder"
+                                                Background="{ThemeResource MyForegroundThemeBrush}"
+                                                CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button
+                        x:Name="CancelBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        Content="Cancel"
+                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                x:Name="LoginBorder"
+                                                Background="{ThemeResource MyForegroundThemeBrush}"
+                                                CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </StackPanel>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding mess}"></TextBlock>
-            <ProgressBar Background="{ThemeResource MyBackgroundThemeBrush}" x:Name="loading" Width="500"  IsIndeterminate="{Binding  isShowProgres}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Command="{Binding addCus}" >Add</Button>
-        </Grid>
+                <TextBlock
+                    x:Name="messageTextBlock"
+                    FontSize="15"
+                    Foreground="Red"
+                    Text="Error"
+                    TextAlignment="Center" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

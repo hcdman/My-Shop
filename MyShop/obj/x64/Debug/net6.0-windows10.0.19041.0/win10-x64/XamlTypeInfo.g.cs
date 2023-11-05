@@ -253,46 +253,46 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeNameTable[25] = "MyShop.View.AddCategoryPage";
             _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[28] = "MyShop.View.AddCustomerPage";
-            _typeNameTable[29] = "Microsoft.UI.Xaml.Controls.ProgressRing";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
-            _typeNameTable[32] = "MyShop.View.AddProductPage";
-            _typeNameTable[33] = "CommunityToolkit.WinUI.UI.Controls.DataGrid";
-            _typeNameTable[34] = "System.Collections.IEnumerable";
-            _typeNameTable[35] = "System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
-            _typeNameTable[36] = "System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
-            _typeNameTable[37] = "CommunityToolkit.WinUI.UI.Controls.DataGridColumn";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Data.Binding";
-            _typeNameTable[40] = "Int32";
-            _typeNameTable[41] = "System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>";
-            _typeNameTable[42] = "CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Visibility";
-            _typeNameTable[44] = "CommunityToolkit.WinUI.UI.Controls.DataGridLength";
-            _typeNameTable[45] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[46] = "CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode";
-            _typeNameTable[47] = "CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility";
-            _typeNameTable[48] = "CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility";
-            _typeNameTable[49] = "Microsoft.UI.Xaml.Controls.ScrollBarVisibility";
-            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
-            _typeNameTable[51] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[52] = "CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode";
-            _typeNameTable[53] = "CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode";
-            _typeNameTable[54] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>";
-            _typeNameTable[55] = "System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>";
-            _typeNameTable[56] = "System.Collections.IList";
-            _typeNameTable[57] = "CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn";
-            _typeNameTable[58] = "CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn";
-            _typeNameTable[59] = "Windows.UI.Text.FontWeight";
-            _typeNameTable[60] = "Microsoft.UI.Xaml.Media.FontFamily";
-            _typeNameTable[61] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[62] = "CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn";
-            _typeNameTable[63] = "MyShop.View.CategoryPage";
-            _typeNameTable[64] = "MyShop.View.CustomerPage";
-            _typeNameTable[65] = "MyShop.Converter.PriceToCurrencyConverters";
-            _typeNameTable[66] = "MyShop.View.DashboardPage";
-            _typeNameTable[67] = "Microsoft.UI.Xaml.Controls.Button";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.Button";
+            _typeNameTable[29] = "MyShop.View.AddCustomerPage";
+            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.ProgressRing";
+            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
+            _typeNameTable[33] = "MyShop.View.AddProductPage";
+            _typeNameTable[34] = "CommunityToolkit.WinUI.UI.Controls.DataGrid";
+            _typeNameTable[35] = "System.Collections.IEnumerable";
+            _typeNameTable[36] = "System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
+            _typeNameTable[37] = "System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
+            _typeNameTable[38] = "CommunityToolkit.WinUI.UI.Controls.DataGridColumn";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Data.Binding";
+            _typeNameTable[41] = "Int32";
+            _typeNameTable[42] = "System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>";
+            _typeNameTable[43] = "CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.Visibility";
+            _typeNameTable[45] = "CommunityToolkit.WinUI.UI.Controls.DataGridLength";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[47] = "CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode";
+            _typeNameTable[48] = "CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility";
+            _typeNameTable[49] = "CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.ScrollBarVisibility";
+            _typeNameTable[51] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
+            _typeNameTable[52] = "Microsoft.UI.Xaml.DataTemplate";
+            _typeNameTable[53] = "CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode";
+            _typeNameTable[54] = "CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode";
+            _typeNameTable[55] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>";
+            _typeNameTable[56] = "System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>";
+            _typeNameTable[57] = "System.Collections.IList";
+            _typeNameTable[58] = "CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn";
+            _typeNameTable[59] = "CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn";
+            _typeNameTable[60] = "Windows.UI.Text.FontWeight";
+            _typeNameTable[61] = "Microsoft.UI.Xaml.Media.FontFamily";
+            _typeNameTable[62] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[63] = "CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn";
+            _typeNameTable[64] = "MyShop.View.CategoryPage";
+            _typeNameTable[65] = "MyShop.View.CustomerPage";
+            _typeNameTable[66] = "MyShop.Converter.PriceToCurrencyConverters";
+            _typeNameTable[67] = "MyShop.View.DashboardPage";
             _typeNameTable[68] = "MyShop.View.LoginPage";
             _typeNameTable[69] = "MyShop.View.OrdersPage";
             _typeNameTable[70] = "MyShop.View.ProductsPage";
@@ -418,46 +418,46 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeTable[25] = typeof(global::MyShop.View.AddCategoryPage);
             _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[28] = typeof(global::MyShop.View.AddCustomerPage);
-            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
-            _typeTable[32] = typeof(global::MyShop.View.AddProductPage);
-            _typeTable[33] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGrid);
-            _typeTable[34] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[35] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
-            _typeTable[36] = typeof(global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
-            _typeTable[37] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Data.Binding);
-            _typeTable[40] = typeof(global::System.Int32);
-            _typeTable[41] = typeof(global::System.Nullable<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>);
-            _typeTable[42] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Visibility);
-            _typeTable[44] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridLength);
-            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[46] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode);
-            _typeTable[47] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility);
-            _typeTable[48] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility);
-            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollBarVisibility);
-            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
-            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[52] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode);
-            _typeTable[53] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode);
-            _typeTable[54] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>);
-            _typeTable[55] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>);
-            _typeTable[56] = typeof(global::System.Collections.IList);
-            _typeTable[57] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn);
-            _typeTable[58] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn);
-            _typeTable[59] = typeof(global::Windows.UI.Text.FontWeight);
-            _typeTable[60] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
-            _typeTable[61] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[62] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn);
-            _typeTable[63] = typeof(global::MyShop.View.CategoryPage);
-            _typeTable[64] = typeof(global::MyShop.View.CustomerPage);
-            _typeTable[65] = typeof(global::MyShop.Converter.PriceToCurrencyConverters);
-            _typeTable[66] = typeof(global::MyShop.View.DashboardPage);
-            _typeTable[67] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
+            _typeTable[29] = typeof(global::MyShop.View.AddCustomerPage);
+            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
+            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
+            _typeTable[33] = typeof(global::MyShop.View.AddProductPage);
+            _typeTable[34] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGrid);
+            _typeTable[35] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[36] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
+            _typeTable[37] = typeof(global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
+            _typeTable[38] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Data.Binding);
+            _typeTable[41] = typeof(global::System.Int32);
+            _typeTable[42] = typeof(global::System.Nullable<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>);
+            _typeTable[43] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Visibility);
+            _typeTable[45] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridLength);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[47] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode);
+            _typeTable[48] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility);
+            _typeTable[49] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollBarVisibility);
+            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
+            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
+            _typeTable[53] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode);
+            _typeTable[54] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode);
+            _typeTable[55] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>);
+            _typeTable[56] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>);
+            _typeTable[57] = typeof(global::System.Collections.IList);
+            _typeTable[58] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn);
+            _typeTable[59] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn);
+            _typeTable[60] = typeof(global::Windows.UI.Text.FontWeight);
+            _typeTable[61] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
+            _typeTable[62] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[63] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn);
+            _typeTable[64] = typeof(global::MyShop.View.CategoryPage);
+            _typeTable[65] = typeof(global::MyShop.View.CustomerPage);
+            _typeTable[66] = typeof(global::MyShop.Converter.PriceToCurrencyConverters);
+            _typeTable[67] = typeof(global::MyShop.View.DashboardPage);
             _typeTable[68] = typeof(global::MyShop.View.LoginPage);
             _typeTable[69] = typeof(global::MyShop.View.OrdersPage);
             _typeTable[70] = typeof(global::MyShop.View.ProductsPage);
@@ -591,20 +591,20 @@ namespace MyShop.MyShop_XamlTypeInfo
         private object Activate_18_MainWindow() { return new global::MyShop.MainWindow(); }
         private object Activate_21_ProgressBar() { return new global::Microsoft.UI.Xaml.Controls.ProgressBar(); }
         private object Activate_25_AddCategoryPage() { return new global::MyShop.View.AddCategoryPage(); }
-        private object Activate_28_AddCustomerPage() { return new global::MyShop.View.AddCustomerPage(); }
-        private object Activate_29_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
-        private object Activate_32_AddProductPage() { return new global::MyShop.View.AddProductPage(); }
-        private object Activate_33_DataGrid() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGrid(); }
-        private object Activate_35_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
-        private object Activate_36_Collection() { return new global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
-        private object Activate_54_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>(); }
-        private object Activate_55_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>(); }
-        private object Activate_57_DataGridTextColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn(); }
-        private object Activate_62_DataGridTemplateColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn(); }
-        private object Activate_63_CategoryPage() { return new global::MyShop.View.CategoryPage(); }
-        private object Activate_64_CustomerPage() { return new global::MyShop.View.CustomerPage(); }
-        private object Activate_65_PriceToCurrencyConverters() { return new global::MyShop.Converter.PriceToCurrencyConverters(); }
-        private object Activate_66_DashboardPage() { return new global::MyShop.View.DashboardPage(); }
+        private object Activate_29_AddCustomerPage() { return new global::MyShop.View.AddCustomerPage(); }
+        private object Activate_30_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
+        private object Activate_33_AddProductPage() { return new global::MyShop.View.AddProductPage(); }
+        private object Activate_34_DataGrid() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGrid(); }
+        private object Activate_36_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
+        private object Activate_37_Collection() { return new global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
+        private object Activate_55_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>(); }
+        private object Activate_56_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>(); }
+        private object Activate_58_DataGridTextColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn(); }
+        private object Activate_63_DataGridTemplateColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn(); }
+        private object Activate_64_CategoryPage() { return new global::MyShop.View.CategoryPage(); }
+        private object Activate_65_CustomerPage() { return new global::MyShop.View.CustomerPage(); }
+        private object Activate_66_PriceToCurrencyConverters() { return new global::MyShop.Converter.PriceToCurrencyConverters(); }
+        private object Activate_67_DashboardPage() { return new global::MyShop.View.DashboardPage(); }
         private object Activate_68_LoginPage() { return new global::MyShop.View.LoginPage(); }
         private object Activate_69_OrdersPage() { return new global::MyShop.View.OrdersPage(); }
         private object Activate_70_ProductsPage() { return new global::MyShop.View.ProductsPage(); }
@@ -657,25 +657,25 @@ namespace MyShop.MyShop_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_35_ObservableCollection(object instance, object item)
+        private void VectorAdd_36_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>)instance;
             var newItem = (global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_36_Collection(object instance, object item)
+        private void VectorAdd_37_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>)instance;
             var newItem = (global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_54_ObservableCollection(object instance, object item)
+        private void VectorAdd_55_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Style>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Style)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_55_Collection(object instance, object item)
+        private void VectorAdd_56_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Style>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Style)item;
@@ -950,16 +950,20 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  MyShop.View.AddCustomerPage
+            case 28:   //  Microsoft.UI.Xaml.Controls.Button
+                xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 29:   //  MyShop.View.AddCustomerPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_AddCustomerPage;
+                userType.Activator = Activate_29_AddCustomerPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Microsoft.UI.Xaml.Controls.ProgressRing
+            case 30:   //  Microsoft.UI.Xaml.Controls.ProgressRing
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_29_ProgressRing;
+                userType.Activator = Activate_30_ProgressRing;
                 userType.AddMemberName("IsIndeterminate");
                 userType.AddMemberName("IsActive");
                 userType.AddMemberName("Maximum");
@@ -969,26 +973,26 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.Controls.Control
+            case 31:   //  Microsoft.UI.Xaml.Controls.Control
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 31:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
+            case 32:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 32:   //  MyShop.View.AddProductPage
+            case 33:   //  MyShop.View.AddProductPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_32_AddProductPage;
+                userType.Activator = Activate_33_AddProductPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 33:   //  CommunityToolkit.WinUI.UI.Controls.DataGrid
+            case 34:   //  CommunityToolkit.WinUI.UI.Controls.DataGrid
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_33_DataGrid;
+                userType.Activator = Activate_34_DataGrid;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("AutoGenerateColumns");
                 userType.AddMemberName("Columns");
@@ -1038,27 +1042,27 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  System.Collections.IEnumerable
+            case 35:   //  System.Collections.IEnumerable
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 35:   //  System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
+            case 36:   //  System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>"));
-                userType.CollectionAdd = VectorAdd_35_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_36_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 36:   //  System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
+            case 37:   //  System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_36_Collection;
-                userType.CollectionAdd = VectorAdd_36_Collection;
+                userType.Activator = Activate_37_Collection;
+                userType.CollectionAdd = VectorAdd_37_Collection;
                 xamlType = userType;
                 break;
 
-            case 37:   //  CommunityToolkit.WinUI.UI.Controls.DataGridColumn
+            case 38:   //  CommunityToolkit.WinUI.UI.Controls.DataGridColumn
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("ActualWidth");
                 userType.AddMemberName("CanUserReorder");
@@ -1082,19 +1086,19 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.Style
+            case 39:   //  Microsoft.UI.Xaml.Style
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  Microsoft.UI.Xaml.Data.Binding
+            case 40:   //  Microsoft.UI.Xaml.Data.Binding
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 40:   //  Int32
+            case 41:   //  Int32
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 41:   //  System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>
+            case 42:   //  System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetBoxedType(GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection"));
                 userType.BoxInstance = userType.BoxType<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>;
@@ -1102,29 +1106,29 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection
+            case 43:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Ascending", global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection.Ascending);
                 userType.AddEnumValue("Descending", global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection.Descending);
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Visibility
+            case 44:   //  Microsoft.UI.Xaml.Visibility
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 44:   //  CommunityToolkit.WinUI.UI.Controls.DataGridLength
+            case 45:   //  CommunityToolkit.WinUI.UI.Controls.DataGridLength
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.CreateFromStringMethod = x => (global::System.Object)global::CommunityToolkit.WinUI.UI.Controls.DataGridLength.ConvertFromString(x);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Microsoft.UI.Xaml.Media.Brush
+            case 46:   //  Microsoft.UI.Xaml.Media.Brush
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 46:   //  CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode
+            case 47:   //  CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode.None);
                 userType.AddEnumValue("ExcludeHeader", global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode.ExcludeHeader);
@@ -1132,7 +1136,7 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 47:   //  CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility
+            case 48:   //  CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility.None);
                 userType.AddEnumValue("Horizontal", global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility.Horizontal);
@@ -1141,7 +1145,7 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 48:   //  CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility
+            case 49:   //  CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility.None);
                 userType.AddEnumValue("Column", global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility.Column);
@@ -1150,19 +1154,19 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 49:   //  Microsoft.UI.Xaml.Controls.ScrollBarVisibility
+            case 50:   //  Microsoft.UI.Xaml.Controls.ScrollBarVisibility
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 50:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
+            case 51:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 51:   //  Microsoft.UI.Xaml.DataTemplate
+            case 52:   //  Microsoft.UI.Xaml.DataTemplate
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 52:   //  CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode
+            case 53:   //  CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("VisibleWhenSelected", global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected);
                 userType.AddEnumValue("Visible", global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode.Visible);
@@ -1170,36 +1174,36 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 53:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode
+            case 54:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Extended", global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode.Extended);
                 userType.AddEnumValue("Single", global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode.Single);
                 xamlType = userType;
                 break;
 
-            case 54:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>
+            case 55:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>"));
-                userType.CollectionAdd = VectorAdd_54_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_55_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 55:   //  System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>
+            case 56:   //  System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_55_Collection;
-                userType.CollectionAdd = VectorAdd_55_Collection;
+                userType.Activator = Activate_56_Collection;
+                userType.CollectionAdd = VectorAdd_56_Collection;
                 xamlType = userType;
                 break;
 
-            case 56:   //  System.Collections.IList
+            case 57:   //  System.Collections.IList
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 57:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn
+            case 58:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn"));
-                userType.Activator = Activate_57_DataGridTextColumn;
+                userType.Activator = Activate_58_DataGridTextColumn;
                 userType.AddMemberName("FontWeight");
                 userType.AddMemberName("FontFamily");
                 userType.AddMemberName("FontSize");
@@ -1208,7 +1212,7 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 58:   //  CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn
+            case 59:   //  CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridColumn"));
                 userType.AddMemberName("Binding");
                 userType.AddMemberName("ClipboardContentBinding");
@@ -1217,17 +1221,17 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 59:   //  Windows.UI.Text.FontWeight
+            case 60:   //  Windows.UI.Text.FontWeight
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Microsoft.UI.Xaml.Media.FontFamily
+            case 61:   //  Microsoft.UI.Xaml.Media.FontFamily
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 61:   //  Windows.UI.Text.FontStyle
+            case 62:   //  Windows.UI.Text.FontStyle
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -1235,44 +1239,40 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 62:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn
+            case 63:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridColumn"));
-                userType.Activator = Activate_62_DataGridTemplateColumn;
+                userType.Activator = Activate_63_DataGridTemplateColumn;
                 userType.AddMemberName("CellTemplate");
                 userType.AddMemberName("CellEditingTemplate");
                 xamlType = userType;
                 break;
 
-            case 63:   //  MyShop.View.CategoryPage
+            case 64:   //  MyShop.View.CategoryPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_63_CategoryPage;
+                userType.Activator = Activate_64_CategoryPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  MyShop.View.CustomerPage
+            case 65:   //  MyShop.View.CustomerPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_64_CustomerPage;
+                userType.Activator = Activate_65_CustomerPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 65:   //  MyShop.Converter.PriceToCurrencyConverters
+            case 66:   //  MyShop.Converter.PriceToCurrencyConverters
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_65_PriceToCurrencyConverters;
+                userType.Activator = Activate_66_PriceToCurrencyConverters;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  MyShop.View.DashboardPage
+            case 67:   //  MyShop.View.DashboardPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_66_DashboardPage;
+                userType.Activator = Activate_67_DashboardPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
-                break;
-
-            case 67:   //  Microsoft.UI.Xaml.Controls.Button
-                xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 68:   //  MyShop.View.LoginPage
