@@ -15,6 +15,8 @@ View\OrdersPage.xbf
 View\ProductsPage.xbf
 View\SettingsPage.xbf
 View\ShellPage.xbf
+View\StasticsChild.xbf
 View\StatisticsPage.xbf
 View\UpdateCategoryPage.xbf
 View\UpdateCustomerPage.xbf
+View\UpdateProductPage.xbf

@@ -1,1 +1,1 @@
-C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\MyShop.csproj;x64
+E:\DoAn\My_shop\My-Shop\MyShop\MyShop.csproj;x64

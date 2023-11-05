@@ -51,8 +51,11 @@ exports.getProduct = async (req, res) => {
 exports.addNew = async (req, res) => {
   data = JSON.parse(req.body.data);
   console.log("data");
-  const b64 = Buffer.from(req.file.buffer).toString("base64");
-  let dataURI = "data:" + req.file.mimetype + ";base64," + b64;
+  let dataURI = "";
+  if (req.file) {
+    const b64 = Buffer.from(req.file.buffer).toString("base64");
+    dataURI = "data:" + req.file.mimetype + ";base64," + b64;
+  }
 
   const { masp, tensp, hangsx, anh, gia_goc, gia, sl, maloai, giamgia } = data;
 
@@ -90,6 +93,7 @@ exports.addNew = async (req, res) => {
                 {
                   masp,
                   anh: result.url,
+                  public_id: result.public_id,
                   tensp,
                   hangsx,
                   gia_goc,
@@ -129,13 +133,18 @@ exports.delete = async (req, res) => {
     [masp],
     async (error, result) => {
       if (result.length > 0) {
-        let sql = `DELETE FROM sanpham where masp = '${masp}'`;
-        db.query(sql, async (error, result) => {
+        let public_id = result[0].public_id;
+        let sql = "delete from sanpham where masp=?";
+        db.query(sql, [masp], async (error, result) => {
           if (error) {
             return res.status(400).json({
               message: "Lỗi khi xóa sản phẩm",
             });
           }
+          await cloudinary.uploader.destroy(
+            public_id,
+            function (error, result) {}
+          );
           return res.json({
             message: "Xóa sản phẩm thành công",
           });
@@ -150,9 +159,77 @@ exports.delete = async (req, res) => {
 };
 
 //update sản phẩm
+// exports.update = async (req, res) => {
+//   const masp = req.params.id;
+//   const { anh, tensp, hangsx, gia_goc, gia, sl, maloai, giamgia } = req.body;
+//   if (
+//     !masp ||
+//     masp.length !== 4 ||
+//     !anh ||
+//     !tensp ||
+//     gia_goc <= 0 ||
+//     gia <= 0 ||
+//     sl <= 0 ||
+//     !maloai
+//   )
+//     return res.status(400).json({ message: "Thông tin không hợp lệ" });
+
+//   db.query(
+//     "select * from sanpham where masp=?",
+//     [masp],
+//     async (error, result) => {
+//       if (result.length > 0) {
+//         let public_id = result[0].public_id;
+//         db.query(
+//           "select * from loai where maloai=?",
+//           [maloai],
+//           async (error, result) => {
+//             if (result.length < 1)
+//               return res.status(400).json({ message: "Mã loại không tồn tại" });
+//             await cloudinary.uploader.destroy(
+//               public_id,
+//               function (error, result) {}
+//             );
+//             cloudinary.uploader.upload(anh, function (error, result) {
+//               if (error)
+//                 return res.status(400).json({ message: "Ảnh không tồn tại" });
+//               let sql = `UPDATE sanpham SET ? where masp = '${masp}'`;
+//               db.query(
+//                 sql,
+//                 {
+//                   anh: result.url,
+//                   tensp,
+//                   hangsx,
+//                   gia_goc,
+//                   gia,
+//                   sl,
+//                   maloai,
+//                   giamgia,
+//                 },
+//                 (error, result) => {
+//                   return res.status(200).json({
+//                     message: "Update sản phẩm thành công",
+//                   });
+//                 }
+//               );
+//             });
+//           }
+//         );
+//       } else {
+//         return res.status(400).json({ message: "Sản phẩm không tồn tại" });
+//       }
+//     }
+//   );
+// };
 exports.update = async (req, res) => {
+  data = JSON.parse(req.body.data);
+  let dataURI = "";
+  if (req.file) {
+    const b64 = Buffer.from(req.file.buffer).toString("base64");
+    dataURI = "data:" + req.file.mimetype + ";base64," + b64;
+  }
   const masp = req.params.id;
-  const { anh, tensp, hangsx, gia_goc, gia, sl, maloai, giamgia } = req.body;
+  const { anh, tensp, hangsx, gia_goc, gia, sl, maloai, giamgia } = data;
   if (
     !masp ||
     masp.length !== 4 ||
@@ -170,21 +247,47 @@ exports.update = async (req, res) => {
     [masp],
     async (error, result) => {
       if (result.length > 0) {
+        let public_id = result[0].public_id;
         db.query(
           "select * from loai where maloai=?",
           [maloai],
           async (error, result) => {
             if (result.length < 1)
               return res.status(400).json({ message: "Mã loại không tồn tại" });
-
-            cloudinary.uploader.upload(anh, function (error, result) {
-              if (error)
-                return res.status(400).json({ message: "Ảnh không tồn tại" });
+            if (req.file) {
+              await cloudinary.uploader.destroy(
+                public_id,
+                function (error, result) {}
+              );
+              cloudinary.uploader.upload(dataURI, function (error, result) {
+                if (error)
+                  return res.status(400).json({ message: "Ảnh không tồn tại" });
+                let sql = `UPDATE sanpham SET ? where masp = '${masp}'`;
+                db.query(
+                  sql,
+                  {
+                    anh: result.url,
+                    public_id: result.public_id,
+                    tensp,
+                    hangsx,
+                    gia_goc,
+                    gia,
+                    sl,
+                    maloai,
+                    giamgia,
+                  },
+                  (error, result) => {
+                    return res.status(200).json({
+                      message: "Update sản phẩm thành công",
+                    });
+                  }
+                );
+              });
+            } else {
               let sql = `UPDATE sanpham SET ? where masp = '${masp}'`;
               db.query(
                 sql,
                 {
-                  anh: result.url,
                   tensp,
                   hangsx,
                   gia_goc,
@@ -199,7 +302,7 @@ exports.update = async (req, res) => {
                   });
                 }
               );
-            });
+            }
           }
         );
       } else {

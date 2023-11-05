@@ -24,8 +24,10 @@
     <None Remove="Styles\Thickness.xaml" />
     <None Remove="View\AddCategoryPage.xaml" />
     <None Remove="View\AddCustomerPage.xaml" />
+    <None Remove="View\StasticsChild.xaml" />
     <None Remove="View\UpdateCategoryPage.xaml" />
     <None Remove="View\UpdateCustomerPage.xaml" />
+    <None Remove="View\UpdateProductPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -71,6 +73,16 @@
     <Content Update="Assets\icon-shop-64.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\UpdateProductPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\StasticsChild.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\UpdateCustomerPage.xaml">
