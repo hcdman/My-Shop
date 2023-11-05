@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "runtimeOptions": {
     "tfm": "net6.0",
@@ -16,23 +15,4 @@
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
     }
   }
-=======
-{
-  "runtimeOptions": {
-    "tfm": "net6.0",
-    "includedFrameworks": [
-      {
-        "name": "Microsoft.NETCore.App",
-        "version": "6.0.23"
-      },
-      {
-        "name": "Microsoft.WindowsDesktop.App",
-        "version": "6.0.23"
-      }
-    ],
-    "configProperties": {
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
-    }
-  }
->>>>>>> 52ac67ffbe666f24a9297c30f01b377add5f7a1c
 }

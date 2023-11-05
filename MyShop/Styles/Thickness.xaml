@@ -36,5 +36,6 @@
 
     <Thickness x:Key="PageContentMargin">10,48,0,0</Thickness>
     <Thickness x:Key="NavigateItemPadding">0,15,0,15</Thickness>
-
+    <Thickness
+        x:Key="Top5SoldMargin">60, 0, 60, 0</Thickness>
 </ResourceDictionary>

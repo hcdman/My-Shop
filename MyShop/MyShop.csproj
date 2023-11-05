@@ -18,7 +18,7 @@
     <None Remove="Icons\order.png" />
     <None Remove="Icons\product.png" />
     <None Remove="PhoneSample\iphone.png" />
-    <None Remove="Styles\FontSizes.xaml" />
+    <None Remove="Styles\Sizes.xaml" />
     <None Remove="Styles\TextBlock.xaml" />
     <None Remove="Styles\Theme.xaml" />
     <None Remove="Styles\Thickness.xaml" />
@@ -115,7 +115,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Styles\FontSizes.xaml">
+    <Page Update="Styles\Sizes.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

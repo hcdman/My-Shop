@@ -90,6 +90,7 @@ public sealed partial class ShellPage : Page
         if (navPageType is not null && !Type.Equals(preNavPageType, navPageType))
         {
             ContentFrame.Navigate(navPageType, null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft});
+            SaveCurrentNavPage();
         }
     }
 
@@ -109,6 +110,11 @@ public sealed partial class ShellPage : Page
     }
     
     private void Page_Unloaded(object sender, RoutedEventArgs e)
+    {
+        SaveCurrentNavPage();
+    }
+
+    public void SaveCurrentNavPage()
     {
         var currentPage = ContentFrame.SourcePageType.FullName;
 

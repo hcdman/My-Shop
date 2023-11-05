@@ -67,10 +67,18 @@ public sealed partial class MainWindow : WindowEx
         if(Bounds._width > 1300)
         {
             Application.Current.Resources["OpenPaneLength"] = 300;
-             
+            Application.Current.Resources["Top5ImageWidth"] = 100;
+            Application.Current.Resources["Top5SoldMargin"] = new Thickness(68,0,68,0);
+            Application.Current.Resources["DataGridTextWidth"] = 110;
+            Application.Current.Resources["DataGridAddressWidth"] = 300;
+
         } else
         { 
             Application.Current.Resources["OpenPaneLength"] = 200;
+            Application.Current.Resources["Top5ImageWidth"] = 50;
+            Application.Current.Resources["Top5SoldMargin"] = new Thickness(33, 0, 33, 0);
+            Application.Current.Resources["DataGridTextWidth"] = 85;
+            Application.Current.Resources["DataGridAddressWidth"] = 110;
         }
         if (this.Content is Frame frame)
         {

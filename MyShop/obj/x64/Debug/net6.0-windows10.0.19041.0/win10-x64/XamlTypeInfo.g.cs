@@ -290,11 +290,11 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeNameTable[62] = "CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn";
             _typeNameTable[63] = "MyShop.View.CategoryPage";
             _typeNameTable[64] = "MyShop.View.CustomerPage";
-            _typeNameTable[65] = "MyShop.View.DashboardPage";
-            _typeNameTable[66] = "Microsoft.UI.Xaml.Controls.Button";
-            _typeNameTable[67] = "MyShop.View.LoginPage";
-            _typeNameTable[68] = "MyShop.View.OrdersPage";
-            _typeNameTable[69] = "MyShop.Converter.PriceToCurrencyConverters";
+            _typeNameTable[65] = "MyShop.Converter.PriceToCurrencyConverters";
+            _typeNameTable[66] = "MyShop.View.DashboardPage";
+            _typeNameTable[67] = "Microsoft.UI.Xaml.Controls.Button";
+            _typeNameTable[68] = "MyShop.View.LoginPage";
+            _typeNameTable[69] = "MyShop.View.OrdersPage";
             _typeNameTable[70] = "MyShop.View.ProductsPage";
             _typeNameTable[71] = "MyShop.Helpers.EnumToBooleanConverter";
             _typeNameTable[72] = "MyShop.View.SettingsPage";
@@ -455,11 +455,11 @@ namespace MyShop.MyShop_XamlTypeInfo
             _typeTable[62] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn);
             _typeTable[63] = typeof(global::MyShop.View.CategoryPage);
             _typeTable[64] = typeof(global::MyShop.View.CustomerPage);
-            _typeTable[65] = typeof(global::MyShop.View.DashboardPage);
-            _typeTable[66] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
-            _typeTable[67] = typeof(global::MyShop.View.LoginPage);
-            _typeTable[68] = typeof(global::MyShop.View.OrdersPage);
-            _typeTable[69] = typeof(global::MyShop.Converter.PriceToCurrencyConverters);
+            _typeTable[65] = typeof(global::MyShop.Converter.PriceToCurrencyConverters);
+            _typeTable[66] = typeof(global::MyShop.View.DashboardPage);
+            _typeTable[67] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
+            _typeTable[68] = typeof(global::MyShop.View.LoginPage);
+            _typeTable[69] = typeof(global::MyShop.View.OrdersPage);
             _typeTable[70] = typeof(global::MyShop.View.ProductsPage);
             _typeTable[71] = typeof(global::MyShop.Helpers.EnumToBooleanConverter);
             _typeTable[72] = typeof(global::MyShop.View.SettingsPage);
@@ -603,10 +603,10 @@ namespace MyShop.MyShop_XamlTypeInfo
         private object Activate_62_DataGridTemplateColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn(); }
         private object Activate_63_CategoryPage() { return new global::MyShop.View.CategoryPage(); }
         private object Activate_64_CustomerPage() { return new global::MyShop.View.CustomerPage(); }
-        private object Activate_65_DashboardPage() { return new global::MyShop.View.DashboardPage(); }
-        private object Activate_67_LoginPage() { return new global::MyShop.View.LoginPage(); }
-        private object Activate_68_OrdersPage() { return new global::MyShop.View.OrdersPage(); }
-        private object Activate_69_PriceToCurrencyConverters() { return new global::MyShop.Converter.PriceToCurrencyConverters(); }
+        private object Activate_65_PriceToCurrencyConverters() { return new global::MyShop.Converter.PriceToCurrencyConverters(); }
+        private object Activate_66_DashboardPage() { return new global::MyShop.View.DashboardPage(); }
+        private object Activate_68_LoginPage() { return new global::MyShop.View.LoginPage(); }
+        private object Activate_69_OrdersPage() { return new global::MyShop.View.OrdersPage(); }
         private object Activate_70_ProductsPage() { return new global::MyShop.View.ProductsPage(); }
         private object Activate_71_EnumToBooleanConverter() { return new global::MyShop.Helpers.EnumToBooleanConverter(); }
         private object Activate_72_SettingsPage() { return new global::MyShop.View.SettingsPage(); }
@@ -1257,34 +1257,34 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 65:   //  MyShop.View.DashboardPage
-                userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_DashboardPage;
+            case 65:   //  MyShop.Converter.PriceToCurrencyConverters
+                userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_65_PriceToCurrencyConverters;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  Microsoft.UI.Xaml.Controls.Button
+            case 66:   //  MyShop.View.DashboardPage
+                userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_66_DashboardPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 67:   //  Microsoft.UI.Xaml.Controls.Button
                 xamlType = new global::MyShop.MyShop_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 67:   //  MyShop.View.LoginPage
+            case 68:   //  MyShop.View.LoginPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_67_LoginPage;
+                userType.Activator = Activate_68_LoginPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 68:   //  MyShop.View.OrdersPage
+            case 69:   //  MyShop.View.OrdersPage
                 userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_68_OrdersPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 69:   //  MyShop.Converter.PriceToCurrencyConverters
-                userType = new global::MyShop.MyShop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_69_PriceToCurrencyConverters;
+                userType.Activator = Activate_69_OrdersPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

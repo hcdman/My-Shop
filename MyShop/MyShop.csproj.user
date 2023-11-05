@@ -41,7 +41,7 @@
     <Page Update="Styles\TextBlock.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\FontSizes.xaml">
+    <Page Update="Styles\Sizes.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Theme.xaml">

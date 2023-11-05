@@ -11,7 +11,10 @@ namespace MyShop.Converter
         {
             int price = (int)value;
             CultureInfo cultureInfo = CultureInfo.GetCultureInfo("vi-VN");
-
+            if (price == 0)
+            {
+                return "0đ";
+            }
             string result = price.ToString("#,### đ", cultureInfo.NumberFormat);
             return result;
         } 

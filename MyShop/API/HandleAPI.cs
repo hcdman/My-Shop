@@ -206,11 +206,9 @@ namespace MyShop.API
             {
 
                 var response = await client.GetAsync("customer/getall");
-                System.Threading.Thread.Sleep(1000);
                 var returnValue = await response.Content.ReadAsStringAsync();
                 res = JsonSerializer.Deserialize<listCustomer>(returnValue);
                 //return res;
-                System.Threading.Thread.Sleep(1000);
             }
 
 
@@ -231,7 +229,6 @@ namespace MyShop.API
             JsonSerializer.Serialize(cus),
             Encoding.UTF8,
                 "application/json");
-            System.Threading.Thread.Sleep(1000);
             var response = await client.PostAsync("customer/add", jsonContent);
             var returnValue = await response.Content.ReadAsStringAsync();
             Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
@@ -292,7 +289,6 @@ namespace MyShop.API
             JsonSerializer.Serialize(cus),
             Encoding.UTF8,
                 "application/json");
-            // System.Threading.Thread.Sleep(1000);
             var response = await client.PutAsync($"customer/update/{cus.makh}", jsonContent);
             var returnValue = await response.Content.ReadAsStringAsync();
             Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
