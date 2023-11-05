@@ -103,7 +103,7 @@ exports.delete = async (req, res) => {
         db.query(sql, async (error, result) => {
           if (error) {
             return res.status(400).json({
-              message: "Lỗi khi xóa sản phẩm",
+              message: "Lỗi khi xóa khách hàng",
             });
           }
           return res.json({
