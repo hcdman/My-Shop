@@ -2529,6 +2529,7 @@ C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\App.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MainWindow.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\TextBlock.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Theme.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xbf
@@ -3167,6 +3168,7 @@ C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\App.xaml
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MainWindow.xaml
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xaml
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\TextBlock.xaml
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Theme.xaml
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xaml
@@ -3188,6 +3190,7 @@ C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateProductPage.xaml
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\App.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MainWindow.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\TextBlock.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Theme.xbf
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xbf
@@ -3236,6 +3239,3 @@ C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xbf
-C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xaml
-C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\Styles\Sizes.xbf

@@ -82,7 +82,7 @@
                         Binding="{Binding makh}"
                         CanUserResize="False"
                         FontSize="{StaticResource MediumFontSize}"
-                        FontWeight="Normal"
+                        FontWeight="Medium"
                         Header="Id" />
                     <controls:DataGridTextColumn
                         Binding="{Binding hoten}"
@@ -107,7 +107,8 @@
                     <controls:DataGridTextColumn
                         Binding="{Binding email}"
                         CanUserResize="False"
-                        Header="Email" />
+                        Header="Email"
+                        ElementStyle="{StaticResource DataGridTextStyles}" />
                     <controls:DataGridTextColumn
                         Binding="{Binding ngdk}"
                         CanUserResize="False"

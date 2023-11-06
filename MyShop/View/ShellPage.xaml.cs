@@ -117,7 +117,18 @@ public sealed partial class ShellPage : Page
     public void SaveCurrentNavPage()
     {
         var currentPage = ContentFrame.SourcePageType.FullName;
-
+        if(currentPage == "MyShop.View.AddCustomerPage"|| currentPage == "MyShop.View.UpdateCustomerPage")
+        {
+            currentPage = "MyShop.View.CustomerPage";
+        }
+        if (currentPage == "MyShop.View.AddProductPage" || currentPage == "MyShop.View.UpdateProductPage")
+        {
+            currentPage = "MyShop.View.ProductsPage";
+        }
+        if (currentPage == "MyShop.View.AddCategoryPage" || currentPage == "MyShop.View.UpdateCategoryPage")
+        {
+            currentPage = "MyShop.View.CategoryPage";
+        }
         var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         config.AppSettings.Settings["currentNavigationViewItem"].Value = currentPage;
         config.Save(ConfigurationSaveMode.Minimal);

@@ -47,11 +47,7 @@ public sealed partial class UpdateCustomerPage : Page, INotifyPropertyChanged
     public async void updateCus()
     {
         mess.Text = "";
-        loading.IsIndeterminate = true;
-        loading.IsHitTestVisible = true;
         var (success, message) = await Task.Run(() => { return api.updateCustomer(cus); });
-        loading.IsIndeterminate = false;
-        loading.IsHitTestVisible = false;
         mess.Text = message;
     }
 

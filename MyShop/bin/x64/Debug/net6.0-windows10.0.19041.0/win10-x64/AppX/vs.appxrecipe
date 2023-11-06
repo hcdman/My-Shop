@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-05T17:45:41.097</Modified>
+      <Modified>2023-11-06T10:14:03.473</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-05T17:45:40.196</Modified>
+      <Modified>2023-11-06T10:14:02.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
       <PackagePath>MyShop.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-05T14:12:22.695</Modified>
+      <Modified>2023-11-06T09:47:14.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
       <PackagePath>MyShop.dll</PackagePath>
-      <Modified>2023-11-05T17:45:39.645</Modified>
+      <Modified>2023-11-06T10:14:02.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
       <PackagePath>MyShop.dll.config</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MyShop.exe</PackagePath>
-      <Modified>2023-11-05T17:45:39.696</Modified>
+      <Modified>2023-11-06T10:14:02.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
       <PackagePath>MyShop.deps.json</PackagePath>
-      <Modified>2023-11-05T14:34:00.947</Modified>
+      <Modified>2023-11-06T09:47:13.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ADMIN\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.22\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

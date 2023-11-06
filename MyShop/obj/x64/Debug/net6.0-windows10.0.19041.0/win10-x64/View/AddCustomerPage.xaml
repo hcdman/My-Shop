@@ -10,21 +10,29 @@
     Foreground="{ThemeResource MyForegroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
+    <Grid>
         <Border
-            Width="300"
-            Height="400"
-            CornerRadius="6">
+            Width="500"
+            Height="600"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+            CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
                 <TextBlock
-                    Padding="10"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
                     FontSize="25"
                     FontWeight="Bold"
-                    Text="Login" />
+                    Text="Add Customer" />
                 <Grid VerticalAlignment="Center">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -32,69 +40,125 @@
                     </Grid.RowDefinitions>
                     <TextBlock
                         Grid.Row="0"
-                        Margin="0,15"
+                        Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Username" />
-                    <TextBox x:ConnectionId='7'
-                        x:Name="usernameTextBox"
+                        Text="Name" />
+                    <TextBox
                         Grid.Row="1"
-                        Grid.Column="1"
-                        Width="255"
+                        Width="450"
                         Padding="0,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1"
-                        Text="{Binding User, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        BorderThickness="0,0,0,1" />
                     <TextBlock
                         Grid.Row="2"
-                        Margin="0,15"
+                        Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Password" />
-                    <PasswordBox x:ConnectionId='8'
-                        x:Name="passwordBox"
+                        Text="Address" />
+                    <TextBox
                         Grid.Row="3"
-                        Width="255"
+                        Width="450"
                         Padding="0,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1"
-                        Password="{Binding Pass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="4"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Phone number" />
+                    <TextBox
+                        Grid.Row="5"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="6"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Date of Birth" />
+                    <CalendarDatePicker Grid.Row="7" />
+                    <TextBlock
+                        Grid.Row="8"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Email" />
+                    <TextBox
+                        Grid.Row="9"
+                        Width="450"
+                        Padding="0,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1" />
+                    <TextBlock
+                        Grid.Row="10"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Date of Registration" />
+                    <CalendarDatePicker Grid.Row="11" />
                 </Grid>
-                <CheckBox x:ConnectionId='2'
-                    x:Name="rememberMe"
-                    Content="Remember me"
-                    IsChecked="{Binding Remember, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <Button x:ConnectionId='3'
-                    x:Name="LoginBtn"
-                    Width="250"
-                    Height="35"
-                    Margin="0,25"
-                    Background="{ThemeResource MyForegroundThemeBrush}"
-                    Command="{Binding Login}"
-                    Content="Login"
-                    Foreground="{ThemeResource MyBackgroundThemeBrush}">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border
-                                            x:Name="LoginBorder"
-                                            Background="{ThemeResource MyForegroundThemeBrush}"
-                                            CornerRadius="16">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <TextBlock x:ConnectionId='4'
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button x:ConnectionId='3'
+                        x:Name="AddBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        Content="Add"
+                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                x:Name="LoginBorder"
+                                                Background="{ThemeResource MyForegroundThemeBrush}"
+                                                CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:ConnectionId='4'
+                        x:Name="CancelBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        Content="Cancel"
+                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                x:Name="LoginBorder"
+                                                Background="{ThemeResource MyForegroundThemeBrush}"
+                                                CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+                <TextBlock x:ConnectionId='2'
                     x:Name="messageTextBlock"
                     FontSize="15"
                     Foreground="Red"
-                    Text="{Binding Mess, Mode=TwoWay}" />
+                    Text="Error"
+                    TextAlignment="Center" />
             </StackPanel>
         </Border>
     </Grid>
