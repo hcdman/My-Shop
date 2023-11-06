@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -36,6 +36,6 @@
 
     <Thickness x:Key="PageContentMargin">10,48,0,0</Thickness>
     <Thickness x:Key="NavigateItemPadding">0,15,0,15</Thickness>
-    <Thickness
-        x:Key="Top5SoldMargin">60, 0, 60, 0</Thickness>
+    <Thickness x:Key="Top5SoldMargin">60, 0, 60, 0</Thickness>
+    <Thickness x:Key="ProductMargin">52, 0, 52, 0</Thickness>
 </ResourceDictionary>

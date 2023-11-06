@@ -15,6 +15,7 @@ using Microsoft.UI.Xaml.Navigation;
 using MyShop.ViewModel;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.UI.Xaml.Media.Animation;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -43,6 +44,11 @@ namespace MyShop.View
                 Frame.Navigate(typeof(View.ProductsPage));
             }
 
+        }
+
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(View.ProductsPage));
         }
     }
 }

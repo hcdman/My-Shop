@@ -15,30 +15,28 @@
     <Page.Resources>
         <converter:PriceToCurrencyConverters x:Key="PriceToCurrencyConverters" />
     </Page.Resources>
-    <Grid Margin="{StaticResource PageContentMargin}">
-        <Grid Width="900">
+    <Grid>
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="50" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-
-            <!--  Header & Add, Edit Import button  -->
-            <Grid Grid.Row="0">
-                <Grid.Resources>
-                    <Style TargetType="TextBlock">
-                        <Setter Property="FontWeight" Value="SemiBold" />
-                        <Setter Property="FontSize" Value="20" />
-                    </Style>
-                </Grid.Resources>
+            <!--  Header  -->
+            <TextBlock
+                Margin="20,20,0,20"
+                Style="{StaticResource PageTitleStyle}"
+                Text="Products" />
+            <!--  Add, Import button  -->
+            <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Products" />
                 <Button
                     Grid.Column="1"
                     Margin="0,0,10,0"
@@ -46,23 +44,25 @@
                     Click="AddButton_Click">
                     Add
                 </Button>
-                <Button Grid.Column="2" Background="{ThemeResource MyBlockBackgroundThemeBrush}">Import</Button>
+                <Button
+                    Grid.Column="2"
+                    Margin="0,0,20,0"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}">
+                    Import
+                </Button>
             </Grid>
 
             <!--  Search bar  -->
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Margin="20,0,0,20">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="280" />
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="220" />
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <StackPanel Orientation="Horizontal">
                         <TextBox
                             Name="productNameTextBox"
-                            Width="200"
+                            Width="300"
                             Height="30"
                             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                             PlaceholderText="Product Name"
@@ -74,21 +74,20 @@
             </Grid>
 
             <!--  Filter, Sort  -->
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" Margin="20,0,0,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="240" />
-                    <ColumnDefinition Width="260" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Margin="0,9,0,0">
+                <Grid Grid.Column="0">
                     <ComboBox
                         Width="200"
                         ItemsSource="{Binding SelectOption1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         PlaceholderText="Pick a Price range"
                         SelectedItem="{Binding Option1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </Grid>
-                <Grid Grid.Column="1" Margin="0,9,0,0">
+                <Grid Grid.Column="1" Margin="10,0,0,0">
                     <ComboBox
                         Width="200"
                         DisplayMemberPath="tenloai"
@@ -97,96 +96,82 @@
                         SelectedItem="{Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                         SelectedValuePath="tenloai" />
                 </Grid>
-                <Grid Grid.Column="2">
+                <Grid
+                    Grid.Column="2"
+                    Margin="0,0,20,0"
+                    HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal">
-                        <Button Command="{Binding Filter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">Filter</Button>
+                        <Button Margin="0,0,10,0" Command="{Binding Filter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">Filter</Button>
                         <Button Command="{Binding ClearFilter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">Remove Filter</Button>
                     </StackPanel>
                 </Grid>
-                <Grid Grid.Column="3" Margin="0,9,0,0">
-                    <ComboBox
-                        Width="200"
-                        ItemsSource="{Binding SelectOption2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                        PlaceholderText="Sort by"
-                        SelectedItem="{Binding Option2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                </Grid>
             </Grid>
-
+            <Grid
+                Grid.Row="3"
+                Margin="0,10,20,0"
+                HorizontalAlignment="Right">
+                <ComboBox
+                    Width="200"
+                    ItemsSource="{Binding SelectOption2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    PlaceholderText="Sort by"
+                    SelectedItem="{Binding Option2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
             <!--  Data  -->
-            <Grid Grid.Row="3">
-                <GridView x:Name="ContentGridView" ItemsSource="{Binding Products}">
-
-
-                    <GridView.ItemContainerStyle>
-                        <Style TargetType="GridViewItem">
-                            <Setter Property="Margin" Value="5,5,5,5" />
-                        </Style>
-                    </GridView.ItemContainerStyle>
-                    <GridView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <ItemsWrapGrid
-                                x:Name="MaxItemsWrapGrid"
-                                MaximumRowsOrColumns="5"
-                                Orientation="Horizontal" />
-                        </ItemsPanelTemplate>
-                    </GridView.ItemsPanel>
-                    <GridView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel
-                                Margin="30,5,30,5"
-                                Padding="20"
-                                Background="{ThemeResource MyBlockBackgroundThemeBrush}"
-                                CornerRadius="8">
-
-                                <StackPanel.ContextFlyout>
-                                    <MenuFlyout>
-                                        <MenuFlyoutItem
-                                            Click="EditMenuFlyoutItem_Click"
-                                            Tag="{Binding masp}"
-                                            Text="Edit">
-                                            <MenuFlyoutItem.Icon>
-                                                <SymbolIcon Symbol="Edit" />
-                                            </MenuFlyoutItem.Icon>
-                                        </MenuFlyoutItem>
-                                        <MenuFlyoutItem
-                                            Click="DeleteMenuFlyoutItem_Click"
-                                            Tag="{Binding masp}"
-                                            Text="Delete">
-                                            <MenuFlyoutItem.Icon>
-                                                <SymbolIcon Symbol="Delete" />
-                                            </MenuFlyoutItem.Icon>
-                                        </MenuFlyoutItem>
-                                    </MenuFlyout>
-                                </StackPanel.ContextFlyout>
-                                <Image Width="50" Source="{Binding anh}" />
-                                <StackPanel Margin="0,10,0,0">
-                                    <TextBlock
-                                        FontWeight="Bold"
-                                        Text="{Binding tensp}"
-                                        TextAlignment="Center" />
-                                    <TextBlock
-                                        FontStyle="Italic"
-                                        Text="{Binding gia, Converter={StaticResource PriceToCurrencyConverters}}"
-                                        TextAlignment="Center" />
+            <Grid
+                Grid.Row="4"
+                Margin="20 5 20 20"
+                Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                CornerRadius="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <StackPanel
+                    x:Name="ContentGridView"
+                    Grid.Row="0"
+                    Margin="0,10,0,0"
+                    Orientation="Horizontal">
+                    <GridView ItemsSource="{Binding Products}">
+                        <GridView.ItemContainerStyle>
+                            <Style TargetType="GridViewItem">
+                                <Setter Property="Margin" Value="{ThemeResource Top5SoldMargin}" />
+                            </Style>
+                        </GridView.ItemContainerStyle>
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsWrapGrid
+                                    x:Name="MaxItemsWrapGrid"
+                                    MaximumRowsOrColumns="5"
+                                    Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Image Width="{ThemeResource Top5ImageWidth}" Source="{Binding anh}" />
+                                    <StackPanel Margin="0,10,0,0" Padding="0,0,0,20" Width="100">
+                                        <TextBlock
+                                            FontWeight="Bold"
+                                            Style="{StaticResource BodyTextStyle}"
+                                            Text="{Binding tensp}"
+                                            TextAlignment="Center" />
+                                        <TextBlock
+                                            FontStyle="Italic"
+                                            Text="{Binding gia, Converter={StaticResource PriceToCurrencyConverters}}"
+                                            TextAlignment="Center" />
+                                    </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-
-
-                </GridView>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </StackPanel>
             </Grid>
-
             <!--  Page navigation  -->
-            <Grid Grid.Row="4">
+            <Grid Grid.Row="5" Margin="0,0,0,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <StackPanel
-                    Margin="10"
-                    HorizontalAlignment="Right"
-                    Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <TextBlock
                         Margin="0,5,0,0"
                         HorizontalAlignment="Center"

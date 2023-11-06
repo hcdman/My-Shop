@@ -71,11 +71,11 @@
             CornerRadius="10">
             <controls:DataGrid
                 x:Name="CustomerDataGrid"
+                Margin="0,10,0,0"
                 HorizontalAlignment="Center"
                 AutoGenerateColumns="False"
                 IsReadOnly="True"
                 ItemsSource="{Binding customers, Mode=TwoWay}">
-
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn
                         Width="SizeToCells"
@@ -107,8 +107,8 @@
                     <controls:DataGridTextColumn
                         Binding="{Binding email}"
                         CanUserResize="False"
-                        Header="Email"
-                        ElementStyle="{StaticResource DataGridTextStyles}" />
+                        ElementStyle="{StaticResource DataGridTextStyles}"
+                        Header="Email" />
                     <controls:DataGridTextColumn
                         Binding="{Binding ngdk}"
                         CanUserResize="False"
