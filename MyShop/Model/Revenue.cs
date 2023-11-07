@@ -34,7 +34,7 @@ namespace MyShop.Model
             new Revenue("Aug.", 450),
             new Revenue("Sep.", 500),
             new Revenue("Oct.", 600),
-            new Revenue("Nov.", 700),
+            new Revenue("Nov.", 690),
             new Revenue("Dec.", 500)
                 });
             }
@@ -42,7 +42,7 @@ namespace MyShop.Model
             {
                 return new List<Revenue>(new Revenue[12]
                 {
-                    new Revenue("Day 1", 100),
+                    new Revenue("Day 1", 77),
                     new Revenue("Day 2", 50),
                     new Revenue("Day 3", 20),
                     new Revenue("Day 4", 50),

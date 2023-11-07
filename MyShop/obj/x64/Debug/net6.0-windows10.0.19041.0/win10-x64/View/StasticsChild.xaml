@@ -16,14 +16,17 @@
     <Grid Margin="{StaticResource PageContentMargin}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock FontWeight="Bold" FontSize="20">Product Stastics</TextBlock>
+            <TextBlock
+                    Margin="20,20,0,20"
+                    Style="{StaticResource PageTitleStyle}"
+                    Text="Product Stastics" />  
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button x:ConnectionId='2' Margin="2"                   Name="ViewProduct">View Revenue Stastics</Button>
                 <Button x:ConnectionId='3' Margin="2"                   Name="Week">Week</Button>
@@ -31,8 +34,10 @@
                 <Button x:ConnectionId='5' Margin="2"                   Name="Year" Background=" #FF00FF00 " >Year</Button>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1">
-            <chart:SfCircularChart Height="500">
+        <Grid Grid.Row="1" Margin="20 5 20 20"
+         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+         CornerRadius="10" >
+            <chart:SfCircularChart Margin="0,0,10,0" >
                 <chart:SfCircularChart.Legend >
                     <chart:ChartLegend ToggleSeriesVisibility="True"/>
                 </chart:SfCircularChart.Legend>
@@ -47,7 +52,7 @@
                         <chart:PieSeries.DataLabelSettings>
                             <chart:CircularDataLabelSettings Context="Percentage" UseSeriesPalette="True" 
 					ShowConnectorLine="True" 
-					ConnectorHeight="40"
+					ConnectorHeight="35"
 					Position="Outside"/>
 
                         </chart:PieSeries.DataLabelSettings>
