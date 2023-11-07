@@ -117,6 +117,7 @@ public sealed partial class ShellPage : Page
     public void SaveCurrentNavPage()
     {
         var currentPage = ContentFrame.SourcePageType.FullName;
+
         if(currentPage == "MyShop.View.AddCustomerPage"|| currentPage == "MyShop.View.UpdateCustomerPage")
         {
             currentPage = "MyShop.View.CustomerPage";

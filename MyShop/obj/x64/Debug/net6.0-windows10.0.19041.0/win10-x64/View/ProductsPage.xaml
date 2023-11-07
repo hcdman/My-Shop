@@ -30,6 +30,7 @@
                 Margin="20,20,0,20"
                 Style="{StaticResource PageTitleStyle}"
                 Text="Products" />
+            
             <!--  Add, Import button  -->
             <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
                 <Grid.ColumnDefinitions>
@@ -116,6 +117,7 @@
                     PlaceholderText="Sort by"
                     SelectedItem="{Binding Option2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
+            
             <!--  Data  -->
             <Grid
                 Grid.Row="4"

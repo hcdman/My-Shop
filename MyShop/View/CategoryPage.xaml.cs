@@ -26,6 +26,7 @@ namespace MyShop.View;
 public sealed partial class CategoryPage : Page
 {
     CategoryViewModel cateVM = new CategoryViewModel();
+    
     public CategoryPage()
     {
         this.InitializeComponent();
