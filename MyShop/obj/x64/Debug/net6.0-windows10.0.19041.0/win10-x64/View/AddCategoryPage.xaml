@@ -7,60 +7,108 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource MyBackgroundThemeBrush}"
-    Foreground="{ThemeResource MyForegroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid x:ConnectionId='3' Grid.Column="0" Name="form">
+    <Grid>
+        <Border 
+      Width="auto"
+      Height="auto"
+      Margin="20,48,20,20"
+      Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+      CornerRadius="10">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-
-
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">ID category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding maloai , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
+                <TextBlock
+              Grid.Row="0"
+              Margin="0,10,0,0"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              FontSize="25"
+              FontWeight="Bold"
+              Text="Add Category" />
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Name category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding tenloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                    <StackPanel
+                  Grid.Column="0"
+                  Margin="20,20,50,0"
+                  Orientation="Vertical">
+                        <Grid VerticalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                 </Grid.RowDefinitions>
+                            <TextBlock
+                          Grid.Row="0"
+                          Margin="0,10"
+                          HorizontalAlignment="Left"
+                          FontWeight="Medium"
+                          Text="ID Category" />
+                            <TextBox
+                          Grid.Row="1"
+                          Width="350"
+                          Padding="0,5"
+                          HorizontalAlignment="Left"
+                          BorderThickness="0,0,0,1"
+                         />
+                            <TextBlock
+                          Grid.Row="2"
+                          Margin="0,10"
+                          HorizontalAlignment="Left"
+                          FontWeight="Medium"
+                          Text="Name Category" />
+                            <TextBox
+                          Grid.Row="3"
+                          Width="350"
+                          Padding="0,5"
+                          HorizontalAlignment="Left"
+                          BorderThickness="0,0,0,1"
+                           />
+                        </Grid>
+                    </StackPanel>
                 </Grid>
+                <Grid Grid.Row="2" Margin="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <StackPanel
+                  Grid.Row="0"
+                  HorizontalAlignment="Center"
+                  Orientation="Horizontal">
+                        <Button x:ConnectionId='3'
+                      x:Name="AddBtn"
+                      Width="100"
+                      Height="35"
+                      Margin="20,0,20,0"
+                                       
+                      Content="Add"
+                      CornerRadius="10" />
+                        <Button x:ConnectionId='4'
+                      x:Name="CancelBtn"
+                      Width="100"
+                      Height="35"
+                      Margin="20,0,20,0"
+                      Content="Cancel"
+                      CornerRadius="10" 
+                                          />
+                    </StackPanel>
+                    <TextBlock x:ConnectionId='2'
+                  x:Name="messageTextBlock"
+                  Grid.Row="1"
+                  Margin="0,20,0,0"
+                  FontSize="15"
+                  Foreground="Red"
+                  Text="{Binding Mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                  TextAlignment="Center" />
 
+                </Grid>
             </Grid>
-            <Grid Grid.Column="1">
-                <StackPanel>
-                    <Image Source="ms-appx:///PhoneSample/iphone.png"/>
-                    <Button HorizontalAlignment="Center" Margin="0 10">Import Image</Button>
-                </StackPanel>
-            </Grid>
-        </Grid>
-        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding mess}"></TextBlock>
-            <ProgressBar x:ConnectionId='2' x:Name="loading" Width="500"  IsIndeterminate="{Binding  isShowProgres}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-
-        </Grid>
-        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Command="{Binding addCate}" >Add</Button>
-        </Grid>
+        </Border>
     </Grid>
 </Page>
 

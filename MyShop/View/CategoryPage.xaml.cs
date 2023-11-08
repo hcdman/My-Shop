@@ -33,12 +33,6 @@ public sealed partial class CategoryPage : Page
         this.DataContext = cateVM;
     }
 
-    private void addCate(object sender, RoutedEventArgs e)
-    {
-        Frame.Navigate(typeof(AddCategoryPage));
-    }
-
-
     private void deleteCate(object sender, RoutedEventArgs e)
     {
         var btn = sender as Button;
@@ -83,5 +77,15 @@ public sealed partial class CategoryPage : Page
     private void preC(object sender, RoutedEventArgs e)
     {
         cateVM.pre();
+    }
+
+    private void AddButton_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(View.AddCategoryPage));
+    }
+
+    private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+    {
+
     }
 }

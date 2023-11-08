@@ -11,52 +11,115 @@
     Foreground="{ThemeResource MyForegroundThemeBrush}"
                        >
 
-    <Grid Margin="{StaticResource PageContentMargin}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid x:ConnectionId='5' Grid.Column="0" Name="form">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-
-
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">ID category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding maloai , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+    <Grid>
+        <Border
+    Width="500"
+    Height="600"
+    Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+    CornerRadius="10">
+            <StackPanel Margin="20" Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="25"
+            FontWeight="Bold"
+            Text="Category's Information" />
+                <!--Data is here-->
+                <Grid x:ConnectionId='2' x:Name="form" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                Grid.Row="0"
+                Margin="0,10"
+                HorizontalAlignment="Left"
+                FontWeight="Medium"
+                Text="ID Category" />
+                    <TextBox
+                Grid.Row="1"
+                Width="450"
+                Padding="0,5"
+                HorizontalAlignment="Left"
+                BorderThickness="0,0,0,1"
+                Text="{Binding maloai , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBlock
+                Grid.Row="2"
+                Margin="0,10"
+                HorizontalAlignment="Left"
+                FontWeight="Medium"
+                Text="Name Category" />
+                    <TextBox
+                Grid.Row="3"
+                Width="450"
+                Padding="0,5"
+                HorizontalAlignment="Left"
+                BorderThickness="0,0,0,1"
+                Text="{Binding tenloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                 </Grid>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Name category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding tenloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-
-            </Grid>
-
-        </Grid>
-
-        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='3' Name="mess"></TextBlock>
-            <ProgressBar x:ConnectionId='4' x:Name="loading" Width="500" IsHitTestVisible="False" IsIndeterminate="False" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:ConnectionId='2'                    >Add</Button>
-        </Grid>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button x:ConnectionId='4'
+                x:Name="AddBtn"
+                Width="100"
+                Height="35"
+                Margin="20,15"
+                Background="{ThemeResource MyForegroundThemeBrush}"
+                                    
+                Content="Update"
+                Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                        x:Name="LoginBorder"
+                                        Background="{ThemeResource MyForegroundThemeBrush}"
+                                        CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:ConnectionId='5'
+                x:Name="CancelBtn"
+                Width="100"
+                Height="35"
+                Margin="20,15"
+                Background="{ThemeResource MyForegroundThemeBrush}"
+                                    
+                Content="Cancel"
+                Foreground="{ThemeResource MyBackgroundThemeBrush}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                        x:Name="LoginBorder"
+                                        Background="{ThemeResource MyForegroundThemeBrush}"
+                                        CornerRadius="16">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+                <TextBlock x:ConnectionId='3'
+            x:Name="mess"
+            FontSize="15"
+            Foreground="Red"
+            TextAlignment="Center" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
 

@@ -77,6 +77,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\AddCategoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="View\UpdateOrderPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,11 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\AddCustomerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="View\AddCategoryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

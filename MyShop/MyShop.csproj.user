@@ -17,6 +17,9 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="View\AddCategoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UpdateOrderPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -36,9 +39,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AddCustomerPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AddCategoryPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Thickness.xaml">

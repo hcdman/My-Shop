@@ -37,7 +37,7 @@
         <Grid Grid.Row="1" Margin="20 5 20 20"
          Background="{ThemeResource MyBlockBackgroundThemeBrush}"
          CornerRadius="10" >
-            <chart:SfCircularChart Margin="0,0,10,0" >
+            <chart:SfCircularChart Margin="0,0,0,10" >
                 <chart:SfCircularChart.Legend >
                     <chart:ChartLegend ToggleSeriesVisibility="True"/>
                 </chart:SfCircularChart.Legend>

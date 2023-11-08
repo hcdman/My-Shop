@@ -11,59 +11,41 @@
     Foreground="{ThemeResource MyForegroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-            <RowDefinition />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
+        
+        <!--Header-->
         <TextBlock
-            Margin="10"
-            FontSize="15"
-            FontWeight="Bold">
-            Category
-        </TextBlock>
-        <TextBlock Text="{Binding mess}">Demo</TextBlock>
-        <ProgressBar
-            x:Name="loading"
-            Canvas.Left="94"
-            Canvas.Top="313"
-            Width="500"
-            Height="10"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Background="{ThemeResource MyBackgroundThemeBrush}"
-            IsIndeterminate="{Binding isShowProgressBar}" />
+          Margin="20,20,0,20"
+          Style="{StaticResource PageTitleStyle}"
+          Text="Category" />
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <!--  Search information  -->
-                <Grid Height="40">
-                    <TextBlock
-                        Margin="8"
-                        IsHitTestVisible="False"
-                        Text="Category Name"
-                        Visibility="Visible" />
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Name="textBoxFilter"
-                        Height="20"
-                        Text="{Binding keyword, Mode=TwoWay}" />
-                </Grid>
-                <Button Grid.Column="1" Margin="10,0,0,0">Search</Button>
+                Name="orderNameTextBox"
+                Width="300"
+                Height="30"
+                Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                PlaceholderText="Category Name"
+                TextWrapping="Wrap" />
+                    <Button Margin="10,0" >Search</Button>
+                </StackPanel>
             </Grid>
             <Button
-                Grid.Column="1"
-                Width="100"
-                HorizontalAlignment="Right"
-                Click="addCate">
+                         Grid.Column="1"
+                         Margin="0,0,10,0"
+                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                         Click="AddButton_Click">
                 Add
             </Button>
         </Grid>
@@ -71,17 +53,18 @@
         <!--  Data of category  -->
         <Grid
             Grid.Row="2"
-            Width="700"
-            Height="350"
-            Background="{ThemeResource MyBlockBackgroundThemeBrush}">
+           Margin="20 5 20 20"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+           CornerRadius="10">
             <controls:DataGrid
                 x:Name="CustomerDataGrid"
                 HorizontalAlignment="Center"
                 AutoGenerateColumns="False"
+                IsReadOnly="True"
                 ItemsSource="{Binding categories}">
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn
-                        Width="SizeToHeader"
+                        Width="SizeToCells"
                         Binding="{Binding maloai}"
                         CanUserResize="False"
                         FontWeight="Medium"
@@ -121,34 +104,48 @@
             </controls:DataGrid>
         </Grid>
         <!--  Pagination  -->
-        <Grid Grid.Row="3" Width="700">
-
+        <Grid Grid.Row="3" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <StackPanel
-                Margin="10"
-                HorizontalAlignment="Right"
-                Orientation="Horizontal">
-                <TextBlock FontWeight="Bold">Category per page</TextBlock>
-                <Border Margin="5,0,0,0" Background="{ThemeResource MyBlockBackgroundThemeBrush}">
-                    <TextBlock Text="{Binding _rowsPerPage}" />
-                </Border>
-
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock
+                  Margin="0,5,0,0"
+                  HorizontalAlignment="Center"
+                  FontWeight="Bold"
+                  TextAlignment="Center">            
+                 Category per page
+                            </TextBlock>
+                            <TextBox
+                  Width="10"
+                  Height="30"
+                  Margin="10,0"
+                  KeyDown="TextBox_KeyDown"
+    
+                  TextAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel
+                  Grid.Column="1"
+                  Margin="10,0,0,0"
+                  Orientation="Horizontal">
+                            <Button
+                  Width="80"
+                  Margin="10,0">
+                                Previous
+                </Button>
+                <TextBlock Margin="0,5,0,0"
+                  Height="30"
+                  VerticalAlignment="Center"
+                  TextAlignment="Center" 
+                       Text="1/1"/>     
+                <Button
+              Width="80"
+              Margin="10,0"
+             >
+                    Next
+                </Button>
             </StackPanel>
-            <StackPanel
-                Grid.Column="1"
-                Margin="10,0,0,0"
-                Orientation="Horizontal">
-                <Button Click="preC">Previous</Button>
-                <Border Margin="10" Background="{ThemeResource MyBlockBackgroundThemeBrush}">
-                    <TextBlock><Run Text="{Binding _currentPage}" />
-                        /<Run Text="{Binding _totalPages}" /></TextBlock>
-                </Border>
-                <Button Click="nextC">Next</Button>
-            </StackPanel>
-
         </Grid>
     </Grid>
 </Page>

@@ -66,7 +66,7 @@ public sealed partial class StatisticsPage : Page
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Profit";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Profit";
+        yAxis.Header = "Profit ($)";
 
         //Change the correct viewmodel data of Profit behind
         this.DataContext = new StatisticViewModel("year");
@@ -80,7 +80,7 @@ public sealed partial class StatisticsPage : Page
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Revenue";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Revenue";
+        yAxis.Header = "Revenue ($)";
         // Update the header
         this.DataContext = new StatisticViewModel("week");
     }

@@ -72,7 +72,7 @@
                         <chart:CategoryAxis PlotOffsetStart="10" PlotOffsetEnd="10" Header="Time"/>
                     </chart:SfCartesianChart.XAxes>
                     <chart:SfCartesianChart.YAxes>
-                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue" Interval="100" />
+                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue ($)" Interval="100" />
                     </chart:SfCartesianChart.YAxes>
                     <chart:SfCartesianChart.Legend>
                         <chart:ChartLegend IconWidth="15" 
@@ -97,16 +97,16 @@
                             </chart:ColumnSeries.DataLabelSettings>
                         </chart:ColumnSeries>
 
-                        <!--Binding data is here - data show in spline-->
-                        <chart:SplineSeries ItemsSource="{Binding Revenues}"
+                        <!--Binding data is here - data show in line-->
+                        <chart:LineSeries ItemsSource="{Binding Revenues}"
                                         Label="Line"
                                         IsVisibleOnLegend="True"
                                     XBindingPath="Year" YBindingPath="Counts"
                                     ShowDataLabels="True">
-                            <chart:SplineSeries.DataLabelSettings>
+                            <chart:LineSeries.DataLabelSettings>
                                 <chart:CartesianDataLabelSettings ContentTemplate="{StaticResource dataLabelTemplate}"/>
-                            </chart:SplineSeries.DataLabelSettings>
-                        </chart:SplineSeries>
+                            </chart:LineSeries.DataLabelSettings>
+                        </chart:LineSeries>
                     </chart:SfCartesianChart.Series>
 
                 </chart:SfCartesianChart>
