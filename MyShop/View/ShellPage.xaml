@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MyShop.View.ShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyShop.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background= "{ThemeResource MyBlockBackgroundThemeBrush}"
+    Foreground="{ThemeResource MyForegroundThemeBrush}"
+    Unloaded="Page_Unloaded"
+    >
+    <Grid>
+        <Grid
+        x:Name="AppTitleBar"
+        Height="48"
+        Margin="48,0,0,0"
+        VerticalAlignment="Top"
+        Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image
+            x:Name="AppFontIcon"
+            Width="16"
+            Height="16"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Source="/Assets/icon-shop-64.png" />
+            <TextBlock
+            Margin="12,0,0,0"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            Style="{StaticResource PageTitleStyle}"
+            Text="{x:Bind GetAppTitleFromSystem()}"/>
+        </Grid>
+        <NavigationView x:Name="NavView"
+                     Loaded="NavView_Loaded"
+                     ItemInvoked="NavView_ItemInvoked"
+                     OpenPaneLength="{ThemeResource OpenPaneLength}"
+                     IsBackButtonVisible="Collapsed"
+                     IsBackEnabled="False"
+                     >
+            <NavigationView.Resources>
+                <LinearGradientBrush x:Key="NavigationViewItemBackgroundSelected">
+                    <GradientStop Offset="0" Color="#0A21C6"/>
+                    <GradientStop Offset="1" Color="#DADADA"/>
+                </LinearGradientBrush>
+                <Thickness x:Key="NavigationViewContentGridBorderThickness">0,0,0,0</Thickness>
+                <CornerRadius x:Key="NavigationViewContentGridCornerRadius">0,0,0,0</CornerRadius>
+            </NavigationView.Resources>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Dashboard" Tag="MyShop.View.DashboardPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF246;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Customer" Tag="MyShop.View.CustomerPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEA8C;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Category" Tag="MyShop.View.CategoryPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8FD;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Products" Tag="MyShop.View.ProductsPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8EA;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Orders" Tag="MyShop.View.OrdersPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7BF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Statistics" Tag="MyShop.View.StatisticsPage" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEB05;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <NavigationView.PaneFooter>
+                <NavigationViewItem Content="Log out" Tag="MyShop.View.LoginPage" Tapped="NavigationViewItem_Tapped" Padding="{StaticResource NavigateItemPadding}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF3B1;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.PaneFooter>
+
+            <Frame x:Name="ContentFrame" />
+        </NavigationView>
+    </Grid>
+</Page>

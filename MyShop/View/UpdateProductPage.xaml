@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MyShop.View.UpdateProductPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:local="using:MyShop.View"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+mc:Ignorable="d"
+Background="{ThemeResource MyBackgroundThemeBrush}"
+Foreground="{ThemeResource MyForegroundThemeBrush}">
+
+    <Grid Margin="{StaticResource PageContentMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition
+            Height="Auto"></RowDefinition>
+            <RowDefinition
+            Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid
+        Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                Width="500"></ColumnDefinition>
+                <ColumnDefinition
+                Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid
+            Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                    <RowDefinition
+                    Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid
+                Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">ID:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Id, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Name:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Price:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Price, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Cost:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Cost, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Manufacturer:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Manufactuer, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Quatity:</TextBlock>
+                    <TextBox
+                    Grid.Column="1"
+                    TextAlignment="Center"
+                    Text="{Binding Quantity, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid
+                Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                        Width="100"></ColumnDefinition>
+                        <ColumnDefinition
+                        Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                    Grid.Column="0">Type:</TextBlock>
+                    <ComboBox
+                    Grid.Column="1"
+                    DisplayMemberPath="tenloai"
+                    SelectedValuePath="tenloai"
+                    ItemsSource="{Binding AllType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                    SelectedItem="{Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        />
+                </Grid>
+                <ProgressRing
+                Grid.Row="7"
+                Width="50"
+                Height="50"
+                IsIndeterminate="{Binding IsLoading, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <TextBlock
+                Grid.Row="7"
+                Text="{Binding Mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                Foreground="Red"
+                FontSize="15"
+                x:Name="messageTextBlock" />
+            </Grid>
+            <Grid
+            Grid.Column="1">
+                <StackPanel>
+                    <Image
+                    Source="{Binding Image, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <Button
+                    HorizontalAlignment="Center"
+                    Margin="0 10"
+                    Command="{Binding LoadImage}">Import Image</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid
+        Grid.Row="1"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+            <Button x:Name="btnUpdate" Click="btnUpdate_Click">Update</Button>
+        </Grid>
+    </Grid>
+</Page>

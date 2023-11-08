@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    x:Class="MyShop.View.OrdersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyShop.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource MyBackgroundThemeBrush}"
+    Foreground="{ThemeResource MyForegroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+<<<<<<< HEAD
+        <TextBlock FontSize="15" FontWeight="Bold" Margin="10">Order</TextBlock>
+        <TextBlock Text="{Binding mess}">Demo</TextBlock>
+        <TextBlock x:ConnectionId='2' Text="" Name="info">Demo</TextBlock>
+        <ProgressBar x:ConnectionId='3' x:Name="loading" Width="500" Background="{ThemeResource MyBackgroundThemeBrush}"  IsIndeterminate="{Binding isShowProgressBar}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <TextBox x:ConnectionId='15' x:Name="CustomerNameTextBox" Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" PlaceholderText="Customer ID" Width="180"/>
+                <Button x:ConnectionId='16' Margin="8,0,0,0"                   >Search</Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="1">
+                <TextBox x:ConnectionId='12' Text="{Binding  start_date, Mode=TwoWay}" Margin="0,0,10,0" x:Name="FromDay" PlaceholderText="From day" Width="100"/>
+                <TextBox x:ConnectionId='13' Text="{Binding  end_date , Mode=TwoWay}" Margin="0,0,20,0" x:Name="ToDay" PlaceholderText="To day" Width="100"/>
+                <Button x:ConnectionId='14'                Content="Filter"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="35,10,0,10" Grid.Column="2">
+                <Button x:ConnectionId='10'                      Margin="0,0,10,0" Content="Remove Filder"/>
+                <Button x:ConnectionId='11'             Content="Add"/>
+=======
+
+        <!--Header-->
+        <TextBlock
+                 Margin="20,20,0,20"
+                 Style="{StaticResource PageTitleStyle}"
+                 Text="Order" />  
+        
+        <!--Add button-->
+        <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='7'
+                    Grid.Column="1"
+                    Margin="0,0,10,0"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                                           >
+                Add
+            </Button>
+        </Grid>
+
+        <!--Search bar-->
+        <Grid Grid.Row="1" Margin="20,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:ConnectionId='6'
+                           Name="orderNameTextBox"
+                           Width="300"
+                           Height="30"
+                           Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                           PlaceholderText="Order Name"
+                           TextWrapping="Wrap" />
+                    <Button Margin="10,0" >Search</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+         <!--Filter by date-->
+        <Grid Grid.Row="2" Margin="20,0,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="0">
+                <CalendarDatePicker PlaceholderText="From day" Margin="5" />
+                <CalendarDatePicker PlaceholderText="To day" Margin="5" />
+                <Button Content="Filter"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <Button Margin="0,0,10,0" Content="Remove Filter"/>
+>>>>>>> e74e5883a489ed174a4d041384b2d181cbf406e7
+            </StackPanel>
+
+        </Grid>
+        <!--Data of order-->
+<<<<<<< HEAD
+        <Grid Grid.Row="2" Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Width="800" Height="350">
+            <controls:DataGrid x:ConnectionId='6' x:Name="CustomerDataGrid" ItemsSource="{Binding orders}" AutoGenerateColumns="False" HorizontalAlignment="Center">
+                <controls:DataGrid.Columns>
+
+                    <controls:DataGridTextColumn Header="Order ID" Binding="{Binding sohd}" CanUserResize="False" Width="SizeToHeader" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Date" Binding="{Binding nghd}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Customer ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding makh}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Total price" CanUserResize="False" Width="SizeToCells" Binding="{Binding trigia}" FontWeight="Medium"/>
+                   
+=======
+        <Grid Grid.Row="3" Margin="20 5 20 20"
+                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                         CornerRadius="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <controls:DataGrid x:ConnectionId='3' x:Name="CustomerDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" HorizontalAlignment="Center"  IsReadOnly="True">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" CanUserResize="False" Width="SizeToHeader" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Customer Name" CanUserResize="False" Width="SizeToHeader" Binding="{Binding CustomerName}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Product" CanUserResize="False" Width="SizeToCells" Binding="{Binding Product}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Date" Binding="{Binding Date}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Status" CanUserResize="False" Width="SizeToCells" Binding="{Binding Status}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Amount" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Amount}" FontWeight="Medium"/>
+>>>>>>> e74e5883a489ed174a4d041384b2d181cbf406e7
+                    <controls:DataGridTemplateColumn Header="Action" IsReadOnly="True" CanUserResize="False"  Width="SizeToCells">
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+<<<<<<< HEAD
+                                    <Button x:ConnectionId='8' Margin="5 0 0 0"                     Tag="{Binding sohd}">
+=======
+                                    <Button x:ConnectionId='5' Margin="5 0 0 0"                 Tag="{Binding OrderId}">
+>>>>>>> e74e5883a489ed174a4d041384b2d181cbf406e7
+                                        <Image  Source="ms-appx:///Icons/edit.png" Width="16"/>
+                                    </Button>
+                                    <Button x:ConnectionId='9' Margin="5 0 0 0"                     Tag="{Binding sohd}">
+                                        <Image  Source="ms-appx:///Icons/delete.png" Width="16"/>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </Grid>
+
+        <!--Page navigation-->
+        <Grid Grid.Row="4" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+<<<<<<< HEAD
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <TextBlock FontWeight="Bold">Order per page</TextBlock>
+                <Border Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Margin="5,0,0,0">
+                    <TextBlock Text="{Binding _rowsPerPage}"></TextBlock>
+                </Border>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10,0,0,0">
+                <Button x:ConnectionId='4'            >Previous</Button>
+                <Border Margin="10"  Background= "{ThemeResource MyBlockBackgroundThemeBrush}">
+                    <TextBlock><Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/></TextBlock>
+                </Border>
+                <Button x:ConnectionId='5'             >Next</Button>
+=======
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock
+                         Margin="0,5,0,0"
+                         HorizontalAlignment="Center"
+                         FontWeight="Bold"
+                         TextAlignment="Center">            
+             Order per page
+                </TextBlock>
+                <TextBox x:ConnectionId='2'
+             Width="10"
+             Height="30"
+             Margin="10,0"
+                                      
+           
+             TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel
+             Grid.Column="1"
+             Margin="10,0,0,0"
+             Orientation="Horizontal">
+                <Button
+             Width="80"
+             Margin="10,0">
+                    Previous
+                </Button>
+                <TextBlock Margin="0,5,0,0"
+             Height="30"
+             VerticalAlignment="Center"
+             TextAlignment="Center" 
+                  Text="1/1"/>
+                <Button
+                     Width="80"
+                     Margin="10,0"
+                    >
+                    Next
+                </Button>
+>>>>>>> e74e5883a489ed174a4d041384b2d181cbf406e7
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+

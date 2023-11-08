@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MyShop.View.addDetailOrderPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyShop.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource MyBackgroundThemeBrush}"
+     Foreground="{ThemeResource MyForegroundThemeBrush}">
+
+
+    <Grid Margin="{StaticResource PageContentMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Name="form">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+
+
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0">Order ID</TextBlock>
+                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding sohd , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0">Product ID:</TextBlock>
+                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding masp, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0">Amount:</TextBlock>
+                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding sl, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel>
+                    <Image Source="ms-appx:///PhoneSample/iphone.png"/>
+                    <Button HorizontalAlignment="Center" Margin="0 10">Import Image</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="{Binding mess}"></TextBlock>
+            <ProgressBar x:Name="loading" Width="500"  IsIndeterminate="{Binding  isShowProgres}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        </Grid>
+        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Command="{Binding addDetailOrder}" >Add</Button>
+        </Grid>
+    </Grid>
+</Page>

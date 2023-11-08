@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="MyShop.View.ProductsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:controls1="using:System.Windows.Controls"
+    xmlns:converter="using:MyShop.Converter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:MyShop.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource MyBackgroundThemeBrush}"
+    Foreground="{ThemeResource MyForegroundThemeBrush}"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <converter:PriceToCurrencyConverters x:Key="PriceToCurrencyConverters" />
+    </Page.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <!--  Header  -->
+            <TextBlock
+                Margin="20,20,0,20"
+                Style="{StaticResource PageTitleStyle}"
+                Text="Products" />
+
+            <!--  Add, Import button  -->
+            <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:ConnectionId='9'
+                    Grid.Column="1"
+                    Margin="0,0,10,0"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                                           >
+                    Add
+                </Button>
+                <Button
+                    Grid.Column="2"
+                    Margin="0,0,20,0"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}">
+                    Import
+                </Button>
+            </Grid>
+
+            <!--  Search bar  -->
+            <Grid Grid.Row="1" Margin="20,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:ConnectionId='8'
+                            Name="productNameTextBox"
+                            Width="300"
+                            Height="30"
+                            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                            PlaceholderText="Product Name"
+                            Text="{Binding SearchName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                            TextWrapping="Wrap" />
+                        <Button Margin="10,0" Command="{Binding Filter}">Search</Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <!--  Filter, Sort  -->
+            <Grid Grid.Row="2" Margin="20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <ComboBox
+                        Width="200"
+                        ItemsSource="{Binding SelectOption1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        PlaceholderText="Pick a Price range"
+                        SelectedItem="{Binding Option1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <Grid Grid.Column="1" Margin="10,0,0,0">
+                    <ComboBox
+                        Width="200"
+                        DisplayMemberPath="tenloai"
+                        ItemsSource="{Binding AllType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        PlaceholderText="Pick a Manufacturer"
+                        SelectedItem="{Binding Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        SelectedValuePath="tenloai" />
+                </Grid>
+                <Grid
+                    Grid.Column="2"
+                    Margin="0,0,20,0"
+                    HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="0,0,10,0" Command="{Binding Filter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">Filter</Button>
+                        <Button Command="{Binding ClearFilter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">Remove Filter</Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid
+                Grid.Row="3"
+                Margin="0,10,20,0"
+                HorizontalAlignment="Right">
+                <ComboBox
+                    Width="200"
+                    ItemsSource="{Binding SelectOption2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    PlaceholderText="Sort by"
+                    SelectedItem="{Binding Option2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+
+            <!--  Data  -->
+            <Grid
+                Grid.Row="4"
+                Margin="20,5,20,20"
+                Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                CornerRadius="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <StackPanel x:ConnectionId='3'
+                    x:Name="ContentGridView"
+                    Grid.Row="0"
+                    Margin="0,10,0,0"
+                    Orientation="Horizontal">
+                    <GridView ItemsSource="{Binding Products}">
+                        <GridView.ItemContainerStyle>
+                            <Style TargetType="GridViewItem">
+                                <Setter Property="Margin" Value="{ThemeResource Top5SoldMargin}" />
+                            </Style>
+                        </GridView.ItemContainerStyle>
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsWrapGrid
+                                    x:Name="MaxItemsWrapGrid"
+                                    MaximumRowsOrColumns="5"
+                                    Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Image Width="{ThemeResource Top5ImageWidth}" Source="{Binding anh}" />
+                                    <StackPanel
+                                        Width="100"
+                                        Margin="0,10,0,0"
+                                        Padding="0,0,0,20">
+                                        <TextBlock
+                                            FontWeight="Bold"
+                                            Style="{StaticResource BodyTextStyle}"
+                                            Text="{Binding tensp}"
+                                            TextAlignment="Center" />
+                                        <TextBlock
+                                            FontStyle="Italic"
+                                            Text="{Binding gia, Converter={StaticResource PriceToCurrencyConverters}}"
+                                            TextAlignment="Center" />
+                                    </StackPanel>
+                                        <StackPanel.ContextFlyout>
+                                            <MenuFlyout>
+                                                <MenuFlyoutItem x:ConnectionId='6'
+                                                                                    
+                                                    Tag="{Binding masp}"
+                                                    Text="Edit">
+                                                    <MenuFlyoutItem.Icon>
+                                                        <SymbolIcon Symbol="Edit" />
+                                                    </MenuFlyoutItem.Icon>
+                                                </MenuFlyoutItem>
+                                                <MenuFlyoutItem x:ConnectionId='7'
+                                                                                      
+                                                    Tag="{Binding masp}"
+                                                    Text="Delete">
+                                                    <MenuFlyoutItem.Icon>
+                                                        <SymbolIcon Symbol="Delete" />
+                                                    </MenuFlyoutItem.Icon>
+                                                </MenuFlyoutItem>
+                                            </MenuFlyout>
+                                        </StackPanel.ContextFlyout>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </StackPanel>
+            </Grid>
+            <!--  Page navigation  -->
+            <Grid Grid.Row="5" Margin="0,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <TextBlock
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center"
+                        FontWeight="Bold"
+                        TextAlignment="Center">
+                        Product per page
+                    </TextBlock>
+                    <TextBox x:ConnectionId='2'
+                        Width="10"
+                        Height="30"
+                        Margin="10,0"
+                                                 
+                        Text="{Binding PerPage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                        TextAlignment="Center" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="10,0,0,0"
+                    Orientation="Horizontal">
+                    <Button
+                        Width="80"
+                        Margin="10,0"
+                        Command="{Binding Prev}">
+                        Previous
+                    </Button>
+                    <TextBlock
+                        Height="30"
+                        VerticalAlignment="Center"
+                        Text="{Binding Page2k, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                        TextAlignment="Center" />
+                    <Button
+                        Width="80"
+                        Margin="10,0"
+                        Command="{Binding Next}">
+                        Next
+                    </Button>
+                </StackPanel>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

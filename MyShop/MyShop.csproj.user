@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</Source>
+    <MediumTileSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</MediumTileSource>
+    <WideTileSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</WideTileSource>
+    <AppIconSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</AppIconSource>
+    <PackageLogoSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</PackageLogoSource>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="App.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Page Update="View\addDetailOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\detailOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\addOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UpdateCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UpdateCategoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCategoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Thickness.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Theme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\AddProductPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CategoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DashboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ShellPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
