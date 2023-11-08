@@ -82,7 +82,7 @@
                     </chart:SfCartesianChart.Legend>
                     <chart:SfCartesianChart.Series>
 
-                        <!--Binding data is here - data show in column-->
+                        <!--Binding data is here - data show in cl-->
                         <chart:ColumnSeries ItemsSource="{Binding Revenues}"  
                             Label="Column" 
                             IsVisibleOnLegend="True"      
