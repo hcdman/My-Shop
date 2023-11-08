@@ -87,32 +87,12 @@
                     Command="{Binding Login}"
                     x:Name="LoginBtn"
                     Content="Login"
-                    Foreground="{ThemeResource MyBackgroundThemeBrush}"
-                    Background="{ThemeResource MyForegroundThemeBrush}"
                     Margin="0,25"
                     Height="35"
-                    Width="250">
-                    <Button.Style>
-                        <Style
-                            TargetType="Button">
-                            <Setter
-                                Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate
-                                        TargetType="Button">
-                                        <Border
-                                            x:Name="LoginBorder"
-                                            Background="{ThemeResource MyForegroundThemeBrush}"
-                                            CornerRadius="16">
-                                            <ContentPresenter
-                                                HorizontalAlignment="Center"
-                                                VerticalAlignment="Center" />
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
+                    Width="250"
+                    CornerRadius="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
                 </Button>
                 <TextBlock
                     Text="{Binding Mess, Mode=TwoWay}"

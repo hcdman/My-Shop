@@ -30,7 +30,7 @@
                 Margin="20,20,0,20"
                 Style="{StaticResource PageTitleStyle}"
                 Text="Products" />
-            
+
             <!--  Add, Import button  -->
             <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
                 <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='7'
+                <Button x:ConnectionId='9'
                     Grid.Column="1"
                     Margin="0,0,10,0"
                     Background="{ThemeResource MyBlockBackgroundThemeBrush}"
@@ -61,7 +61,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <StackPanel Orientation="Horizontal">
-                        <TextBox x:ConnectionId='6'
+                        <TextBox x:ConnectionId='8'
                             Name="productNameTextBox"
                             Width="300"
                             Height="30"
@@ -117,11 +117,11 @@
                     PlaceholderText="Sort by"
                     SelectedItem="{Binding Option2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
-            
+
             <!--  Data  -->
             <Grid
                 Grid.Row="4"
-                Margin="20 5 20 20"
+                Margin="20,5,20,20"
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                 CornerRadius="10">
                 <Grid.RowDefinitions>
@@ -150,7 +150,10 @@
                             <DataTemplate>
                                 <StackPanel>
                                     <Image Width="{ThemeResource Top5ImageWidth}" Source="{Binding anh}" />
-                                    <StackPanel Margin="0,10,0,0" Padding="0,0,0,20" Width="100">
+                                    <StackPanel
+                                        Width="100"
+                                        Margin="0,10,0,0"
+                                        Padding="0,0,0,20">
                                         <TextBlock
                                             FontWeight="Bold"
                                             Style="{StaticResource BodyTextStyle}"
@@ -161,6 +164,26 @@
                                             Text="{Binding gia, Converter={StaticResource PriceToCurrencyConverters}}"
                                             TextAlignment="Center" />
                                     </StackPanel>
+                                        <StackPanel.ContextFlyout>
+                                            <MenuFlyout>
+                                                <MenuFlyoutItem x:ConnectionId='6'
+                                                                                    
+                                                    Tag="{Binding masp}"
+                                                    Text="Edit">
+                                                    <MenuFlyoutItem.Icon>
+                                                        <SymbolIcon Symbol="Edit" />
+                                                    </MenuFlyoutItem.Icon>
+                                                </MenuFlyoutItem>
+                                                <MenuFlyoutItem x:ConnectionId='7'
+                                                                                      
+                                                    Tag="{Binding masp}"
+                                                    Text="Delete">
+                                                    <MenuFlyoutItem.Icon>
+                                                        <SymbolIcon Symbol="Delete" />
+                                                    </MenuFlyoutItem.Icon>
+                                                </MenuFlyoutItem>
+                                            </MenuFlyout>
+                                        </StackPanel.ContextFlyout>
                                 </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>

@@ -63,12 +63,27 @@ public sealed partial class ProductsPage : Microsoft.UI.Xaml.Controls.Page
 
     private async void DeleteMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
     {
-        var item = sender as MenuFlyoutItem;
-        var id = item.Tag.ToString();
-        var (success, message) = await api.DeleteProduct(id);
+        ContentDialog deleteDialog = new ContentDialog
+        {
+            XamlRoot = this.XamlRoot,
+            Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+            Title = "Delete this product?",
+            Content = "All information of this product will be delete and can not recover",
+            CloseButtonText = "Cancel",
+            PrimaryButtonText = "Delete",
+            DefaultButton = ContentDialogButton.Close
+        };
 
-        var dataSource = (ProductPageViewModel)DataContext;
-        dataSource.FilterFunc();
+        ContentDialogResult result = await deleteDialog.ShowAsync();
+        if (result == ContentDialogResult.Primary)
+        {
+            var item = sender as MenuFlyoutItem;
+            var id = item.Tag.ToString();
+            var (success, message) = await api.DeleteProduct(id);
+
+            var dataSource = (ProductPageViewModel)DataContext;
+            dataSource.FilterFunc();
+        }
     }
 
     private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)

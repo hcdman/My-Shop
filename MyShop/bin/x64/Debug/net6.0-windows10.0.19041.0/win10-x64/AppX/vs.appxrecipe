@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-08T02:09:11.747</Modified>
+      <Modified>2023-11-08T03:51:04.783</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-08T02:09:09.907</Modified>
+      <Modified>2023-11-08T03:51:03.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
       <PackagePath>MyShop.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-07T14:42:36.565</Modified>
+      <Modified>2023-11-08T03:51:02.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
       <PackagePath>MyShop.dll</PackagePath>
-      <Modified>2023-11-08T02:09:09.235</Modified>
+      <Modified>2023-11-08T03:51:00.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
       <PackagePath>MyShop.dll.config</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MyShop.exe</PackagePath>
-      <Modified>2023-11-08T02:09:09.339</Modified>
+      <Modified>2023-11-08T03:51:00.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
       <PackagePath>MyShop.deps.json</PackagePath>
-      <Modified>2023-11-08T01:38:15.471</Modified>
+      <Modified>2023-11-08T03:51:02.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\hoai0\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

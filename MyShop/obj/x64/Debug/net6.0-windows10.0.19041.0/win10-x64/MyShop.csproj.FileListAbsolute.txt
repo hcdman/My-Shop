@@ -3254,3 +3254,13 @@ C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\obj\x64\Debug\net6.0-window
 C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xaml
 C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xbf
 C:\Users\hoai0\source\repos\Project 1\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\AddOrderPage.g.i.cs
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\AddOrderPage.g.cs
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.g.i.cs
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.g.cs
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\AddOrderPage.xaml
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xaml
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\AddOrderPage.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\AddOrderPage.xbf
+C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\View\UpdateOrderPage.xbf

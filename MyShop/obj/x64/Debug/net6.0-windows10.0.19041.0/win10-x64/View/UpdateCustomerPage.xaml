@@ -112,52 +112,20 @@
                         Width="100"
                         Height="35"
                         Margin="20,15"
-                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                                          
                         Content="Update"
-                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="Button">
-                                            <Border
-                                                x:Name="LoginBorder"
-                                                Background="{ThemeResource MyForegroundThemeBrush}"
-                                                CornerRadius="16">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </Button.Style>
-                    </Button>
+                        CornerRadius="10" />
                     <Button x:ConnectionId='5'
                         x:Name="CancelBtn"
                         Width="100"
                         Height="35"
                         Margin="20,15"
-                        Background="{ThemeResource MyForegroundThemeBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Content="Cancel"
-                        Foreground="{ThemeResource MyBackgroundThemeBrush}">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="Button">
-                                            <Border
-                                                x:Name="LoginBorder"
-                                                Background="{ThemeResource MyForegroundThemeBrush}"
-                                                CornerRadius="16">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </Button.Style>
-                    </Button>
+                        CornerRadius="10" />
                 </StackPanel>
                 <TextBlock x:ConnectionId='3'
                     x:Name="mess"
