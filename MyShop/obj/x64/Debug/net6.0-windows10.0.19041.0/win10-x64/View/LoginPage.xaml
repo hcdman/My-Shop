@@ -54,7 +54,7 @@
                         Grid.Row="0"
                         Margin="0,15"
                         HorizontalAlignment="Left" />
-                    <TextBox x:ConnectionId='7'
+                    <TextBox x:ConnectionId='5'
                         x:Name="usernameTextBox"
                         Text="{Binding User, Mode=TwoWay, UpdateSourceTrigger =PropertyChanged}"
                         Grid.Column="1"
@@ -70,7 +70,7 @@
                         Grid.Row="2"
                         Margin="0,15"
                         HorizontalAlignment="Left" />
-                    <PasswordBox x:ConnectionId='8'
+                    <PasswordBox x:ConnectionId='6'
                         x:Name="passwordBox"
                         Password="{Binding Pass, Mode=TwoWay, UpdateSourceTrigger= PropertyChanged}"
                         Grid.Row="3"
@@ -87,32 +87,12 @@
                     Command="{Binding Login}"
                     x:Name="LoginBtn"
                     Content="Login"
-                    Foreground="{ThemeResource MyBackgroundThemeBrush}"
-                    Background="{ThemeResource MyForegroundThemeBrush}"
                     Margin="0,25"
                     Height="35"
-                    Width="250">
-                    <Button.Style>
-                        <Style
-                            TargetType="Button">
-                            <Setter
-                                Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate
-                                        TargetType="Button">
-                                        <Border
-                                            x:Name="LoginBorder"
-                                            Background="{ThemeResource MyForegroundThemeBrush}"
-                                            CornerRadius="16">
-                                            <ContentPresenter
-                                                HorizontalAlignment="Center"
-                                                VerticalAlignment="Center" />
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
+                    Width="250"
+                    CornerRadius="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
                 </Button>
                 <TextBlock x:ConnectionId='4'
                     Text="{Binding Mess, Mode=TwoWay}"
