@@ -123,7 +123,6 @@
                         <controls:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-
                                     <Button x:ConnectionId='7'
                                         Name="deleteC"
                                         Margin="5,0,0,0"
@@ -146,6 +145,7 @@
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </Grid>
+        
         <!--  Pagination  -->
         <Grid Grid.Row="3" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>

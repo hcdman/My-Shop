@@ -33,8 +33,6 @@ public sealed partial class CustomerPage : Page
         this.InitializeComponent();
 
         cusViewModel = new CustomerViewModel();
-
-
         this.DataContext = cusViewModel;
 
 

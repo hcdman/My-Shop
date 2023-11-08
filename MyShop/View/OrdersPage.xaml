@@ -11,53 +11,94 @@
     Background="{ThemeResource MyBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition ></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <TextBlock FontSize="15" FontWeight="Bold" Margin="10">Order</TextBlock>
-        <Grid Grid.Row="1" Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
-                <TextBox x:Name="CustomerNameTextBox" PlaceholderText="Customer Name    " Width="180"/>
-                <Button Margin="8,0,0,0">Search</Button>
-            </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="1">
-                <TextBox Margin="0,0,10,0" x:Name="FromDay" PlaceholderText="From day" Width="100"/>
-                <TextBox  Margin="0,0,20,0" x:Name="ToDay" PlaceholderText="To day" Width="100"/>
+        <!--Header-->
+        <TextBlock
+                 Margin="20,20,0,20"
+                 Style="{StaticResource PageTitleStyle}"
+                 Text="Order" />  
+        
+        <!--Add button-->
+        <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button
+                    Grid.Column="1"
+                    Margin="0,0,10,0"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                    Click="AddButton_Click">
+                Add
+            </Button>
+        </Grid>
+
+        <!--Search bar-->
+        <Grid Grid.Row="1" Margin="20,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox
+                           Name="orderNameTextBox"
+                           Width="300"
+                           Height="30"
+                           Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                           PlaceholderText="Order Name"
+                           TextWrapping="Wrap" />
+                    <Button Margin="10,0" >Search</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+         <!--Filter by date-->
+        <Grid Grid.Row="2" Margin="20,0,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Column="0">
+                <CalendarDatePicker PlaceholderText="From day" Margin="5" />
+                <CalendarDatePicker PlaceholderText="To day" Margin="5" />
                 <Button Content="Filter"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="35,10,0,10" Grid.Column="2">
-                <Button Margin="0,0,10,0" Content="Remove Filder"/>
-                <Button Content="Add"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <Button Margin="0,0,10,0" Content="Remove Filter"/>
             </StackPanel>
 
         </Grid>
-
         <!--Data of order-->
-        <Grid Grid.Row="2" Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Width="800" Height="350">
-            <controls:DataGrid x:Name="CustomerDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" HorizontalAlignment="Center">
+        <Grid Grid.Row="3" Margin="20 5 20 20"
+                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                         CornerRadius="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <controls:DataGrid x:Name="CustomerDataGrid" ItemsSource="{Binding Orders}" AutoGenerateColumns="False" HorizontalAlignment="Center"  IsReadOnly="True">
                 <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn Header="Product" CanUserResize="False" Width="SizeToCells" Binding="{Binding Product}" FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" CanUserResize="False" Width="SizeToHeader" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Date" Binding="{Binding Date}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Customer Name" CanUserResize="False" Width="SizeToHeader" Binding="{Binding CustomerName}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Product" CanUserResize="False" Width="SizeToCells" Binding="{Binding Product}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Date" Binding="{Binding Date}" CanUserResize="False"  Width="auto"  FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Status" CanUserResize="False" Width="SizeToCells" Binding="{Binding Status}" FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Amount" CanUserResize="False" Width="SizeToHeader" Binding="{Binding Amount}" FontWeight="Medium"/>
                     <controls:DataGridTemplateColumn Header="Action" IsReadOnly="True" CanUserResize="False"  Width="SizeToCells">
                         <controls:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button Margin="5 0 0 0">
+                                    <Button Margin="5 0 0 0" Click="Update"  Tag="{Binding OrderId}">
                                         <Image  Source="ms-appx:///Icons/edit.png" Width="16"/>
                                     </Button>
                                     <Button Margin="5 0 0 0" >
@@ -70,28 +111,50 @@
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </Grid>
-        <!--Pagination-->
-        <Grid Grid.Row="3" Width="700">
 
+        <!--Page navigation-->
+        <Grid Grid.Row="4" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <TextBlock FontWeight="Bold">Order per page</TextBlock>
-                <Border Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Margin="5,0,0,0">
-                    <TextBlock>10</TextBlock>
-                </Border>
-
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock
+                         Margin="0,5,0,0"
+                         HorizontalAlignment="Center"
+                         FontWeight="Bold"
+                         TextAlignment="Center">            
+             Order per page
+                </TextBlock>
+                <TextBox
+             Width="10"
+             Height="30"
+             Margin="10,0"
+             KeyDown="TextBox_KeyDown"
+           
+             TextAlignment="Center" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10,0,0,0">
-                <Button>Previous</Button>
-                <Border Margin="10"  Background= "{ThemeResource MyBlockBackgroundThemeBrush}">
-                    <TextBlock>1/10</TextBlock>
-                </Border>
-                <Button>Next</Button>
+            <StackPanel
+             Grid.Column="1"
+             Margin="10,0,0,0"
+             Orientation="Horizontal">
+                <Button
+             Width="80"
+             Margin="10,0">
+                    Previous
+                </Button>
+                <TextBlock Margin="0,5,0,0"
+             Height="30"
+             VerticalAlignment="Center"
+             TextAlignment="Center" 
+                  Text="1/1"/>
+                <Button
+                     Width="80"
+                     Margin="10,0"
+                    >
+                    Next
+                </Button>
             </StackPanel>
-
         </Grid>
     </Grid>
 </Page>

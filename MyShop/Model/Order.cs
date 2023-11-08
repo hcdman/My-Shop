@@ -20,13 +20,13 @@ namespace MyShop.Model
             return new List<Order>(new Order[]
                 {
             new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
-            new Order { Product="Iphone 13 pro",OrderId="#11232",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"}
+            new Order { Product="Iphone 13 pro",OrderId="#11231",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11230",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11234",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11235",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11236",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11237",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"},
+            new Order { Product="Iphone 13 pro",OrderId="#11238",Date="Jun 19, 2022",CustomerName="Ung Chang Im",Status="Deleveried",Amount="$400.00"}
             });
 
         }

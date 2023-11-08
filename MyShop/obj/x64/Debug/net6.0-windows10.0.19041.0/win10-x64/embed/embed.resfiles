@@ -6,6 +6,7 @@ Styles\Theme.xbf
 Styles\Thickness.xbf
 View\AddCategoryPage.xbf
 View\AddCustomerPage.xbf
+View\AddOrderPage.xbf
 View\AddProductPage.xbf
 View\CategoryPage.xbf
 View\CustomerPage.xbf
@@ -19,4 +20,5 @@ View\StasticsChild.xbf
 View\StatisticsPage.xbf
 View\UpdateCategoryPage.xbf
 View\UpdateCustomerPage.xbf
+View\UpdateOrderPage.xbf
 View\UpdateProductPage.xbf
