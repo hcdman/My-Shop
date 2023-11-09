@@ -33,6 +33,9 @@ app.use("/product", multer.single("file"), require("./routes/product"));
 app.use("/customer", require("./routes/customer"));
 app.use("/bill", require("./routes/bill"));
 app.use("/cthd", require("./routes/billInfo"));
+app.use("/revenue", require("./routes/revenue"));
+app.use("/profit", require("./routes/profit"));
+app.use("/piece", require("./routes/piece"));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

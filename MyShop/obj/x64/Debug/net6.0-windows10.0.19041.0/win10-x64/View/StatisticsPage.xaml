@@ -72,7 +72,7 @@
                         <chart:CategoryAxis PlotOffsetStart="10" PlotOffsetEnd="10" Header="Time"/>
                     </chart:SfCartesianChart.XAxes>
                     <chart:SfCartesianChart.YAxes>
-                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue ($)" Interval="100" />
+                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue (tr)" Interval="100" />
                     </chart:SfCartesianChart.YAxes>
                     <chart:SfCartesianChart.Legend>
                         <chart:ChartLegend IconWidth="15" 

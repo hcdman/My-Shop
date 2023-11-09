@@ -16,7 +16,6 @@ using System.Security.Cryptography;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Xml.Linq;
-using MyShop.Model;
 using System.ComponentModel;
 
 namespace MyShop.API
@@ -28,9 +27,9 @@ namespace MyShop.API
         public HandleAPI()
         {
 
-            //client.BaseAddress = new Uri("http://localhost:5000/");
+            client.BaseAddress = new Uri("http://localhost:5000/");
 
-            client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
+            //client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json")
@@ -331,6 +330,29 @@ namespace MyShop.API
             return new Tuple<bool, string>(false, res.message);
         }
 
+        //////////----------------- Statistics ----------------------------
+        public async Task<ListRevenueWeek> RevenueStatistics(string api, string page)
+        {
+           
+            var response = await client.GetAsync($"{page}/{api}");
+            var returnValue = await response.Content.ReadAsStringAsync();
+            ListRevenueWeek res = JsonSerializer.Deserialize<ListRevenueWeek>(returnValue);
 
+            return res;
+
+        }
+
+        public async Task<ListSales> PieceStatistics(string api)
+        {
+
+            var response = await client.GetAsync($"piece/{api}");
+            var returnValue = await response.Content.ReadAsStringAsync();
+            ListSales res = JsonSerializer.Deserialize<ListSales>(returnValue);
+
+            return res;
+
+        }
+
+        ///////////////////------------------------------------------------
     }
 }

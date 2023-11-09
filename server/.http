@@ -132,10 +132,10 @@ POST http://localhost:5000/bill/add
 Content-Type: application/json
 
 {
-  "sohd":1003,
-  "nghd":"2023-10-20",
-  "makh":"KH01",
-  "trigia":140601500
+  "sohd":1008,
+  "nghd":"2023-11-04",
+  "makh":"KH02",
+  "trigia":100900900
 }
 
 
@@ -163,9 +163,9 @@ POST http://localhost:5000/cthd/add
 Content-Type: application/json
 
 {
-  "sohd":1003,
+  "sohd":1008,
   "masp":"SP10",
-  "sl":6
+  "sl":3
 }
 
 ###
@@ -204,3 +204,12 @@ Content-Type: application/json
   "per_page": 2,
   "page":1
 }
+
+###
+GET http://localhost:5000/profit/month
+
+###
+GET http://localhost:5000/revenue/year
+
+###
+GET http://localhost:5000/piece/month

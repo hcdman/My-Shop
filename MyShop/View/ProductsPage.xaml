@@ -46,6 +46,7 @@
                     Add
                 </Button>
                 <Button
+                    Command="{Binding Import}"
                     Grid.Column="2"
                     Margin="0,0,20,0"
                     Background="{ThemeResource MyBlockBackgroundThemeBrush}">

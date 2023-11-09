@@ -42,7 +42,6 @@ namespace MyShop.View
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("month");
-
         }
 
         private void YearClick(object sender, RoutedEventArgs e)
@@ -51,8 +50,6 @@ namespace MyShop.View
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("year");
-
-
         }
         private void WeekClick(object sender, RoutedEventArgs e)
         {
@@ -60,7 +57,6 @@ namespace MyShop.View
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("week");
-
         }
 
         private void OtherView(object sender, RoutedEventArgs e)

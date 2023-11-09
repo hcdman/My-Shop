@@ -50,7 +50,6 @@ exports.getProduct = async (req, res) => {
 //thêm sản phẩm mới
 exports.addNew = async (req, res) => {
   data = JSON.parse(req.body.data);
-  console.log("data");
   let dataURI = "";
   if (req.file) {
     const b64 = Buffer.from(req.file.buffer).toString("base64");

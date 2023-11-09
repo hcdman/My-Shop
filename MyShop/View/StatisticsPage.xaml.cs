@@ -25,12 +25,14 @@ namespace MyShop.View;
 /// </summary>
 public sealed partial class StatisticsPage : Page
 {
+    private string currentPage = "revenue";
+    private string type = "year";
     public StatisticsPage()
     {
         this.InitializeComponent();
 
         //Default show revenue by year
-        this.DataContext = new StatisticViewModel("year");
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
 
     private void MonthClick(object sender, RoutedEventArgs e)
@@ -38,7 +40,8 @@ public sealed partial class StatisticsPage : Page
         Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-        this.DataContext = new StatisticViewModel("month");
+        type = "month";
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
 
     private void YearClick(object sender, RoutedEventArgs e)
@@ -46,16 +49,16 @@ public sealed partial class StatisticsPage : Page
         Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-        this.DataContext = new StatisticViewModel("year");
-
+        type = "year";
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
     private void WeekClick(object sender, RoutedEventArgs e)
     {
         Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
         Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-        this.DataContext = new StatisticViewModel("week");
-
+        type = "week";
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
 
     private void ProfitClick(object sender, RoutedEventArgs e)
@@ -66,10 +69,10 @@ public sealed partial class StatisticsPage : Page
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Profit";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Profit ($)";
+        yAxis.Header = "Profit (tr)";
 
-        //Change the correct viewmodel data of Profit behind
-        this.DataContext = new StatisticViewModel("year");
+        currentPage = "profit";
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
 
     private void RevenueClick(object sender, RoutedEventArgs e)
@@ -80,14 +83,14 @@ public sealed partial class StatisticsPage : Page
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Revenue";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Revenue ($)";
+        yAxis.Header = "Revenue (tr)";
         // Update the header
-        this.DataContext = new StatisticViewModel("week");
+        currentPage = "revenue";
+        this.DataContext = new StatisticViewModel(type, currentPage);
     }
 
     private void OtherView(object sender, RoutedEventArgs e)
     {
-
         Frame.Navigate(typeof(View.StasticsChild));
     }
 }
