@@ -15,7 +15,7 @@
         <Grid x:ConnectionId='2'
         x:Name="AppTitleBar"
         Height="48"
-        Margin="48,0,0,0"
+        Margin="16,0,0,0"
         VerticalAlignment="Top"
         Padding="0">
             <Grid.ColumnDefinitions>
@@ -24,8 +24,8 @@
             </Grid.ColumnDefinitions>
             <Image x:ConnectionId='6'
             x:Name="AppFontIcon"
-            Width="16"
-            Height="16"
+            Width="32"
+            Height="32"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
             Source="/Assets/icon-shop-64.png" />
@@ -42,6 +42,7 @@
                      OpenPaneLength="{ThemeResource OpenPaneLength}"
                      IsBackButtonVisible="Collapsed"
                      IsBackEnabled="False"
+                     IsPaneToggleButtonVisible="False"
                      >
             <NavigationView.Resources>
                 <LinearGradientBrush x:Key="NavigationViewItemBackgroundSelected">
@@ -52,7 +53,7 @@
                 <CornerRadius x:Key="NavigationViewContentGridCornerRadius">0,0,0,0</CornerRadius>
             </NavigationView.Resources>
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Dashboard" Tag="MyShop.View.DashboardPage" Padding="{StaticResource NavigateItemPadding}">
+                <NavigationViewItem Margin="0  50 0 0" Content="Dashboard" Tag="MyShop.View.DashboardPage" Padding="{StaticResource NavigateItemPadding}">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xF246;" />
                     </NavigationViewItem.Icon>

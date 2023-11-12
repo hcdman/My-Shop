@@ -75,7 +75,8 @@
                 HorizontalAlignment="Center"
                 AutoGenerateColumns="False"
                 IsReadOnly="True"
-                ItemsSource="{Binding customers, Mode=TwoWay}">
+                ItemsSource="{Binding customers, Mode=TwoWay}"
+                >
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn
                         Width="SizeToCells"
@@ -83,7 +84,7 @@
                         CanUserResize="False"
                         FontSize="{StaticResource MediumFontSize}"
                         FontWeight="Medium"
-                        Header="Id" />
+                        Header="ID" />
                     <controls:DataGridTextColumn
                         Binding="{Binding hoten}"
                         CanUserResize="False"
@@ -145,7 +146,7 @@
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </Grid>
-        
+
         <!--  Pagination  -->
         <Grid Grid.Row="3" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>

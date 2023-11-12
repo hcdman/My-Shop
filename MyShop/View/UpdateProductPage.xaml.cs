@@ -18,6 +18,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using WinRT;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,9 +38,10 @@ namespace MyShop.View
             Loaded += UpdateProductPage_Loaded;
         }
 
-        private void UpdateProductPage_Loaded(object sender, RoutedEventArgs e)
+        private async void UpdateProductPage_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new UpdateProductViewModel(pro);
+            this.DataContext = await UpdateProductViewModel.CreateAsync(pro);
+            TypeComboBox_Load();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -56,6 +58,22 @@ namespace MyShop.View
             {
                 await Task.Delay(1000);
                 Frame.Navigate(typeof(View.ProductsPage));
+            }
+        }
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(View.ProductsPage));
+        }
+
+        private void TypeComboBox_Load()
+        {
+            for (var i = 0; i < TypeComboBox.Items.Count; i++)
+            {
+                TypeProduct type = (TypeProduct)TypeComboBox.Items[i];
+                if (type.maloai.Equals(pro.maloai))
+                {
+                    TypeComboBox.SelectedIndex = i;
+                }
             }
         }
     }

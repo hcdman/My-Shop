@@ -11,12 +11,13 @@ View\AddProductPage.xbf
 View\CategoryPage.xbf
 View\CustomerPage.xbf
 View\DashboardPage.xbf
+View\LoginExpiredPage.xbf
 View\LoginPage.xbf
 View\OrdersPage.xbf
 View\ProductsPage.xbf
 View\SettingsPage.xbf
 View\ShellPage.xbf
-View\StasticsChild.xbf
+View\StatisticsChild.xbf
 View\StatisticsPage.xbf
 View\UpdateCategoryPage.xbf
 View\UpdateCustomerPage.xbf

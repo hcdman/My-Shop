@@ -76,13 +76,13 @@ public sealed partial class MainWindow : WindowEx
         { 
             Application.Current.Resources["OpenPaneLength"] = 200;
             Application.Current.Resources["Top5ImageWidth"] = 50;
-            Application.Current.Resources["Top5SoldMargin"] = new Thickness(33, 0, 33, 0);
+            Application.Current.Resources["Top5SoldMargin"] = new Thickness(33, 5, 33, 5);
             Application.Current.Resources["DataGridTextWidth"] = 85;
             Application.Current.Resources["DataGridAddressWidth"] = 110;
         }
         if (this.Content is Frame frame)
         {
-            if (!(frame.Content is MyShop.View.LoginPage))
+            if (frame.Content is not MyShop.View.LoginPage && frame.Content is not MyShop.View.LoginExpiredPage)
             {
                 frame.Navigate(typeof(View.ShellPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
             }

@@ -9,6 +9,8 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI;
 using Microsoft.UI.Xaml.Media.Animation;
+using System.Windows.Controls.Primitives;
+using System.Linq;
 
 namespace MyShop.Services;
 
@@ -62,10 +64,28 @@ public class ThemeSelectorService : IThemeSelectorService
                 ElementTheme.Light => new SolidColorBrush(Colors.Black),
                 _ => new SolidColorBrush(Colors.Transparent)
             };
+            BrushCollection customBrush = new BrushCollection();
 
+            switch (Theme)
+            {
+                case ElementTheme.Dark:
+                    customBrush.Add(new SolidColorBrush(Windows.UI.Color.FromArgb(255, 174, 223, 247)));
+                    break;
+
+                case ElementTheme.Light:
+                    customBrush.Add(new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 60, 114)));
+                    break;
+            }
+            Application.Current.Resources["customBrushes"] = customBrush;
+            //Application.Current.Resources["customBrushes"] = Theme switch
+            //{
+            //    ElementTheme.Dark => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 174, 223, 247)),
+            //    ElementTheme.Light => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 60, 114)),
+            //    _ => new SolidColorBrush(Colors.Transparent)
+            //};
             if (App.MainWindow.Content is Frame frame)
             {
-                if (!(frame.Content is MyShop.View.LoginPage)) { 
+                if (frame.Content is not MyShop.View.LoginPage && frame.Content is not MyShop.View.LoginExpiredPage) { 
                    frame.Navigate(typeof(View.ShellPage), null, null);
                 }
 

@@ -117,7 +117,7 @@ namespace MyShop.ViewModel
             Type = new TypeProduct();
             Type.maloai = "";
             Page = 1;
-            PerPage = 5;
+            PerPage = 15;
             ProductPageViewModel_Loaded();
         }
 

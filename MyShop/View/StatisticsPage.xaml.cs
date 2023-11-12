@@ -35,24 +35,24 @@ public sealed partial class StatisticsPage : Page
 
     private void MonthClick(object sender, RoutedEventArgs e)
     {
-        Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-        Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+        Year.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+        Week.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
         Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
         this.DataContext = new StatisticViewModel("month");
     }
 
     private void YearClick(object sender, RoutedEventArgs e)
     {
-        Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-        Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+        Month.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+        Week.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
         Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
         this.DataContext = new StatisticViewModel("year");
 
     }
     private void WeekClick(object sender, RoutedEventArgs e)
     {
-        Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-        Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+        Month.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+        Year.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
         Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
         this.DataContext = new StatisticViewModel("week");
 
@@ -60,13 +60,13 @@ public sealed partial class StatisticsPage : Page
 
     private void ProfitClick(object sender, RoutedEventArgs e)
     {
-        Revenue.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+        Revenue.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
         Profit.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
         //Convert to show profit
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Profit";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Profit";
+        yAxis.Header = "Profit ($)";
 
         //Change the correct viewmodel data of Profit behind
         this.DataContext = new StatisticViewModel("year");
@@ -74,13 +74,13 @@ public sealed partial class StatisticsPage : Page
 
     private void RevenueClick(object sender, RoutedEventArgs e)
     {
-        Profit.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+        Profit.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
         Revenue.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
         //Convert to show revenue
         SfCartesianChart chart = this.FindName("chart") as SfCartesianChart;
         chart.Header = "Revenue";
         NumericalAxis yAxis = chart.YAxes[0] as NumericalAxis;
-        yAxis.Header = "Revenue";
+        yAxis.Header = "Revenue ($)";
         // Update the header
         this.DataContext = new StatisticViewModel("week");
     }
@@ -88,7 +88,7 @@ public sealed partial class StatisticsPage : Page
     private void OtherView(object sender, RoutedEventArgs e)
     {
 
-        Frame.Navigate(typeof(View.StasticsChild));
+        Frame.Navigate(typeof(View.StatisticsChild));
     }
 }
 

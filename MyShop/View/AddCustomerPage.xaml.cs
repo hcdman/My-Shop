@@ -27,7 +27,18 @@ public sealed partial class AddCustomerPage : Page
     {
         this.InitializeComponent();
         AddCustomerViewModel ViewModel = new AddCustomerViewModel();
+        RegistrationCalendar.Date = DateTime.Now;
         //form.DataContext = ViewModel.cus;
         //this.DataContext = ViewModel;
+    }
+
+    private void CancelBtn_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(CustomerPage));
+    }
+
+    private void AddBtn_Click(object sender, RoutedEventArgs e)
+    {
+        //TODO: Add Customer
     }
 }

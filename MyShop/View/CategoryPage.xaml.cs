@@ -33,19 +33,28 @@ public sealed partial class CategoryPage : Page
         this.DataContext = cateVM;
     }
 
-    private void addCate(object sender, RoutedEventArgs e)
+    private async void deleteCate(object sender, RoutedEventArgs e)
     {
-        Frame.Navigate(typeof(AddCategoryPage));
-    }
+        ContentDialog deleteDialog = new ContentDialog
+        {
+            XamlRoot = this.XamlRoot,
+            Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+            Title = "Delete this category?",
+            Content = "All information of this category will be delete and can not recover",
+            CloseButtonText = "Cancel",
+            PrimaryButtonText = "Delete",
+            DefaultButton = ContentDialogButton.Close
+        };
 
+        ContentDialogResult result = await deleteDialog.ShowAsync();
+        if (result == ContentDialogResult.Primary)
+        {
+            var btn = sender as Button;
+            string id = btn.Tag as string;
+            //deleteCategory(id);
 
-    private void deleteCate(object sender, RoutedEventArgs e)
-    {
-        var btn = sender as Button;
-        string id = btn.Tag as string;
-        //deleteCategory(id);
-
-        cateVM.deleteCategory(id);
+            cateVM.deleteCategory(id);
+        }
     }
 
     private void updateCate(object sender, RoutedEventArgs e)
@@ -83,5 +92,15 @@ public sealed partial class CategoryPage : Page
     private void preC(object sender, RoutedEventArgs e)
     {
         cateVM.pre();
+    }
+
+    private void AddButton_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(View.AddCategoryPage));
+    }
+
+    private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+    {
+
     }
 }

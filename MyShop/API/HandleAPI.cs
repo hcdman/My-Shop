@@ -174,6 +174,7 @@ namespace MyShop.API
             var returnValue = await response.Content.ReadAsStringAsync();
             ListTypeProduct res = JsonSerializer.Deserialize<ListTypeProduct>(returnValue);
 
+            await Task.CompletedTask;
             return res;
         }
 

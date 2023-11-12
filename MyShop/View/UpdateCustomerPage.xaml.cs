@@ -54,6 +54,8 @@ public sealed partial class UpdateCustomerPage : Page, INotifyPropertyChanged
     private void mainLoad(object sender, RoutedEventArgs e)
     {
         form.DataContext = cus;
+        BirthCalendar.Date = DateTime.Parse(cus.ngsinh);
+        RegistrationCalendar.Date = DateTime.Parse(cus.ngdk);
     }
 
 
@@ -61,5 +63,10 @@ public sealed partial class UpdateCustomerPage : Page, INotifyPropertyChanged
     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
         cus = (Customer)e.Parameter;
+    }
+
+    private void CancelBtn_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(View.CustomerPage));
     }
 }

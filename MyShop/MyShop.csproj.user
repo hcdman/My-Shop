@@ -17,6 +17,12 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="View\LoginExpiredPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCategoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UpdateOrderPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -26,7 +32,7 @@
     <Page Update="View\UpdateProductPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\StasticsChild.xaml">
+    <Page Update="View\StatisticsChild.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UpdateCustomerPage.xaml">
@@ -36,9 +42,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AddCustomerPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AddCategoryPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Thickness.xaml">

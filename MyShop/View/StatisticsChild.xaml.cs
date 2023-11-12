@@ -25,11 +25,11 @@ namespace MyShop.View
     /// </summary>
     /// 
 
-    public sealed partial class StasticsChild : Page
+    public sealed partial class StatisticsChild : Page
     {
 
 
-        public StasticsChild()
+        public StatisticsChild()
         {
             this.InitializeComponent();
             this.DataContext = new SaleViewModel("year");
@@ -38,8 +38,8 @@ namespace MyShop.View
 
         private void MonthClick(object sender, RoutedEventArgs e)
         {
-            Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-            Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+            Year.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+            Week.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
             Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("month");
 
@@ -47,8 +47,8 @@ namespace MyShop.View
 
         private void YearClick(object sender, RoutedEventArgs e)
         {
-            Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-            Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+            Month.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+            Week.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("year");
 
@@ -56,8 +56,8 @@ namespace MyShop.View
         }
         private void WeekClick(object sender, RoutedEventArgs e)
         {
-            Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
-            Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
+            Month.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
+            Year.Background = (Brush)Application.Current.Resources["MyBlockBackgroundThemeBrush"];
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
             this.DataContext = new SaleViewModel("week");
 

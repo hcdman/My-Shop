@@ -172,13 +172,24 @@ namespace MyShop.ViewModel
         }
 
         HandleAPI api = new HandleAPI();
-        public UpdateProductViewModel(Product pro)
+
+        public static async Task<UpdateProductViewModel> CreateAsync(Product pro)
+        {
+            var viewModel = new UpdateProductViewModel();
+            await viewModel.InitializeAsync(pro);
+            return viewModel;
+        }
+        public UpdateProductViewModel()
         {
             IsLoading = false;
-            Mess= "";
-            string ml = null;
+            Mess = "";
             Type = new TypeProduct();
-            
+            Id = Name = Manufactuer = Image = "";
+            Price = Cost = 0; // Set default values as needed
+        }
+        private async Task InitializeAsync(Product pro)
+        {
+            string ml = null;
             if (pro != null)
             {
                 Id = pro.masp;
@@ -190,14 +201,11 @@ namespace MyShop.ViewModel
                 Quantity = pro.sl;
                 ml = pro.maloai;
             }
-            else
-            {
-                Id = Name = Manufactuer = Image = "";
-            }
-            AddProductPageViewModel_Loaded(ml);
+
+            await AddProductPageViewModel_Loaded(ml);
         }
 
-        private async void AddProductPageViewModel_Loaded(string ml)
+        private async Task AddProductPageViewModel_Loaded(string ml)
         {
             ListTypeProduct listTypeProduct = await api.GetAllType();
             AllType = new BindingList<TypeProduct>();

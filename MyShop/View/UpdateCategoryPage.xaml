@@ -1,61 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Page
     x:Class="MyShop.View.UpdateCategoryPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:MyShop.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:MyShop.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
     Background="{ThemeResource MyBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}"
-    Loaded="mainLoaded">
+    Loaded="mainLoaded"
+    mc:Ignorable="d">
 
-    <Grid Margin="{StaticResource PageContentMargin}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"></ColumnDefinition>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Name="form">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-
-
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">ID category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding maloai , UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+    <Grid>
+        <Border
+            Width="500"
+            Height="600"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+            CornerRadius="10">
+            <StackPanel Margin="20" Orientation="Vertical">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="Category's Information" />
+                <!--  Data is here  -->
+                <Grid x:Name="form" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="0"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="ID Category" />
+                    <TextBox
+                        Grid.Row="1"
+                        Width="450"
+                        Padding="10,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1"
+                        Text="{Binding maloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Name Category" />
+                    <TextBox
+                        Grid.Row="3"
+                        Width="450"
+                        Padding="10,5"
+                        HorizontalAlignment="Left"
+                        BorderThickness="0,0,0,1"
+                        Text="{Binding tenloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                 </Grid>
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"></ColumnDefinition>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0">Name category:</TextBlock>
-                    <TextBox Grid.Column="1" TextAlignment="Center" Text="{Binding tenloai, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
-                </Grid>
-
-            </Grid>
-
-        </Grid>
-
-        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Name="mess"></TextBlock>
-            <ProgressBar x:Name="loading" Width="500" IsHitTestVisible="False" IsIndeterminate="False" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Click="updateCate" >Add</Button>
-        </Grid>
+                <StackPanel
+                    Margin="0,20,0,0"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+                    <Button
+                        x:Name="AddBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Click="Update_Click"
+                        Content="Update"
+                        CornerRadius="16" />
+                    <Button
+                        x:Name="CancelBtn"
+                        Width="100"
+                        Height="35"
+                        Margin="20,15"
+                        Click="Cancel_Click"
+                        Content="Cancel"
+                        CornerRadius="16" />
+                </StackPanel>
+                <TextBlock
+                    x:Name="mess"
+                    FontSize="15"
+                    Foreground="Red"
+                    TextAlignment="Center" />
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

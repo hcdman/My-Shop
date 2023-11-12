@@ -37,26 +37,33 @@ public sealed partial class UpdateCategoryPage : Page, INotifyPropertyChanged
 
     private void mainLoaded(object sender, RoutedEventArgs e)
     {
-        form.DataContext = cate;
+        this.DataContext = cate;
     }
 
 
     HandleAPI api = new HandleAPI();
 
-    private void updateCate(object sender, RoutedEventArgs e)
-    {
-        updateCateory();
-    }
+   
     public async void updateCateory()
     {
         mess.Text = "";
-        loading.IsIndeterminate = true;
+       
         var (success, message) = await Task.Run(() => { return api.updateCategory(cate); });
-        loading.IsIndeterminate = false;
+       
         mess.Text = message;
     }
     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
         cate = (Category)e.Parameter;
+    }
+
+    private void Cancel_Click(object sender, RoutedEventArgs e)
+    {
+        Frame.Navigate(typeof(View.CategoryPage));
+    }
+
+    private void Update_Click(object sender, RoutedEventArgs e)
+    {
+        updateCateory();
     }
 }

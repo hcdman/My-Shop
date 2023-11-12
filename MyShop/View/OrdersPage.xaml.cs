@@ -59,4 +59,25 @@ public sealed partial class OrdersPage : Page
 
         Frame.Navigate(typeof(View.UpdateOrderPage),order);
     }
+
+    private async void Delete(object sender, RoutedEventArgs e)
+    {
+        ContentDialog deleteDialog = new ContentDialog
+        {
+            XamlRoot = this.XamlRoot,
+            Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+            Title = "Delete this order?",
+            Content = "All information of this order will be delete and can not recover",
+            CloseButtonText = "Cancel",
+            PrimaryButtonText = "Delete",
+            DefaultButton = ContentDialogButton.Close
+        };
+
+        ContentDialogResult result = await deleteDialog.ShowAsync();
+        if (result == ContentDialogResult.Primary)
+        {
+            //TODO: delete
+        }
+    }
+
 }

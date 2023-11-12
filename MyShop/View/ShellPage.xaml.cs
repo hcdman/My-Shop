@@ -130,6 +130,14 @@ public sealed partial class ShellPage : Page
         {
             currentPage = "MyShop.View.CategoryPage";
         }
+        if (currentPage == "MyShop.View.AddOrderPage" || currentPage == "MyShop.View.UpdateOrderPage")
+        {
+            currentPage = "MyShop.View.OrdersPage";
+        }
+        if (currentPage == "MyShop.View.StatisticsChild")
+        {
+            currentPage = "MyShop.View.StatisticsPage";
+        }
         var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
         config.AppSettings.Settings["currentNavigationViewItem"].Value = currentPage;
         config.Save(ConfigurationSaveMode.Minimal);
