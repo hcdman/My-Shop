@@ -337,7 +337,6 @@ namespace MyShop.API
             var response = await client.GetAsync($"{page}/{api}");
             var returnValue = await response.Content.ReadAsStringAsync();
             ListRevenueWeek res = JsonSerializer.Deserialize<ListRevenueWeek>(returnValue);
-
             return res;
 
         }

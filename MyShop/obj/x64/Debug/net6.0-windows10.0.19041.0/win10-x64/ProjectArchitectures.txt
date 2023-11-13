@@ -1,1 +1,1 @@
-E:\DoAn\Win\MyShop-current\My-Shop\MyShop\MyShop.csproj;x64
+C:\Users\hoai0\source\repos\Project 1 - Temp\My-Shop\My-Shop\MyShop\MyShop.csproj;x64

@@ -21,7 +21,7 @@ db.connect((err) => {
 
 app.use(cookieParser());
 
-app.use(bodyParser.urlencoded({ extended: false })); //get data from frontend
+app.use(bodyParser.urlencoded({ extended: false }));  //get data from frontend
 app.use(bodyParser.json());
 
 app.use(express.json());
