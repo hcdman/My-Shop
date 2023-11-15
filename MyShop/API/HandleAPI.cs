@@ -331,15 +331,17 @@ namespace MyShop.API
         }
 
         //////////----------------- Statistics ----------------------------
-        public async Task<ListRevenueWeek> RevenueStatistics(string api, string page)
+        public async Task<ListRevenueWeek> RevenueStatistics(string api, string page, int currentDay, int currentMonth, int currentYear)
         {
-           
-            var response = await client.GetAsync($"{page}/{api}");
+            Date newDate = new Date() { day = currentDay, month = currentMonth, year = currentYear };
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(newDate),
+            Encoding.UTF8,"application/json");
+
+            var response = await client.PostAsync($"{page}/{api}", jsonContent);
             var returnValue = await response.Content.ReadAsStringAsync();
             ListRevenueWeek res = JsonSerializer.Deserialize<ListRevenueWeek>(returnValue);
-
             return res;
-
         }
 
         public async Task<ListSales> PieceStatistics(string api)

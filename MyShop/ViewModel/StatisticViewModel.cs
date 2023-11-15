@@ -19,24 +19,24 @@ namespace MyShop.ViewModel
         }
 
 
-        public StatisticViewModel(string check, string page)
+        public StatisticViewModel(string check, string page, int currentDay, int currentMonth, int currentYear)
         {
-            loadData(check, page);
+           loadData(check, page, currentDay, currentMonth, currentYear);
         }
 
-        public async void loadData(string check, string page)
+        public async void loadData(string check, string page, int currentDay, int currentMonth, int currentYear)
         {
             if (check == "year")
             {
-                Revenues = await Revenue.Revenues("year", page);
+                Revenues = await Revenue.Revenues("year", page, currentDay, currentMonth, currentYear);
             }
             else if (check == "month")
             {
-                Revenues = await Revenue.Revenues("month", page);
+                Revenues = await Revenue.Revenues("month", page, currentDay, currentMonth, currentYear);
             }
             else
             {
-                Revenues = await Revenue.Revenues("week", page);
+                Revenues = await Revenue.Revenues("week", page, currentDay, currentMonth, currentYear);
             }
         }
 

@@ -22,14 +22,25 @@
         <!--Header, Filter-->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+               
             </Grid.ColumnDefinitions>
             <TextBlock
-                     Margin="20,20,0,20"
+                     Margin="20,20,40,20"
                      Style="{StaticResource PageTitleStyle}"
-                     Text="Statistics" />     
-            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                     Text="Statistics" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button Margin="0" Click="minusClick" >-</Button>
+                <Button Margin="0,0,10,0" Click="addClick">+</Button>
+            </StackPanel>
+            <TextBlock Grid.Column="2" TextAlignment="Left"
+          Margin="0,20,0,20"      
+          Style="{StaticResource PageTitleStyle}"
+          Name="showFilter" />
+            <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Margin="2" Click="OtherView" Name="ViewProduct">View Product Stastics</Button>
                 <Button Margin="2" Click="WeekClick" Name="Week">Week</Button>
                 <Button Margin="2" Click="MonthClick" Name="Month">Month</Button>
@@ -72,7 +83,7 @@
                         <chart:CategoryAxis PlotOffsetStart="10" PlotOffsetEnd="10" Header="Time"/>
                     </chart:SfCartesianChart.XAxes>
                     <chart:SfCartesianChart.YAxes>
-                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue (tr)" Interval="100" />
+                        <chart:NumericalAxis PlotOffsetStart="30" Header="Revenue (tr)" Interval="1000" />
                     </chart:SfCartesianChart.YAxes>
                     <chart:SfCartesianChart.Legend>
                         <chart:ChartLegend IconWidth="15" 
@@ -88,7 +99,7 @@
                             IsVisibleOnLegend="True"      
                             XBindingPath="Year"  
                             YBindingPath="Counts" ShowDataLabels="True">
-
+                            
                             <chart:ColumnSeries.DataLabelSettings>
                                 <chart:CartesianDataLabelSettings Position="Outer" 
                                           ConnectorHeight="20"

@@ -32,7 +32,7 @@ namespace MyShop.Model
         }
 
 
-        public async static Task<List<Revenue>> Revenues(string check, string page)
+        public async static Task<List<Revenue>> Revenues(string check, string page, int currentDay, int currentMonth, int currentYear)
         {
             HandleAPI api = new HandleAPI();
             if (check == "year")
@@ -52,7 +52,7 @@ namespace MyShop.Model
                     new Revenue("Nov.", 0),
                     new Revenue("Dec.", 0)
                 });
-                ListRevenueWeek getYear = await api.RevenueStatistics("year", page);
+                ListRevenueWeek getYear = await api.RevenueStatistics("year", page, currentDay, currentMonth, currentYear);
                 foreach (var item in getYear.data)
                 {
                     resultYear[item.id - 1].Counts = item.tong;
@@ -64,7 +64,7 @@ namespace MyShop.Model
 
                 var resultMonth = new List<Revenue>();
                 for (int i = 1; i <= 31; i++) resultMonth.Add(new Revenue($"Day {i}", 0));
-                ListRevenueWeek getMonth = await api.RevenueStatistics("month", page);
+                ListRevenueWeek getMonth = await api.RevenueStatistics("month", page, currentDay, currentMonth, currentYear);
                 foreach (var item in getMonth.data)
                 {
                     resultMonth[item.id - 1].Counts = item.tong;
@@ -84,7 +84,7 @@ namespace MyShop.Model
                     new Revenue("Sun", 0)
                 });
 
-            ListRevenueWeek getWeek = await api.RevenueStatistics("week", page);
+            ListRevenueWeek getWeek = await api.RevenueStatistics("week", page, currentDay, currentMonth, currentYear);
             foreach (var item in getWeek.data)
             {
                 result[item.id].Counts = item.tong;
