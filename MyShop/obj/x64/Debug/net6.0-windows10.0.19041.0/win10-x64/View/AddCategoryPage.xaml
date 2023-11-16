@@ -22,7 +22,7 @@
                     FontSize="25"
                     FontWeight="Bold"
                     Text="Add Category" />
-                <Grid VerticalAlignment="Center">
+                <Grid x:ConnectionId='2' VerticalAlignment="Center" Name="form">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -40,7 +40,8 @@
                         Width="450"
                         Padding="10,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        BorderThickness="0,0,0,1" 
+                        Text="{Binding maloai, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
                     <TextBlock
                         Grid.Row="2"
                         Margin="0,10"
@@ -52,20 +53,22 @@
                         Width="450"
                         Padding="10,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        BorderThickness="0,0,0,1" 
+                        Text="{Binding tenloai, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"
+                        />
                 </Grid>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 20 0 0">
-                    <Button x:ConnectionId='3'
+                    <Button x:ConnectionId='4'
                         x:Name="AddBtn"
                         Width="100"
                         Height="35"
                         Margin="25,15"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                                         
+                       Command="{Binding addCate}"
                         Content="Add"
                         CornerRadius="10" />
-                    <Button x:ConnectionId='4'
+                    <Button x:ConnectionId='5'
                                             
                         x:Name="CancelBtn"
                         Width="100"
@@ -73,14 +76,14 @@
                         Margin="25,15"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Content="Cancel"
+                        Content="Back"
                         CornerRadius="10" />
                 </StackPanel>
-                <TextBlock x:ConnectionId='2'
+                <TextBlock x:ConnectionId='3'
                     x:Name="messageTextBlock"
                     FontSize="15"
                     Foreground="Red"
-                    Text="Error"
+                    Text=""
                     TextAlignment="Center" />
             </StackPanel>
         </Border>

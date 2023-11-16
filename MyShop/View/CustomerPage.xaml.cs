@@ -60,7 +60,7 @@ public sealed partial class CustomerPage : Page
         if(result == ContentDialogResult.Primary)
         {
             var btn = sender as Button;
-    string id = btn.Tag as string;
+            string id = btn.Tag as string;
 
             if (btn != null)
             {

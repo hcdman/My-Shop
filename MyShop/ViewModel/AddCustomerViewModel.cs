@@ -20,7 +20,7 @@ namespace MyShop.ViewModel
         public string mess { get; set; }
         public Customer cus { get; set; }
 
-        public ICommand addCus {  get; set; }   
+     
 
         public AddCustomerViewModel()
         {
@@ -28,20 +28,20 @@ namespace MyShop.ViewModel
             isShowProgres = false;  
             cus.ngsinh = "yyyy-MM-dd";
             cus.ngdk = "yyyy-MM-dd";
-            addCus = new relayCommand(handleAdd, canAdd);
+          
         }
         
 
-        public bool canAdd(object obj)
+        public void addCustomer(DateTime d1, DateTime d2)
         {
-            return true;
+            cus.ngsinh = d1.Year + "-" + d1.Month + "-" + d1.Day;
+            cus.ngdk = d2.Year + "-" + d2.Month + "-" + d2.Day;
+
+            addCusTomer(cus);   
         }
 
         HandleAPI api = new HandleAPI();
-        public void handleAdd(object obj)
-        {
-            addCusTomer(cus);
-        }
+
      
         public async void addCusTomer(Customer cus)
         {

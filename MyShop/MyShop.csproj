@@ -24,7 +24,9 @@
     <None Remove="Styles\Thickness.xaml" />
     <None Remove="View\AddCategoryPage.xaml" />
     <None Remove="View\AddCustomerPage.xaml" />
+    <None Remove="View\addDetailOrderPage.xaml" />
     <None Remove="View\AddOrderPage.xaml" />
+    <None Remove="View\detailOrderPage.xaml" />
     <None Remove="View\LoginExpiredPage.xaml" />
     <None Remove="View\StatisticsChild.xaml" />
     <None Remove="View\UpdateCategoryPage.xaml" />
@@ -76,6 +78,16 @@
     <Content Update="Assets\icon-shop-64.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\addDetailOrderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\detailOrderPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\LoginExpiredPage.xaml">

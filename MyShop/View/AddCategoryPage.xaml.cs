@@ -12,6 +12,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.ViewModel;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,13 +27,13 @@ namespace MyShop.View
         public AddCategoryPage()
         {
             this.InitializeComponent();
+            this.DataContext = vm;
+            form.DataContext = vm.cate;
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
+        AddCategoryViewModel vm = new AddCategoryViewModel();
 
-        }
-
+   
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(View.CategoryPage));

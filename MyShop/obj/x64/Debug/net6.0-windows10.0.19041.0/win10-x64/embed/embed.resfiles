@@ -6,11 +6,13 @@ Styles\Theme.xbf
 Styles\Thickness.xbf
 View\AddCategoryPage.xbf
 View\AddCustomerPage.xbf
+View\addDetailOrderPage.xbf
 View\AddOrderPage.xbf
 View\AddProductPage.xbf
 View\CategoryPage.xbf
 View\CustomerPage.xbf
 View\DashboardPage.xbf
+View\detailOrderPage.xbf
 View\LoginExpiredPage.xbf
 View\LoginPage.xbf
 View\OrdersPage.xbf

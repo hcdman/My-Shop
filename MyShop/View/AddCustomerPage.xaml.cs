@@ -26,11 +26,15 @@ public sealed partial class AddCustomerPage : Page
     public AddCustomerPage()
     {
         this.InitializeComponent();
-        AddCustomerViewModel ViewModel = new AddCustomerViewModel();
+        vm = new AddCustomerViewModel();
         RegistrationCalendar.Date = DateTime.Now;
-        //form.DataContext = ViewModel.cus;
-        //this.DataContext = ViewModel;
+        DateofBirth.Date = DateTime.Now;
+
+        form.DataContext = vm.cus;
+        this.DataContext = vm;
     }
+
+     AddCustomerViewModel vm;
 
     private void CancelBtn_Click(object sender, RoutedEventArgs e)
     {
@@ -40,5 +44,12 @@ public sealed partial class AddCustomerPage : Page
     private void AddBtn_Click(object sender, RoutedEventArgs e)
     {
         //TODO: Add Customer
+        DateTimeOffset d1 = (DateTimeOffset)DateofBirth.Date;
+        DateTimeOffset d2 = (DateTimeOffset)RegistrationCalendar.Date;
+
+        DateTime dob = d1.DateTime;
+        DateTime dor = d2.DateTime;
+         vm.addCustomer(dob, dor);
+
     }
 }

@@ -28,8 +28,7 @@ namespace MyShop.API
         public HandleAPI()
         {
 
-            client.BaseAddress = new Uri("http://localhost:5000/");
-
+            client.BaseAddress = new Uri("http://localhost:8080/");
             //client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -332,6 +331,124 @@ namespace MyShop.API
             return new Tuple<bool, string>(false, res.message);
         }
 
+        public async Task<BindingList<Order>> getAllOrder()
+        {
 
+            listOrder res = new listOrder();
+            res.bill = null;
+            while (res.bill == null)
+            {
+
+                var response = await client.GetAsync("bill/getall");
+                System.Threading.Thread.Sleep(1000);
+                var returnValue = await response.Content.ReadAsStringAsync();
+                // Debug.WriteLine(returnValue);    <TextBlock Text="{Binding mess}">Demo</TextBlock>
+                res = JsonSerializer.Deserialize<listOrder>(returnValue);
+                System.Threading.Thread.Sleep(1000);
+            }
+            for (var i = 0; i < res.bill.Count; i++)
+            {
+                res.bill[i].nghd = res.bill[i].nghd.Substring(0, 10);
+            }
+            return new BindingList<Order>(res.bill);
+        }
+
+        public async Task<Tuple<bool, string>> deleteOrder(string id)
+        {
+            var response = await client.DeleteAsync($"bill/delete/{id}");
+
+            var returnValue = await response.Content.ReadAsStringAsync();
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+
+            if (response.StatusCode.ToString() == "OK") return Tuple.Create(true, res.message);
+            return Tuple.Create(false, res.message);
+        }
+
+        public async Task<Tuple<bool, string>> updateOrder(Order order)
+        {
+
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(order),
+            Encoding.UTF8,
+                "application/json");
+
+
+            var response = await client.PutAsync($"bill/update/{order.sohd}", jsonContent);
+            var returnValue = await response.Content.ReadAsStringAsync();
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+            if (response.StatusCode.ToString() == "OK")
+            {
+                return new Tuple<bool, string>(true, res.message);
+            }
+            return new Tuple<bool, string>(false, res.message);
+        }
+
+        public async Task<Tuple<bool, string>> addOrder(Order order)
+        {
+
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(order),
+            Encoding.UTF8,
+                "application/json");
+            System.Threading.Thread.Sleep(1000);
+            var response = await client.PostAsync("bill/add", jsonContent);
+            var returnValue = await response.Content.ReadAsStringAsync();
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+            if (response.StatusCode.ToString() == "OK")
+            {
+                return new Tuple<bool, string>(true, res.message);
+            }
+            return new Tuple<bool, string>(false, res.message);
+        }
+
+        public async Task<BindingList<DetailOrderAndProduct>> getDetailOrderByID(string id)
+        {
+
+            ListDetailOrder res = new ListDetailOrder();
+            res.data = null;
+            while (res.data == null)
+            {
+                var response = await client.GetAsync($"cthd/get/{id}");
+                System.Threading.Thread.Sleep(1000);
+                var returnValue = await response.Content.ReadAsStringAsync();
+
+                //if(returnValue.)
+                // Debug.WriteLine(returnValue);
+                res = JsonSerializer.Deserialize<ListDetailOrder>(returnValue);
+                System.Threading.Thread.Sleep(1000);
+            }
+
+            return new BindingList<DetailOrderAndProduct>(res.data);
+        }
+
+
+        public async Task<Tuple<bool, string>> addOrderDetail(DetailOrder detailOrder)
+        {
+
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(detailOrder),
+            Encoding.UTF8,
+                "application/json");
+            System.Threading.Thread.Sleep(1000);
+            var response = await client.PostAsync("cthd/add", jsonContent);
+            var returnValue = await response.Content.ReadAsStringAsync();
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+            if (response.StatusCode.ToString() == "OK")
+            {
+                return new Tuple<bool, string>(true, res.message);
+            }
+            return new Tuple<bool, string>(false, res.message);
+        }
+
+        public async Task<Tuple<bool, string>> deleteDetailOrder(string id)
+        {
+            var response = await client.DeleteAsync($"cthd/delete/{id}");
+
+            var returnValue = await response.Content.ReadAsStringAsync();
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+
+            if (response.StatusCode.ToString() == "OK") return Tuple.Create(true, res.message);
+            return Tuple.Create(false, res.message);
+        }
     }
 }

@@ -54,9 +54,10 @@
                         Width="300"
                         Height="30"
                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
-                        PlaceholderText="Order Name"
-                        TextWrapping="Wrap" />
-                    <Button Margin="10,0">Search</Button>
+                        PlaceholderText="Customer ID"
+                        TextWrapping="Wrap" 
+                        Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"  KeyDown="searchByKey"/>
+                    <Button Margin="10,0" Click="SearchByID">Search</Button>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -73,18 +74,20 @@
                 Margin="0,10,0,10"
                 Orientation="Horizontal">
                 <CalendarDatePicker
+                    Name="startDate"
                     Margin="5"
                     DateFormat="{}{day.integer}/{month.integer}/{year.full}"
                     PlaceholderText="From day" />
                 <CalendarDatePicker
+                    Name="endDate"
                     Margin="5"
                     DateFormat="{}{day.integer}/{month.integer}/{year.full}"
                     PlaceholderText="To day" />
-                <Button Content="Filter" />
+                <Button Content="Filter" Click="filter" />
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal">
-                <Button Margin="0,0,20,0" Content="Remove Filter" />
+                <Button Margin="0,0,20,0" Content="Remove Filter" Click="RemoveFilter" />
             </StackPanel>
 
         </Grid>
@@ -102,39 +105,31 @@
                 HorizontalAlignment="Center"
                 AutoGenerateColumns="False"
                 IsReadOnly="True"
-                ItemsSource="{Binding Orders}">
+                ItemsSource="{Binding orders}">
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn
                         Width="auto"
-                        Binding="{Binding OrderId}"
+                        Binding="{Binding sohd}"
                         CanUserResize="False"
                         FontWeight="Medium"
                         Header="Order ID" />
+              
                     <controls:DataGridTextColumn
-                        Binding="{Binding CustomerName}"
-                        CanUserResize="False"
-                        ElementStyle="{StaticResource DataGridNameStyles}"
-                        Header="Customer Name" />
-                    <controls:DataGridTextColumn
-                        Binding="{Binding Product}"
-                        CanUserResize="False"
-                        ElementStyle="{StaticResource DataGridAddressStyle}"
-                        Header="Product" />
-                    <controls:DataGridTextColumn
-                        Binding="{Binding Date}"
+                        Binding="{Binding nghd}"
                         CanUserResize="False"
                         ElementStyle="{StaticResource DataGridTextStyles}"
                         Header="Date" />
+                    
                     <controls:DataGridTextColumn
-                        Binding="{Binding Status}"
+                        Binding="{Binding makh}"
                         CanUserResize="False"
                         ElementStyle="{StaticResource DataGridTextStyles}"
-                        Header="Status" />
+                        Header="ID Customer" />
                     <controls:DataGridTextColumn
-                        Binding="{Binding Amount}"
+                        Binding="{Binding trigia}"
                         CanUserResize="False"
                         ElementStyle="{StaticResource DataGridTextStyles}"
-                        Header="Amount" />
+                        Header="Total Price" />
                     <controls:DataGridTemplateColumn
                         CanUserResize="False"
                         Header="Action"
@@ -144,11 +139,11 @@
                                 <StackPanel Orientation="Horizontal">
                                     <Button
                                         Margin="5,0,0,0"
-                                        Click="Update"
-                                        Tag="{Binding OrderId}">
+                                        Click="detailOrder"
+                                        Tag="{Binding sohd}">
                                         <Image Width="16" Source="ms-appx:///Icons/edit.png" />
                                     </Button>
-                                    <Button Margin="5,0,0,0" Click="Delete">
+                                    <Button Margin="5,0,0,0" Click="deleteOrder" Tag="{Binding sohd}">
                                         <Image Width="16" Source="ms-appx:///Icons/delete.png" />
                                     </Button>
                                 </StackPanel>
@@ -185,16 +180,17 @@
                 Grid.Column="1"
                 Margin="10,0,0,0"
                 Orientation="Horizontal">
-                <Button Width="80" Margin="10,0">
+                <Button Width="80" Margin="10,0" Click="pre">
                     Previous
                 </Button>
                 <TextBlock
                     Height="30"
                     Margin="0,5,0,0"
                     VerticalAlignment="Center"
-                    Text="1/1"
-                    TextAlignment="Center" />
-                <Button Width="80" Margin="10,0">
+                    TextAlignment="Center">
+                 <Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/>
+                </TextBlock>
+                <Button Width="80" Margin="10,0" Click="next">
                     Next
                 </Button>
             </StackPanel>

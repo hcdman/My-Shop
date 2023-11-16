@@ -17,6 +17,12 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="View\addDetailOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\detailOrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\LoginExpiredPage.xaml">
       <SubType>Designer</SubType>
     </Page>

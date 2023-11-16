@@ -37,8 +37,8 @@
                         Height="30"
                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                         PlaceholderText="Category Name"
-                        TextWrapping="Wrap" />
-                    <Button Margin="10,0">Search</Button>
+                        TextWrapping="Wrap" Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" />
+                    <Button Margin="10,0" Click="search">Search</Button>
                 </StackPanel>
             </Grid>
             <Button
@@ -133,7 +133,7 @@
                 Grid.Column="1"
                 Margin="10,0,0,0"
                 Orientation="Horizontal">
-                <Button Width="80" Margin="10,0">
+                <Button Width="80" Margin="10,0" Click="preC">
                     Previous
                 </Button>
                 <TextBlock
@@ -142,7 +142,7 @@
                     VerticalAlignment="Center"
                     Text="1/1"
                     TextAlignment="Center" />
-                <Button Width="80" Margin="10,0">
+                <Button Width="80" Margin="10,0" Click="nextC">
                     Next
                 </Button>
             </StackPanel>

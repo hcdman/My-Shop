@@ -140,7 +140,7 @@
                     x:Name="mess"
                     FontSize="15"
                     Foreground="Red"
-                    TextAlignment="Center" />
+                    TextAlignment="Center"  />
             </StackPanel>
         </Border>
     </Grid>

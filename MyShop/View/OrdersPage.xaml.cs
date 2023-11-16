@@ -16,6 +16,7 @@ using Windows.Foundation.Collections;
 using MyShop.Model;
 using System.Windows;
 using RoutedEventArgs = Microsoft.UI.Xaml.RoutedEventArgs;
+using System.Windows.Input;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,15 +27,17 @@ namespace MyShop.View;
 /// </summary>
 public sealed partial class OrdersPage : Page
 {
-    OrdersViewModel orderVMD = new OrdersViewModel();
+    OrdersViewModel vm = new OrdersViewModel();
+
     public OrdersPage()
     {
         this.InitializeComponent();
-        this.DataContext = orderVMD;
+        this.DataContext = vm;
     }
 
     private void AddButton_Click(object sender, RoutedEventArgs e)
     {
+
         Frame.Navigate(typeof(View.AddOrderPage));
     }
 
@@ -43,25 +46,83 @@ public sealed partial class OrdersPage : Page
 
     }
 
-    private void Update(object sender, RoutedEventArgs e)
+    private void detailOrder(object sender, RoutedEventArgs e)
     {
         var btn = sender as Button;
-        string id = btn.Tag as string;
-        Order order = new Order();
-        for (int i = 0; i < orderVMD.Orders.Count; i++)
+        // id = btn.Tag as int;
+        int id = 0;
+        if (btn.Tag != null)
         {
-            if (id == orderVMD.Orders[i].OrderId)
+            id = (int)btn.Tag;
+        }
+        Order order = new Order();
+        for (int i = 0; i <  vm.orders.Count; i++)
+        {
+            if (id == vm.orders[i].sohd)
             {
-                order = orderVMD.Orders[i];
+                order = vm.orders[i];
                 break;
             }
         }
 
-        Frame.Navigate(typeof(View.UpdateOrderPage),order);
+         Frame.Navigate(typeof(View.detailOrderPage), order);
     }
 
-    private async void Delete(object sender, RoutedEventArgs e)
+    private void next(object sender, RoutedEventArgs e)
     {
+        vm.next();
+    }
+
+    private void pre(object sender, RoutedEventArgs e)
+    {
+        vm.pre();
+    }
+
+    private void SearchByID(object sender, RoutedEventArgs e)
+    {
+        vm.search();
+    }
+
+
+
+    private async void filter(object sender, RoutedEventArgs e)
+    {
+
+        // vm.filterByDate();
+        DateTimeOffset strDate = (DateTimeOffset)startDate.Date;
+        DateTimeOffset eDate = (DateTimeOffset)endDate.Date;
+        DateTime d1 = strDate.Date;
+        DateTime d2 = eDate.Date;
+
+        /*ContentDialog deleteDialog = new ContentDialog
+        {
+            XamlRoot = this.XamlRoot,
+            Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+            Title = "",
+            Content = d1.Day + " " + d1.Month + " " + d1.Year + " " + d2.Day + " " + d2.Month + " " + d2.Year,
+            CloseButtonText = "Cancel",
+            PrimaryButtonText = "Delete",
+            DefaultButton = ContentDialogButton.Close
+        };
+
+        ContentDialogResult result = await deleteDialog.ShowAsync();*/
+        vm.filterByDate(d1, d2);
+    }
+
+    private void RemoveFilter(object sender, RoutedEventArgs e)
+    {
+           vm.removeFilter();
+          //startDate.Date =
+          
+    }
+
+
+
+    private async void deleteOrder(object sender, RoutedEventArgs e)
+    {
+
+
+
         ContentDialog deleteDialog = new ContentDialog
         {
             XamlRoot = this.XamlRoot,
@@ -76,7 +137,31 @@ public sealed partial class OrdersPage : Page
         ContentDialogResult result = await deleteDialog.ShowAsync();
         if (result == ContentDialogResult.Primary)
         {
-            //TODO: delete
+
+            var btn = sender as Button;
+            // id = btn.Tag as int;
+            int id = 0;
+            if (btn.Tag != null)
+            {
+                id = (int)btn.Tag;
+            }
+
+            // info.Text = id + "";
+
+            if (btn != null)
+            {
+                vm.deleteOrder(id + "");
+            }
+          
+        }
+    }
+
+  
+    private void searchByKey(object sender, KeyRoutedEventArgs e)
+    {
+       if(e.Key == Windows.System.VirtualKey.Enter)
+        {
+            vm.search();
         }
     }
 

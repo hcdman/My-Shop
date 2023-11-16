@@ -36,7 +36,7 @@ namespace MyShop.View
         private void mainLoad(object sender, RoutedEventArgs e)
         {
             this.DataContext = order;
-            Calendar.Date = DateTime.Parse(order.Date);
+            Calendar.Date = DateTime.Parse(order.nghd);
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {

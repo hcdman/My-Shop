@@ -13,7 +13,7 @@
     <Grid>
         <Border
             Width="500"
-            Height="600"
+            Height="700"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
@@ -23,8 +23,10 @@
                     FontSize="25"
                     FontWeight="Bold"
                     Text="Add Customer" />
-                <Grid VerticalAlignment="Center">
+                <Grid x:ConnectionId='2' VerticalAlignment="Center" Name="form">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -43,68 +45,91 @@
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Name" />
+                        Text="ID" />
                     <TextBox
                         Grid.Row="1"
                         Width="450"
                         Padding="10,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        BorderThickness="0,0,0,1"
+                        Text="{Binding makh, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
                     <TextBlock
                         Grid.Row="2"
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Address" />
+                        Text="Fullname" />
                     <TextBox
                         Grid.Row="3"
                         Width="450"
                         Padding="10,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        BorderThickness="0,0,0,1"
+                        Text = "{Binding hoten, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" />
                     <TextBlock
                         Grid.Row="4"
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Phone number" />
+                        Text="Address" />
                     <TextBox
                         Grid.Row="5"
                         Width="450"
                         Padding="10,5"
                         HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        BorderThickness="0,0,0,1" 
+                        Text="{Binding dchi, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
                     <TextBlock
                         Grid.Row="6"
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Date of Birth" />
-                    <CalendarDatePicker
-                        DateFormat="{}{day.integer}/{month.integer}/{year.full}"
-                        Grid.Row="7" />
+                        Text="Tel" />
+                    <TextBox
+                     Width="450"
+                     Padding="10,5"
+                       HorizontalAlignment="Left"
+                       BorderThickness="0,0,0,1" 
+                   Grid.Row="7"
+                   Text="{Binding sodt, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
                     <TextBlock
                         Grid.Row="8"
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Email" />
-                    <TextBox
-                        Grid.Row="9"
-                        Width="450"
-                        Padding="10,5"
-                        HorizontalAlignment="Left"
-                        BorderThickness="0,0,0,1" />
+                        Text="Date of Birth" />
+                    <CalendarDatePicker x:ConnectionId='6'
+                  DateFormat="{}{day.integer}/{month.integer}/{year.full}"  Name="DateofBirth"
+                     Grid.Row="9" />
+                   
                     <TextBlock
                         Grid.Row="10"
                         Margin="0,10"
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
-                        Text="Date of Registration" />
-                    <CalendarDatePicker x:ConnectionId='5' DateFormat="{}{day.integer}/{month.integer}/{year.full}" x:Name="RegistrationCalendar" Grid.Row="11" />
+                        Text="Email"/>
+                    <TextBox
+                Width="450"
+                Padding="10,5"
+                 HorizontalAlignment="Left"
+                BorderThickness="0,0,0,1" 
+                Grid.Row="11"
+                 Text="{Binding email, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"/>
+
+
+                    <TextBlock
+                        Grid.Row="12"
+                        Margin="0,10"
+                        HorizontalAlignment="Left"
+                        FontWeight="Medium"
+                        Text="Date of Registration"/>
+                    <CalendarDatePicker x:ConnectionId='7' Name="RegistrationCalendar"
+                    DateFormat="{}{day.integer}/{month.integer}/{year.full}"
+                    Grid.Row="13" />
+                    
                 </Grid>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Button x:ConnectionId='3'
+                    <Button x:ConnectionId='4'
                         x:Name="AddBtn"
                         Width="100"
                         Height="35"
@@ -114,22 +139,22 @@
                         Content="Add"
                         CornerRadius="10" 
                                             />
-                    <Button x:ConnectionId='4'
+                    <Button x:ConnectionId='5'
                         x:Name="CancelBtn"
                         Width="100"
                         Height="35"
                         Margin="25,15"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Content="Cancel"
+                        Content="Back"
                         CornerRadius="10" 
                                                />
                 </StackPanel>
-                <TextBlock x:ConnectionId='2'
+                <TextBlock x:ConnectionId='3'
                     x:Name="messageTextBlock"
                     FontSize="15"
                     Foreground="Red"
-                    Text="Error"
+                    Text=""
                     TextAlignment="Center" />
             </StackPanel>
         </Border>

@@ -31,17 +31,17 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:ConnectionId='8'
+                    <TextBox x:ConnectionId='10'
                         Name="orderNameTextBox"
                         Width="300"
                         Height="30"
                         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                         PlaceholderText="Category Name"
-                        TextWrapping="Wrap" />
-                    <Button Margin="10,0">Search</Button>
+                        TextWrapping="Wrap" Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}" />
+                    <Button x:ConnectionId='11' Margin="10,0"               >Search</Button>
                 </StackPanel>
             </Grid>
-            <Button x:ConnectionId='7'
+            <Button x:ConnectionId='9'
                 Grid.Column="1"
                 Margin="0,0,10,0"
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
@@ -58,7 +58,7 @@
                 Margin="20,5,20,20"
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                 CornerRadius="10">
-                <controls:DataGrid x:ConnectionId='3'
+                <controls:DataGrid x:ConnectionId='5'
                     x:Name="CustomerDataGrid"
                     Margin="0,20,0,0"
                     HorizontalAlignment="Center"
@@ -86,13 +86,13 @@
                             <controls:DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button x:ConnectionId='5'
+                                        <Button x:ConnectionId='7'
                                             Margin="5,0,0,0"
                                                               
                                             Tag="{Binding maloai}">
                                             <Image Width="16" Source="ms-appx:///Icons/edit.png" />
                                         </Button>
-                                        <Button x:ConnectionId='6'
+                                        <Button x:ConnectionId='8'
                                             Margin="5,0,0,0"
                                                               
                                             Tag="{Binding maloai}">
@@ -121,7 +121,7 @@
                     TextAlignment="Center">
                     Category per page
                 </TextBlock>
-                <TextBox x:ConnectionId='2'
+                <TextBox x:ConnectionId='4'
                     Width="10"
                     Height="30"
                     Margin="10,0"
@@ -133,7 +133,7 @@
                 Grid.Column="1"
                 Margin="10,0,0,0"
                 Orientation="Horizontal">
-                <Button Width="80" Margin="10,0">
+                <Button x:ConnectionId='2' Width="80" Margin="10,0"             >
                     Previous
                 </Button>
                 <TextBlock
@@ -142,7 +142,7 @@
                     VerticalAlignment="Center"
                     Text="1/1"
                     TextAlignment="Center" />
-                <Button Width="80" Margin="10,0">
+                <Button x:ConnectionId='3' Width="80" Margin="10,0"              >
                     Next
                 </Button>
             </StackPanel>

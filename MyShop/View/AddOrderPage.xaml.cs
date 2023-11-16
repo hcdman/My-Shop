@@ -12,6 +12,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.ViewModel;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,19 +24,27 @@ namespace MyShop.View
     /// </summary>
     public sealed partial class AddOrderPage : Page
     {
+        addOrderViewModel addOrder;
         public AddOrderPage()
         {
             this.InitializeComponent();
+            addOrder = new addOrderViewModel();
+            this.DataContext = addOrder;
+            form.DataContext = addOrder.order;
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+    
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(View.OrdersPage));
+        }
+
+        private void addOrders(object sender, RoutedEventArgs e)
+        {
+             DateTimeOffset d = (DateTimeOffset)dateOrder.Date;
+             DateTime dateTime = d.DateTime;
+             //messageTextBlock.Text = dateTime.Day + " " + dateTime.Month + " " + dateTime.Year;
+             addOrder.addOneOrder(dateTime);
         }
     }
 }
