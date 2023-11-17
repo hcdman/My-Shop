@@ -94,7 +94,7 @@
                         Click="addOrders"
                         Content="Add"
                         CornerRadius="10" />
-                    
+
                     <Button
                         x:Name="CancelBtn"
                         Width="100"

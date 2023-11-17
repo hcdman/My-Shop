@@ -37,6 +37,7 @@ namespace MyShop.ViewModel
         {
             order.nghd = date.Year + "-" + date.Month + "-"  + date.Day;
             add_Order(order);
+
         }
 
         public async void add_Order(Order order)
@@ -45,7 +46,6 @@ namespace MyShop.ViewModel
             // mess = order.makh + " " + order.nghd + order.trigia;
             isShowProgres = true;
             var (success, message) = await api.addOrder(order);
-            //mess = message;
             mess = message;
             isShowProgres = false;
         }

@@ -11,7 +11,7 @@
     Foreground="{ThemeResource MyForegroundThemeBrush}"
                      
     xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls">
-    <Grid Margin="{StaticResource PageContentMargin}">
+    <!--<Grid Margin="{StaticResource PageContentMargin}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -19,8 +19,10 @@
             <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock FontSize="15" FontWeight="Bold" Margin="10">Detail order</TextBlock>
+        
         <TextBlock Text="{Binding mess}">Demo</TextBlock>
-        <ProgressBar x:ConnectionId='2' x:Name="loading" Width="500" Background="{ThemeResource MyBackgroundThemeBrush}"  IsIndeterminate="{Binding isShowProgressBar}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="loading" Width="500" Background="{ThemeResource MyBackgroundThemeBrush}"  IsIndeterminate="{Binding isShowProgressBar}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+       
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -33,16 +35,16 @@
                 </Grid.ColumnDefinitions>
                 <Grid Height="40">
                     <TextBlock Margin="8"  IsHitTestVisible="False"  Text="Search in Customers ..." Visibility="Visible"/>
-                    <TextBox x:ConnectionId='8' Name="textBoxFilter" Text="{Binding keyword, Mode=TwoWay}" Height="20"/>
+                    <TextBox Name="textBoxFilter" Text="{Binding keyword, Mode=TwoWay}" Height="20"/>
                 </Grid>
                 <Button Grid.Column="1" Margin="10,0,0,0" >Search</Button>
             </Grid>
-            <Button x:ConnectionId='7' Grid.Column="1" Width="100" HorizontalAlignment="Right"                       >Add</Button>
+            <Button Grid.Column="1" Width="100" HorizontalAlignment="Right" Click="addDetailOrder">Add</Button>
         </Grid>
 
-        <!--Data of customer-->
+        --><!--Data of customer--><!--
         <Grid Grid.Row="2" Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Width="700" Height="350">
-            <controls:DataGrid x:ConnectionId='3' x:Name="CustomerDataGrid" ItemsSource="{Binding detailOrderProduct, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalAlignment="Center">
+            <controls:DataGrid x:Name="CustomerDataGrid" ItemsSource="{Binding detailOrderProduct, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalAlignment="Center">
 
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn Header="ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding id_cthd}" FontWeight="Medium"/>
@@ -55,11 +57,11 @@
                     <controls:DataGridTextColumn Header="Price" Binding="{Binding gia}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
 
 
-                    <controls:DataGridTemplateColumn x:ConnectionId='4' x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
+                    <controls:DataGridTemplateColumn x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
                         <controls:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button x:ConnectionId='6' Margin="5 0 0 0" Tag="{Binding id_cthd}"                          >
+                                    <Button Margin="5 0 0 0" Tag="{Binding id_cthd}"  Click="deteleOrderpage" >
                                         <Image  Source="ms-appx:///Icons/delete.png" Width="16"/>
                                     </Button>
                                 </StackPanel>
@@ -69,7 +71,7 @@
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </Grid>
-        <!--Pagination-->
+        --><!--Pagination--><!--
         <Grid Grid.Row="3" Width="700">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -92,6 +94,150 @@
                 <Button>Next</Button>
             </StackPanel>
 
+        </Grid>
+    </Grid>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Header  -->
+        <TextBlock
+        Margin="20,20,0,20"
+        Style="{StaticResource PageTitleStyle}"
+        Text="Detail Order" />
+
+        <!--  Add button  -->
+        <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='12'
+            Grid.Column="1"
+            Margin="0,0,20,0"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                                  >
+                Add
+            </Button>
+        </Grid>
+
+        <!--  Search bar  -->
+        <Grid Grid.Row="1" Margin="20,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:ConnectionId='11'
+                    Name="orderNameTextBox"
+                    Width="300"
+                    Height="30"
+                    Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                    PlaceholderText="Search detail order"
+                    TextWrapping="Wrap" 
+                    Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"                       />
+                    <Button Margin="10,0">Search</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <!--  Data of order  -->
+        <Grid
+        Grid.Row="2"
+        Margin="20,5,20,20"
+        Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+        CornerRadius="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <controls:DataGrid x:ConnectionId='5'
+            x:Name="CustomerDataGrid"
+            HorizontalAlignment="Center"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            ItemsSource="{Binding detailOrderProduct, Mode=TwoWay}">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Header="ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding id_cthd}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Order ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding sohd}" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Product ID" Binding="{Binding masp}" CanUserResize="False" Width="SizeToHeader" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Quantity" Binding="{Binding sl}" CanUserResize="False"  Width="auto" FontWeight="Medium"/>
+                    <controls:DataGridTemplateColumn Header="Product Image" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                   
+                                        <Image  Source="{Binding anh}" Width="30"/>
+                                 
+                                </StackPanel>
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
+                    <controls:DataGridTextColumn Header="Name Product" Binding="{Binding tensp}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Manufacturer" Binding="{Binding hangsx}" CanUserResize="False"  Width="SizeToHeader" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
+
+                    <controls:DataGridTemplateColumn x:ConnectionId='7' x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:ConnectionId='9' Margin="5 0 0 0" Tag="{Binding id_cthd}"                          >
+                                        <Image  Source="ms-appx:///Icons/delete.png" Width="16"/>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+            <ProgressBar x:ConnectionId='6' Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <!--  Page navigation  -->
+        <Grid Grid.Row="3" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <TextBlock
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                FontWeight="Bold"
+                TextAlignment="Center">
+                Detail Order per page
+                </TextBlock>
+                <TextBox x:ConnectionId='4'
+                Width="10"
+                Height="30"
+                Margin="10,0"
+                                         
+                Text="{Binding _rowsPerPage}"
+                TextAlignment="Center" />
+            </StackPanel>
+            <StackPanel
+            Grid.Column="1"
+            Margin="10,0,0,0"
+            Orientation="Horizontal">
+                <Button x:ConnectionId='2' Width="80" Margin="10,0"            >
+                    Previous
+                </Button>
+                <TextBlock
+                Height="30"
+                Margin="0,5,0,0"
+                VerticalAlignment="Center"
+                TextAlignment="Center">
+             <Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/>
+                </TextBlock>
+                <Button x:ConnectionId='3' Width="80" Margin="10,0"             >
+                    Next
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>

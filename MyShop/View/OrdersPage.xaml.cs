@@ -121,8 +121,6 @@ public sealed partial class OrdersPage : Page
     private async void deleteOrder(object sender, RoutedEventArgs e)
     {
 
-
-
         ContentDialog deleteDialog = new ContentDialog
         {
             XamlRoot = this.XamlRoot,

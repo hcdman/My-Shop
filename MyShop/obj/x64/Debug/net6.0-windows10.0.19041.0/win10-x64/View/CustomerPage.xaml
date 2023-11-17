@@ -33,19 +33,20 @@
             </Grid.ColumnDefinitions>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="auto"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Grid Height="40">
-                    <TextBlock
-                        Margin="8"
-                        IsHitTestVisible="False"
-                        Text="Search in Customers ..."
-                        Visibility="Visible" />
-                    <TextBox x:ConnectionId='11'
-                        Name="textBoxFilter"
-                        Height="20"
-                        Text="{Binding keyword, Mode=TwoWay}" />
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:ConnectionId='11'
+                              Name="orderNameTextBox"
+                              Width="300"
+                              Height="30"
+                              Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+                              PlaceholderText="Search in Customers ..."
+                              TextWrapping="Wrap" 
+                              Text="{Binding keyword, Mode=TwoWay}"/>
+                    </StackPanel>
                 </Grid>
                 <Button x:ConnectionId='10'
                     Grid.Column="1"

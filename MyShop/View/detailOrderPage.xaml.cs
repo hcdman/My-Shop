@@ -81,5 +81,25 @@ namespace MyShop.View
         {
              Frame.Navigate(typeof(addDetailOrderPage), order);
         }
+
+        private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+
+        }
+
+        private void pre(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void next(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void searchByKey(object sender, KeyRoutedEventArgs e)
+        {
+
+        }
     }
 }

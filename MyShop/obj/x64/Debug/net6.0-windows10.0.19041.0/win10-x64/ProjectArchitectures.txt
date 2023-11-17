@@ -1,1 +1,1 @@
-F:\HK3_Nam1\windowPropraming\MyShop_Update1\My-Shop\MyShop\MyShop.csproj;x64
+C:\Users\hoai0\Downloads\temp\My-Shop\MyShop\MyShop.csproj;x64
