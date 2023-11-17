@@ -16,8 +16,8 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <!--  Header  -->
         <TextBlock
@@ -66,6 +66,8 @@
 
         <!--  Data of customer  -->
         <Grid
+         
+             Height="400"
             Grid.Row="2"
             Margin="20,20,20,0"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
@@ -147,9 +149,11 @@
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </Grid>
-
+        <Grid Grid.Row="3">
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+        </Grid>
         <!--  Pagination  -->
-        <Grid Grid.Row="3" HorizontalAlignment="Center">
+        <Grid Grid.Row="4" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -185,10 +189,10 @@
                 </Button>
                 <TextBlock
                     Height="30"
+                    Margin="0,5,0,0"
                     VerticalAlignment="Center"
                     TextAlignment="Center">
-                    <Run Text="{Binding _currentPage}" />
-                    /<Run Text="{Binding _totalPages}" />
+                 <Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/>   
                 </TextBlock>
                 <Button
                     Width="80"

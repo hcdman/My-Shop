@@ -10,9 +10,13 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
         <Border
             Width="500"
-            Height="600"
+            Height="300"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
@@ -56,6 +60,7 @@
                         BorderThickness="0,0,0,1" 
                         Text="{Binding tenloai, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"
                         />
+                    
                 </Grid>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 20 0 0">
                     <Button
@@ -78,6 +83,7 @@
                         VerticalAlignment="Center"
                         Content="Back"
                         CornerRadius="10" />
+                    
                 </StackPanel>
                 <TextBlock
                     x:Name="messageTextBlock"
@@ -85,7 +91,12 @@
                     Foreground="Red"
                     Text=""
                     TextAlignment="Center" />
-            </StackPanel>
+                
+            </StackPanel>   
+
         </Border>
+        <Grid Grid.Row="1">
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Page>

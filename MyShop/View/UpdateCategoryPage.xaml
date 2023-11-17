@@ -14,7 +14,7 @@
     <Grid>
         <Border
             Width="500"
-            Height="600"
+            Height="300"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">

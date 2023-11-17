@@ -54,7 +54,7 @@ namespace MyShop.View
 
         }
 
-        private void add_detailOrder(object sender, RoutedEventArgs e)
+        private void addDetailOrder(object sender, RoutedEventArgs e)
         {
 
         }

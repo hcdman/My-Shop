@@ -11,9 +11,13 @@
     Loaded="mainLoad"
     mc:Ignorable="d">
     <Grid>
-    <Border
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border
     Width="500"
-    Height="600"
+    Height="350"
     Background="{ThemeResource MyBlockBackgroundThemeBrush}"
     CornerRadius="10"
         Loaded="mainLoad">
@@ -87,6 +91,7 @@
                 Width="100"
                 Height="35"
                 Margin="20,15"
+                Click="addDetailOrder"
               Command="{Binding addDetailOrder}"
                 Content="Add"
                 CornerRadius="16" />
@@ -106,5 +111,8 @@
             TextAlignment="Center" />
         </StackPanel>
     </Border>
+        <Grid Grid.Row="1">
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Page>

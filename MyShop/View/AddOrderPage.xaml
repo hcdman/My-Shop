@@ -11,9 +11,13 @@
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
         <Border
             Width="500"
-            Height="600"
+            Height="350"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
@@ -116,5 +120,8 @@
                     TextAlignment="Center" />
             </StackPanel>
         </Border>
+        <Grid Grid.Row="1">
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Page>

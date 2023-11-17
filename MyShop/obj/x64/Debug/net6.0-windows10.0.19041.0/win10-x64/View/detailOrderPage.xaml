@@ -11,97 +11,12 @@
     Foreground="{ThemeResource MyForegroundThemeBrush}"
                      
     xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls">
-    <!--<Grid Margin="{StaticResource PageContentMargin}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition ></RowDefinition>
-            <RowDefinition Height="40"></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="15" FontWeight="Bold" Margin="10">Detail order</TextBlock>
-        
-        <TextBlock Text="{Binding mess}">Demo</TextBlock>
-        <ProgressBar x:Name="loading" Width="500" Background="{ThemeResource MyBackgroundThemeBrush}"  IsIndeterminate="{Binding isShowProgressBar}" Height="10" Canvas.Left="94" Canvas.Top="313" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-       
-        <Grid Grid.Row="1" Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid Height="40">
-                    <TextBlock Margin="8"  IsHitTestVisible="False"  Text="Search in Customers ..." Visibility="Visible"/>
-                    <TextBox Name="textBoxFilter" Text="{Binding keyword, Mode=TwoWay}" Height="20"/>
-                </Grid>
-                <Button Grid.Column="1" Margin="10,0,0,0" >Search</Button>
-            </Grid>
-            <Button Grid.Column="1" Width="100" HorizontalAlignment="Right" Click="addDetailOrder">Add</Button>
-        </Grid>
-
-        --><!--Data of customer--><!--
-        <Grid Grid.Row="2" Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Width="700" Height="350">
-            <controls:DataGrid x:Name="CustomerDataGrid" ItemsSource="{Binding detailOrderProduct, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalAlignment="Center">
-
-                <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn Header="ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding id_cthd}" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Order ID" CanUserResize="False" Width="SizeToHeader" Binding="{Binding sohd}" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Product ID" Binding="{Binding masp}" CanUserResize="False" Width="SizeToCells" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Quantity" Binding="{Binding sl}" CanUserResize="False"  Width="auto" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Product Image" Binding="{Binding anh}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Name Product" Binding="{Binding tensp}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Manufacturer" Binding="{Binding hangsx}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
-
-
-                    <controls:DataGridTemplateColumn x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
-                        <controls:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Margin="5 0 0 0" Tag="{Binding id_cthd}"  Click="deteleOrderpage" >
-                                        <Image  Source="ms-appx:///Icons/delete.png" Width="16"/>
-                                    </Button>
-                                </StackPanel>
-                            </DataTemplate>
-                        </controls:DataGridTemplateColumn.CellTemplate>
-                    </controls:DataGridTemplateColumn>
-                </controls:DataGrid.Columns>
-            </controls:DataGrid>
-        </Grid>
-        --><!--Pagination--><!--
-        <Grid Grid.Row="3" Width="700">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <TextBlock FontWeight="Bold">Customer per page</TextBlock>
-                <Border Background= "{ThemeResource MyBlockBackgroundThemeBrush}" Margin="5,0,0,0">
-                    <TextBlock Text="{Binding _rowsPerPage}"></TextBlock>
-                </Border>
-
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10,0,0,0">
-                <Button>Previous</Button>
-                <Border Margin="10"  Background= "{ThemeResource MyBlockBackgroundThemeBrush}">
-                    <TextBlock>
-                    <Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/>
-                    </TextBlock>
-                </Border>
-                <Button>Next</Button>
-            </StackPanel>
-
-        </Grid>
-    </Grid>-->
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
@@ -148,15 +63,12 @@
         </Grid>
         <!--  Data of order  -->
         <Grid
+        Height="400"  
         Grid.Row="2"
         Margin="20,5,20,20"
         Background="{ThemeResource MyBlockBackgroundThemeBrush}"
         CornerRadius="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <controls:DataGrid x:ConnectionId='5'
+            <controls:DataGrid x:ConnectionId='6'
             x:Name="CustomerDataGrid"
             HorizontalAlignment="Center"
             AutoGenerateColumns="False"
@@ -195,11 +107,13 @@
                     </controls:DataGridTemplateColumn>
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
-            <ProgressBar x:ConnectionId='6' Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
         </Grid>
+        <Grid Grid.Row="3">
+            <ProgressBar x:ConnectionId='5' Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
 
+        </Grid>
         <!--  Page navigation  -->
-        <Grid Grid.Row="3" Margin="0,0,0,10">
+        <Grid Grid.Row="4" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
