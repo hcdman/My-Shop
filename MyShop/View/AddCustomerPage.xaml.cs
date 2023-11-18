@@ -41,15 +41,29 @@ public sealed partial class AddCustomerPage : Page
         Frame.Navigate(typeof(CustomerPage));
     }
 
-    private void AddBtn_Click(object sender, RoutedEventArgs e)
+    private async void AddBtn_Click(object sender, RoutedEventArgs e)
     {
         //TODO: Add Customer
         DateTimeOffset d1 = (DateTimeOffset)DateofBirth.Date;
         DateTimeOffset d2 = (DateTimeOffset)RegistrationCalendar.Date;
-
         DateTime dob = d1.DateTime;
         DateTime dor = d2.DateTime;
-         vm.addCustomer(dob, dor);
+        bool success = await vm.addCustomer(dob, dor);
+        if (success)
+        {
+            ContentDialog addDialog = new ContentDialog
+            {
+                XamlRoot = this.XamlRoot,
+                Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+                Title = "Add successfully !",
+                Content = "You will be redirected to main page.",
+                CloseButtonText = "OK",
+                DefaultButton = ContentDialogButton.Close
+            };
+
+            ContentDialogResult result = await addDialog.ShowAsync();
+            Frame.Navigate(typeof(View.CustomerPage));
+        };
 
     }
 }

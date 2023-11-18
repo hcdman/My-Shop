@@ -450,31 +450,5 @@ namespace MyShop.API
             if (response.StatusCode.ToString() == "OK") return Tuple.Create(true, res.message);
             return Tuple.Create(false, res.message);
         }
-        //////////----------------- Statistics ----------------------------
-        public async Task<ListRevenueWeek> RevenueStatistics(string api, string page, int currentDay, int currentMonth, int currentYear)
-        {
-            Date newDate = new Date() { day = currentDay, month = currentMonth, year = currentYear };
-            using StringContent jsonContent = new(
-            JsonSerializer.Serialize(newDate),
-            Encoding.UTF8, "application/json");
-
-            var response = await client.PostAsync($"{page}/{api}", jsonContent);
-            var returnValue = await response.Content.ReadAsStringAsync();
-            ListRevenueWeek res = JsonSerializer.Deserialize<ListRevenueWeek>(returnValue);
-            return res;
-        }
-
-        public async Task<ListSales> PieceStatistics(string api)
-        {
-
-            var response = await client.GetAsync($"piece/{api}");
-            var returnValue = await response.Content.ReadAsStringAsync();
-            ListSales res = JsonSerializer.Deserialize<ListSales>(returnValue);
-
-            return res;
-
-        }
-
-        ///////////////////------------------------------------------------
     }
 }

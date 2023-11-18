@@ -25,7 +25,6 @@
             Margin="20,20,0,20"
             Style="{StaticResource PageTitleStyle}"
             Text="Customer" />
-        <TextBlock Text="{Binding mess}">Demo</TextBlock>
         <Grid Grid.Row="1" Margin="20,0,20,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />

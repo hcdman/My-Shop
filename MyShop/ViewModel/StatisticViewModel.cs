@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace MyShop.ViewModel
 {
 
@@ -14,29 +15,23 @@ namespace MyShop.ViewModel
         private List<Revenue> _revenues;
         public List<Revenue> Revenues
         {
-            get { return _revenues; }
-            set { _revenues = value; }
+            get { return _revenues; } set { _revenues = value; }    
         }
 
 
-        public StatisticViewModel(string check, string page, int currentDay, int currentMonth, int currentYear)
-        {
-            loadData(check, page, currentDay, currentMonth, currentYear);
-        }
-
-        public async void loadData(string check, string page, int currentDay, int currentMonth, int currentYear)
+        public StatisticViewModel(string check)
         {
             if (check == "year")
             {
-                Revenues = await Revenue.Revenues("year", page, currentDay, currentMonth, currentYear);
+                Revenues = Revenue.Revenues("year");
             }
-            else if (check == "month")
+            else if(check=="month")
             {
-                Revenues = await Revenue.Revenues("month", page, currentDay, currentMonth, currentYear);
+                Revenues = Revenue.Revenues("month");
             }
             else
             {
-                Revenues = await Revenue.Revenues("week", page, currentDay, currentMonth, currentYear);
+                Revenues = Revenue.Revenues("week");
             }
         }
 

@@ -33,14 +33,15 @@ namespace MyShop.ViewModel
     
 
         HandleAPI api = new HandleAPI();
-        public void addOneOrder(DateTime date)
+        public Task<bool> addOneOrder(DateTime date)
         {
+           
             order.nghd = date.Year + "-" + date.Month + "-"  + date.Day;
-            add_Order(order);
+             return add_Order(order);
 
         }
 
-        public async void add_Order(Order order)
+        public async Task<bool> add_Order (Order order)
         {
             mess = "";
             // mess = order.makh + " " + order.nghd + order.trigia;
@@ -48,6 +49,8 @@ namespace MyShop.ViewModel
             var (success, message) = await api.addOrder(order);
             mess = message;
             isShowProgres = false;
+            return success;
+            
         }
     }
 }

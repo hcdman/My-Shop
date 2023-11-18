@@ -64,9 +64,23 @@ public sealed partial class CustomerPage : Page
 
             if (btn != null)
             {
-                cusViewModel.deleteCustomer(btn.Tag as string);
+                bool success = await cusViewModel.deleteCustomer(btn.Tag as string);
+                if(success)
+                {
+                    ContentDialog addDialog = new ContentDialog
+                    {
+                        XamlRoot = this.XamlRoot,
+                        Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+                        Title = "Delete successfully !",
+                        Content = "Your data will be update.",
+                        CloseButtonText = "OK",
+                        DefaultButton = ContentDialogButton.Close
+                    };
+                    _ = await addDialog.ShowAsync();
+                }
+
             }
-            // Frame.Navigate(typeof(CustomerPage));
+         
         }
     }
 

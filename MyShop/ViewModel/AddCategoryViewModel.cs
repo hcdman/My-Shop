@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Microsoft.UI.Xaml.Controls;
 using MyShop.API;
 using MyShop.Model;
 using MyShop.ViewModel.command;
+using Windows.UI.Popups;
 
 namespace MyShop.ViewModel;
 public class AddCategoryViewModel:INotifyPropertyChanged
@@ -57,5 +59,7 @@ public class AddCategoryViewModel:INotifyPropertyChanged
         var (success, message) = await api.addCategory(cate);
         mess = message;
         isShowProgres = false;
+       
+
     }
 }

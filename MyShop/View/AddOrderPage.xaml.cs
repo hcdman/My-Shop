@@ -39,12 +39,28 @@ namespace MyShop.View
             Frame.Navigate(typeof(View.OrdersPage));
         }
 
-        private void addOrders(object sender, RoutedEventArgs e)
+        private async void addOrders(object sender, RoutedEventArgs e)
         {
              DateTimeOffset d = (DateTimeOffset)dateOrder.Date;
              DateTime dateTime = d.DateTime;
-             //messageTextBlock.Text = dateTime.Day + " " + dateTime.Month + " " + dateTime.Year;
-             addOrder.addOneOrder(dateTime);
+            //messageTextBlock.Text = dateTime.Day + " " + dateTime.Month + " " + dateTime.Year;
+            bool success = await addOrder.addOneOrder(dateTime);
+            if (success)
+            {
+                ContentDialog addDialog = new ContentDialog
+                {
+                    XamlRoot = this.XamlRoot,
+                    Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+                    Title = "Add successfully !",
+                    Content = "You will be redirected to main page.",
+                    CloseButtonText = "OK",
+                    DefaultButton = ContentDialogButton.Close
+                };
+
+                ContentDialogResult result = await addDialog.ShowAsync();
+                Frame.Navigate(typeof(View.OrdersPage));
+            };
+          
         }
     }
 }

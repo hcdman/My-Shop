@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyShop.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodel="using:MyShop.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:addDetailOrderViewModel}"
     Background="{ThemeResource MyBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}"
     Loaded="mainLoad"
@@ -91,7 +91,6 @@
                 Width="100"
                 Height="35"
                 Margin="20,15"
-                Click="addDetailOrder"
               Command="{Binding addDetailOrder}"
                 Content="Add"
                 CornerRadius="16" />
@@ -108,6 +107,7 @@
             x:Name="mess"
             FontSize="15"
             Foreground="Red"
+                
             TextAlignment="Center" />
         </StackPanel>
     </Border>

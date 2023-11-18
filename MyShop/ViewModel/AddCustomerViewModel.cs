@@ -32,24 +32,25 @@ namespace MyShop.ViewModel
         }
         
 
-        public void addCustomer(DateTime d1, DateTime d2)
+        public Task<bool> addCustomer(DateTime d1, DateTime d2)
         {
             cus.ngsinh = d1.Year + "-" + d1.Month + "-" + d1.Day;
             cus.ngdk = d2.Year + "-" + d2.Month + "-" + d2.Day;
 
-            addCusTomer(cus);   
+            return addCusTomer(cus);   
         }
 
         HandleAPI api = new HandleAPI();
 
      
-        public async void addCusTomer(Customer cus)
+        public async Task<bool> addCusTomer(Customer cus)
         {
             mess = "";
             isShowProgres = true;
            var (success, message) = await api.addCustomer(cus);
             mess = message;
             isShowProgres = false;
+            return success;
             
         }
     }

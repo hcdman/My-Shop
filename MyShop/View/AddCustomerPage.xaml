@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Border
             Width="500"
-            Height="625"
+            Height="680"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
@@ -155,11 +155,13 @@
                         Click="CancelBtn_Click"/>
                 </StackPanel>
                 <TextBlock
-                    x:Name="messageTextBlock"
-                    FontSize="15"
-                    Foreground="Red"
-                    Text=""
-                    TextAlignment="Center" />
+                      x:Name="messageTextBlock"
+                      Grid.Row="1"
+                      Margin="0,5,0,0"
+                      FontSize="15"
+                      Foreground="Red"
+                      Text="{Binding mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                      TextAlignment="Center" />
             </StackPanel>
         </Border>
         <Grid Grid.Row="1">

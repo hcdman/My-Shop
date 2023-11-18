@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <Border
             Width="500"
-            Height="300"
+            Height="340"
             Background="{ThemeResource MyBlockBackgroundThemeBrush}"
             CornerRadius="10">
             <StackPanel Margin="20" Orientation="Vertical">
@@ -71,6 +71,7 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                        Command="{Binding addCate}"
+                        
                         Content="Add"
                         CornerRadius="10" />
                     <Button
@@ -89,7 +90,7 @@
                     x:Name="messageTextBlock"
                     FontSize="15"
                     Foreground="Red"
-                    Text=""
+                    Text="{Binding mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                     TextAlignment="Center" />
                 
             </StackPanel>   

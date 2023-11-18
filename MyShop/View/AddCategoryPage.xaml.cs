@@ -36,6 +36,7 @@ namespace MyShop.View
    
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+
             Frame.Navigate(typeof(View.CategoryPage));
         }
     }

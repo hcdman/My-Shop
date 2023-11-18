@@ -49,6 +49,20 @@ public sealed partial class UpdateCustomerPage : Page, INotifyPropertyChanged
         mess.Text = "";
         var (success, message) = await Task.Run(() => { return api.updateCustomer(cus); });
         mess.Text = message;
+        if(success)
+        {
+            ContentDialog addDialog = new ContentDialog
+            {
+                XamlRoot = this.XamlRoot,
+                Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+                Title = "Update successfully !",
+                Content = "Your data will be update.",
+                CloseButtonText = "OK",
+                DefaultButton = ContentDialogButton.Close
+            };
+            _ = await addDialog.ShowAsync();
+            Frame.Navigate(typeof(View.CustomerPage));
+        }
     }
 
     private void mainLoad(object sender, RoutedEventArgs e)

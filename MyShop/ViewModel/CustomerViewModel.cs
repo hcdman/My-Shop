@@ -95,7 +95,7 @@ namespace MyShop.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        public async void deleteCustomer(string id)
+        public async Task<bool> deleteCustomer(string id)
         {
             mess = "";
             var (success, message) = await api.deleteCustomer(id);
@@ -104,8 +104,7 @@ namespace MyShop.ViewModel
             isShowProgressBar = false;
             loadDataByPage();
             mess = message;
-           // System.Threading.Thread.Sleep(3000);
-           // mess = "";
+            return success;
         }
         public async void search()
         {
