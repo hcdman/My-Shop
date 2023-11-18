@@ -1,14 +1,21 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Win32;
 using MyShop.API;
 using MyShop.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace MyShop.ViewModel
 {
@@ -234,6 +241,122 @@ namespace MyShop.ViewModel
             if (num == -1 && Page == 1) return;
             Page += num;
             FilterFunc(false);
+        }
+
+
+        // import data from excel file
+        private readonly RelayCommand _import;
+        public RelayCommand Import
+        {
+            get
+            {
+                return _import ?? (new RelayCommand(() => importDataFromExcel()));
+            }
+        }
+
+        // read excel file
+        private static string GetCellValue(SpreadsheetDocument document, Cell cell)
+        {
+            SharedStringTablePart stringTablePart = document.WorkbookPart.SharedStringTablePart;
+            string value = cell.CellValue.InnerXml;
+
+            if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
+            {
+                return stringTablePart.SharedStringTable.ChildElements[Int32.Parse(value)].InnerText;
+            }
+            else
+            {
+                return value;
+            }
+        }
+
+        private DataTable readEx(string filename, string sheetName)
+        {
+            DataTable dataTable = new DataTable();
+            using (SpreadsheetDocument spreadSheetDocument = SpreadsheetDocument.Open(filename, false))
+            {
+                WorkbookPart workbookPart = spreadSheetDocument.WorkbookPart;
+                IEnumerable<Sheet> sheets = spreadSheetDocument.WorkbookPart.Workbook.GetFirstChild<Sheets>().Elements<Sheet>();
+
+                var sheet = sheets.FirstOrDefault(s => s.Name == sheetName);
+                string relationshipId = sheet.Id.Value;
+                WorksheetPart worksheetPart = (WorksheetPart)spreadSheetDocument.WorkbookPart.GetPartById(relationshipId);
+                Worksheet workSheet = worksheetPart.Worksheet;
+                SheetData sheetData = workSheet.GetFirstChild<SheetData>();
+                IEnumerable<Row> rows = sheetData.Descendants<Row>();
+
+                foreach (Cell cell in rows.ElementAt(0))
+                {
+                    dataTable.Columns.Add(GetCellValue(spreadSheetDocument, cell));
+                }
+
+                foreach (Row row in rows)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    for (int i = 0; i < row.Descendants<Cell>().Count(); i++)
+                    {
+                        dataRow[i] = GetCellValue(spreadSheetDocument, row.Descendants<Cell>().ElementAt(i));
+                    }
+
+                    dataTable.Rows.Add(dataRow);
+                }
+
+            }
+            dataTable.Rows.RemoveAt(0);
+
+            return dataTable;
+        }
+
+        private async void importDataFromExcel()
+        {
+            // Open dialog and choose file excel
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            var dialogResult = openFile.ShowDialog();
+            if (dialogResult == false) return;
+
+            // read data from file excel
+            DataTable table = readEx(openFile.FileName, "Product");
+
+            // add data to database
+            foreach (DataRow row in table.Rows)
+            {
+                string anh = row["anh"].ToString();
+                Product product = new Product()
+                {
+                    masp = row["masp"].ToString(),
+                    anh = anh,
+                    tensp = row["tensp"].ToString(),
+                    hangsx = row["hangsx"].ToString(),
+                    gia_goc = int.Parse(row["gia_goc"].ToString()),
+                    gia = int.Parse(row["gia"].ToString()),
+                    sl = int.Parse(row["sl"].ToString()),
+                    maloai = row["maloai"].ToString(),
+                    giamgia = int.Parse(row["giamgia"].ToString())
+                };
+
+                using StringContent jsonContent = new(
+                JsonSerializer.Serialize(product),
+                Encoding.UTF8,
+                    "application/json");
+
+                var content = new MultipartFormDataContent();
+
+                // Thêm tệp ảnh vào nội dung multipart
+                var imageContent = new StreamContent(System.IO.File.OpenRead(anh));
+                imageContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "file",
+                    FileName = "image.jpg"
+                };
+                content.Add(imageContent);
+                // Thêm các tham số khác nếu cần
+                content.Add(jsonContent, "data");
+
+                var (success, mess) = await api.AddNewProduct(content);
+                // load page
+                if (success) FilterFunc();
+            }
         }
     }
 }

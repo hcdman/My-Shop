@@ -14,10 +14,6 @@ const db = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
-
-console.log(process.env.DATABASE_HOST)
-console.log(process.env.DATABASE_PASSWORD)
-
 db.connect((err) => {
   if (err) console.log(err);
   else console.log("MySQL Connection Success");
@@ -37,6 +33,10 @@ app.use("/product", multer.single("file"), require("./routes/product"));
 app.use("/customer", require("./routes/customer"));
 app.use("/bill", require("./routes/bill"));
 app.use("/cthd", require("./routes/billInfo"));
+app.use("/revenue", require("./routes/revenue"));
+app.use("/profit", require("./routes/profit"));
+app.use("/piece", require("./routes/piece"));
+
 app.get("/", (req, res) => {
   res.json({ message: "hello" });
 });

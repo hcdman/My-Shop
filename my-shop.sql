@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 05, 2023 lúc 05:14 AM
+-- Thời gian đã tạo: Th10 18, 2023 lúc 04:41 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -58,12 +58,17 @@ CREATE TABLE `cthd` (
 --
 
 INSERT INTO `cthd` (`sohd`, `masp`, `sl`) VALUES
-(1001, 'SP02', 2),
+(1001, 'SP02', 30),
 (1001, 'SP04', 5),
 (1001, 'SP09', 3),
 (1002, 'SP01', 1),
 (1002, 'SP04', 2),
-(1003, 'SP10', 6);
+(1003, 'SP10', 6),
+(1004, 'SP10', 1),
+(1005, 'SP09', 1),
+(1006, 'SP01', 10),
+(1007, 'SP04', 1),
+(1008, 'SP10', 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +90,12 @@ CREATE TABLE `hoadon` (
 INSERT INTO `hoadon` (`sohd`, `nghd`, `makh`, `trigia`) VALUES
 (1001, '2023-10-02', 'KH03', 200451500),
 (1002, '2023-10-22', 'KH01', 140601500),
-(1003, '2023-10-22', 'KH01', 140601500);
+(1003, '2023-10-22', 'KH01', 140601500),
+(1004, '2023-10-31', 'KH01', 50870000),
+(1005, '2023-11-01', 'KH02', 2990000),
+(1006, '2023-11-02', 'KH03', 32990000),
+(1007, '2023-11-03', 'KH01', 5000000),
+(1008, '2023-11-04', 'KH02', 100900900);
 
 -- --------------------------------------------------------
 
@@ -161,9 +171,11 @@ INSERT INTO `sanpham` (`masp`, `anh`, `tensp`, `hangsx`, `gia_goc`, `gia`, `sl`,
 ('', '', '', '', 0, 0, 0, '', 0, NULL),
 ('SP01', 'http://res.cloudinary.com/haonhat/image/upload/v1697384754/xdmjbhdmanbpowgkpfnc.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL),
 ('SP02', 'http://res.cloudinary.com/haonhat/image/upload/v1698062899/xaxavilkca4hwnfy8olw.jpg', 'Samsung Galaxy', 'Samsung', 30000000, 26990000, 100, 'ML02', 0, NULL),
-('SP04', 'http://res.cloudinary.com/haonhat/image/upload/v1697384807/mpc1pp6cqmzhlbpckmg5.jpg', 'iPhone 14 Plus', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL),
-('SP09', 'http://res.cloudinary.com/haonhat/image/upload/v1697636185/qqgq2qpw9ksyoh4a3dve.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL),
-('SP10', 'http://res.cloudinary.com/haonhat/image/upload/v1697640826/eeaapv2ns4ylajdlpzt2.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL);
+('SP04', 'http://res.cloudinary.com/haonhat/image/upload/v1697384807/mpc1pp6cqmzhlbpckmg5.jpg', 'iPhone 14 Plus', 'Apple', 19990000, 21990000, 50, 'ML04', 12, NULL),
+('SP09', 'http://res.cloudinary.com/haonhat/image/upload/v1697636185/qqgq2qpw9ksyoh4a3dve.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML05', 12, NULL),
+('SP10', 'http://res.cloudinary.com/haonhat/image/upload/v1697640826/eeaapv2ns4ylajdlpzt2.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML03', 12, NULL),
+('SP55', 'http://res.cloudinary.com/haonhat/image/upload/v1699533896/rl9ippj8cyi6fyh9jexa.jpg', 'OPPO Reno7 series', 'Oppo', 7000000, 7490000, 10, 'ML03', 0, 'rl9ippj8cyi6fyh9jexa'),
+('SP56', 'http://res.cloudinary.com/haonhat/image/upload/v1699533901/vjvxbmblgwfbehtucyjj.jpg', 'OPPO A17', 'Oppo', 3000000, 3990000, 12, 'ML03', 12, 'vjvxbmblgwfbehtucyjj');
 
 --
 -- Chỉ mục cho các bảng đã đổ
