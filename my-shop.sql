@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 18, 2023 lúc 04:41 AM
+-- Thời gian đã tạo: Th10 19, 2023 lúc 07:24 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -50,25 +50,26 @@ INSERT INTO `account` (`Username`, `Password`, `Startday`, `Available`) VALUES
 CREATE TABLE `cthd` (
   `sohd` int(11) NOT NULL,
   `masp` char(4) NOT NULL,
-  `sl` int(11) NOT NULL
+  `sl` int(11) NOT NULL,
+  `id_cthd` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `cthd`
 --
 
-INSERT INTO `cthd` (`sohd`, `masp`, `sl`) VALUES
-(1001, 'SP02', 30),
-(1001, 'SP04', 5),
-(1001, 'SP09', 3),
-(1002, 'SP01', 1),
-(1002, 'SP04', 2),
-(1003, 'SP10', 6),
-(1004, 'SP10', 1),
-(1005, 'SP09', 1),
-(1006, 'SP01', 10),
-(1007, 'SP04', 1),
-(1008, 'SP10', 1);
+INSERT INTO `cthd` (`sohd`, `masp`, `sl`, `id_cthd`) VALUES
+(1001, 'SP02', 30, 1),
+(1001, 'SP04', 5, 2),
+(1001, 'SP09', 3, 3),
+(1002, 'SP01', 1, 4),
+(1002, 'SP04', 2, 5),
+(1003, 'SP10', 6, 6),
+(1004, 'SP10', 1, 7),
+(1005, 'SP09', 1, 8),
+(1006, 'SP01', 10, 9),
+(1007, 'SP04', 1, 10),
+(1008, 'SP10', 1, 11);
 
 -- --------------------------------------------------------
 
@@ -168,14 +169,13 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`masp`, `anh`, `tensp`, `hangsx`, `gia_goc`, `gia`, `sl`, `maloai`, `giamgia`, `public_id`) VALUES
-('', '', '', '', 0, 0, 0, '', 0, NULL),
 ('SP01', 'http://res.cloudinary.com/haonhat/image/upload/v1697384754/xdmjbhdmanbpowgkpfnc.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL),
 ('SP02', 'http://res.cloudinary.com/haonhat/image/upload/v1698062899/xaxavilkca4hwnfy8olw.jpg', 'Samsung Galaxy', 'Samsung', 30000000, 26990000, 100, 'ML02', 0, NULL),
 ('SP04', 'http://res.cloudinary.com/haonhat/image/upload/v1697384807/mpc1pp6cqmzhlbpckmg5.jpg', 'iPhone 14 Plus', 'Apple', 19990000, 21990000, 50, 'ML04', 12, NULL),
 ('SP09', 'http://res.cloudinary.com/haonhat/image/upload/v1697636185/qqgq2qpw9ksyoh4a3dve.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML05', 12, NULL),
 ('SP10', 'http://res.cloudinary.com/haonhat/image/upload/v1697640826/eeaapv2ns4ylajdlpzt2.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML03', 12, NULL),
-('SP55', 'http://res.cloudinary.com/haonhat/image/upload/v1699533896/rl9ippj8cyi6fyh9jexa.jpg', 'OPPO Reno7 series', 'Oppo', 7000000, 7490000, 10, 'ML03', 0, 'rl9ippj8cyi6fyh9jexa'),
-('SP56', 'http://res.cloudinary.com/haonhat/image/upload/v1699533901/vjvxbmblgwfbehtucyjj.jpg', 'OPPO A17', 'Oppo', 3000000, 3990000, 12, 'ML03', 12, 'vjvxbmblgwfbehtucyjj');
+('SP66', 'http://res.cloudinary.com/haonhat/image/upload/v1700375050/gbpjujbjhu60kh8vxmfc.jpg', 'OPPO A17', 'Oppo', 3000000, 3990000, 12, 'ML03', 12, 'gbpjujbjhu60kh8vxmfc'),
+('SP69', 'http://res.cloudinary.com/haonhat/image/upload/v1700375048/uqpgiurftufq5j5czah8.jpg', 'OPPO Reno7 series', 'Oppo', 7000000, 7490000, 10, 'ML03', 0, 'uqpgiurftufq5j5czah8');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -191,8 +191,7 @@ ALTER TABLE `account`
 -- Chỉ mục cho bảng `cthd`
 --
 ALTER TABLE `cthd`
-  ADD PRIMARY KEY (`sohd`,`masp`),
-  ADD KEY `masp` (`masp`);
+  ADD PRIMARY KEY (`id_cthd`);
 
 --
 -- Chỉ mục cho bảng `hoadon`
@@ -219,6 +218,16 @@ ALTER TABLE `loai`
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`masp`),
   ADD KEY `maloai` (`maloai`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `cthd`
+--
+ALTER TABLE `cthd`
+  MODIFY `id_cthd` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
