@@ -103,4 +103,9 @@ public sealed partial class CategoryPage : Page
     {
 
     }
+
+    private void Import_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
 }

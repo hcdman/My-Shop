@@ -17,6 +17,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
+            
         </Grid.RowDefinitions>
 
         <!--  Header  -->
@@ -27,6 +28,7 @@
         <Grid Grid.Row="1" Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
@@ -47,6 +49,13 @@
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                 Click="AddButton_Click">
                 Add
+            </Button>
+            <Button
+            Grid.Column="2"
+            Margin="0,0,10,0"
+            Background="{ThemeResource MyBlockBackgroundThemeBrush}"
+            Click="Import_Click">    
+                Import
             </Button>
         </Grid>
 

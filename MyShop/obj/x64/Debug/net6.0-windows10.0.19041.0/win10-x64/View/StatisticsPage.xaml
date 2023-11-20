@@ -26,7 +26,6 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-
             </Grid.ColumnDefinitions>
             <TextBlock
                      Margin="20,20,40,20"
