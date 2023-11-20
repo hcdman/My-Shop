@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyShop.ViewModel
 {
-    class SaleViewModel : INotifyCollectionChanged
+    class SaleViewModel : INotifyPropertyChanged
     {
         private List<Sales> _sales;
         public List<Sales> Saless
@@ -18,21 +19,25 @@ namespace MyShop.ViewModel
         }
         public SaleViewModel(string check)
         {
+            loadData(check);
+        }
+
+        public async void loadData(string check)
+        {
             if (check == "year")
             {
-                Saless = Sales.Saless("year");
+                Saless = await Sales.Saless("year");
             }
             else if (check == "month")
             {
-
-                Saless = Sales.Saless("month");
+                Saless = await Sales.Saless("month");
             }
             else
             {
-
-                Saless = Sales.Saless("week");
+                Saless = await Sales.Saless("week");
             }
         }
-        public event NotifyCollectionChangedEventHandler CollectionChanged;
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -1795,8 +1795,9 @@ namespace MyShop.MyShop_XamlTypeInfo
                 userType.Activator = Activate_126_SfCartesianChart;
                 userType.SetContentPropertyName("Syncfusion.UI.Xaml.Charts.SfCartesianChart.Series");
                 userType.AddMemberName("Series");
-                userType.AddMemberName("PaletteBrushes");
+                userType.AddMemberName("PlotAreaBackground");
                 userType.AddMemberName("PlotAreaBorderThickness");
+                userType.AddMemberName("PaletteBrushes");
                 userType.AddMemberName("XAxes");
                 userType.AddMemberName("YAxes");
                 userType.AddMemberName("SelectionBehavior");
@@ -1804,7 +1805,6 @@ namespace MyShop.MyShop_XamlTypeInfo
                 userType.AddMemberName("TrackballBehavior");
                 userType.AddMemberName("CrosshairBehavior");
                 userType.AddMemberName("PlotAreaBorderBrush");
-                userType.AddMemberName("PlotAreaBackground");
                 userType.AddMemberName("IsTransposed");
                 userType.AddMemberName("EnableSideBySideSeriesPlacement");
                 xamlType = userType;
@@ -4525,15 +4525,15 @@ namespace MyShop.MyShop_XamlTypeInfo
             var that = (global::Syncfusion.UI.Xaml.Charts.CartesianSeries)instance;
             that.ShowTrackballLabel = (global::System.Boolean)Value;
         }
-        private object get_243_SfCartesianChart_PaletteBrushes(object instance)
+        private object get_243_SfCartesianChart_PlotAreaBackground(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
-            return that.PaletteBrushes;
+            return that.PlotAreaBackground;
         }
-        private void set_243_SfCartesianChart_PaletteBrushes(object instance, object Value)
+        private void set_243_SfCartesianChart_PlotAreaBackground(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
-            that.PaletteBrushes = (global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Media.Brush>)Value;
+            that.PlotAreaBackground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
         private object get_244_SfCartesianChart_PlotAreaBorderThickness(object instance)
         {
@@ -4545,405 +4545,405 @@ namespace MyShop.MyShop_XamlTypeInfo
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.PlotAreaBorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_245_SfCartesianChart_XAxes(object instance)
+        private object get_245_SfCartesianChart_PaletteBrushes(object instance)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
+            return that.PaletteBrushes;
+        }
+        private void set_245_SfCartesianChart_PaletteBrushes(object instance, object Value)
+        {
+            var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
+            that.PaletteBrushes = (global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Media.Brush>)Value;
+        }
+        private object get_246_SfCartesianChart_XAxes(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.XAxes;
         }
-        private object get_246_ChartAxis_PlotOffsetStart(object instance)
+        private object get_247_ChartAxis_PlotOffsetStart(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PlotOffsetStart;
         }
-        private void set_246_ChartAxis_PlotOffsetStart(object instance, object Value)
+        private void set_247_ChartAxis_PlotOffsetStart(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PlotOffsetStart = (global::System.Double)Value;
         }
-        private object get_247_ChartAxis_PlotOffsetEnd(object instance)
+        private object get_248_ChartAxis_PlotOffsetEnd(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.PlotOffsetEnd;
         }
-        private void set_247_ChartAxis_PlotOffsetEnd(object instance, object Value)
+        private void set_248_ChartAxis_PlotOffsetEnd(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.PlotOffsetEnd = (global::System.Double)Value;
         }
-        private object get_248_ChartAxis_AxisLineOffset(object instance)
+        private object get_249_ChartAxis_AxisLineOffset(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AxisLineOffset;
         }
-        private void set_248_ChartAxis_AxisLineOffset(object instance, object Value)
+        private void set_249_ChartAxis_AxisLineOffset(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AxisLineOffset = (global::System.Double)Value;
         }
-        private object get_249_ChartAxis_LabelRotation(object instance)
+        private object get_250_ChartAxis_LabelRotation(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelRotation;
         }
-        private void set_249_ChartAxis_LabelRotation(object instance, object Value)
+        private void set_250_ChartAxis_LabelRotation(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelRotation = (global::System.Double)Value;
         }
-        private object get_250_ChartAxis_AxisLineStyle(object instance)
+        private object get_251_ChartAxis_AxisLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AxisLineStyle;
         }
-        private void set_250_ChartAxis_AxisLineStyle(object instance, object Value)
+        private void set_251_ChartAxis_AxisLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AxisLineStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_251_ChartAxis_LabelStyle(object instance)
+        private object get_252_ChartAxis_LabelStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelStyle;
         }
-        private void set_251_ChartAxis_LabelStyle(object instance, object Value)
+        private void set_252_ChartAxis_LabelStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelStyle = (global::Syncfusion.UI.Xaml.Charts.LabelStyle)Value;
         }
-        private object get_252_ChartAxis_Header(object instance)
+        private object get_253_ChartAxis_Header(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.Header;
         }
-        private void set_252_ChartAxis_Header(object instance, object Value)
+        private void set_253_ChartAxis_Header(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_253_ChartAxis_HeaderStyle(object instance)
+        private object get_254_ChartAxis_HeaderStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.HeaderStyle;
         }
-        private void set_253_ChartAxis_HeaderStyle(object instance, object Value)
+        private void set_254_ChartAxis_HeaderStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.HeaderStyle = (global::Syncfusion.UI.Xaml.Charts.LabelStyle)Value;
         }
-        private object get_254_ChartAxis_HeaderTemplate(object instance)
+        private object get_255_ChartAxis_HeaderTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.HeaderTemplate;
         }
-        private void set_254_ChartAxis_HeaderTemplate(object instance, object Value)
+        private void set_255_ChartAxis_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_255_ChartAxis_IsInversed(object instance)
+        private object get_256_ChartAxis_IsInversed(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.IsInversed;
         }
-        private void set_255_ChartAxis_IsInversed(object instance, object Value)
+        private void set_256_ChartAxis_IsInversed(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.IsInversed = (global::System.Boolean)Value;
         }
-        private object get_256_ChartAxis_EdgeLabelsDrawingMode(object instance)
+        private object get_257_ChartAxis_EdgeLabelsDrawingMode(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.EdgeLabelsDrawingMode;
         }
-        private void set_256_ChartAxis_EdgeLabelsDrawingMode(object instance, object Value)
+        private void set_257_ChartAxis_EdgeLabelsDrawingMode(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.EdgeLabelsDrawingMode = (global::Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode)Value;
         }
-        private object get_257_ChartAxis_MajorGridLineStyle(object instance)
+        private object get_258_ChartAxis_MajorGridLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MajorGridLineStyle;
         }
-        private void set_257_ChartAxis_MajorGridLineStyle(object instance, object Value)
+        private void set_258_ChartAxis_MajorGridLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MajorGridLineStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_258_ChartAxis_MajorTickStyle(object instance)
+        private object get_259_ChartAxis_MajorTickStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.MajorTickStyle;
         }
-        private void set_258_ChartAxis_MajorTickStyle(object instance, object Value)
+        private void set_259_ChartAxis_MajorTickStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.MajorTickStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_259_ChartAxis_ZoomPosition(object instance)
+        private object get_260_ChartAxis_ZoomPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ZoomPosition;
         }
-        private void set_259_ChartAxis_ZoomPosition(object instance, object Value)
+        private void set_260_ChartAxis_ZoomPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ZoomPosition = (global::System.Double)Value;
         }
-        private object get_260_ChartAxis_ZoomFactor(object instance)
+        private object get_261_ChartAxis_ZoomFactor(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ZoomFactor;
         }
-        private void set_260_ChartAxis_ZoomFactor(object instance, object Value)
+        private void set_261_ChartAxis_ZoomFactor(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ZoomFactor = (global::System.Double)Value;
         }
-        private object get_261_ChartAxis_ShowMajorGridLines(object instance)
+        private object get_262_ChartAxis_ShowMajorGridLines(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowMajorGridLines;
         }
-        private void set_261_ChartAxis_ShowMajorGridLines(object instance, object Value)
+        private void set_262_ChartAxis_ShowMajorGridLines(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowMajorGridLines = (global::System.Boolean)Value;
         }
-        private object get_262_ChartAxis_EnableAutoIntervalOnZooming(object instance)
+        private object get_263_ChartAxis_EnableAutoIntervalOnZooming(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.EnableAutoIntervalOnZooming;
         }
-        private void set_262_ChartAxis_EnableAutoIntervalOnZooming(object instance, object Value)
+        private void set_263_ChartAxis_EnableAutoIntervalOnZooming(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.EnableAutoIntervalOnZooming = (global::System.Boolean)Value;
         }
-        private object get_263_ChartAxis_LabelsIntersectAction(object instance)
+        private object get_264_ChartAxis_LabelsIntersectAction(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelsIntersectAction;
         }
-        private void set_263_ChartAxis_LabelsIntersectAction(object instance, object Value)
+        private void set_264_ChartAxis_LabelsIntersectAction(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelsIntersectAction = (global::Syncfusion.UI.Xaml.Charts.AxisLabelsIntersectAction)Value;
         }
-        private object get_264_ChartAxis_LabelExtent(object instance)
+        private object get_265_ChartAxis_LabelExtent(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelExtent;
         }
-        private void set_264_ChartAxis_LabelExtent(object instance, object Value)
+        private void set_265_ChartAxis_LabelExtent(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelExtent = (global::System.Double)Value;
         }
-        private object get_265_ChartAxis_OpposedPosition(object instance)
+        private object get_266_ChartAxis_OpposedPosition(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.OpposedPosition;
         }
-        private void set_265_ChartAxis_OpposedPosition(object instance, object Value)
+        private void set_266_ChartAxis_OpposedPosition(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.OpposedPosition = (global::System.Boolean)Value;
         }
-        private object get_266_ChartAxis_TickLineSize(object instance)
+        private object get_267_ChartAxis_TickLineSize(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.TickLineSize;
         }
-        private void set_266_ChartAxis_TickLineSize(object instance, object Value)
+        private void set_267_ChartAxis_TickLineSize(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.TickLineSize = (global::System.Double)Value;
         }
-        private object get_267_ChartAxis_ShowTrackballLabel(object instance)
+        private object get_268_ChartAxis_ShowTrackballLabel(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.ShowTrackballLabel;
         }
-        private void set_267_ChartAxis_ShowTrackballLabel(object instance, object Value)
+        private void set_268_ChartAxis_ShowTrackballLabel(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.ShowTrackballLabel = (global::System.Boolean)Value;
         }
-        private object get_268_ChartAxis_TrackballLabelTemplate(object instance)
+        private object get_269_ChartAxis_TrackballLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.TrackballLabelTemplate;
         }
-        private void set_268_ChartAxis_TrackballLabelTemplate(object instance, object Value)
+        private void set_269_ChartAxis_TrackballLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.TrackballLabelTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_269_ChartAxis_CrosshairLabelTemplate(object instance)
+        private object get_270_ChartAxis_CrosshairLabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.CrosshairLabelTemplate;
         }
-        private void set_269_ChartAxis_CrosshairLabelTemplate(object instance, object Value)
+        private void set_270_ChartAxis_CrosshairLabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.CrosshairLabelTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_270_ChartAxis_LabelTemplate(object instance)
+        private object get_271_ChartAxis_LabelTemplate(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.LabelTemplate;
         }
-        private void set_270_ChartAxis_LabelTemplate(object instance, object Value)
+        private void set_271_ChartAxis_LabelTemplate(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.LabelTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_271_ChartAxis_AutoScrollingMode(object instance)
+        private object get_272_ChartAxis_AutoScrollingMode(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AutoScrollingMode;
         }
-        private void set_271_ChartAxis_AutoScrollingMode(object instance, object Value)
+        private void set_272_ChartAxis_AutoScrollingMode(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AutoScrollingMode = (global::Syncfusion.UI.Xaml.Charts.ChartAutoScrollingMode)Value;
         }
-        private object get_272_ChartAxis_AutoScrollingDelta(object instance)
+        private object get_273_ChartAxis_AutoScrollingDelta(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             return that.AutoScrollingDelta;
         }
-        private void set_272_ChartAxis_AutoScrollingDelta(object instance, object Value)
+        private void set_273_ChartAxis_AutoScrollingDelta(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.ChartAxis)instance;
             that.AutoScrollingDelta = (global::System.Double)Value;
         }
-        private object get_273_SfCartesianChart_YAxes(object instance)
+        private object get_274_SfCartesianChart_YAxes(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.YAxes;
         }
-        private object get_274_RangeAxisBase_EdgeLabelsVisibilityMode(object instance)
+        private object get_275_RangeAxisBase_EdgeLabelsVisibilityMode(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.EdgeLabelsVisibilityMode;
         }
-        private void set_274_RangeAxisBase_EdgeLabelsVisibilityMode(object instance, object Value)
+        private void set_275_RangeAxisBase_EdgeLabelsVisibilityMode(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.EdgeLabelsVisibilityMode = (global::Syncfusion.UI.Xaml.Charts.EdgeLabelsVisibilityMode)Value;
         }
-        private object get_275_RangeAxisBase_MinorTicksPerInterval(object instance)
+        private object get_276_RangeAxisBase_MinorTicksPerInterval(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.MinorTicksPerInterval;
         }
-        private void set_275_RangeAxisBase_MinorTicksPerInterval(object instance, object Value)
+        private void set_276_RangeAxisBase_MinorTicksPerInterval(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.MinorTicksPerInterval = (global::System.Int32)Value;
         }
-        private object get_276_RangeAxisBase_MinorTickLineSize(object instance)
+        private object get_277_RangeAxisBase_MinorTickLineSize(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.MinorTickLineSize;
         }
-        private void set_276_RangeAxisBase_MinorTickLineSize(object instance, object Value)
+        private void set_277_RangeAxisBase_MinorTickLineSize(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.MinorTickLineSize = (global::System.Double)Value;
         }
-        private object get_277_RangeAxisBase_MinorGridLineStyle(object instance)
+        private object get_278_RangeAxisBase_MinorGridLineStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.MinorGridLineStyle;
         }
-        private void set_277_RangeAxisBase_MinorGridLineStyle(object instance, object Value)
+        private void set_278_RangeAxisBase_MinorGridLineStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.MinorGridLineStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_278_RangeAxisBase_MinorTickStyle(object instance)
+        private object get_279_RangeAxisBase_MinorTickStyle(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.MinorTickStyle;
         }
-        private void set_278_RangeAxisBase_MinorTickStyle(object instance, object Value)
+        private void set_279_RangeAxisBase_MinorTickStyle(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.MinorTickStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_279_RangeAxisBase_ShowMinorGridLines(object instance)
+        private object get_280_RangeAxisBase_ShowMinorGridLines(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             return that.ShowMinorGridLines;
         }
-        private void set_279_RangeAxisBase_ShowMinorGridLines(object instance, object Value)
+        private void set_280_RangeAxisBase_ShowMinorGridLines(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.RangeAxisBase)instance;
             that.ShowMinorGridLines = (global::System.Boolean)Value;
         }
-        private object get_280_SfCartesianChart_SelectionBehavior(object instance)
+        private object get_281_SfCartesianChart_SelectionBehavior(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.SelectionBehavior;
         }
-        private void set_280_SfCartesianChart_SelectionBehavior(object instance, object Value)
+        private void set_281_SfCartesianChart_SelectionBehavior(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.SelectionBehavior = (global::Syncfusion.UI.Xaml.Charts.SeriesSelectionBehavior)Value;
         }
-        private object get_281_SfCartesianChart_ZoomPanBehavior(object instance)
+        private object get_282_SfCartesianChart_ZoomPanBehavior(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.ZoomPanBehavior;
         }
-        private void set_281_SfCartesianChart_ZoomPanBehavior(object instance, object Value)
+        private void set_282_SfCartesianChart_ZoomPanBehavior(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.ZoomPanBehavior = (global::Syncfusion.UI.Xaml.Charts.ChartZoomPanBehavior)Value;
         }
-        private object get_282_SfCartesianChart_TrackballBehavior(object instance)
+        private object get_283_SfCartesianChart_TrackballBehavior(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.TrackballBehavior;
         }
-        private void set_282_SfCartesianChart_TrackballBehavior(object instance, object Value)
+        private void set_283_SfCartesianChart_TrackballBehavior(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.TrackballBehavior = (global::Syncfusion.UI.Xaml.Charts.ChartTrackballBehavior)Value;
         }
-        private object get_283_SfCartesianChart_CrosshairBehavior(object instance)
+        private object get_284_SfCartesianChart_CrosshairBehavior(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.CrosshairBehavior;
         }
-        private void set_283_SfCartesianChart_CrosshairBehavior(object instance, object Value)
+        private void set_284_SfCartesianChart_CrosshairBehavior(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.CrosshairBehavior = (global::Syncfusion.UI.Xaml.Charts.ChartCrosshairBehavior)Value;
         }
-        private object get_284_SfCartesianChart_PlotAreaBorderBrush(object instance)
+        private object get_285_SfCartesianChart_PlotAreaBorderBrush(object instance)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             return that.PlotAreaBorderBrush;
         }
-        private void set_284_SfCartesianChart_PlotAreaBorderBrush(object instance, object Value)
+        private void set_285_SfCartesianChart_PlotAreaBorderBrush(object instance, object Value)
         {
             var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
             that.PlotAreaBorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_285_SfCartesianChart_PlotAreaBackground(object instance)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
-            return that.PlotAreaBackground;
-        }
-        private void set_285_SfCartesianChart_PlotAreaBackground(object instance, object Value)
-        {
-            var that = (global::Syncfusion.UI.Xaml.Charts.SfCartesianChart)instance;
-            that.PlotAreaBackground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
         private object get_286_SfCartesianChart_IsTransposed(object instance)
         {
@@ -6815,12 +6815,12 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlMember.Getter = get_242_CartesianSeries_ShowTrackballLabel;
                 xamlMember.Setter = set_242_CartesianSeries_ShowTrackballLabel;
                 break;
-            case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PaletteBrushes":
+            case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PlotAreaBackground":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
-                xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PaletteBrushes", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.Brush>");
+                xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PlotAreaBackground", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_243_SfCartesianChart_PaletteBrushes;
-                xamlMember.Setter = set_243_SfCartesianChart_PaletteBrushes;
+                xamlMember.Getter = get_243_SfCartesianChart_PlotAreaBackground;
+                xamlMember.Setter = set_243_SfCartesianChart_PlotAreaBackground;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PlotAreaBorderThickness":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
@@ -6829,290 +6829,290 @@ namespace MyShop.MyShop_XamlTypeInfo
                 xamlMember.Getter = get_244_SfCartesianChart_PlotAreaBorderThickness;
                 xamlMember.Setter = set_244_SfCartesianChart_PlotAreaBorderThickness;
                 break;
+            case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PaletteBrushes":
+                userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
+                xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PaletteBrushes", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.Brush>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_245_SfCartesianChart_PaletteBrushes;
+                xamlMember.Setter = set_245_SfCartesianChart_PaletteBrushes;
+                break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.XAxes":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "XAxes", "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.ChartAxis>");
-                xamlMember.Getter = get_245_SfCartesianChart_XAxes;
+                xamlMember.Getter = get_246_SfCartesianChart_XAxes;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PlotOffsetStart":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PlotOffsetStart", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_246_ChartAxis_PlotOffsetStart;
-                xamlMember.Setter = set_246_ChartAxis_PlotOffsetStart;
+                xamlMember.Getter = get_247_ChartAxis_PlotOffsetStart;
+                xamlMember.Setter = set_247_ChartAxis_PlotOffsetStart;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.PlotOffsetEnd":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PlotOffsetEnd", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_247_ChartAxis_PlotOffsetEnd;
-                xamlMember.Setter = set_247_ChartAxis_PlotOffsetEnd;
+                xamlMember.Getter = get_248_ChartAxis_PlotOffsetEnd;
+                xamlMember.Setter = set_248_ChartAxis_PlotOffsetEnd;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AxisLineOffset":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "AxisLineOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_248_ChartAxis_AxisLineOffset;
-                xamlMember.Setter = set_248_ChartAxis_AxisLineOffset;
+                xamlMember.Getter = get_249_ChartAxis_AxisLineOffset;
+                xamlMember.Setter = set_249_ChartAxis_AxisLineOffset;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelRotation":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "LabelRotation", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_249_ChartAxis_LabelRotation;
-                xamlMember.Setter = set_249_ChartAxis_LabelRotation;
+                xamlMember.Getter = get_250_ChartAxis_LabelRotation;
+                xamlMember.Setter = set_250_ChartAxis_LabelRotation;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AxisLineStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "AxisLineStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_250_ChartAxis_AxisLineStyle;
-                xamlMember.Setter = set_250_ChartAxis_AxisLineStyle;
+                xamlMember.Getter = get_251_ChartAxis_AxisLineStyle;
+                xamlMember.Setter = set_251_ChartAxis_AxisLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "LabelStyle", "Syncfusion.UI.Xaml.Charts.LabelStyle");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_251_ChartAxis_LabelStyle;
-                xamlMember.Setter = set_251_ChartAxis_LabelStyle;
+                xamlMember.Getter = get_252_ChartAxis_LabelStyle;
+                xamlMember.Setter = set_252_ChartAxis_LabelStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.Header":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_252_ChartAxis_Header;
-                xamlMember.Setter = set_252_ChartAxis_Header;
+                xamlMember.Getter = get_253_ChartAxis_Header;
+                xamlMember.Setter = set_253_ChartAxis_Header;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.HeaderStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "HeaderStyle", "Syncfusion.UI.Xaml.Charts.LabelStyle");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_253_ChartAxis_HeaderStyle;
-                xamlMember.Setter = set_253_ChartAxis_HeaderStyle;
+                xamlMember.Getter = get_254_ChartAxis_HeaderStyle;
+                xamlMember.Setter = set_254_ChartAxis_HeaderStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.HeaderTemplate":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_254_ChartAxis_HeaderTemplate;
-                xamlMember.Setter = set_254_ChartAxis_HeaderTemplate;
+                xamlMember.Getter = get_255_ChartAxis_HeaderTemplate;
+                xamlMember.Setter = set_255_ChartAxis_HeaderTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.IsInversed":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "IsInversed", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_255_ChartAxis_IsInversed;
-                xamlMember.Setter = set_255_ChartAxis_IsInversed;
+                xamlMember.Getter = get_256_ChartAxis_IsInversed;
+                xamlMember.Setter = set_256_ChartAxis_IsInversed;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.EdgeLabelsDrawingMode":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "EdgeLabelsDrawingMode", "Syncfusion.UI.Xaml.Charts.EdgeLabelsDrawingMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_256_ChartAxis_EdgeLabelsDrawingMode;
-                xamlMember.Setter = set_256_ChartAxis_EdgeLabelsDrawingMode;
+                xamlMember.Getter = get_257_ChartAxis_EdgeLabelsDrawingMode;
+                xamlMember.Setter = set_257_ChartAxis_EdgeLabelsDrawingMode;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MajorGridLineStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MajorGridLineStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_257_ChartAxis_MajorGridLineStyle;
-                xamlMember.Setter = set_257_ChartAxis_MajorGridLineStyle;
+                xamlMember.Getter = get_258_ChartAxis_MajorGridLineStyle;
+                xamlMember.Setter = set_258_ChartAxis_MajorGridLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.MajorTickStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MajorTickStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_258_ChartAxis_MajorTickStyle;
-                xamlMember.Setter = set_258_ChartAxis_MajorTickStyle;
+                xamlMember.Getter = get_259_ChartAxis_MajorTickStyle;
+                xamlMember.Setter = set_259_ChartAxis_MajorTickStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ZoomPosition":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ZoomPosition", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_259_ChartAxis_ZoomPosition;
-                xamlMember.Setter = set_259_ChartAxis_ZoomPosition;
+                xamlMember.Getter = get_260_ChartAxis_ZoomPosition;
+                xamlMember.Setter = set_260_ChartAxis_ZoomPosition;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ZoomFactor":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ZoomFactor", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_260_ChartAxis_ZoomFactor;
-                xamlMember.Setter = set_260_ChartAxis_ZoomFactor;
+                xamlMember.Getter = get_261_ChartAxis_ZoomFactor;
+                xamlMember.Setter = set_261_ChartAxis_ZoomFactor;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowMajorGridLines":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ShowMajorGridLines", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_261_ChartAxis_ShowMajorGridLines;
-                xamlMember.Setter = set_261_ChartAxis_ShowMajorGridLines;
+                xamlMember.Getter = get_262_ChartAxis_ShowMajorGridLines;
+                xamlMember.Setter = set_262_ChartAxis_ShowMajorGridLines;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.EnableAutoIntervalOnZooming":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "EnableAutoIntervalOnZooming", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_262_ChartAxis_EnableAutoIntervalOnZooming;
-                xamlMember.Setter = set_262_ChartAxis_EnableAutoIntervalOnZooming;
+                xamlMember.Getter = get_263_ChartAxis_EnableAutoIntervalOnZooming;
+                xamlMember.Setter = set_263_ChartAxis_EnableAutoIntervalOnZooming;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelsIntersectAction":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "LabelsIntersectAction", "Syncfusion.UI.Xaml.Charts.AxisLabelsIntersectAction");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_263_ChartAxis_LabelsIntersectAction;
-                xamlMember.Setter = set_263_ChartAxis_LabelsIntersectAction;
+                xamlMember.Getter = get_264_ChartAxis_LabelsIntersectAction;
+                xamlMember.Setter = set_264_ChartAxis_LabelsIntersectAction;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelExtent":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "LabelExtent", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_264_ChartAxis_LabelExtent;
-                xamlMember.Setter = set_264_ChartAxis_LabelExtent;
+                xamlMember.Getter = get_265_ChartAxis_LabelExtent;
+                xamlMember.Setter = set_265_ChartAxis_LabelExtent;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.OpposedPosition":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "OpposedPosition", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_265_ChartAxis_OpposedPosition;
-                xamlMember.Setter = set_265_ChartAxis_OpposedPosition;
+                xamlMember.Getter = get_266_ChartAxis_OpposedPosition;
+                xamlMember.Setter = set_266_ChartAxis_OpposedPosition;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.TickLineSize":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "TickLineSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_266_ChartAxis_TickLineSize;
-                xamlMember.Setter = set_266_ChartAxis_TickLineSize;
+                xamlMember.Getter = get_267_ChartAxis_TickLineSize;
+                xamlMember.Setter = set_267_ChartAxis_TickLineSize;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.ShowTrackballLabel":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ShowTrackballLabel", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_267_ChartAxis_ShowTrackballLabel;
-                xamlMember.Setter = set_267_ChartAxis_ShowTrackballLabel;
+                xamlMember.Getter = get_268_ChartAxis_ShowTrackballLabel;
+                xamlMember.Setter = set_268_ChartAxis_ShowTrackballLabel;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.TrackballLabelTemplate":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "TrackballLabelTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_268_ChartAxis_TrackballLabelTemplate;
-                xamlMember.Setter = set_268_ChartAxis_TrackballLabelTemplate;
+                xamlMember.Getter = get_269_ChartAxis_TrackballLabelTemplate;
+                xamlMember.Setter = set_269_ChartAxis_TrackballLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.CrosshairLabelTemplate":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "CrosshairLabelTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_269_ChartAxis_CrosshairLabelTemplate;
-                xamlMember.Setter = set_269_ChartAxis_CrosshairLabelTemplate;
+                xamlMember.Getter = get_270_ChartAxis_CrosshairLabelTemplate;
+                xamlMember.Setter = set_270_ChartAxis_CrosshairLabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.LabelTemplate":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "LabelTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_270_ChartAxis_LabelTemplate;
-                xamlMember.Setter = set_270_ChartAxis_LabelTemplate;
+                xamlMember.Getter = get_271_ChartAxis_LabelTemplate;
+                xamlMember.Setter = set_271_ChartAxis_LabelTemplate;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AutoScrollingMode":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "AutoScrollingMode", "Syncfusion.UI.Xaml.Charts.ChartAutoScrollingMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_271_ChartAxis_AutoScrollingMode;
-                xamlMember.Setter = set_271_ChartAxis_AutoScrollingMode;
+                xamlMember.Getter = get_272_ChartAxis_AutoScrollingMode;
+                xamlMember.Setter = set_272_ChartAxis_AutoScrollingMode;
                 break;
             case "Syncfusion.UI.Xaml.Charts.ChartAxis.AutoScrollingDelta":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.ChartAxis");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "AutoScrollingDelta", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_272_ChartAxis_AutoScrollingDelta;
-                xamlMember.Setter = set_272_ChartAxis_AutoScrollingDelta;
+                xamlMember.Getter = get_273_ChartAxis_AutoScrollingDelta;
+                xamlMember.Setter = set_273_ChartAxis_AutoScrollingDelta;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.YAxes":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "YAxes", "System.Collections.ObjectModel.ObservableCollection`1<Syncfusion.UI.Xaml.Charts.RangeAxisBase>");
-                xamlMember.Getter = get_273_SfCartesianChart_YAxes;
+                xamlMember.Getter = get_274_SfCartesianChart_YAxes;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.EdgeLabelsVisibilityMode":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "EdgeLabelsVisibilityMode", "Syncfusion.UI.Xaml.Charts.EdgeLabelsVisibilityMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_274_RangeAxisBase_EdgeLabelsVisibilityMode;
-                xamlMember.Setter = set_274_RangeAxisBase_EdgeLabelsVisibilityMode;
+                xamlMember.Getter = get_275_RangeAxisBase_EdgeLabelsVisibilityMode;
+                xamlMember.Setter = set_275_RangeAxisBase_EdgeLabelsVisibilityMode;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.MinorTicksPerInterval":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MinorTicksPerInterval", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_275_RangeAxisBase_MinorTicksPerInterval;
-                xamlMember.Setter = set_275_RangeAxisBase_MinorTicksPerInterval;
+                xamlMember.Getter = get_276_RangeAxisBase_MinorTicksPerInterval;
+                xamlMember.Setter = set_276_RangeAxisBase_MinorTicksPerInterval;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.MinorTickLineSize":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MinorTickLineSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_276_RangeAxisBase_MinorTickLineSize;
-                xamlMember.Setter = set_276_RangeAxisBase_MinorTickLineSize;
+                xamlMember.Getter = get_277_RangeAxisBase_MinorTickLineSize;
+                xamlMember.Setter = set_277_RangeAxisBase_MinorTickLineSize;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.MinorGridLineStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MinorGridLineStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_277_RangeAxisBase_MinorGridLineStyle;
-                xamlMember.Setter = set_277_RangeAxisBase_MinorGridLineStyle;
+                xamlMember.Getter = get_278_RangeAxisBase_MinorGridLineStyle;
+                xamlMember.Setter = set_278_RangeAxisBase_MinorGridLineStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.MinorTickStyle":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "MinorTickStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_278_RangeAxisBase_MinorTickStyle;
-                xamlMember.Setter = set_278_RangeAxisBase_MinorTickStyle;
+                xamlMember.Getter = get_279_RangeAxisBase_MinorTickStyle;
+                xamlMember.Setter = set_279_RangeAxisBase_MinorTickStyle;
                 break;
             case "Syncfusion.UI.Xaml.Charts.RangeAxisBase.ShowMinorGridLines":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.RangeAxisBase");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ShowMinorGridLines", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_279_RangeAxisBase_ShowMinorGridLines;
-                xamlMember.Setter = set_279_RangeAxisBase_ShowMinorGridLines;
+                xamlMember.Getter = get_280_RangeAxisBase_ShowMinorGridLines;
+                xamlMember.Setter = set_280_RangeAxisBase_ShowMinorGridLines;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.SelectionBehavior":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "SelectionBehavior", "Syncfusion.UI.Xaml.Charts.SeriesSelectionBehavior");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_280_SfCartesianChart_SelectionBehavior;
-                xamlMember.Setter = set_280_SfCartesianChart_SelectionBehavior;
+                xamlMember.Getter = get_281_SfCartesianChart_SelectionBehavior;
+                xamlMember.Setter = set_281_SfCartesianChart_SelectionBehavior;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.ZoomPanBehavior":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "ZoomPanBehavior", "Syncfusion.UI.Xaml.Charts.ChartZoomPanBehavior");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_281_SfCartesianChart_ZoomPanBehavior;
-                xamlMember.Setter = set_281_SfCartesianChart_ZoomPanBehavior;
+                xamlMember.Getter = get_282_SfCartesianChart_ZoomPanBehavior;
+                xamlMember.Setter = set_282_SfCartesianChart_ZoomPanBehavior;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.TrackballBehavior":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "TrackballBehavior", "Syncfusion.UI.Xaml.Charts.ChartTrackballBehavior");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_282_SfCartesianChart_TrackballBehavior;
-                xamlMember.Setter = set_282_SfCartesianChart_TrackballBehavior;
+                xamlMember.Getter = get_283_SfCartesianChart_TrackballBehavior;
+                xamlMember.Setter = set_283_SfCartesianChart_TrackballBehavior;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.CrosshairBehavior":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "CrosshairBehavior", "Syncfusion.UI.Xaml.Charts.ChartCrosshairBehavior");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_283_SfCartesianChart_CrosshairBehavior;
-                xamlMember.Setter = set_283_SfCartesianChart_CrosshairBehavior;
+                xamlMember.Getter = get_284_SfCartesianChart_CrosshairBehavior;
+                xamlMember.Setter = set_284_SfCartesianChart_CrosshairBehavior;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PlotAreaBorderBrush":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
                 xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PlotAreaBorderBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_284_SfCartesianChart_PlotAreaBorderBrush;
-                xamlMember.Setter = set_284_SfCartesianChart_PlotAreaBorderBrush;
-                break;
-            case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.PlotAreaBackground":
-                userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");
-                xamlMember = new global::MyShop.MyShop_XamlTypeInfo.XamlMember(this, "PlotAreaBackground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_285_SfCartesianChart_PlotAreaBackground;
-                xamlMember.Setter = set_285_SfCartesianChart_PlotAreaBackground;
+                xamlMember.Getter = get_285_SfCartesianChart_PlotAreaBorderBrush;
+                xamlMember.Setter = set_285_SfCartesianChart_PlotAreaBorderBrush;
                 break;
             case "Syncfusion.UI.Xaml.Charts.SfCartesianChart.IsTransposed":
                 userType = (global::MyShop.MyShop_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Syncfusion.UI.Xaml.Charts.SfCartesianChart");

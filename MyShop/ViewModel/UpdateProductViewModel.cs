@@ -101,6 +101,20 @@ namespace MyShop.ViewModel
             }
         }
 
+        private int _discount;
+        public int Discount
+        {
+            get
+            {
+                return _discount;
+            }
+            set
+            {
+                SetProperty(ref _discount, value);
+                OnPropertyChanged(nameof(Discount));
+            }
+        }
+
         private TypeProduct _type;
         public TypeProduct Type
         {

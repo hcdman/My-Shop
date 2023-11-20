@@ -90,7 +90,7 @@
                     x:Name="messageTextBlock"
                     FontSize="15"
                     Foreground="Red"
-                    Text="hello"
+                    Text="{Binding mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                     TextAlignment="Center" />
                 
             </StackPanel>   

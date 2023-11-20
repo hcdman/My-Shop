@@ -107,7 +107,11 @@ namespace MyShop.ViewModel
             for (int i = 0; i < _db.bill.Count; i++)
                 _db.bill[i].Id = i + 1;
 
-            foreach (var item in _tmp.product) Most5List.Add(item);
+            foreach (var item in _tmp.product) 
+            {
+                if (item.giamgia > 0) item.gia = item.gia - item.gia * item.giamgia / 100;
+                Most5List.Add(item);
+            } 
 
             foreach (var item in _db.bill) Dashboard.Add(item);
 
