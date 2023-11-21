@@ -17,24 +17,24 @@ namespace MyShop.ViewModel
             get { return _sales; }
             set { _sales = value; }
         }
-        public SaleViewModel(string check)
+        public SaleViewModel(string check, int currentDay, int currentMonth, int currentYear)
         {
-            loadData(check);
+            loadData(check, currentDay, currentMonth, currentYear);
         }
 
-        public async void loadData(string check)
+        public async void loadData(string check, int currentDay, int currentMonth, int currentYear)
         {
             if (check == "year")
             {
-                Saless = await Sales.Saless("year");
+                Saless = await Sales.Saless("year", currentDay, currentMonth, currentYear);
             }
             else if (check == "month")
             {
-                Saless = await Sales.Saless("month");
+                Saless = await Sales.Saless("month", currentDay, currentMonth, currentYear);
             }
             else
             {
-                Saless = await Sales.Saless("week");
+                Saless = await Sales.Saless("week", currentDay, currentMonth, currentYear);
             }
         }
 

@@ -35,13 +35,12 @@ namespace MyShop.View
         public StatisticsChild()
         {
             this.InitializeComponent();
-            this.DataContext = new SaleViewModel("year");
             currentDate = DateTime.Now.Date;
             currentYear = currentDate.Year;
             currentMonth = currentDate.Month;
             currentDay = currentDate.Day;
+            this.DataContext = new SaleViewModel("year", currentDay, currentMonth, currentYear);
             showFilter.Text = $"{currentYear}";
-
         }
 
         private void MonthClick(object sender, RoutedEventArgs e)
@@ -49,9 +48,9 @@ namespace MyShop.View
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-          
+
+            this.DataContext = new SaleViewModel("month", currentDay, currentMonth, currentYear);
             showFilter.Text = $"{currentMonth}/{currentYear}";
-           
         }
 
         private void YearClick(object sender, RoutedEventArgs e)
@@ -59,16 +58,16 @@ namespace MyShop.View
             Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-          
+
+            this.DataContext = new SaleViewModel("year", currentDay, currentMonth, currentYear);
             showFilter.Text = $"{currentYear}";
-           
         }
         private void WeekClick(object sender, RoutedEventArgs e)
         {
             Month.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Year.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255, 255));
             Week.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 255, 0));
-           
+
             UpdateWeek();
         }
 
@@ -87,9 +86,10 @@ namespace MyShop.View
             DayOfWeek firstDayOfWeek = DayOfWeek.Monday;
             int offset = firstDayOfWeek - date.DayOfWeek;
             DateTime startOfWeek = date.AddDays(offset);
-            DateTime endOfWeek = startOfWeek.AddDays(7);
+            DateTime endOfWeek = startOfWeek.AddDays(6);
 
             // Update the TextBlock
+            this.DataContext = new SaleViewModel("week", startOfWeek.Day, startOfWeek.Month, startOfWeek.Year);
             showFilter.Text = $"{startOfWeek.ToString("dd/MM/yyyy")} to {endOfWeek.ToString("dd/MM/yyyy")}";
 
            
@@ -121,16 +121,15 @@ namespace MyShop.View
                     currentYear--;
                     currentMonth = 12;
                 }
-                showFilter.Text = $"{currentMonth}/{currentYear}";
-               
+                this.DataContext = new SaleViewModel("month", currentDay, currentMonth, currentYear);
+                showFilter.Text = $"{currentMonth}/{currentYear}";             
 
             }
             else
             {
                 currentYear--;
+                this.DataContext = new SaleViewModel("year", currentDay, currentMonth, currentYear);
                 showFilter.Text = $"{currentYear}";
-               
-
             }
         }
 
@@ -160,12 +159,15 @@ namespace MyShop.View
                     currentYear++;
                     currentMonth = 1;
                 }
-              
+                this.DataContext = new SaleViewModel("month", currentDay, currentMonth, currentYear);
+                showFilter.Text = $"{currentMonth}/{currentYear}";
+
             }
             else
             {
                 currentYear++;
-                
+            this.DataContext = new SaleViewModel("year", currentDay, currentMonth, currentYear);
+
 
                 showFilter.Text = $"{currentYear}";
             }

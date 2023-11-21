@@ -20,9 +20,9 @@ using WinUIEx;
 
 namespace MyShop.ViewModel
 {
-    internal  class LoginViewModel : ObservableObject
+    internal class LoginViewModel : ObservableObject
     {
-        public ICommand login {  get; set; }
+        public ICommand login { get; set; }
 
         private string _user;
         public string User
@@ -80,7 +80,7 @@ namespace MyShop.ViewModel
 
         private void LoginPage_Loaded()
         {
-           var passwordIn64 = ConfigurationManager.AppSettings["Password"];
+            var passwordIn64 = ConfigurationManager.AppSettings["Password"];
 
             if (passwordIn64.Length != 0)
             {
@@ -104,16 +104,26 @@ namespace MyShop.ViewModel
         {
             get
             {
-                return _login ?? (new RelayCommand(() => handleLogin())) ;
+                return _login ?? (new RelayCommand(() => handleLogin()));
             }
         }
+
 
         public async void handleLogin()
         {
             var (success, message) = await api.Login(User, Pass);
-            if (success == true)
+            if (message == "code")
             {
-                if(Remember == true)
+
+                if (App.MainWindow.Content is Frame frame)
+                {
+                    frame.Navigate(typeof(View.LoginExpiredPage), null, null);
+                    App.MainWindow.Maximize();
+                }
+            }
+            else if (success == true)
+            {
+                if (Remember == true)
                 {
                     var passwordInBytes = Encoding.UTF8.GetBytes(Pass);
                     var entropy = new byte[20];
@@ -133,7 +143,8 @@ namespace MyShop.ViewModel
                     config.Save(ConfigurationSaveMode.Minimal);
 
                     ConfigurationManager.RefreshSection("appSettings");
-                } else
+                }
+                else
                 {
                     var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                     config.AppSettings.Settings["Username"].Value = "";
@@ -144,7 +155,7 @@ namespace MyShop.ViewModel
                     ConfigurationManager.RefreshSection("appSettings");
                 }
 
-     
+
                 if (App.MainWindow.Content is Frame frame)
                 {
                     frame.Navigate(typeof(View.ShellPage), null, null);

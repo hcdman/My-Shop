@@ -34,7 +34,7 @@ namespace MyShop.Model
             SalesRate = count;
         }
 
-        public async static Task<List<Sales>> Saless(string check)
+        public async static Task<List<Sales>> Saless(string check, int currentDay, int currentMonth, int currentYear)
         {
             HandleAPI api = new HandleAPI();
             if (check == "year")
@@ -43,7 +43,7 @@ namespace MyShop.Model
                 ListSales getPieceYear;
                 while (true)
                 {
-                    getPieceYear = await api.PieceStatistics("year");
+                    getPieceYear = await api.PieceStatistics("year", currentDay, currentMonth, currentYear);
                     if (getPieceYear.data.Count > 0) break;
                 }
 
@@ -64,7 +64,7 @@ namespace MyShop.Model
                 ListSales getPieceMonth;
                 while (true)
                 {
-                    getPieceMonth = await api.PieceStatistics("month");
+                    getPieceMonth = await api.PieceStatistics("month", currentDay, currentMonth, currentYear);
                     if (getPieceMonth.data.Count > 0) break;
                 }
 
@@ -75,7 +75,7 @@ namespace MyShop.Model
                 {
                     var item = getPieceMonth.data[i];
                     if (i < 4) resMonth.Add(new Sales(item.product, item.sl));
-                    else if (i == 4) resMonth.Add(new Sales("Orders", item.sl));
+                    else if (i == 4) resMonth.Add(new Sales("Others", item.sl));
                     else resMonth[4].SalesRate += item.sl;
                 }
 
@@ -85,7 +85,7 @@ namespace MyShop.Model
             ListSales getPieceWeek;
             while (true)
             {
-                getPieceWeek = await api.PieceStatistics("week");
+                getPieceWeek = await api.PieceStatistics("week", currentDay, currentMonth, currentYear);
                 if (getPieceWeek.data.Count > 0) break;
             }
 

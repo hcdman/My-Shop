@@ -10,11 +10,16 @@ const db = mysql.createConnection({
 // get week
 exports.getRevenueWeek = async (req, res) => {
   let { day, month, year } = req.body;
-  day = day - 2;
   let date1 = new Date(year, month - 1, day);
-  const day2 = date1.getDate() + 7;
+  let thh = date1.setTime(date1.getTime() + 7 * 24 * 60 * 60 * 1000);
+  date2 = new Date(thh);
+  const day2 = date2.getDate();
+  const month2 = date2.getMonth() + 1;
+  const year2 = date2.getFullYear();
+  const str1 = `${year}-${month}-${day}`;
+  const str2 = `${year2}-${month2}-${day2}`;
 
-  let sql = `select weekday(nghd) as id, round(sum(trigia)/1000000,0) as tong from hoadon where year(nghd) = ${year} and month(nghd) = ${month} and day(nghd) >= ${day} and day(nghd) <=${day2} group by weekday(nghd)`;
+  let sql = `select weekday(nghd) as id, round(sum(trigia)/1000000,0) as tong from hoadon where datediff(nghd, "${str1}") >= 0 and datediff(nghd, "${str1}") < datediff("${str2}", "${str1}") group by weekday(nghd)`;
   db.query(sql, (error, result) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));

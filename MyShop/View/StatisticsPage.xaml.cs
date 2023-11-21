@@ -39,11 +39,11 @@ public sealed partial class StatisticsPage : Page, INotifyPropertyChanged
         this.InitializeComponent();
 
         //Default show revenue by year
-        this.DataContext = new StatisticViewModel(type, currentPage, currentDay, currentMonth, currentYear);
         currentDate = DateTime.Now.Date;
         currentYear = currentDate.Year;
         currentMonth = currentDate.Month;
         currentDay = currentDate.Day;
+        this.DataContext = new StatisticViewModel(type, currentPage, currentDay, currentMonth, currentYear);
         showFilter.Text = $"{currentYear}";
     }
 
@@ -84,13 +84,13 @@ public sealed partial class StatisticsPage : Page, INotifyPropertyChanged
         DayOfWeek firstDayOfWeek = DayOfWeek.Monday;
         int offset = firstDayOfWeek - date.DayOfWeek;
         DateTime startOfWeek = date.AddDays(offset);
-        DateTime endOfWeek = startOfWeek.AddDays(7);
+        DateTime endOfWeek = startOfWeek.AddDays(6);
 
         // Update the TextBlock
         showFilter.Text = $"{startOfWeek.ToString("dd/MM/yyyy")} to {endOfWeek.ToString("dd/MM/yyyy")}";
 
         // Update the DataContext
-        this.DataContext = new StatisticViewModel(type, currentPage, currentDay, currentMonth, currentYear);
+        this.DataContext = new StatisticViewModel(type, currentPage, startOfWeek.Day, startOfWeek.Month, startOfWeek.Year);
     }
     private void ProfitClick(object sender, RoutedEventArgs e)
     {

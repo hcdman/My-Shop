@@ -9,8 +9,17 @@ const db = mysql.createConnection({
 
 // get week
 exports.getPieceWeek = async (req, res) => {
-  let sql =
-    "select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and week(hd.nghd) = week(curdate()) group by l.maloai, l.tenloai order by sl desc";
+  let { day, month, year } = req.body;
+  let date1 = new Date(year, month - 1, day);
+  let thh = date1.setTime(date1.getTime() + 7 * 24 * 60 * 60 * 1000);
+  date2 = new Date(thh);
+  const day2 = date2.getDate();
+  const month2 = date2.getMonth() + 1;
+  const year2 = date2.getFullYear();
+  const str1 = `${year}-${month}-${day}`;
+  const str2 = `${year2}-${month2}-${day2}`;
+
+  let sql = `select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and datediff(nghd, "${str1}") >= 0 and datediff(nghd, "${str1}") < datediff("${str2}", "${str1}") group by l.maloai, l.tenloai order by sl desc`;
   db.query(sql, (error, result) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));
@@ -20,9 +29,9 @@ exports.getPieceWeek = async (req, res) => {
 
 // get year
 exports.getPieceYear = async (req, res) => {
-  console.log("request");
-  let sql =
-    "select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and year(hd.nghd) = year(curdate()) group by l.maloai, l.tenloai order by sl desc";
+  const { day, month, year } = req.body;
+
+  let sql = `select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and year(hd.nghd) = ${year} group by l.maloai, l.tenloai order by sl desc`;
   db.query(sql, (error, result) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));
@@ -32,8 +41,9 @@ exports.getPieceYear = async (req, res) => {
 
 // get month
 exports.getPieceMonth = async (req, res) => {
-  let sql =
-    "select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and month(hd.nghd) = month(curdate()) group by l.maloai, l.tenloai order by sl desc";
+  const { day, month, year } = req.body;
+
+  let sql = `select l.tenloai as product, sum(ct.sl) as sl from hoadon hd, cthd ct, sanpham sp, loai l where ct.masp = sp.masp and sp.maloai = l.maloai and hd.sohd = ct.sohd and month(hd.nghd) = ${month} and year(hd.nghd)= ${year} group by l.maloai, l.tenloai order by sl desc`;
   db.query(sql, (error, result) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));

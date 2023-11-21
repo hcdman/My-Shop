@@ -1,9 +1,9 @@
-POST https://test-deploy-jbnz-b3pzz1uzt-nxhawk.vercel.app/auth/login
+POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-  "username":"haonhat",
-  "password":"123aa"
+  "username":"admin",
+  "password":"admin"
 }
 
 ###
@@ -11,9 +11,27 @@ POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
+  "username":"admin",
+  "password": "admin",
+  "confirm_password": "admin"
+}
+
+###
+POST http://localhost:5000/auth/addCode
+Content-Type: application/json
+
+{
+  "code":"1234567"
+}
+
+###
+POST http://localhost:5000/auth/active
+Content-Type: application/json
+
+{
   "username":"haonhat",
-  "password": "123aa",
-  "confirm_password": "123aa"
+  "password":"123aa",
+  "code":"1234567"
 }
 
 ###
@@ -188,3 +206,6 @@ Content-Type: application/json
   "maloai":"ML03",
   "tenloai":"Vivo"
 }
+
+###
+GET  http://localhost:5000/piece/month

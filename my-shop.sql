@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2023 lúc 07:24 AM
+-- Thời gian đã tạo: Th10 21, 2023 lúc 03:37 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -39,7 +39,28 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`Username`, `Password`, `Startday`, `Available`) VALUES
+('admin', '$argon2id$v=19$m=65536,t=3,p=4$gJmbBxrKkPisdDRYz1XCYQ$Vk7+4z9rDJJJxteIouSHkoc14S4zyR24mgBq3hBJ5jI', '2023-11-20', 0),
 ('haonhat', '$argon2id$v=19$m=65536,t=3,p=4$vd8SwsM2ht8FLDkQR2Yy3g$/kCWWytQZ4kWuMqsSusL8RIbSSs1Jz758i/S3xGn2cg', '2023-10-14', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `code`
+--
+
+CREATE TABLE `code` (
+  `id` int(11) NOT NULL,
+  `code` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `code`
+--
+
+INSERT INTO `code` (`id`, `code`) VALUES
+(6, '1234567'),
+(7, '1234567'),
+(8, '1234567');
 
 -- --------------------------------------------------------
 
@@ -169,11 +190,21 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`masp`, `anh`, `tensp`, `hangsx`, `gia_goc`, `gia`, `sl`, `maloai`, `giamgia`, `public_id`) VALUES
+('1327', 'http://res.cloudinary.com/haonhat/image/upload/v1700448696/ymohhj2pqqymb5wjqj1m.jpg', 'iPhone 14 Pro Max', 'Apple', 26990000, 29990000, 100, 'ML01', 8, 'ymohhj2pqqymb5wjqj1m'),
+('2769', 'http://res.cloudinary.com/haonhat/image/upload/v1700448698/fiaekqrtxakhcm8cpvfe.jpg', 'iPhone 14 Pro', 'Apple', 26990000, 27990000, 92, 'ML01', 10, 'fiaekqrtxakhcm8cpvfe'),
+('4286', 'http://res.cloudinary.com/haonhat/image/upload/v1700448692/qc1n598osa1guorirzp1.jpg', 'iPhone 15 Plus', 'Apple', 24990000, 25990000, 68, 'ML01', 0, 'qc1n598osa1guorirzp1'),
+('5385', 'http://res.cloudinary.com/haonhat/image/upload/v1700448704/vnfpkwil14kyahthjqqx.jpg', 'iPhone 13', 'Apple', 14990000, 18990000, 56, 'ML01', 13, 'vnfpkwil14kyahthjqqx'),
+('5711', 'http://res.cloudinary.com/haonhat/image/upload/v1700448709/aweftatfuuszuem4hkm7.jpg', 'iPhone 11', 'Apple', 9990000, 11990000, 98, 'ML01', 9, 'aweftatfuuszuem4hkm7'),
+('5789', 'http://res.cloudinary.com/haonhat/image/upload/v1700448706/e3x4fyizhv1llcs2sxwp.jpg', 'iPhone 12', 'Apple', 14990000, 17990000, 59, 'ML01', 23, 'e3x4fyizhv1llcs2sxwp'),
+('5900', 'http://res.cloudinary.com/haonhat/image/upload/v1700448694/jdnagnar7of8yc167thk.jpg', 'iPhone 15', 'Apple', 18990000, 22990000, 1, 'ML01', 4, 'jdnagnar7of8yc167thk'),
+('6433', 'http://res.cloudinary.com/haonhat/image/upload/v1700448700/phtfro4zuczu4tcoy7gq.jpg', 'iPhone 14 Plus', 'Apple', 22990000, 24990000, 73, 'ML01', 12, 'phtfro4zuczu4tcoy7gq'),
+('8375', 'http://res.cloudinary.com/haonhat/image/upload/v1700448685/kumz965lge7a5dub3tht.jpg', 'iPhone 15 Pro', 'Apple', 26990000, 28990000, 40, 'ML01', 0, 'kumz965lge7a5dub3tht'),
+('9862', 'http://res.cloudinary.com/haonhat/image/upload/v1700448703/evopkfxu41rjgsnmftxw.jpg', 'iPhone 14', 'Apple', 18990000, 21990000, 80, 'ML01', 13, 'evopkfxu41rjgsnmftxw'),
 ('SP01', 'http://res.cloudinary.com/haonhat/image/upload/v1697384754/xdmjbhdmanbpowgkpfnc.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML01', 12, NULL),
 ('SP02', 'http://res.cloudinary.com/haonhat/image/upload/v1698062899/xaxavilkca4hwnfy8olw.jpg', 'Samsung Galaxy', 'Samsung', 30000000, 26990000, 100, 'ML02', 0, NULL),
 ('SP04', 'http://res.cloudinary.com/haonhat/image/upload/v1697384807/mpc1pp6cqmzhlbpckmg5.jpg', 'iPhone 14 Plus', 'Apple', 19990000, 21990000, 50, 'ML04', 12, NULL),
-('SP09', 'http://res.cloudinary.com/haonhat/image/upload/v1697636185/qqgq2qpw9ksyoh4a3dve.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML05', 12, NULL),
-('SP10', 'http://res.cloudinary.com/haonhat/image/upload/v1697640826/eeaapv2ns4ylajdlpzt2.jpg', 'iPhone 15 Pro Max', 'Apple', 19990000, 21990000, 50, 'ML03', 12, NULL),
+('SP09', 'http://res.cloudinary.com/haonhat/image/upload/v1697636185/qqgq2qpw9ksyoh4a3dve.jpg', 'iPhone 15 Pro Vip', 'Apple', 19990000, 21990000, 50, 'ML05', 12, NULL),
+('SP10', 'http://res.cloudinary.com/haonhat/image/upload/v1697640826/eeaapv2ns4ylajdlpzt2.jpg', 'iPhone 15 Vip Pro', 'Apple', 19990000, 21990000, 50, 'ML03', 12, NULL),
 ('SP66', 'http://res.cloudinary.com/haonhat/image/upload/v1700375050/gbpjujbjhu60kh8vxmfc.jpg', 'OPPO A17', 'Oppo', 3000000, 3990000, 12, 'ML03', 12, 'gbpjujbjhu60kh8vxmfc'),
 ('SP69', 'http://res.cloudinary.com/haonhat/image/upload/v1700375048/uqpgiurftufq5j5czah8.jpg', 'OPPO Reno7 series', 'Oppo', 7000000, 7490000, 10, 'ML03', 0, 'uqpgiurftufq5j5czah8');
 
@@ -186,6 +217,12 @@ INSERT INTO `sanpham` (`masp`, `anh`, `tensp`, `hangsx`, `gia_goc`, `gia`, `sl`,
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`Username`);
+
+--
+-- Chỉ mục cho bảng `code`
+--
+ALTER TABLE `code`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `cthd`
@@ -222,6 +259,12 @@ ALTER TABLE `sanpham`
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
+
+--
+-- AUTO_INCREMENT cho bảng `code`
+--
+ALTER TABLE `code`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `cthd`

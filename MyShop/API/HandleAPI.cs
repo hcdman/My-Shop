@@ -36,12 +36,29 @@ namespace MyShop.API
             );
         }
 
-        public async Task<bool> hasAccount()
+        //ActiveAccount
+        public async Task<Tuple<bool, string>> ActiveAccount(string username, string password, string code)
         {
+            Admin admin = new Admin() { username = username, password = password, code = code };
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(admin),
+            Encoding.UTF8,
+                "application/json");
 
+            var response = await client.PostAsync("auth/active", jsonContent);
+            var returnValue = await response.Content.ReadAsStringAsync();
 
-            return false;
+            Json_Response res = JsonSerializer.Deserialize<Json_Response>(returnValue);
+
+            //Write file using StreamWriter - store local
+            if (response.StatusCode.ToString() == "OK")
+            {
+                return new Tuple<bool, string>(true, res.message);
+            }
+
+            return new Tuple<bool, string>(false, res.message);
         }
+
 
         public async Task<Tuple<bool, string>> Login(string username, string password)
         {
@@ -465,13 +482,18 @@ namespace MyShop.API
             return res;
         }
 
-        public async Task<ListSales> PieceStatistics(string api)
+        public async Task<ListSales> PieceStatistics(string api, int currentDay, int currentMonth, int currentYear)
         {
 
-            var response = await client.GetAsync($"piece/{api}");
-            var returnValue = await response.Content.ReadAsStringAsync();
-            ListSales res = JsonSerializer.Deserialize<ListSales>(returnValue);
+            Date newDate = new Date() { day = currentDay, month = currentMonth, year = currentYear };
+            using StringContent jsonContent = new(
+            JsonSerializer.Serialize(newDate),
+            Encoding.UTF8, "application/json");
 
+            var response = await client.PostAsync($"piece/{api}", jsonContent);
+            var returnValue = await response.Content.ReadAsStringAsync();
+
+            ListSales res = JsonSerializer.Deserialize<ListSales>(returnValue);
             return res;
 
         }

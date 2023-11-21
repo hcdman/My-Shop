@@ -12,6 +12,9 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using MyShop.ViewModel;
+using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,9 +26,29 @@ namespace MyShop.View
     /// </summary>
     public sealed partial class LoginExpiredPage : Page
     {
+
+        private async void showToast()
+        {
+            ContentDialog toast = new ContentDialog
+            {
+                XamlRoot = this.XamlRoot,
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                Title = "Enter the code",
+                Content = "Your account is currently beyond the trial period, please enter the code to activate your account",
+                CloseButtonText = "Cancel",
+                PrimaryButtonText = "Ok",
+                DefaultButton = ContentDialogButton.Close
+            };
+
+            ContentDialogResult result = await toast.ShowAsync();
+        }
         public LoginExpiredPage()
         {
             this.InitializeComponent();
+            this.DataContext = new LoginExpiredPageViewModel();
+            this.Loaded += (sender, args) => { showToast(); };
         }
+
+
     }
 }
