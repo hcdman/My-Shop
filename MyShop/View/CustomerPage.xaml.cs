@@ -149,4 +149,10 @@ private void prePage(object sender, RoutedEventArgs e)
 {
     cusViewModel.pre();
 }
+
+  private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+  {
+        if (e.Key != Windows.System.VirtualKey.Enter) return;
+        cusViewModel.loadDataByPage();
+  }
 }

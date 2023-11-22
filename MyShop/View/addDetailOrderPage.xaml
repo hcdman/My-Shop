@@ -163,7 +163,12 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgres}" Height="20" HorizontalAlignment="Center"/>
+            <TextBlock
+             Text="{Binding mess}"
+             FontSize="15"
+             Foreground="Red"
+             TextAlignment="Center"  />
         </Grid>
     </Grid>
 </Page>

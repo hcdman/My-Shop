@@ -116,8 +116,19 @@
             </Grid>
         </Grid>
 
+        <Grid Grid.Row="3">
+            <ProgressBar Grid.Row="1" x:Name="loading" Width="500" Background="Transparent"  IsIndeterminate="{Binding isShowProgressBar}" Height="20" HorizontalAlignment="Center"/>
+            <TextBlock
+               x:Name="messageTextBlock"
+               Grid.Row="1"
+               Margin="0,20,0,0"
+               FontSize="15"
+               Foreground="Red"
+               Text="{Binding mess, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+               TextAlignment="Center" />
+        </Grid>
         <!--  Pagination  -->
-        <Grid Grid.Row="3" Margin="0,0,0,10">
+        <Grid Grid.Row="4" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -135,7 +146,7 @@
                     Height="30"
                     Margin="10,0"
                     KeyDown="TextBox_KeyDown"
-                    Text="{Binding _rowsPerPage}"
+                    Text="{Binding _rowsPerPage, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                     TextAlignment="Center" />
             </StackPanel>
             <StackPanel

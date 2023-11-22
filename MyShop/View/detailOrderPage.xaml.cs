@@ -84,17 +84,17 @@ namespace MyShop.View
 
         private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-
+            vm.loadDataByPage();
         }
 
         private void pre(object sender, RoutedEventArgs e)
         {
-
+            vm.pre();
         }
 
         private void next(object sender, RoutedEventArgs e)
         {
-
+            vm.next();
         }
 
         private void searchByKey(object sender, KeyRoutedEventArgs e)

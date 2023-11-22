@@ -43,7 +43,8 @@ public sealed partial class OrdersPage : Page
 
     private void TextBox_KeyDown(object sender, KeyRoutedEventArgs e)
     {
-
+        if (e.Key != Windows.System.VirtualKey.Enter) return;
+        vm.loadDataByPage();
     }
 
     private void detailOrder(object sender, RoutedEventArgs e)

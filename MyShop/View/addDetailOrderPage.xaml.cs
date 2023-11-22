@@ -30,6 +30,8 @@ namespace MyShop.View
     {
         ObservableCollection<ProductOrder> orderProducts = new ObservableCollection<ProductOrder>();
         ObservableCollection<ProductOrder> filterProducts = new ObservableCollection<ProductOrder>();
+        List<ProductOrder> selectedProduct = new List<ProductOrder>();
+
         ProductPageViewModel pm = new ProductPageViewModel();
         public addDetailOrderPage()
         {
@@ -69,7 +71,15 @@ namespace MyShop.View
 
         private void addDetailOrder(object sender, RoutedEventArgs e)
         {
-
+         //   viewModel.isShowProgres = true;
+            List<DetailOrder> ls = new List<DetailOrder>();
+            for(int i = 0; i < selectedProduct.Count; i++)
+            {
+                DetailOrder detai_order = new DetailOrder() { masp = selectedProduct[i].masp, sohd = order.sohd, sl = selectedProduct[i].sl };
+                ls.Add(detai_order);
+            }
+            viewModel.add_ListDetailOrder(ls);
+           // viewModel.isShowProgres = false;
         }
 
 
@@ -88,6 +98,7 @@ namespace MyShop.View
                 if (selectedProductListBox.Items.Contains(product) == false)
                 {
                     selectedProductListBox.Items.Add(product);
+                    selectedProduct.Add(product);
                 }
 
                 //Check product filter
@@ -114,6 +125,7 @@ namespace MyShop.View
                 if (selectedProductListBox.Items.Contains(product))
                 {
                     selectedProductListBox.Items.Remove(product);
+                    selectedProduct.Remove(product);
                 }
 
                 //Check product filter
@@ -130,6 +142,7 @@ namespace MyShop.View
         {
 
             string nameFilter = Filter.Text;
+            filterProducts.Clear();
             if (nameFilter.Length != 0)
             {
                 // add product filter to filterProducts

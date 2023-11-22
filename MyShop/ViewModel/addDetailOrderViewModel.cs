@@ -18,35 +18,35 @@ namespace MyShop.ViewModel
         public bool isShowProgres { get; set; }
 
         public string mess { get; set; }
-        public ICommand addDetailOrder { get; set; }
+ 
 
         public addDetailOrderViewModel()
         {
             detailOrder = new DetailOrder();
             isShowProgres = false;
-            addDetailOrder = new relayCommand(handleAdd, canAdd);
         }
-
-
-        public bool canAdd(object obj)
-        {
-            return true;
-        }
-
         HandleAPI api = new HandleAPI();
-        public void handleAdd(object obj)
-        {
-            add_detaiOrder(detailOrder);
-        }
-
+     
         public async void add_detaiOrder(DetailOrder detail_order)
         {
+            
+        }
+
+        public async void add_ListDetailOrder(List<DetailOrder> ls)
+        {
             mess = "";
-            // mess = order.makh + " " + order.nghd + order.trigia;
+            var temp = "";
             isShowProgres = true;
-            var (success, message) = await api.addOrderDetail(detail_order);
-            mess = message;
+
+           // Tuple<bool, string> rs = new Tuple<bool, string>();
+            for (int i = 0; i < ls.Count; i++)
+            {
+                var  (success, message) = await api.addOrderDetail(ls[i]);
+                temp = message;
+            }
+                          
             isShowProgres = false;
+            mess = temp;
         }
     }
 }

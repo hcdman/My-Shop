@@ -1,12 +1,20 @@
-﻿using MyShop.API;
+﻿using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.Win32;
+using MyShop.API;
 using MyShop.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.UI.Xaml.Controls;
 
 namespace MyShop.ViewModel
 {
@@ -23,6 +31,9 @@ namespace MyShop.ViewModel
          public string mess { get; set; }
         public string keyword {  get; set; }
         public bool? isShowProgressBar { get; set; }
+
+
+       
         public CategoryViewModel()
         {
             //categories = new BindingList<Category>();
@@ -105,6 +116,103 @@ namespace MyShop.ViewModel
                 }
             }
             loadDataByPage();
+        }
+
+
+        /// get cell value
+        private static string GetCellValue(SpreadsheetDocument document, Cell cell)
+        {
+            SharedStringTablePart stringTablePart = document.WorkbookPart.SharedStringTablePart;
+            string value = cell.CellValue.InnerXml;
+
+            if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
+            {
+                return stringTablePart.SharedStringTable.ChildElements[Int32.Parse(value)].InnerText;
+            }
+            else
+            {
+                return value;
+            }
+        }
+
+        private DataTable readEx(string filename, string sheetName)
+        {
+            DataTable dataTable = new DataTable();
+            using (SpreadsheetDocument spreadSheetDocument = SpreadsheetDocument.Open(filename, false))
+            {
+                WorkbookPart workbookPart = spreadSheetDocument.WorkbookPart;
+                IEnumerable<Sheet> sheets = spreadSheetDocument.WorkbookPart.Workbook.GetFirstChild<Sheets>().Elements<Sheet>();
+
+                var sheet = sheets.FirstOrDefault(s => s.Name == sheetName);
+                string relationshipId = sheet.Id.Value;
+                WorksheetPart worksheetPart = (WorksheetPart)spreadSheetDocument.WorkbookPart.GetPartById(relationshipId);
+                Worksheet workSheet = worksheetPart.Worksheet;
+                SheetData sheetData = workSheet.GetFirstChild<SheetData>();
+                IEnumerable<Row> rows = sheetData.Descendants<Row>();
+
+                foreach (Cell cell in rows.ElementAt(0))
+                {
+                    dataTable.Columns.Add(GetCellValue(spreadSheetDocument, cell));
+                }
+
+                foreach (Row row in rows)
+                {
+                    DataRow dataRow = dataTable.NewRow();
+                    for (int i = 0; i < row.Descendants<Cell>().Count(); i++)
+                    {
+                        dataRow[i] = GetCellValue(spreadSheetDocument, row.Descendants<Cell>().ElementAt(i));
+                    }
+
+                    dataTable.Rows.Add(dataRow);
+                }
+
+            }
+            dataTable.Rows.RemoveAt(0);
+
+            return dataTable;
+        }
+
+        public async void importDataFromExcel()
+        {
+            // Open dialog and choose file excel
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            var dialogResult = openFile.ShowDialog();
+            if (dialogResult == false) return;
+
+            // read data from file excel
+            DataTable table = readEx(openFile.FileName, "category");
+
+            // add data to database
+            isShowProgressBar = true;
+          //  var temp = "";
+            var isSuccess = true;
+            var temp = "";
+            foreach (DataRow row in table.Rows)
+            {
+                Category cate = new Category()
+                {
+                    maloai = row["maloai"].ToString(),
+                    tenloai = row["tenloai"].ToString()
+                };
+
+               // temp += cate.maloai + " " + cate.tenloai + " ";
+                var (success, mess) = await api.addCategory(cate);
+                isSuccess = isSuccess && success;
+            }
+           // mess = temp;
+            isShowProgressBar = false;
+            if(isSuccess)
+            {
+                mess = "Import thành công";
+                System.Threading.Thread.Sleep(2000);
+                loadData();
+            }
+            else
+            {
+                mess = "Import thất bại";
+            }
+
         }
     }
 }

@@ -173,7 +173,9 @@
                     Height="30"
                     Margin="10,0"
                     Background="{ThemeResource MyBlockBackgroundThemeBrush}"
-                    Text="{Binding _rowsPerPage}"
+                    KeyDown="TextBox_KeyDown"
+                    Text="{Binding _rowsPerPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 
                     TextAlignment="Center" />
             </StackPanel>
             <StackPanel
@@ -191,7 +193,7 @@
                     Margin="0,5,0,0"
                     VerticalAlignment="Center"
                     TextAlignment="Center">
-                 <Run Text="{Binding _currentPage}"/>/<Run Text="{Binding _totalPages}"/>   
+                 <Run Text="{Binding _currentPage}"  />/<Run Text="{Binding _totalPages}"/>   
                 </TextBlock>
                 <Button
                     Width="80"

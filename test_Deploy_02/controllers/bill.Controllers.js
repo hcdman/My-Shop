@@ -7,6 +7,7 @@ const db = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
+
 // get all customer
 exports.getAllBill = async (req, res) => {
   let sql = "SELECT * FROM hoadon";
@@ -14,6 +15,8 @@ exports.getAllBill = async (req, res) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));
 
+
+    console.log(result);
     return res.status(200).json({
       bill: result,
     });

@@ -1,1 +1,1 @@
-E:\DoAn\Win\Myshop-current-4\My-Shop\MyShop\MyShop.csproj;x64
+F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\MyShop.csproj;x64

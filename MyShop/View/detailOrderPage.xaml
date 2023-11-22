@@ -54,7 +54,7 @@
                     Width="300"
                     Height="30"
                     Background="{ThemeResource MyBlockBackgroundThemeBrush}"
-                    PlaceholderText="Search detail order"
+                    PlaceholderText="Search detail order by product ID"
                     TextWrapping="Wrap" 
                     Text="{Binding keyword, UpdateSourceTrigger=LostFocus, Mode=TwoWay}"  KeyDown="searchByKey"/>
                     <Button Margin="10,0">Search</Button>
@@ -92,7 +92,7 @@
                     </controls:DataGridTemplateColumn>
                     <controls:DataGridTextColumn Header="Name Product" Binding="{Binding tensp}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Manufacturer" Binding="{Binding hangsx}" CanUserResize="False"  Width="SizeToHeader" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia_goc}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
 
                     <controls:DataGridTemplateColumn x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
                         <controls:DataGridTemplateColumn.CellTemplate>
@@ -131,7 +131,7 @@
                 Height="30"
                 Margin="10,0"
                 KeyDown="TextBox_KeyDown"
-                Text="{Binding _rowsPerPage}"
+                Text="{Binding _rowsPerPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 TextAlignment="Center" />
             </StackPanel>
             <StackPanel

@@ -180,7 +180,7 @@
                     Height="30"
                     Margin="10,0"
                     KeyDown="TextBox_KeyDown"
-                    Text="{Binding _rowsPerPage}"
+                    Text="{Binding _rowsPerPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                     TextAlignment="Center" />
             </StackPanel>
             <StackPanel
