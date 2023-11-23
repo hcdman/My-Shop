@@ -181,7 +181,7 @@ namespace MyShop.ViewModel
             if (dialogResult == false) return;
 
             // read data from file excel
-            DataTable table = readEx(openFile.FileName, "category");
+            DataTable table = readEx(openFile.FileName, "Category");
 
             // add data to database
             isShowProgressBar = true;

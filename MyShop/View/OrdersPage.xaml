@@ -6,11 +6,14 @@
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:MyShop.View"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:converter="using:MyShop.Converter"
     Background="{ThemeResource MyBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <converter:PriceToCurrencyConverters x:Key="PriceToCurrencyConverters" />
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -130,7 +133,7 @@
                         Header="ID Customer" />
                     <controls:DataGridTextColumn
                          Width="150"
-                        Binding="{Binding trigia}"
+                        Binding="{Binding trigia, Converter={StaticResource PriceToCurrencyConverters}}"
                         CanUserResize="False"
                         ElementStyle="{StaticResource DataGridTextStyles}"
                         Header="Total Price" />

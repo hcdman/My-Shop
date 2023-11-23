@@ -29,13 +29,13 @@
     <AppXManifest Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-22T12:17:53.029</Modified>
+      <Modified>2023-11-23T02:54:12.405</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-22T12:17:52.038</Modified>
+      <Modified>2023-11-23T02:54:10.983</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.runtimeconfig.json">
       <PackagePath>MyShop.runtimeconfig.json</PackagePath>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll">
       <PackagePath>MyShop.dll</PackagePath>
-      <Modified>2023-11-22T12:17:51.763</Modified>
+      <Modified>2023-11-23T02:54:10.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.dll.config">
       <PackagePath>MyShop.dll.config</PackagePath>
@@ -51,7 +51,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\obj\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MyShop.exe</PackagePath>
-      <Modified>2023-11-22T12:17:51.798</Modified>
+      <Modified>2023-11-23T02:54:10.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\HK3_Nam1\windowPropraming\MyShopUpdate3\My-Shop\MyShop\bin\x64\Debug\net6.0-windows10.0.19041.0\win10-x64\MyShop.deps.json">
       <PackagePath>MyShop.deps.json</PackagePath>

@@ -6,11 +6,17 @@
     xmlns:local="using:MyShop.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Foreground="{ThemeResource MyForegroundThemeBrush}"
     Loaded="mainLoad"
-    xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls">
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls" 
+    xmlns:converter="using:MyShop.Converter">
+    <Page.Resources>
+        <converter:PriceToCurrencyConverters x:Key="PriceToCurrencyConverters" />
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -92,7 +98,7 @@
                     </controls:DataGridTemplateColumn>
                     <controls:DataGridTextColumn Header="Name Product" Binding="{Binding tensp}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
                     <controls:DataGridTextColumn Header="Manufacturer" Binding="{Binding hangsx}" CanUserResize="False"  Width="SizeToHeader" FontWeight="Medium"/>
-                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia_goc}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
+                    <controls:DataGridTextColumn Header="Price" Binding="{Binding gia_goc, Converter={StaticResource PriceToCurrencyConverters}}" CanUserResize="False"  Width="SizeToCells" FontWeight="Medium"/>
 
                     <controls:DataGridTemplateColumn x:Name="ope" Header="Operations" IsReadOnly="True" CanUserResize="False"  Width="SizeToHeader" >
                         <controls:DataGridTemplateColumn.CellTemplate>

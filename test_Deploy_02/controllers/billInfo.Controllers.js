@@ -29,7 +29,7 @@ exports.getBillInfo = async (req, res) => {
     if (result.length < 1)
       return res.json({ data: [] });
 
-    let sql = `SELECT ct.* ,  sp.masp, sp.anh, sp.tensp, sp.hangsx, sp.gia_goc FROM cthd ct, sanpham sp WHERE ct.masp = sp.masp and sohd=? `;
+    let sql = `SELECT ct.* ,  sp.masp, sp.anh, sp.tensp, sp.hangsx, ROUND((100-sp.giamgia)*sp.gia/100,0) AS gia_goc FROM cthd ct, sanpham sp WHERE ct.masp = sp.masp and sohd=? `;
     db.query(sql, [sohd], async (error, result) => {
       if (error) return res.status(400).json({ message: "Server Error" });
       res.json({
