@@ -16099,23 +16099,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\hoai0\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\HK3_Nam1\\windowPropraming\\MyShopUpdate3\\My-Shop\\MyShop\\MyShop.csproj",
+      "projectUniqueName": "C:\\Users\\hoai0\\source\\repos\\My Shop\\My-Shop\\MyShop\\MyShop.csproj",
       "projectName": "MyShop",
-      "projectPath": "F:\\HK3_Nam1\\windowPropraming\\MyShopUpdate3\\My-Shop\\MyShop\\MyShop.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\HK3_Nam1\\windowPropraming\\MyShopUpdate3\\My-Shop\\MyShop\\obj\\",
+      "projectPath": "C:\\Users\\hoai0\\source\\repos\\My Shop\\My-Shop\\MyShop\\MyShop.csproj",
+      "packagesPath": "C:\\Users\\hoai0\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hoai0\\source\\repos\\My Shop\\My-Shop\\MyShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hoai0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -16209,27 +16209,27 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -16237,15 +16237,15 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -16256,7 +16256,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
