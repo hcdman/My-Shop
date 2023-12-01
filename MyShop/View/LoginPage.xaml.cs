@@ -16,7 +16,7 @@ public sealed partial class LoginPage : Page
     {
         this.InitializeComponent();
         this.DataContext = new LoginViewModel();
-        App.MainWindow.ExtendsContentIntoTitleBar = true;
+        //App.MainWindow.ExtendsContentIntoTitleBar = true;
         //App.MainWindow.SetTitleBar(AppTitleBar);
     }
     public string GetAppTitleFromSystem()

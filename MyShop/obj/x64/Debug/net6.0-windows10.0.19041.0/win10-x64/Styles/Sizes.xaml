@@ -6,6 +6,7 @@
     <x:Double x:Key="LargeFontSize">18</x:Double>
     <x:Double x:Key="MediumFontSize">15</x:Double>
     <x:Double x:Key="DataGridAddressWidth">300</x:Double>
+    <x:Double x:Key="OrderGridTextWidth">110</x:Double>
     <x:Double x:Key="DataGridTextWidth">110</x:Double>
     <x:Double x:Key="OpenPaneLength">300</x:Double>
     <x:Double x:Key="Top5ImageWidth">10</x:Double>

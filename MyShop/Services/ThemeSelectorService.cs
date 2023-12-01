@@ -51,6 +51,20 @@ public class ThemeSelectorService : IThemeSelectorService
                 _ => new SolidColorBrush(Colors.Transparent)
             };
 
+            Application.Current.Resources["ButtonBackgroundPointerOver"] = Theme switch
+            {
+                ElementTheme.Light => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 17, 18, 30)),
+                ElementTheme.Dark => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 243, 243, 243)),
+                _ => new SolidColorBrush(Colors.Transparent)
+            };
+
+            Application.Current.Resources["ButtonBackgroundPressed"] = Theme switch
+            {
+                ElementTheme.Light => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 17, 18, 30)),
+                ElementTheme.Dark => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 243, 243, 243)),
+                _ => new SolidColorBrush(Colors.Transparent)
+            };
+
             Application.Current.Resources["MyBlockBackgroundThemeBrush"] = Theme switch
             {
                 ElementTheme.Dark => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 30, 29, 41)),
@@ -62,6 +76,20 @@ public class ThemeSelectorService : IThemeSelectorService
             {
                 ElementTheme.Dark => new SolidColorBrush(Colors.White),
                 ElementTheme.Light => new SolidColorBrush(Colors.Black),
+                _ => new SolidColorBrush(Colors.Transparent)
+            };
+
+            Application.Current.Resources["ButtonForegroundPointerOver"] = Theme switch
+            {
+                ElementTheme.Light => new SolidColorBrush(Colors.White),
+                ElementTheme.Dark => new SolidColorBrush(Colors.Black),
+                _ => new SolidColorBrush(Colors.Transparent)
+            };
+
+            Application.Current.Resources["ButtonForegroundPressed"] = Theme switch
+            {
+                ElementTheme.Light => new SolidColorBrush(Colors.White),
+                ElementTheme.Dark => new SolidColorBrush(Colors.Black),
                 _ => new SolidColorBrush(Colors.Transparent)
             };
             BrushCollection customBrush = new BrushCollection();
@@ -83,13 +111,11 @@ public class ThemeSelectorService : IThemeSelectorService
             //    ElementTheme.Light => new SolidColorBrush(Windows.UI.Color.FromArgb(255, 0, 60, 114)),
             //    _ => new SolidColorBrush(Colors.Transparent)
             //};
-            if (App.MainWindow.Content is Frame frame)
-            {
-                if (frame.Content is not MyShop.View.LoginPage && frame.Content is not MyShop.View.LoginExpiredPage) { 
-                   frame.Navigate(typeof(View.ShellPage), null, null);
-                }
-
+            
+            if (MainWindow.frame.Content is not MyShop.View.LoginPage && MainWindow.frame.Content is not MyShop.View.LoginExpiredPage) { 
+                MainWindow.WindowFrameNavigate(typeof(View.ShellPage));
             }
+
             rootElement.RequestedTheme = Theme;
             TitleBarHelper.UpdateTitleBar(Theme);
 

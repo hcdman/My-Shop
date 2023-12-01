@@ -15,7 +15,7 @@
         <Grid
         x:Name="AppTitleBar"
         Height="48"
-        Margin="16,0,0,0"
+        Margin="16,5,0,0"
         VerticalAlignment="Top"
         Padding="0">
             <Grid.ColumnDefinitions>

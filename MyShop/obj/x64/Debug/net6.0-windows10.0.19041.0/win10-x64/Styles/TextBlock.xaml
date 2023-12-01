@@ -34,6 +34,15 @@
         <Setter Property="Width" Value="{ThemeResource DataGridAddressWidth}" />
         <Setter Property="Padding" Value="0,5,0,5" />
     </Style>
+    <Style x:Key="OrderGridStyle" TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="{ThemeResource MyForegroundThemeBrush}" />
+        <Setter Property="Width" Value="{ThemeResource OrderGridTextWidth}" />
+        <Setter Property="Padding" Value="0,5,0,5" />
+    </Style>
     <Style x:Key="DataGridNameStyles" TargetType="TextBlock">
         <Setter Property="FontWeight" Value="Medium" />
         <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />

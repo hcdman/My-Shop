@@ -21,22 +21,21 @@ namespace MyShop;
 public sealed partial class MainWindow : WindowEx
 {
     private Microsoft.UI.Windowing.AppWindow _appWindow;
+    private static Frame frame1;
 
-    private Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue;
-
-    private UISettings settings;
+    public static Frame frame
+    {
+        get => frame1; set => frame1 = value;
+    }
 
     public MainWindow()
     {
         InitializeComponent();
+        ExtendsContentIntoTitleBar = true;
+        frame = mainFrame;
         this.AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets\\icon-shop-64.ico"));
-        Content = null;
-        Title = Windows.ApplicationModel.Package.Current.DisplayName;
+        Title = "MyShop";
 
-        // Theme change code picked from https://github.com/microsoft/WinUI-Gallery/pull/1239
-        dispatcherQueue = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
-        settings = new UISettings();
-        settings.ColorValuesChanged += Settings_ColorValuesChanged; // cannot use FrameworkElement.ActualThemeChanged event
 
         _appWindow = GetAppWindowForCurrentWindow();
         Debug.WriteLine(_appWindow.Presenter);
@@ -44,15 +43,9 @@ public sealed partial class MainWindow : WindowEx
 
     }
 
-    // this handles updating the caption button colors correctly when indows system theme is changed
-    // while the app is open
-    private void Settings_ColorValuesChanged(UISettings sender, object args)
+    public static void WindowFrameNavigate(System.Type page)
     {
-        // This calls comes off-thread, hence we will need to dispatch it to current app's thread
-        dispatcherQueue.TryEnqueue(() =>
-        {
-            TitleBarHelper.ApplySystemThemeToCaptionButtons();
-        });
+        frame.Navigate(page);
     }
 
     private Microsoft.UI.Windowing.AppWindow GetAppWindowForCurrentWindow()
@@ -68,25 +61,28 @@ public sealed partial class MainWindow : WindowEx
         {
             Application.Current.Resources["OpenPaneLength"] = 300;
             Application.Current.Resources["Top5ImageWidth"] = 100;
-            Application.Current.Resources["Top5SoldMargin"] = new Thickness(68,0,68,0);
+            var windowWidth = (int) Bounds._width;
+            var space = (windowWidth - 300 - 150*5 - 40) / 10;
+            Application.Current.Resources["Top5SoldMargin"] = new Thickness(space,0,space,0);
             Application.Current.Resources["DataGridTextWidth"] = 110;
-            Application.Current.Resources["DataGridAddressWidth"] = 300;
+            Application.Current.Resources["OrderGridTextWidth"] = (windowWidth -300 - 300 - 40 - 100)/3;
+            Application.Current.Resources["DataGridAddressWidth"] = 280;
 
         } else
         { 
             Application.Current.Resources["OpenPaneLength"] = 200;
-            Application.Current.Resources["Top5ImageWidth"] = 50;
-            Application.Current.Resources["Top5SoldMargin"] = new Thickness(33, 5, 33, 5);
+            Application.Current.Resources["Top5ImageWidth"] = 60;
+            var windowWidth = (int)Bounds._width;
+            var space = (windowWidth - 200 - 150 * 5 - 40) / 10;
+            Application.Current.Resources["Top5SoldMargin"] = new Thickness(space, 0, space, 0);
             Application.Current.Resources["DataGridTextWidth"] = 85;
-            Application.Current.Resources["DataGridAddressWidth"] = 110;
+            Application.Current.Resources["OrderGridTextWidth"] = (windowWidth - 300 - 40 -200 - 100) / 3;
+            Application.Current.Resources["DataGridAddressWidth"] = 100;
         }
-        if (this.Content is Frame frame)
+        
+        if (frame is not null && frame.Content is not MyShop.View.LoginPage && frame.Content is not MyShop.View.LoginExpiredPage)
         {
-            if (frame.Content is not MyShop.View.LoginPage && frame.Content is not MyShop.View.LoginExpiredPage)
-            {
-                frame.Navigate(typeof(View.ShellPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
-            }
-
+            MainWindow.WindowFrameNavigate(typeof(View.ShellPage));
         }
     }
 

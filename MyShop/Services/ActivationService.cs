@@ -20,10 +20,7 @@ public class ActivationService : IActivationService
         // Execute tasks before activation.
         await InitializeAsync();
 
-        // Set the MainWindow Content.
-        Frame rootFrame = new Frame();
-        rootFrame.Navigate(typeof(View.LoginPage));
-        App.MainWindow.Content = rootFrame ?? new Frame();
+        MainWindow.WindowFrameNavigate(typeof(View.LoginPage));
 
         App.SetWindowSize();
 

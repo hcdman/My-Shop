@@ -44,7 +44,7 @@ public sealed partial class ShellPage : Page
     }
     public string GetAppTitleFromSystem()
     {
-        return Windows.ApplicationModel.Package.Current.DisplayName;
+        return "MyShop";
     }
     private void NavView_Loaded(object sender, RoutedEventArgs e)
     {
@@ -102,10 +102,7 @@ public sealed partial class ShellPage : Page
         config.AppSettings.Settings["currentNavigationViewItem"].Value = currentPage;
         config.Save(ConfigurationSaveMode.Minimal);
         ConfigurationManager.RefreshSection("appSettings");
-        if (App.MainWindow.Content is Frame frame)
-        {
-            frame.Navigate(typeof(View.LoginPage), null, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromLeft });
-        }
+        MainWindow.WindowFrameNavigate(typeof(View.LoginPage));
         App.MainWindow.Restore();
     }
     

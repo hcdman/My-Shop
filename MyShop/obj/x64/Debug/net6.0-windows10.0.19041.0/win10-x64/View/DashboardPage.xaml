@@ -21,14 +21,15 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <!--  Header  -->
             <TextBlock
-                Margin="20,20,0,20"
+                Grid.Row="0"
+                Margin="20,20,0,0"
                 Style="{StaticResource PageTitleStyle}"
                 Text="Dashboard" />
-            <Grid Grid.Row="0" Margin="{StaticResource PageContentMargin}">
+            <Grid Grid.Row="1" Margin="20,0,20,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
@@ -43,7 +44,7 @@
                 </StackPanel>
             </Grid>
             <!--  General information  -->
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -151,7 +152,8 @@
             </Grid>
             <!--  Top 5 products sold out  -->
             <Grid
-                Grid.Row="2"
+                Grid.Row="3"
+                Width="auto"
                 Margin="20"
                 Padding="0,0,0,20"
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
@@ -183,7 +185,7 @@
                         </GridView.ItemsPanel>
                         <GridView.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel>
+                                <StackPanel Width="150">
                                     <Image Width="{ThemeResource Top5ImageWidth}" Source="{Binding anh}" />
                                     <StackPanel Margin="0,10,0,0" Padding="0,0,0,20">
                                         <TextBlock
@@ -194,7 +196,8 @@
                                         <TextBlock
                                             FontStyle="Italic"
                                             Text="{Binding gia, Converter={StaticResource PriceToCurrencyConverters}}"
-                                            TextAlignment="Center" />
+                                            TextAlignment="Center"
+                                            TextWrapping="Wrap" />
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -204,8 +207,8 @@
             </Grid>
             <!--  Latest order  -->
             <Grid
-                Grid.Row="3"
-                Margin="20,0,20,0"
+                Grid.Row="4"
+                Margin="20,0,20,20"
                 Padding="0,0,0,20"
                 Background="{ThemeResource MyBlockBackgroundThemeBrush}"
                 CornerRadius="10">
@@ -214,7 +217,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <TextBlock
-                    Margin="20"
+                    Margin="20,20,20,0"
                     FontWeight="SemiBold"
                     Style="{StaticResource BodyTextStyle}">
                     Latest orders
@@ -228,40 +231,30 @@
                         ItemsSource="{Binding Dashboard}">
                         <controls:DataGrid.Columns>
                             <controls:DataGridTextColumn
-                                Width="auto"
+                                Width="SizeToHeader"
                                 Binding="{Binding Id}"
                                 CanUserResize="False"
                                 ElementStyle="{StaticResource BodyTextStyle}"
-                                Header="Product" />
+                                Header="ID" />
                             <controls:DataGridTextColumn
-                                Width="auto"
                                 Binding="{Binding sohd}"
                                 CanUserResize="False"
-                                ElementStyle="{StaticResource BodyTextStyle}"
+                                ElementStyle="{StaticResource DataGridTextStyles}"
                                 Header="Order ID" />
                             <controls:DataGridTextColumn
-                                Width="auto"
                                 Binding="{Binding nghd}"
                                 CanUserResize="False"
-                                ElementStyle="{StaticResource BodyTextStyle}"
+                                ElementStyle="{StaticResource OrderGridStyle}"
                                 Header="Date" />
                             <controls:DataGridTextColumn
-                                Width="auto"
                                 Binding="{Binding hoten}"
                                 CanUserResize="False"
-                                ElementStyle="{StaticResource BodyTextStyle}"
+                                ElementStyle="{StaticResource OrderGridStyle}"
                                 Header="Customer name" />
                             <controls:DataGridTextColumn
-                                Width="auto"
-                                Binding="{Binding Status}"
+                                Binding="{Binding trigia, Converter={StaticResource PriceToCurrencyConverters}}"
                                 CanUserResize="False"
-                                ElementStyle="{StaticResource BodyTextStyle}"
-                                Header="Status" />
-                            <controls:DataGridTextColumn
-                                Width="auto"
-                                Binding="{Binding trigia}"
-                                CanUserResize="False"
-                                ElementStyle="{StaticResource BodyTextStyle}"
+                                ElementStyle="{StaticResource DataGridAddressStyle}"
                                 Header="Amount" />
                         </controls:DataGrid.Columns>
                     </controls:DataGrid>

@@ -6,6 +6,8 @@
     <SolidColorBrush x:Key="MyBlockBackgroundThemeBrush" Color="White" />
     <SolidColorBrush x:Key="MyBackgroundThemeBrush" Color="White" />
     <SolidColorBrush x:Key="MyForegroundThemeBrush" Color="White" />
+    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Black" />
+    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White" />
     <BrushCollection x:Key="customBrushes">
         <SolidColorBrush Color="#003C72" />
     </BrushCollection>

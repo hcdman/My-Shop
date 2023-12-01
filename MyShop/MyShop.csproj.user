@@ -6,6 +6,10 @@
     <WideTileSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</WideTileSource>
     <AppIconSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</AppIconSource>
     <PackageLogoSource>C:\Users\ADMIN\Workspace\Windows-C#\Project1-MyShop\MyShop\Assets\icon-shop-64.png</PackageLogoSource>
+    <ActiveDebugProfile>MyShop (Unpackaged)</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
     <None Update="App.xaml">

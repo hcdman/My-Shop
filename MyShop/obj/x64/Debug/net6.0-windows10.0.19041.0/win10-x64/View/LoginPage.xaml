@@ -31,9 +31,9 @@
         <Border
             Grid.Row="1"
             Width="300"
-            Height="400"
             CornerRadius="6">
-            <StackPanel Margin="20" Orientation="Vertical">
+
+            <StackPanel Margin="20,50" Orientation="Vertical">
                 <TextBlock
                     Padding="10"
                     HorizontalAlignment="Center"
@@ -59,7 +59,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         Width="255"
-                        Padding="0,5"
+                        Padding="10,5"
                         HorizontalAlignment="Left"
                         BorderThickness="0,0,0,1"
                         Text="{Binding User, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
@@ -73,13 +73,14 @@
                         x:Name="passwordBox"
                         Grid.Row="3"
                         Width="255"
-                        Padding="0,5"
+                        Padding="10,5"
                         HorizontalAlignment="Left"
                         BorderThickness="0,0,0,1"
                         Password="{Binding Pass, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 </Grid>
                 <CheckBox x:ConnectionId='2'
                     x:Name="rememberMe"
+                    Margin="0,20,0,0"
                     Content="Remember me"
                     IsChecked="{Binding Remember, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                 <Button x:ConnectionId='3'

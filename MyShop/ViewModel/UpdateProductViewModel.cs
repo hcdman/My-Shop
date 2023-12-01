@@ -214,6 +214,7 @@ namespace MyShop.ViewModel
                 Cost = pro.gia_goc;
                 Quantity = pro.sl;
                 ml = pro.maloai;
+                Discount = pro.giamgia;
             }
 
             await AddProductPageViewModel_Loaded(ml);

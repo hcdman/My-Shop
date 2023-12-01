@@ -115,11 +115,10 @@ namespace MyShop.ViewModel
             if (message == "code")
             {
 
-                if (App.MainWindow.Content is Frame frame)
-                {
-                    frame.Navigate(typeof(View.LoginExpiredPage), null, null);
-                    App.MainWindow.Maximize();
-                }
+
+                MainWindow.WindowFrameNavigate(typeof(View.LoginExpiredPage));
+                App.MainWindow.Maximize();
+                
             }
             else if (success == true)
             {
@@ -156,11 +155,9 @@ namespace MyShop.ViewModel
                 }
 
 
-                if (App.MainWindow.Content is Frame frame)
-                {
-                    frame.Navigate(typeof(View.ShellPage), null, null);
-                    App.MainWindow.Maximize();
-                }
+                MainWindow.WindowFrameNavigate(typeof(View.ShellPage));
+                App.MainWindow.Maximize();
+
             }
             else
             {
