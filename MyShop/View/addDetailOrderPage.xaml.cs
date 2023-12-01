@@ -69,7 +69,7 @@ namespace MyShop.View
         }
 
 
-        private void addDetailOrder(object sender, RoutedEventArgs e)
+        private async void  addDetailOrder(object sender, RoutedEventArgs e)
         {
          //   viewModel.isShowProgres = true;
             List<DetailOrder> ls = new List<DetailOrder>();
@@ -78,8 +78,24 @@ namespace MyShop.View
                 DetailOrder detai_order = new DetailOrder() { masp = selectedProduct[i].masp, sohd = order.sohd, sl = selectedProduct[i].sl };
                 ls.Add(detai_order);
             }
-            viewModel.add_ListDetailOrder(ls);
-           // viewModel.isShowProgres = false;
+            bool check = await viewModel.add_ListDetailOrder(ls);
+            if (check)
+            {
+                ContentDialog addDialog = new ContentDialog
+                {
+                    XamlRoot = this.XamlRoot,
+                    Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Microsoft.UI.Xaml.Style,
+                    Title = "Add successfully !",
+                    Content = "You will be redirected to main page.",
+                    CloseButtonText = "OK",
+                    DefaultButton = ContentDialogButton.Close
+                };
+
+                ContentDialogResult result = await addDialog.ShowAsync();
+                Frame.Navigate(typeof(View.OrdersPage));
+            }
+
+            // viewModel.isShowProgres = false;
         }
 
 

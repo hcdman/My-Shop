@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.ApplicationModel;
 
 namespace MyShop.ViewModel
 {
@@ -32,21 +33,26 @@ namespace MyShop.ViewModel
             
         }
 
-        public async void add_ListDetailOrder(List<DetailOrder> ls)
+        public async Task<bool> add_ListDetailOrder(List<DetailOrder> ls)
         {
             mess = "";
             var temp = "";
             isShowProgres = true;
-
-           // Tuple<bool, string> rs = new Tuple<bool, string>();
+            var sc = false;
+         //  Tuple<bool, string> rs = new Tuple<bool, string>();
             for (int i = 0; i < ls.Count; i++)
             {
                 var  (success, message) = await api.addOrderDetail(ls[i]);
                 temp = message;
-            }
-                          
+                sc = success;
+            }       
             isShowProgres = false;
-            mess = temp;
+            if (!sc)
+            {
+                mess = temp;
+            }
+            return sc;
+            
         }
     }
 }
