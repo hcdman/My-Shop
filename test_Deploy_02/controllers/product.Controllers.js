@@ -294,8 +294,8 @@ exports.filter = async (req, res) => {
     sql = `select *, count(*) over() as Total from sanpham where tensp like '%${name}%' and maloai like '%${maloai}%' and ${stringToPrice(
       price
     )}`;
-    if (SortBy === "Price descending") sql += ` order by gia desc, masp`;
-    else if (SortBy === "Price ascending") sql += ` order by gia asc, masp`;
+    if (SortBy === "Price descending") sql += ` order by gia*(100-giamgia) desc, masp`;
+    else if (SortBy === "Price ascending") sql += ` order by gia*(100-giamgia) asc, masp`;
     else sql += " order by masp";
     sql += ` limit ${per_page} offset ${skip}`;
 
