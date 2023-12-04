@@ -210,7 +210,7 @@ namespace MyShop.ViewModel
                 Name = pro.tensp;
                 Manufactuer = pro.hangsx;
                 Image = pro.anh;
-                Price = pro.gia * 100 / (100-pro.giamgia);
+                Price = pro.gia/100 * 100/(100-pro.giamgia)*100;
                 Cost = pro.gia_goc;
                 Quantity = pro.sl;
                 ml = pro.maloai;
