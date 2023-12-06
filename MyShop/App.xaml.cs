@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
@@ -59,7 +59,7 @@ public partial class App : Application
         var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(MainWindow);
         Microsoft.UI.WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
         Microsoft.UI.Windowing.AppWindow appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-        appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1400, Height = 900 });
+        appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1500, Height = 1060 });
         if (appWindow is not null)
         {
             Microsoft.UI.Windowing.DisplayArea displayArea = Microsoft.UI.Windowing.DisplayArea.GetFromWindowId(windowId, Microsoft.UI.Windowing.DisplayAreaFallback.Nearest);

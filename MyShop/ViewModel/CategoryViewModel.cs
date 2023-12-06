@@ -83,7 +83,7 @@ namespace MyShop.ViewModel
             temp = await Task.Run(() => { return api.getAllCategory(); });
             isShowProgressBar = false;
             loadDataByPage();
-            mess = message;
+           
         }
         public void next()
         {
@@ -202,9 +202,8 @@ namespace MyShop.ViewModel
             }
            // mess = temp;
             isShowProgressBar = false;
-            if(isSuccess)
+            if (isSuccess)
             {
-                mess = "Import thành công";
                 System.Threading.Thread.Sleep(2000);
                 loadData();
             }

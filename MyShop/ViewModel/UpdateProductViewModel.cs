@@ -210,7 +210,7 @@ namespace MyShop.ViewModel
                 Name = pro.tensp;
                 Manufactuer = pro.hangsx;
                 Image = pro.anh;
-                Price = pro.gia;
+                Price = pro.gia / 100 * 100 / (100 - pro.giamgia) * 100;
                 Cost = pro.gia_goc;
                 Quantity = pro.sl;
                 ml = pro.maloai;
@@ -232,7 +232,7 @@ namespace MyShop.ViewModel
                     Type.maloai = item.maloai;
                     Type.tenloai = item.tenloai;
                 }
-            }    
+            }
 
         }
 
@@ -278,7 +278,7 @@ namespace MyShop.ViewModel
                 gia = Price,
                 sl = Quantity,
                 maloai = Type.maloai,
-                giamgia = 0
+                giamgia = Discount
             };
             using StringContent jsonContent = new(
             JsonSerializer.Serialize(product),

@@ -54,4 +54,5 @@ public sealed partial class DashboardPage : Page
             dataSource.NewOrder = _tmp + " New Order";
         }
     }
+
 }

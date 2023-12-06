@@ -115,6 +115,13 @@ namespace MyShop.API
             return res;
         }
 
+        public async Task<ListProduct> GetLow5()
+        {
+            var response = await client.GetAsync("product/low5");
+            var returnValue = await response.Content.ReadAsStringAsync();
+            ListProduct res = JsonSerializer.Deserialize<ListProduct>(returnValue);
+            return res;
+        }
         public async Task<Tuple<bool, string>> AddNewProduct(MultipartFormDataContent content)
         {
             var response = await client.PostAsync("product/add", content);

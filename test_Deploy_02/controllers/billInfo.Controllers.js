@@ -57,7 +57,6 @@ exports.delete = async (req, res) => {
     let sohd = result[0].sohd;
 
     db.query('select * from sanpham where masp = ?', masp, async (err, result) => {
-      console.log(result)
       if (err) {
         return res
           .status(400)

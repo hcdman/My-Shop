@@ -16,7 +16,7 @@ exports.getAllBill = async (req, res) => {
     result = JSON.parse(JSON.stringify(result));
 
 
-    console.log(result);
+    
     return res.status(200).json({
       bill: result,
     });

@@ -252,7 +252,7 @@ exports.update = async (req, res) => {
 // lấy danh sách top 5 sản phẩm bán chạy nhất
 exports.getTop5 = async (req, res) => {
   let sql =
-    "SELECT * FROM cthd ct, sanpham sp where ct.masp = sp.masp  GROUP BY ct.masp ORDER BY sum(ct.sl) DESC LIMIT 5";
+    "SELECT * FROM cthd ct, sanpham sp where ct.masp = sp.masp  GROUP BY ct.masp ORDER BY sum(ct.sl) LIMIT 5";
   db.query(sql, (error, result) => {
     if (error) return res.status(400).json({ message: "Server error" });
     result = JSON.parse(JSON.stringify(result));
@@ -262,6 +262,19 @@ exports.getTop5 = async (req, res) => {
     });
   });
 };
+
+exports.getLow5 = async (req, res) => {
+  let sql =
+    "SELECT * FROM sanpham sp where sp.sl<5 LIMIT 5";
+  db.query(sql, (error, result) => {
+    if (error) return res.status(400).json({ message: "Server error" });
+    result = JSON.parse(JSON.stringify(result));
+    return res.status(200).json({
+      product: result,
+    });
+  });
+};
+
 
 function stringToPrice(price) {
   switch (price) {
@@ -294,8 +307,8 @@ exports.filter = async (req, res) => {
     sql = `select *, count(*) over() as Total from sanpham where tensp like '%${name}%' and maloai like '%${maloai}%' and ${stringToPrice(
       price
     )}`;
-    if (SortBy === "Price descending") sql += ` order by gia desc, masp`;
-    else if (SortBy === "Price ascending") sql += ` order by gia asc, masp`;
+    if (SortBy === "Price descending") sql += ` order by gia*(100-giamgia) desc, masp`;
+    else if (SortBy === "Price ascending") sql += ` order by gia*(100-giamgia) asc, masp`;
     else sql += " order by masp";
     sql += ` limit ${per_page} offset ${skip}`;
 

@@ -17,6 +17,8 @@ namespace MyShop.ViewModel
         HandleAPI api = new HandleAPI();
 
         private BindingList<Product> _most5List;
+        private BindingList<Product> _most5ListToo;
+
         public BindingList<Product> Most5List
         {
             get
@@ -27,6 +29,19 @@ namespace MyShop.ViewModel
             {
                 SetProperty(ref _most5List, value);
                 OnPropertyChanged(nameof(Most5List));
+            }
+        }
+
+        public BindingList<Product> Most5ListToo
+        {
+            get
+            {
+                return _most5ListToo;
+            }
+            set
+            {
+                SetProperty(ref _most5ListToo, value);
+                OnPropertyChanged(nameof(Most5ListToo));
             }
         }
 
@@ -95,12 +110,14 @@ namespace MyShop.ViewModel
         {
             ListProduct products = await api.GetAllProduct();
             ListProduct _tmp = await api.GetTop5();
+            ListProduct _tmpp = await api.GetLow5();
             DashboardItemList _db = await api.GetLatestOrder();
             int _tt = await api.GetNumNewOrderW();
             NewOrder = _tt + " New Order";
             MoneyToday = await api.GetMoneyCurrentDay();
 
             Most5List = new BindingList<Product>();
+            Most5ListToo = new BindingList<Product>();
             Dashboard = new BindingList<DashboardItem>();
 
 
@@ -111,7 +128,14 @@ namespace MyShop.ViewModel
             {
                 if (item.giamgia > 0) item.gia = item.gia - item.gia * item.giamgia / 100;
                 Most5List.Add(item);
-            } 
+            }
+
+            foreach (var item in _tmpp.product)
+            {
+                if (item.giamgia > 0) item.gia = item.gia - item.gia * item.giamgia / 100;
+                Most5ListToo.Add(item);
+            }
+
 
             foreach (var item in _db.bill) Dashboard.Add(item);
 
