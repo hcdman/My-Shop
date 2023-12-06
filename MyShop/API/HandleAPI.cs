@@ -194,6 +194,7 @@ namespace MyShop.API
         public async Task<ListTypeProduct> GetAllType()
         {
             var response = await client.GetAsync("type/getall");
+
             var returnValue = await response.Content.ReadAsStringAsync();
             ListTypeProduct res = JsonSerializer.Deserialize<ListTypeProduct>(returnValue);
 
