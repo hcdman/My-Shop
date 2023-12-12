@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -184,9 +185,7 @@ namespace MyShop.ViewModel
                 OnPropertyChanged(nameof(AllType));
             }
         }
-
         HandleAPI api = new HandleAPI();
-
         public static async Task<UpdateProductViewModel> CreateAsync(Product pro)
         {
             var viewModel = new UpdateProductViewModel();

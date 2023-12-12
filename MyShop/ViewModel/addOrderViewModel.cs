@@ -4,6 +4,7 @@ using MyShop.ViewModel.command;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace MyShop.ViewModel
         }
 
 
-    
+
 
         HandleAPI api = new HandleAPI();
         public Task<bool> addOneOrder(DateTime date)

@@ -11,6 +11,7 @@ using MyShop.Model;
 using MyShop.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;

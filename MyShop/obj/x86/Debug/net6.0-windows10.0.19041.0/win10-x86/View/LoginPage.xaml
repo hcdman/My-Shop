@@ -32,7 +32,6 @@
             Grid.Row="1"
             Width="300"
             CornerRadius="6">
-
             <StackPanel Margin="20,50" Orientation="Vertical">
                 <TextBlock
                     Padding="10"
@@ -54,7 +53,7 @@
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
                         Text="Username" />
-                    <TextBox x:ConnectionId='5'
+                    <TextBox x:ConnectionId='7'
                         x:Name="usernameTextBox"
                         Grid.Row="1"
                         Grid.Column="1"
@@ -69,7 +68,7 @@
                         HorizontalAlignment="Left"
                         FontWeight="Medium"
                         Text="Password" />
-                    <PasswordBox x:ConnectionId='6'
+                    <PasswordBox x:ConnectionId='8'
                         x:Name="passwordBox"
                         Grid.Row="3"
                         Width="255"
@@ -98,6 +97,10 @@
                     FontSize="15"
                     Foreground="Red"
                     Text="{Binding Mess, Mode=TwoWay}" />
+                <RadioButtons Header="Run as">
+                    <RadioButton x:ConnectionId='5' Content="Server" Name="server"                      />
+                    <RadioButton x:ConnectionId='6' Content="Local" Name="local"                       IsChecked="True"/>
+                </RadioButtons>
             </StackPanel>
         </Border>
     </Grid>

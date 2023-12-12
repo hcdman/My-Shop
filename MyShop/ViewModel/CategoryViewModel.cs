@@ -15,6 +15,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.UI.Xaml.Controls;
+using System.Configuration;
 
 namespace MyShop.ViewModel
 {
@@ -73,7 +74,7 @@ namespace MyShop.ViewModel
         }
 
         HandleAPI api = new HandleAPI();
-     
+
 
         public async void deleteCategory(string id)
         {

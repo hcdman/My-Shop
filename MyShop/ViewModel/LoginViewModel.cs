@@ -97,7 +97,7 @@ namespace MyShop.ViewModel
                 Remember = true;
             }
         }
-        HandleAPI api = new HandleAPI();
+       
 
         private readonly RelayCommand _login;
         public RelayCommand Login
@@ -111,6 +111,7 @@ namespace MyShop.ViewModel
 
         public async void handleLogin()
         {
+            HandleAPI api = new HandleAPI();
             var (success, message) = await api.Login(User, Pass);
             if (message == "code")
             {
@@ -118,7 +119,7 @@ namespace MyShop.ViewModel
 
                 MainWindow.WindowFrameNavigate(typeof(View.LoginExpiredPage));
                 App.MainWindow.Maximize();
-                
+
             }
             else if (success == true)
             {

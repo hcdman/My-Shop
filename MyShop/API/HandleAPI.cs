@@ -27,9 +27,9 @@ namespace MyShop.API
 
         public HandleAPI()
         {
-
-            client.BaseAddress = new Uri("http://localhost:8080/");
-            //client.BaseAddress = new Uri("https://test-deploy-jbnz-k72rintab-nxhawk.vercel.app/");
+            string uri = ConfigurationManager.AppSettings["Uri"];
+            client.BaseAddress = new Uri(uri);
+            //client.BaseAddress = new Uri("https://myshop-api-pmrd.onrender.com/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json")

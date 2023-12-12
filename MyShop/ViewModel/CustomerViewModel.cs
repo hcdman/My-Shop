@@ -2,6 +2,7 @@
 using MyShop.Model;
 using System;
 using System.ComponentModel;
+using System.Configuration;
 using System.Threading.Tasks;
 
 namespace MyShop.ViewModel
@@ -82,12 +83,12 @@ namespace MyShop.ViewModel
             }
         }
 
-       /* public async A renderData()
-        {
-          //listCustomer rs = await api.GetAllCustomer();
-          // mess = await api.GetAllCustomer(); 
-           temp = await api.GetAllCustomer();
-        }*/
+        /* public async A renderData()
+         {
+           //listCustomer rs = await api.GetAllCustomer();
+           // mess = await api.GetAllCustomer(); 
+            temp = await api.GetAllCustomer();
+         }*/
 
 
         HandleAPI api = new HandleAPI();

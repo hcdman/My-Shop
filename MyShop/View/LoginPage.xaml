@@ -32,7 +32,6 @@
             Grid.Row="1"
             Width="300"
             CornerRadius="6">
-
             <StackPanel Margin="20,50" Orientation="Vertical">
                 <TextBlock
                     Padding="10"
@@ -98,6 +97,10 @@
                     FontSize="15"
                     Foreground="Red"
                     Text="{Binding Mess, Mode=TwoWay}" />
+                <RadioButtons Header="Run as">
+                    <RadioButton Content="Server" Name="server" Checked="HandleCheck"/>
+                    <RadioButton Content="Local" Name="local" Checked="HandleCheck" IsChecked="True"/>
+                </RadioButtons>
             </StackPanel>
         </Border>
     </Grid>

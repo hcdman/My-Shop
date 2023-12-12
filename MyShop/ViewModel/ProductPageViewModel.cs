@@ -16,11 +16,15 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using ABI.System;
+using System.Configuration;
+using System.Security.Policy;
 
 namespace MyShop.ViewModel
 {
     internal class ProductPageViewModel : ObservableObject
     {
+       
         HandleAPI api = new HandleAPI();
 
         private List<Product> _tmpProducts = new List<Product>();
