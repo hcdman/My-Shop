@@ -34,7 +34,6 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                     <ToggleSwitch
                         x:Name="toggleSwitch"

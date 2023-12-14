@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel
             Grid.Row="0"
-            Margin="0,48,0,0"
+            Margin="0,20,0,0"
             HorizontalAlignment="Center"
             Orientation="Horizontal">
             <Image
@@ -32,7 +32,7 @@
             Grid.Row="1"
             Width="300"
             CornerRadius="6">
-            <StackPanel Margin="20,50" Orientation="Vertical">
+            <StackPanel Margin="10,50" Orientation="Vertical">
                 <TextBlock
                     Padding="10"
                     HorizontalAlignment="Center"

@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml;
@@ -7,6 +7,12 @@ using MyShop.Contracts.Services;
 using MyShop.Services;
 using MyShop.ViewModel;
 using System.Runtime.InteropServices;
+using Windows.UI.ViewManagement;
+using Windows.Graphics.Display;
+using Windows.Devices.Display;
+using Windows.Devices.Enumeration;
+using Windows.Graphics;
+using System.Linq;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -59,7 +65,12 @@ public partial class App : Application
         var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(MainWindow);
         Microsoft.UI.WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
         Microsoft.UI.Windowing.AppWindow appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-        appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1500, Height = 1060 });
+        Task.Run(async () => await SizeWindow(appWindow));
+
+        //var bounds = ApplicationView.GetForCurrentView().VisibleBounds;
+        //var scaleFactor = DisplayInformation.GetForCurrentView().RawPixelsPerViewPixel;
+        //appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = 1500, Height = 1060 });
+
         if (appWindow is not null)
         {
             Microsoft.UI.Windowing.DisplayArea displayArea = Microsoft.UI.Windowing.DisplayArea.GetFromWindowId(windowId, Microsoft.UI.Windowing.DisplayAreaFallback.Nearest);
@@ -67,10 +78,43 @@ public partial class App : Application
             {
                 var CenteredPosition = appWindow.Position;
                 CenteredPosition.X = ((displayArea.WorkArea.Width - appWindow.Size.Width) / 2);
-                CenteredPosition.Y = ((displayArea.WorkArea.Height - appWindow.Size.Height) / 2);
+                CenteredPosition.Y = 60;
                 appWindow.Move(CenteredPosition);
             }
         }
+    }
+
+    private static async Task SizeWindow(Microsoft.UI.Windowing.AppWindow appWindow)
+    {
+        var displayList = await DeviceInformation.FindAllAsync
+                          (DisplayMonitor.GetDeviceSelector());
+
+        if (!displayList.Any())
+            return;
+
+        var monitorInfo = await DisplayMonitor.FromInterfaceIdAsync(displayList[0].Id);
+
+        var winSize = new SizeInt32();
+
+        if (monitorInfo == null)
+        {
+            winSize.Width = 1400;
+            winSize.Height = 900;
+        }
+        else
+        {
+            winSize.Height = monitorInfo.NativeResolutionInRawPixels.Height;
+            winSize.Width = monitorInfo.NativeResolutionInRawPixels.Width;
+
+            var widthInInches = Convert.ToInt32(10 * monitorInfo.RawDpiX);
+            var heightInInches = Convert.ToInt32(6 * monitorInfo.RawDpiY);
+
+            winSize.Height = winSize.Height > heightInInches ?
+                             heightInInches : winSize.Height;
+            winSize.Width = winSize.Width > widthInInches ? widthInInches : winSize.Width;
+        }
+
+        appWindow.Resize(winSize);
     }
 
     private const int WAINACTIVE = 0x00;
