@@ -107,7 +107,7 @@ public partial class App : Application
             winSize.Width = monitorInfo.NativeResolutionInRawPixels.Width;
 
             var widthInInches = Convert.ToInt32(10 * monitorInfo.RawDpiX);
-            var heightInInches = Convert.ToInt32(6 * monitorInfo.RawDpiY);
+            var heightInInches = Convert.ToInt32(6.8 * monitorInfo.RawDpiY);
 
             winSize.Height = winSize.Height > heightInInches ?
                              heightInInches : winSize.Height;
